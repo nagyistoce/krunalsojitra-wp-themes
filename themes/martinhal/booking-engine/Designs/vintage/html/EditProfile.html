@@ -1,0 +1,69 @@
+﻿<div id="profileBoc">
+<h2 data-localization="_ChangeCustomerProfile">Kundenprofil ändern</h2>
+</div>
+
+<div id="profileTitle" class="checkOutEntity paintBox">
+    <p class="txtEntityTitle"><i class="icon-bookmark"></i><span data-localization="_YourPersonalData">Ihre Daten</span></p>
+    <fieldset>
+        <div id="checkOutPersonalDiv1" class="clear">
+        	<div  class="formLine">
+            	<label for="Company_Input" data-localization="_FormSelectCompany">Company</label>
+                <input  type="text" id="Company_Input" data-company="profile" name="Company_Input" />
+            </div>
+           	<div  class="formLine">
+            	<label for="Salutation_Select" data-localization="_FormSalutation">Salutation</label>
+                <input id="Salutation_Select" tabindex="2"   value="" name="Salutation_Select" data-salutation="profile" />
+            </div>
+           	<div  class="formLine">
+            	<label for="Firstname_Input_profile" data-localization="_FormFirstname">First Name</label>
+                <input id="Firstname_Input_profile"  type="text" data-firstname="profile" tabindex="3" maxlength="50" name="Firstname_Input_profile" validationMessage="_firstnameRequired" />
+            </div>
+           	<div  class="formLine">
+            	<label for="Lastname_Input_profile" data-localization="_FormLastname">Last Name</label><i class="requiredSmb icon-asterisk"></i>
+                <input id="Lastname_Input_profile" type="text"  value="" data-lastname="profile" tabindex="4" maxlength="50" name="Lastname_Input_profile" validationMessage="_lastnameRequired" />
+            </div>
+           	<div  class="formLine">
+            	<label for="Email_Input_profile" data-localization="_FormEmail">E-Mail</label><i class="requiredSmb icon-asterisk"></i> 
+                <input id="Email_Input_profile" type="email" value="" tabindex="5" data-email="profile" maxlength="50" name="Email_Input_profile" validationMessage="_emailRequired" />
+            </div>
+        </div>
+
+        <div id="checkOutPersonalDiv2"  class="clear"> 
+        	<div  class="formLine">
+            	<label for="Street-Input" data-localization="_FormStreet">Street</label>
+                <input id="Street-Input" type="text" value=""  data-street="profile" tabindex="6" maxlength="50" name="Street-Input" validationMessage="_streetRequired" />
+            </div>
+           	<div  class="formLine">
+            	<label for="Zip_Input" data-localization="_FormZip">ZIP</label>
+                <input id="Zip_Input" data-zip="profile" type="text" value="" tabindex="7" maxlength="10" name="Zip_Input" validationMessage="_zipRequired" />
+            </div>
+           	<div  class="formLine">
+            	<label for="City_Input_profile" data-localization="_FormCity">City</label>
+                <input id="City_Input_profile"  value="" type="text" data-city="profile" tabindex="8" maxlength="50" name="City_Input_profile" validationMessage="_cityRequired" />
+            </div>
+           	<div  class="formLine">
+            	<label for="countryselect_profile" data-localization="_FormCountry">Country</label>
+                <input id="countryselect_profile"  value="" tabindex="9" name="countryselect_profile" data-country="profile"/>
+            </div>
+           	<div  class="formLine">
+            	<label for="Telefon_Input_profile" data-localization="_FormPhone">Phone</label>
+                <input id="Telefon_Input_profile" type="text" value="" data-phone="profile" tabindex="10" maxlength="50" name="Telefon_Input_profile" validationMessage="_phoneRequired" />
+            </div>
+           	<div  class="formLine">
+            	<label for="Fax_Input_profile" data-localization="_FormFax">Fax</label>
+                <input id="Fax_Input_profile" type="text" value="" data-fax="profile" tabindex="11" maxlength="50" name="Fax_Input_profile" validationMessage="_faxRequired" />
+            </div>
+        </div>
+    </fieldset>
+</div>
+<div class="buttonPanel">
+	<div class="buttonPanelL"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  data-localization="_SaveProfilBt" value="Save" id="SaveProfileBt"  type="button"></div>
+</div>
+
+
+<script language="javascript" type="text/javascript">
+    protelWBE.RegisterSaveProfileButton('SaveProfileBt');
+    protelWBE.RegisterSalutationProfileSelect('Salutation_Select');
+    protelWBE.RegisterCountryProfileSelect('countryselect_profile');
+
+</script>

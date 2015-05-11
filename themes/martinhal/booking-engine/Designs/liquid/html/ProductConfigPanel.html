@@ -1,0 +1,115 @@
+﻿<div class="msgBox">
+
+<!----BLOCK: room config------------------------------>
+    <div class="showRoomCategorySelected">
+        <h5 data-function="hotelnamepanel"><!--Hotel Name--></h5>
+        <p><span data-localization="_selectedTimeSpan"><!--Your selection:--></span> <span data-function="selectedTimeSpan"></span></p>
+    </div>
+	<div id="roomConfigMainPanel" >
+    	<div id="NbrAdultDiv" class="searchLine">
+			<fieldset>        
+			  <label for="NbrAdult" data-localization="_FormNbrAdults"><!--Adults:--></label>
+			  <input id="NbrAdult"  class="selectClass" tabindex="1" /></fieldset>
+
+		</div>	
+		<div id="NbrRoomsDiv" class="searchLine">
+        <fieldset>
+			<label for="SelectNbrRooms" data-localization="_FormNbrRooms"><!--Rooms:--></label>
+			<input id="SelectNbrRooms"  class="selectClass" tabindex="2"/></fieldset>
+		</div>
+		<div class="clear"></div>
+			
+      <div id="moreOptionsID" data-function="moreOptions">
+			<p><a href="#" id="showmorebt" data-localization="_AdvancedOptions"><!--Advanced options--></a></p>
+			<p data-localization="_infoProductConfig"><!--Optional message regarding more options here--></p>			  	  
+				<!----BLOCK: advanced room config------------------------------>
+				<div id="advancedRoomConfig" >
+					<div  id="extraRoom1" class="searchLine" data-function="childselector">
+					<fieldset> 
+					  <label for="NbrChild1" data-function="labelchildages1"><!--Children (0-3):--></label>
+					  <input id="NbrChild1" class="selectClass" /></fieldset>
+					</div>
+					<div  id="extraRoom2" class="searchLine" data-function="childselector">
+					<fieldset>         
+					  <label for="NbrChild2" data-function="labelchildages2"><!--Children ##:--></label>
+					  <input id="NbrChild2" class="selectClass" /></fieldset>
+					</div>
+					<div  id="extraRoom3" class="searchLine" data-function="childselector"> 
+					<fieldset>         
+					  <label for="NbrChild3" data-function="labelchildages3"><!--Children (6-9):--></label>
+					  <input id="NbrChild3" class="selectClass" /></fieldset>
+					</div>
+					<div  id="extraRoom4" class="searchLine" data-function="childselector">
+					<fieldset>         
+					  <label for="NbrChild4" data-function="labelchildages4"><!--Children (9-16):--></label>
+					  <input id="NbrChild4" class="selectClass" /></fieldset>
+					</div>
+					<div  id="extraRoom5" class="searchLine"  data-function="addCot">
+					<fieldset>         
+					  <label for="NbrCot" data-localization="_FormNbrCots"><!--Cots:--></label>
+					  <input id="NbrCot" class="selectClass" /></fieldset>
+					</div>
+					<div  id="extraRoom6" class="searchLine" data-function="addBed">
+					<fieldset>         
+					  <label for="NbrAddbed" data-localization="_FormNbrAddBed"><!--Add. bed:--></label>
+					  <input id="NbrAddbed" class="selectClass" /></fieldset>
+					</div>
+				<div class="clear"></div>
+				</div>            
+			
+		</div>
+		<div class="clear"></div>
+		<!---Room Categories Block---------------------------------->
+        <div id="roomCategories" >
+                <h4 data-localization="_lgRoomCategories"><!--Room Categories--></h4>
+                <div class="showRoomCategoryArea" id="RoomTypeBox"> </div>
+		</div>
+		<div class="clear"></div>                    
+		<!---Block: Price/Book selection---------------------------------->
+		<div id="addToBasketPanel">
+        	<div class="priceDiv"><span class="priceClassTxt" data-localization="_RoomPrice"><!--Price:--></span>  <span id="pricelabel" class="priceClass" ><!--400 EUR--></span></div>
+	            <input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  data-localization="_AddRoomBt" value="In den Warenkorb" id="Button2AddToBasket"  type="button" />
+            </div>
+	</div>
+    <div class="clear"></div>       
+</div>
+
+
+<script id="RoomTypeSelectTemplate" type="text/x-kendo-tmpl"> 
+
+#for(i=0; i < data.length; i++){#
+#var infotxt = WbeLocalization._moreroomsavailabe;#
+#if(data[i][_CurrentInstance.RoomTypeFreeRoomsCountField] < 2)#
+#infotxt = WbeLocalization._oneroomsavailabe;#
+					<a data-katselect="#=data[i][_CurrentInstance.CategorieIdSingleField]#" maxOcc="#=data[i][_CurrentInstance.RoomTypeMaxAdultOccupancyField]#" defaultOcc="#=data[i][_CurrentInstance.RoomTypedefaultAdultOccupancyField]#" href="\\#">                
+						# criticalNoRooms=_CurrentInstance.WbeSettings.CriticalNumberOfRooms;
+						noRoomAvailableTxt =WbeLocalization._roomsAvailable;  criticalMassClass='Green';
+						if (data[i][_CurrentInstance.RoomTypeFreeRoomsCountField] <= criticalNoRooms)  { noRoomAvailableTxt =WbeLocalization._onlyRoomsAvailabe+" "+data[i][_CurrentInstance.RoomTypeFreeRoomsCountField]+" "+infotxt; criticalMassClass='Red'; } #
+
+							<div class="showRoomCategory#=criticalMassClass#">
+
+								 <div class="showNoUsers" data-function="showOccIcons" data-occ="#=data[i][_CurrentInstance.RoomTypeMaxAdultOccupancyField]#">
+								 </div>
+								 <div class="showRoomCategoryTxt">#=data[i][_CurrentInstance.CategorieNameField]#</div>
+								 <div class="showRoomsLeft">#=noRoomAvailableTxt#</div>
+							</div>
+                    </a>	
+#}#
+</script>
+
+<script type="text/javascript" language="javascript">
+    protelWBE.CreateNbrRoomsDropDown('SelectNbrRooms');
+    protelWBE.CreateAdultDropDownBox('NbrAdult');
+    protelWBE.CreateChildDropDownBox('NbrChild1', 1);
+    protelWBE.CreateChildDropDownBox('NbrChild2',2);
+    protelWBE.CreateChildDropDownBox('NbrChild3',3);
+    protelWBE.CreateChildDropDownBox('NbrChild4', 4);
+    protelWBE.CreateAddBedDropDownBox('NbrAddbed');
+    protelWBE.CreateCotDropDownBox('NbrCot');
+    protelWBE.RegisterDetailViewPriceLabel('pricelabel');
+    protelWBE.RegisterDetailClxCondition('Clxbox');
+    protelWBE.RegisterBackToResultButton('Button4');
+    protelWBE.CreateToggleButton('showmorebt', 'advancedRoomConfig');
+    protelWBE.RegisterAddToCartButton('Button2AddToBasket');
+
+</script>

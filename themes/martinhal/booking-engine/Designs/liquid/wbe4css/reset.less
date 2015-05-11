@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***RESET DEFAULT CSS***/
+
+.wbe4Wrapper {	
+	line-height:1; 	
+	font-size: @font-size; /*14px font*/
+	font-family: @font-family;/*16px default Browser*/
+	color:@fontColor;
+	background:@wbePage-background;
+	width: @wbeWidth;
+	margin:0 auto;
+}
+
+.wbe4Wrapper { 
+body, div,span,object,html, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footerWBE4, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;     padding:0;     border:0;     outline:0;     font-size:100%; /*vertical-align:baseline;*/  font-weight:normal; }
+
+article,aside,details,figcaption,figure, footerWBE4,header,hgroup,menu,nav,section { display:block; }
+
+ul {     list-style:none; }
+blockquote, q {     quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after {     content:'';     content:none; }
+ 
+a { margin:0; padding:0; font-size:100%;  vertical-align:baseline;   background:transparent; color:@wbeLink-color; text-decoration:underline; }
+a:hover, a:active { outline: none; color:@wbeNoColorLKHover-color;}
+
+
+del { text-decoration: line-through; }
+abbr[title], dfn[title] {border-bottom:@unit_size dotted; cursor:help;}
+table {border-collapse:collapse; border-spacing:0;}
+hr {display:block; height:@unit_size; border:0; border-top:@unit_size solid @wbeGrey-border-color; margin:1em 0; padding:0; }
+
+::selection { background-color:red; @wbeSelection-background; color:@wbeSelection-fontColor; }
+.clear { 	clear:both }
+.displayNone {display:none;}
+.displayInline	{display: inline;}
+.nowrap {white-space:nowrap;}  
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:@font-family-h;
+	font-weight:normal;
+	color:@fontColor-h;
+	margin:2*@space_unit 0 0 0;
+}
+h1, h2 { 	font-size:2em }
+h3 { 	font-size:1.8em }
+h4 {	font-size:1.6em}
+h5, h6 {	font-size:1.4em}
+
+h2{margin:2*@space_unit 0 @space_unit 0;}
+
+p {	font-size:1em;
+	margin:@space_unit 0;
+	line-height:@p-lineheight;
+	clear:left;}
+
+	
+/***SPRITEBIG***/
+#footerFBIcon, #footerYouTubeIcon, #footerTwitterIcon,
+#SocialLogin li a
+{ background:url("../wbe4img/icons/spriteWBE4-@{themeName}.png") no-repeat;}
+
+}
+
+/*Kendo TRICK - let the added wraper transparent*/
+.bgKfix { background: transparent!important; 
+	margin: 1px 0; }

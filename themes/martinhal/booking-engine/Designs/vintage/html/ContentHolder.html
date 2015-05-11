@@ -1,0 +1,71 @@
+﻿<script language="javascript" type="text/javascript">
+ var FontCss = document.createElement("link");
+  FontCss.setAttribute("rel", "stylesheet");
+  FontCss.setAttribute("type", "text/css");
+  FontCss.setAttribute("href","http://fonts.googleapis.com/css?family=Dosis");
+  document.getElementsByTagName('head')[0].appendChild(FontCss);
+</script>
+
+
+<div id="printMsg"><span data-localization="_printMsgTxt">Thank you for printing our content. Please check back soon for new offers.</span> <span data-function="url" id="rintURL">URL</span></div>     
+<div class="wbe4Wrapper">
+
+<div class="wbeBackground">	</div>
+
+<div class="wbeContentOut"> 
+
+    <div class="wbeContentIn"> 
+			<div id="headerWBE4"> 
+		    	<!-- Load header here //-->
+		    </div>
+			<div id="div_basket"  class="item"><a href="#"><i class="icon-shopping-cart"></i> <span href="#" id="ShowMyBasket"></span> </a></div>                    
+            <div id="Search-Results" class="wbeRightPanel" style="display:block;">        </div>
+            <div class="clear;" ></div>
+            <div id="DetailView-Content" class="wbeRightPanel" style="display:none;" >		</div>
+            <div class="clear"> </div>
+
+
+
+   	  	<!---WARNING: THIS DIV CANNOT BE REMOVED------------------------------------>
+    	 <div id="footerMark" class="footerBg" data-function="protelfooter"></div>
+	    </div>
+
+</div>        
+
+</div>	   
+
+
+<script id="rowTemplate" type="text/x-kendo-tmpl">  
+#var paddingTop='';#
+#paddingTop='basketCell'; #
+#var desLen=0;#
+#desLen=Description.length;#
+
+<tr>                 
+	<td data-label="_CartProductDesc" class="noDataLabel #=paddingTop#" id="shoppingCartProduct" >
+		#if(Type == "rooms"){#<h5>${ Name }</h5>#} else {#<h6>${ Name }</h6>#}#
+		#if(desLen >0) {# <p>${ Description }</p> #}#
+		#if(Type == "rooms"){#
+			<p><a data-LinkToID="${ID}"  href="\\#" class=""   data-localization="_basketDetails"></a></p>
+		#}#
+		<p><a href="\\#" class="linkDeleteLk" data-BasketItemDelCommand="${ID}" data-objecttype="${Type}" data-ref="${Ref}"  id="ButtonDelItem" ><i class="icon-remove-sign"></i><span data-localization="_deleteCmd">delete</span></a></p>
+			#if(Type == "rooms"){#
+				<p><a href="\\#" class="linkAddLk" data-BasketItemAddArticle="${ID}" data-ItemHotelID="${requestObject.hotel}" data-objecttype="${Type}" id="ButtonDelItem"  ><i class="icon-plus-sign"></i> <span data-localization="_addAnotherArticleCmd">add service</span></a></p>
+			#}#
+	</td> 
+	<td></td>
+	<td class="txtCrt #=paddingTop#" data-label="_CartProductCount">
+	    <ul class="showInline nowrap displayInline" style="display: inline;" >
+		    #if(Type == "article"){#<li><a href="\\#" class="icon_generated basketQtyMinus icon-minus-sign" data-icon="⊝" style="text-decoration:none;" ></a></li>#}#
+		    <li><span style="width: 20px;">${ Count }</span></li>
+		    #if(Type == "article"){#<li><a href="\\#" class="icon_generated basketQtyPlus icon-plus-sign" data-icon="⊕" style="text-decoration:none; padding-left:0.625em;" ></a></li>#}#	
+	    </ul>
+	 </td> 
+	<td class="txtRight #=paddingTop#" data-label="_CartProductPrice">${ Price }</td>
+</tr>            
+ </script>
+
+<script language="javascript" type="text/javascript">
+ protelWBE.RegisterShowBasketItemLink('ShowMyBasket');
+ </script>
+ 

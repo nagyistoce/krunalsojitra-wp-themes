@@ -1,0 +1,267 @@
+﻿<h2 data-localization="_CheckOutTitle"><!-- Check Out --></h2>
+<div class="txtInfoLine" >
+  <p data-localization="_iBookerCheckOutForm" ><!-- Please fill in the form. The marked fields are mandatory. --></p>
+</div>
+
+
+<div id="checkOutWrapper" class="paintBox">
+  <p class="txtEntityTitle"><span class="icon">b</span><span data-localization="_BookerCheckOutTitle"><!-- Shipping Info --></span></p>
+
+  <div id="checkOutPersonalDiv1">
+	  <div  class="blockLine">
+  			<input id="PrivateCheck" value="1" data-private-ckeck="booker" checked="checked" type="radio"  name="Type" />
+            <label for="PrivateCheck" data-localization="_FormSelectPrivat" tabindex="1"><!-- Privat --></label>
+            <input id="CompanyCheck" value="2" data-company-ckeck="booker" type="radio" name="Type" tabindex="2" />
+            <label for="CompanyCheck" data-localization="_FormSelectCompany"><!-- Company --></label>
+  		</div>
+  <fieldset>
+	  <div  class="formLine">
+      		<label for="Company_Input" data-localization="_FormSelectCompanyName"><!-- Company --></label>
+            <input  type="text" id="Company_Input" data-company="booker" name="Company_Input" tabindex="3" />
+			</div>
+	  <div  class="formLine">
+      		<label for="Salutation_Select" data-localization="_FormSalutation"><!-- Salutation --></label>
+            <input id="Salutation_Select" value="" name="Salutation_Select" data-salutation="booker" tabindex="4" />
+            </div>
+	  <div  class="formLine">
+      	<label for="Firstname_Input_Booker" data-function="labelbookerFirstname" ><span data-localization="_FormFirstname" ><!-- First name --></span></label><span class="requiredSmb"></span>
+        <input id="Firstname_Input_Booker"  type="text" data-firstname="booker" tabindex="5" maxlength="50" name="Firstname_Input_Booker" validationMessage="_firstnameRequired"  />
+		</div>
+	<div  class="formLine">
+    	<label for="Lastname_Input_Booker"><span data-localization="_FormLastname"><!-- Last name --></span></label><span class="requiredSmb"></span>
+		<input id="Lastname_Input_Booker" type="text"  value="" data-lastname="booker" tabindex="6" maxlength="50" name="Lastname_Input_Booker" validationMessage="_lastnameRequired" />
+		</div>
+	<div  class="formLine">
+		<label for="Email_Input_Booker" data-function="labelbookerEmail"><span data-localization="_FormEmail"><!-- E-Mail --></span></label><span class="requiredSmb"></span>
+		<input id="Email_Input_Booker" type="email" value="" tabindex="7" data-email="booker" maxlength="50" name="Email_Input_Booker" validationMessage="_emailRequired" />
+	    <p id="EmailNoteLabel" data-localization="_iEmailBooker" class="formFieldNote"><!-- The confirmation will be sent to the provided e-mail address. --></p>
+		</div>
+  </fieldset>        
+   </div>
+   <div class="clear"></div>
+   
+   
+   
+  <div id="checkOutPersonalDiv2">
+  <fieldset>  
+		<div  class="formLine">
+
+    		<label for="Street-Input" data-function="labelbookerStreet"><span data-localization="_FormStreet"><!-- Street --></span></label>
+            <input id="Street-Input" type="text" value=""  data-street="booker" tabindex="8" maxlength="50" name="Street-Input" validationMessage="_streetRequired" />
+
+
+		</div>
+		<div  class="formLine">
+    		<label for="Zip_Input" data-function="labelbookerZip"><span data-localization="_FormZip"><!-- ZIP --></span></label>
+            <input id="Zip_Input" data-zip="booker" type="text" value="" tabindex="9" maxlength="10" name="Zip_Input" validationMessage="_zipRequired" />
+		</div>
+		<div  class="formLine">
+    		<label for="City_Input_Booker" data-function="labelbookerCity"><span data-localization="_FormCity"><!-- City --></span></label>
+            <input id="City_Input_Booker"  value="" type="text" data-city="booker" tabindex="10" maxlength="50" name="City_Input_Booker" validationMessage="_cityRequired" />
+		</div>
+		<div  class="formLine">
+    		<label for="countryselect_booker"><span data-localization="_FormCountry"><!-- Country --></span></label>
+            <input id="countryselect_booker"  value="" tabindex="11" name="countryselect_booker" data-country="booker"/>
+		</div>
+		<div  class="formLine">
+    		<label for="Telefon_Input_Booker" data-function="labelbookerPhone"><span data-localization="_FormPhone"><!-- Phone --></span></label>
+            <input id="Telefon_Input_Booker" type="text" value="" data-phone="booker" tabindex="12" maxlength="50" name="Telefon_Input_Booker" validationMessage="_phoneRequired" />
+		</div>
+  		<div  class="formLine">
+    		<label for="Fax_Input_Booker" data-function="labelbookerFax"><span data-localization="_FormFax"><!-- Fax --></span></label>
+            <input id="Fax_Input_Booker" type="text" value="" data-fax="booker" tabindex="13" maxlength="50" name="Fax_Input_Booker" validationMessage="_faxRequired" />
+		</div>
+  </fieldset>        
+	</div>
+  <div class="clear"></div>
+
+<p class="txtEntityTitle" data-function="showinvoiceformwrapper"><span class="icon">b</span><span><a href="#" data-function="showInvoiceForm" id="btShowInvoce" name="btShowInvoce" class="morelk" data-localization="_billingDataFormTxt"><!-- Billing Data --></a></span></p>
+	<div class="displayNone" data-function="invoiceForm">
+	<div id="checkOutPersonalDiv12">
+  <div  class="blockLine">
+  			<input id="PrivateCheckI" value="14" data-private-ckeck="invoiceI" checked="checked" type="radio"  name="TypeI" tabindex="14" />
+            <label for="PrivateCheckI" data-localization="_FormSelectPrivat"><!-- Privat --></label>
+            <input id="CompanyCheckI" value="15" data-company-ckeck="invoice" type="radio" name="TypeI" tabindex="15" />
+            <label for="CompanyCheckI" data-localization="_FormSelectCompany"><!-- Company --></label>
+	</div>	
+ <fieldset>	
+	<div  class="formLine">
+      		<label for="Company_InputI" data-localization="_FormSelectCompanyName"><!-- Company --></label>
+            <input  type="text" id="Company_InputI" data-company="invoice" name="Company_InputI" tabindex="16" />
+			</div>
+	  <div  class="formLine">
+      		<label for="Salutation_SelectI" data-localization="_FormSalutation"><!-- Salutation --></label>
+            <input id="Salutation_SelectI" value="" name="Salutation_SelectI" data-salutation="invoice" tabindex="17" />
+            </div>
+	  <div  class="formLine">
+      	<label for="Firstname_Input_BookerI" data-function="labelinvoiceFirstname" ><span data-localization="_FormFirstname"><!-- Last name --></span></label><span class="requiredSmb"></span>
+        <input id="Firstname_Input_invoiceI"  type="text" data-firstname="invoice" tabindex="18" maxlength="50" name="Firstname_Input_invoiceI" validationMessage="_firstnameRequired" />
+		</div>
+	<div  class="formLine">
+    	<label for="Lastname_Input_BookerI" data-function="labelinvoiceLastname"><span data-localization="_FormLastname"><!-- First name --></span></label><span class="requiredSmb"></span>
+		<input id="Lastname_Input_invoiceI" type="text"  value="" data-lastname="invoice" tabindex="19" maxlength="50" name="Lastname_Input_invoiceI" validationMessage="_lastnameRequired" />
+		</div>
+	<div  class="formLine">
+			<label for="Email_Input_Invoice" data-localization="_FormEmail" ><!-- Email --></label>
+           <input id="Email_Input_Invoice" type="email" value="" tabindex="20" data-email="invoice" maxlength="50" name="Email_Input_Invoice" validationMessage="_emailRequired" />
+	</div>
+        
+  </fieldset>        
+   </div>
+	<div class="clear"></div>
+
+  <div id="checkOutPersonalDiv22">
+  <fieldset>
+		<div  class="formLine">
+    		<label for="Street-InputI" data-function="labelinvoiceStreet"><span data-localization="_FormStreet"><!-- Street --></span></label>
+            <input id="Street-InputI" type="text" value=""  data-street="invoice" tabindex="21" maxlength="50" name="Street-InputI"  validationMessage="_streetRequired"/>
+		</div>
+		<div  class="formLine">
+    		<label for="Zip_InputI"  data-function="labelinvoiceZip" ><span data-localization="_FormZip"><!-- ZIP --></span></label>
+            <input id="Zip_InputI" data-zip="invoice" type="text" value="" tabindex="22" maxlength="10" name="Zip_InputI" validationMessage="_zipRequired" />
+		</div>
+		<div  class="formLine">
+    		<label for="City_Input_invoiceI" data-function="labelinvoiceCity" ><span data-localization="_FormCity"><!-- City --></span></label>
+            <input id="City_Input_invoiceI"  value="" type="text" data-city="invoice" tabindex="23" maxlength="50" name="City_Input_invoiceI" validationMessage="_cityRequired" />
+		</div>
+		<div  class="formLine">
+    		<label for="countryselect_invoiceI" data-localization="_FormCountry"><!-- Country --></label>
+            <input id="countryselect_invoiceI"  value="" tabindex="24" name="countryselect_invoiceI" data-country="invoice"/>
+		</div>
+		<div  class="formLine">
+    		<label for="Telefon_Input_invoiceI" data-function="labelinvoicePhone" ><span data-localization="_FormPhone"><!-- Phone --></span></label>
+            <input id="Telefon_Input_invoiceI" type="text" value="" data-phone="invoice" tabindex="25" maxlength="50" name="Telefon_Input_invoiceI"  validationMessage="_phoneRequired" />
+		</div>
+  		<div  class="formLine">
+    		<label for="Fax_Input_invoiceI" data-function="labelinvoiceFax"><span data-localization="_FormFax"><!-- Fax --></span></label>
+            <input id="Fax_Input_invoiceI" type="text" value="" data-fax="invoice" tabindex="26" maxlength="50" name="Fax_Input_invoiceI" validationMessage="_faxRequired" />
+		</div>
+  </fieldset>        
+	</div>
+	</div>	
+  <div class="clear"></div>
+
+  <div id="checkOutPersonalDiv3" data-function="AdditionalLoginData" >
+    <p class="txtEntityTitle" ><span class="icon">b</span><span data-localization="_CreateAccount"><!-- Create your account --></span></p>
+	<fieldset>    
+  		<div  class="formLine">
+			<label for="username_Input" data-function="labelbookerLogin"><span data-localization="_Username"><!-- Username: --></span></label>
+            <input  type="text" id="username_Input" data-login="booker" name="pass_Input" tabindex="27" disabled validationMessage="_usernameRequired"/>
+	        <p id="createAccountUsername" class="usernameClass" data-localization="_CreateAccountEmailMsg"><!-- Your email address is registered as username --></p>
+		</div>
+  		<div  class="formLine">
+        	<label for="vpass_Input" data-function="labelbookerPassword"><span data-localization="_Password"><!-- Passwort: --></span></label>
+			<input   id="vpass_Input"  type="password" data-password="booker" name="vpass_Input" tabindex="28" validationMessage="_CreateAccountPassMsg" />
+			<p id="createAccountEmailNote" class="showVerticalMargins formFieldNote" data-localization="_CreateAccountPassMsg" ><!-- 6 character minimum including numbers or symbols --></p>
+		</div>
+	</fieldset>
+  </div>
+  
+<div id="GuestOnRooms" data-function="GuestDetails">
+
+</div>
+ <div class="clear"> </div>
+ 		<div id="checkOutPayment"  class="searchLine">
+			<p class="txtEntityTitle"><span class="icon">b</span><span data-localization="_CheckOutPaymentTitle"><!-- Payment --></span></p>	 
+			<fieldset>	
+                <label for="paymentmethods"  data-localization="_CheckOutPaymentMode"><!-- Payment method: --></label> <input id="paymentmethods" name="paymentmethods" data-paymentselect="payment" tabindex="98"  />
+			</fieldset>
+		</div>
+<div class="clear"></div>
+
+<!-- Credit Cart comes here -->
+
+<div id="checkOutComment"  class="blockLine">
+  <p class="txtEntityTitle"><span class="icon">b</span><span data-localization="_FormAddNote"><!-- Notes and requests --></span></p>
+  <fieldset><textarea  rows="5" id="comment" name="comment"  data-function="notes" tabindex="99" ></textarea></fieldset>
+</div>
+
+
+
+
+<div class="clear"></div>
+
+<div id="basketPanel">
+
+<table id="BasketTable" >
+  <thead>
+  <tr>           
+ 
+   <th data-field="Description"><span data-localization="_CartProductDesc"><!-- Description --></span></th>  
+     <th data-field="Count"><span data-localization="_CartProductCount"><!-- Count --></span></th>        
+   <th data-field="Price"><span data-localization="_CartProductPrice"><!-- Price --></span></th>      
+
+  </tr>
+  </thead>
+  <tbody id="basketContentTable">
+
+  </tbody>
+</table>
+</div>
+<div class="clear"></div>
+<div id="checkOutTOS">
+	 <input id="Checkbox1" required  data-function="gtc" type="checkbox"   tabindex="100" maxlength="50" name="TOSAgree_Booker" validationMessage="_TOSRequired" /><span class="requiredSmb"></span><label for="TOSAgree_Booker"><span  data-localization="_checkOutTOSAgree">I agree with terms of use </span> (<a class="linkLk" href="#" tabindex="101" data-function="checkoutgtc" data-localization="_checkOutTOS">read more</a> )</label>
+</div>
+
+</div> <!--checkOutWrapper-->
+
+
+<div class="buttonPanel txtRight">
+	<input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';" data-localization="_CheckOutNextbt"  value="Weiter"  id="LastCheckOutButton"  type="button" tabindex="102">
+</div>
+
+<div id="paymentformdiv"></div>
+<script id="RoomGuestTemplate" type="text/x-kendo-template">
+
+#if(typeof data.basketItems != "undefined" &&  data.basketItems.length > 0){# 
+<div class="clear"></div>
+<div id="checkOutBookingTitle" class="paintBox" >
+	<p class="txtEntityTitle"><span class="icon">b</span><span  data-localization="_CheckOutGuestsH">/*Arriving guests*/</span></p>
+	 
+ #var j=0;#
+  #var Room = 1;#
+ # for(var i=0;i < data.basketItems.length;i++){# 
+ #var nbrguests = data.basketItems[i].numAdults + data.basketItems[i].numChild1 + data.basketItems[i].numChild2 +data.basketItems[i].numChild3 +data.basketItems[i].numChild4+ data.basketItems[i].addBeds +data.basketItems[i].cots;#
+ #var nbrrooms = data.basketItems[i].count;#
+
+ #for(var r=0; r < nbrrooms;r++){#
+  #j++;#
+
+<h5><span data-localization="_Room" >Room</span> #=Room#</h5>
+
+#Room++;#
+#for(var g=1; g<= nbrguests;g++){#
+ #j++;#
+ 
+ 		<div class="formLine guestList"><p><span data-localization="_Guest">Guest</span> <span>#=g#</span></p></div>
+		<div class="formLine"><fieldset><label for="Firstname#=r+'_'+g#" data-localization="_FormFirstname">Vorname</label><span class="requiredSmb"></span><input data-guestfirstname="#=data.basketItems[i].id#" data-guestroomnr="#=r#"  data-guestindex="#=g#" id="Firstname#=r+'_'+g+'_'+j#" tabindex="#=j+40#" maxlength="100" name="Firstname#=r+'_'+g#" type="text" validationMessage="_firstnameRequired" required /></fieldset></div>
+		<div class="formLine"><fieldset><label for="LastName#=r+'_'+g#" data-localization="_FormLastname">Nachname</label><span class="requiredSmb"></span><input  data-guestlastname="#=data.basketItems[i].id#" data-guestroomnr="#=r#" data-guestindex="#=g#" id="Lastname#=r+'_'+g+'_'+j#" tabindex="#=j+41#" maxlength="100" name="LastName#=r+'_'+g#" type="text"  validationMessage="_lastnameRequired" required/></fieldset></div>
+		<div class="clear"></div>		
+
+
+
+ #}#
+ #}#
+ #}#
+ #}#
+</div>
+ 
+	
+</script>
+
+<div id="GTCWindowCheckoutBox" data-function="GTCWindowCheckout">
+	
+	
+</div>
+
+
+<script language="javascript" type="text/javascript">
+
+    protelWBE.RegisterPaymentSelectContainer('checkOutPayment');
+    protelWBE.RegisterSalutationBookerSelect('Salutation_Select');
+   protelWBE.RegisterCountryInvoiceSelect('countryselect_invoiceI');
+    protelWBE.RegisterCountryBookerSelect('countryselect_booker');
+    protelWBE.RegisterSalutationInvoiceSelect('Salutation_SelectI');
+    protelWBE.RegisterConfirmCheckoutButton('LastCheckOutButton');
+</script>
+

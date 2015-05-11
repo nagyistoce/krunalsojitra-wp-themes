@@ -1,0 +1,144 @@
+/***BORDER=NONE******************/
+.wbe4Wrapper { 
+
+.k-dropdown {width: @input_size!important;}
+#TabSelectorSearchBox .k-dropdown {width: 12.4em!important;}
+#TabSelectorSearchBox, 
+#HotelTabs, 
+#Search-Results .k-tabstrip,
+#Search-Results .k-tabstrip .k-content, 
+.k-panelbar .k-tabstrip .k-content, 
+#AvailCalender td.k-state-selected, 
+#AvailCalender td.k-state-hover,
+#hLanguageSelection .k-dropdown-wrap.k-state-default .k-input,
+#basketPanel .k-widget, #articlesTabWrapper{	border:none; }
+
+
+/**Overwriting dropdown language selector *************************/
+#hLanguageSelection .k-dropdown-wrap.k-state-default .k-input {box-shadow: none; }
+
+#Search-Results .k-tabstrip {
+	padding:0;
+	margin:0; }
+
+#TabSelectorSearchBox {
+    display: block;
+    z-index: 98;
+	opacity:1;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}	
+
+#articlesTabWrapper ul li.k-state-active {
+	border: @inputborderwidth @inputborderstyle @wbe-artTabsActive-border-color; 
+	border-bottom: 0px;
+	background:		@wbe-artTabsActive-background; 
+	& a { color: @wbe-artTabsActive-fontColor; }
+}
+#articlesTabWrapper ul li {
+	background:	@wbe-artTabs-background; 
+	& a {color: @wbe-artTabs-fontColor; }
+}
+#articlesTabWrapper .k-content.k-state-active {
+	background: @wbe-artTabsAreaInside-background;
+	border: @inputborderwidth @inputborderstyle @wbe-artTabsAreaInside-border-color;
+}
+#articlesTabWrapper ul li:hover { background: @wbe-artTabsHover-background; 
+	border: @inputborderwidth @inputborderstyle @wbe-artTabsHover-border-color; 
+	border-bottom: 0px;
+	& a:hover {color: @wbe-artTabsHover-fontColor; }
+}
+
+#Search-Box-Container .TabSelector ul li.k-item {
+	color: @wbeSearchBoxTab-fontColor; 
+	background: @wbeSearchBoxTab-background;  
+	& a:hover {
+		text-decoration: underline;
+	 }	
+}
+
+#Search-Box-Container .TabSelector ul li.k-state-active, #Search-Box-Container .TabSelector .k-content{
+		background: url("../wbe4img/@{wbeSearchBox-backgroundImg}") repeat scroll 0 0 @wbeSearchBox-backgroundColor;
+}
+.k-widget.k-dropdown .k-dropdown-wrap {border: @inputborderwidth @inputborderstyle @wbeSelect-border-color; }
+
+#headerWBE4 .k-widget.k-dropdown .k-dropdown-wrap { border: @inputborderwidth @inputborderstyle @wbeSearchBoxSelect-border-color;}
+
+
+#Search-Box-Container .TabSelector ul li.k-state-active a {		color:@wbeSearchBoxActiveTab-fontColor; text-decoration: none;	}	 
+#Search-Box-Container .TabSelector ul li.k-item:not(.k-state-active) a.k-link {color: @wbeSearchBoxTab-fontColor; text-decoration: none;}
+
+#TabSelectorSearchBox .k-link:hover { background:@wbeSearchBoxHover-background; color:@wbeSearchBoxHover-fontColor!important;}
+
+#HotelTabs a.k-link{ color: @wbe-hotelTabs-fontColor; text-decoration: none; }
+#HotelTabs { border-bottom:2*@inputborderwidth @inputborderstyle @wbe-hotelTabs-borderBottom-color; margin:0;}
+#HotelTabs a.k-link:hover{ color: @wbe-hotelTabsHover-fontColor;  text-decoration: underline;  }
+#HotelTabs li.k-state-active a.k-link{  color:@wbe-hotelTabsActive-fontColor;}
+#HotelTabs li {
+	background-color: @wbe-hotelTabs-background;
+	vertical-align:bottom;
+	white-space:nowrap;
+}
+#HotelTabs  li.k-state-active, #HotelTabs li.k-state-active:hover {
+	padding:@smallspace_unit 0 0 0; 
+	border-color:@wbe-hotelTabsActive-border-color;
+	background-color:@wbe-hotelTabsActive-background;
+	color:@wbe-hotelTabsActive-fontColor;	}
+#HotelTabs  li:hover { background: @wbe-hotelTabsHover-background; border-color:@wbe-hotelTabsHover-border-color; border-bottom: 0px; color: @wbe-hotelTabsHover-fontColor; }
+#Search-Results .k-tabstrip .k-content, .k-panelbar .k-tabstrip .k-content {padding:0; margin:0; }
+#Search-Results .k-tabstrip .k-tabstrip-items {padding:0; background: @wbeTabsArea-background;}
+#Search-Results  .displayResultsBox {background: @wbeResultBoxesContainer-background;}
+
+/**Calendar**/
+#AvailCalender {border: @inputborderwidth @inputborderstyle @bigCalendar-border; background: @bigCalendar-background; 
+&.k-widget.k-calendar {border-radius:@round;}
+ }
+#AvailCalender td {min-height:4em; min-width:3.3em; width:100%; background-color:@wbeAvailCalendarTd-background!important;}
+#AvailCalender td.k-state-hover {background: @wbeAvailCalendarHover-background!important; }
+#AvailCalender td.k-state-selected {background:@wbeAvailCalendarSelected-background!important; }
+#AvailCalender .k-header, #AvailCalender .k-link .k-nav-fast {white-space:nowrap; }
+#AvailCalender.k-calendar .k-content .k-link {line-height:normal; min-height:4em; }
+#AvailCalender .k-header a.k-link {color:@bigCalendarHead-fontColor; background: @bigCalendarHead-background;
+	&:hover { color:@bigCalendarHeadHover-fontColor; background: @bigCalendarHeadHover-background;}
+}
+
+
+.DayCellAvailCalender {height:2em; border:none; }
+#AvailCalender .k-footer { margin:0; padding:0; height:3*@unit_size; }
+.k-calendar .k-link, .k-link:hover, .k-calendar .k-link:hover {text-decoration:none;}
+.k-link.DayCellAvailCalender>div:first-child {color:@wbeAvailCalendarDaysTop-fontColor; }
+.k-other-month .k-link.DayCellAvailCalender {color:@wbeAvailCalendarNextMonth-fontColor; font-size:0.9em; cursor:default;}
+div.emptydays  { color:@wbeAvailCalendarEmptyDaysTop-fontColor; padding: @unit_size; height: 3.571em; width: 3.571em;}
+
+#AvailCalenderLegend, #AvailCalender th  { background: @bigCalendar-elements-background;  }
+#HotelTabs.k-tabstrip-items .k-link {padding:0.5em;}
+
+/**HotelInfo***************/
+#Search-Results .k-content:not(#AvailCalender) {background:none;}
+
+/***GTC*****************************/
+.k-window.k-widget {background-color:@wbeResultBoxes-background; color: @wbeResultBoxes-fontColor;}
+
+/***Error handling*****************************/
+span.k-tooltip {
+	white-space:normal;
+   	position: relative;
+    display: block;
+    border-width: @unit_size;
+    padding: 0.5em;
+	text-align:left;
+	margin:@smallspace_unit 0; 
+	width:11.4em; }
+#newProfileTOS span.k-tooltip, #checkOutTOS span.k-tooltip {   position: absolute; margin:2*@space_unit 0; width:auto; }
+span.k-icon.k-warning {background:none; margin:0; width:0;}
+
+#Search-Box-Container .k-picker-wrap .k-select,#Search-Box-Container .k-numeric-wrap .k-select,#Search-Box-Container .k-dropdown-wrap .k-select {min-height:auto!important;}
+
+.k-widget .k-picker-wrap.k-state-default,.k-widget .k-dropdown-wrap,.k-widget .k-dropdown-wrap .k-input{padding: 2px 0;}
+}
+
+/***DesignSelector*********************************/
+.slide-out-div-designsettings.wbe4Wrapper {
+		background: #2a201a; 
+		border: 1px solid #2a201a; 
+	h4 {margin-top:0;}
+}

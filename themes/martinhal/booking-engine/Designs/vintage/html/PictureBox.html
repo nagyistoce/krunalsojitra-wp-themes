@@ -1,0 +1,31 @@
+﻿<div id="carouselkatview" class="paintBox">
+        <div class="outer">
+			<ul id="Slides" class="slidesclass">
+	        </ul>
+        <div style="clear: both;"></div>
+</div>
+<!---THIS is a sample of handeling different responses from bxGallery in one single @media---------------------------------------->
+<!---bxGallery send different image sizes for window-size<=530,  530<window-size<640, 640<window-size----------------------------->
+<!---@media -mobile handles up to 760px------------------------------------------------------------------------------------------->
+<script>
+var $this = $(this);
+if (($this.width() >529) && ($this.width() <640) ) {
+	var style = $('<style>#thumbPanel { height: 280px!important;}</style>');
+	$('html > head').append(style);
+}
+
+if (($this.width() >639) && ($this.width() <761) ) {
+	var style = $('<style>#thumbPanel { height: 320px!important; }</style>');
+	$('html > head').append(style);
+}
+</script>
+
+<script id="CarouselImageItem" type="text/x-kendo-template">
+
+	# for(var i=0;i < data.fileEntries.length;i++){#
+	  <li><img src="#= data.fileEntries[i].url #"  alt="#= data.fileEntries[i].subtitle#"  title="#= data.fileEntries[i].subtitle#" /></li>
+	 #}#
+</script>
+</div>
+
+            

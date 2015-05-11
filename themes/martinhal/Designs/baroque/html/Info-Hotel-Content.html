@@ -1,0 +1,87 @@
+﻿<div id="DetailViewHotelContainer"> 
+		<div id="hotelDescription"><p class="txtJustify txt11em" data-function="hoteldescription"><!-- hotel description text --></p></div>
+        
+		<!----Hotel Images-------------------->
+            <div id="ImageModulHotel">
+             
+            </div> 
+            <div class="clear"> </div>
+           
+            <div id="hotelFacilities">
+				<h4 data-localization="_HotelFacilities"><!-- Hotel Facilities --></h4>
+ 				 <div id="hotelFacilitiesIcons" data-function="FacilitiesIcons">
+                   
+                </div>                
+
+				 <div data-function="Facilities">
+                
+                </div>
+                <div class="clear"></div>
+                <p><span class="txtB">*</span> <span data-localization="_HotelServicesTxt"> </span></p>
+            </div>
+
+            <div class="clear"></div>
+            <div id="hotelPoliciesBox" data-function="GlobalInformation" >
+           
+            </div>
+          
+			 <div id="hotelStilBox" data-function="containerAmbience">
+                <h4 data-localization="_Style"><!-- Stil und Atmosphäre des Hotels --></h4>
+                <p  data-function="ambience"></p>
+			</div>			
+			<div id="hotelSurroundingsBox" data-function="containerSpecial">
+                <h4 data-localization="_SpecialFeatures"><!-- Besonderheiten --></h4>
+                <p data-function="Special"></p>
+             </div>  
+<div class="buttonPanel">
+   	<div class="buttonPanelL"><input  class="wbeButton backOfferTab" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"   data-localization="_ShowOfferResult" value="Zeige verfügbare Raten" id="BtSowOfferTab" data-hotelid="" data-function="ShowOffersTabBt"  type="button"/></div>
+</div>             
+</div>    
+
+ <script id="HotelFeatureItemInfoTemplate" type="text/x-kendo-template"> 
+ #var groupid=0;#
+ #var j=0;#
+ #for(i=0; i < data[_CurrentInstance.HotelFeatureArrayField].length;i++){#
+ 
+ #if(i==0 || (groupid > 0 && groupid != data[_CurrentInstance.HotelFeatureArrayField][i][_CurrentInstance.HotelFeatureGroupIdField])){#
+	  #if(i != 0){#
+		</ul></div>
+	 #}#
+	 #groupid = data[_CurrentInstance.HotelFeatureArrayField][i][_CurrentInstance.HotelFeatureGroupIdField];#
+	 <div  class="hFacilitiesBox"><ul>
+	 <li class="hotelFeatureGroupLi"><span class="txtB hotelFeatureGroup">#=data[_CurrentInstance.HotelFeatureArrayField][i][_CurrentInstance.HotelFeatureGroupNameField]#</span></li>
+ #}#
+
+
+ <li>#=data[_CurrentInstance.HotelFeatureArrayField][i][_CurrentInstance.HotelFeatureFieldName]#
+  #if(data[_CurrentInstance.HotelFeatureArrayField][i][_CurrentInstance.HotelFeatureCostsField]){#*#}#
+ </li>
+
+
+ #}#
+ </script>
+
+
+  <script id="HotelFeatureItemIconTemplate" type="text/x-kendo-template"> 
+
+  <ul class="showInline">
+  #for(i=0; i < data[_CurrentInstance.HotelFeatureArrayField].length;i++){#
+   <li><img src="#=data[_CurrentInstance.HotelFeatureArrayField][i][_CurrentInstance.HotelFeatureFileField]#" alt="#=data[_CurrentInstance.HotelFeatureArrayField][i][_CurrentInstance.HotelFeatureFieldName]#" title="#=data[_CurrentInstance.HotelFeatureArrayField][i][_CurrentInstance.HotelFeatureFieldName]#" /></li>
+  #}#
+  </ul>
+
+ </script>
+
+  <script id="GlobalInformationItemsTemplate" type="text/x-kendo-template"> 
+<h4 data-localization="_HotelPolicies">/*Hotel Policies*/</h4> 
+  <div class="tableBox">
+  #for(i=0; i < data[_CurrentInstance.HotelInfosArrayField].length;i++){#
+   #if(data[_CurrentInstance.HotelInfosArrayField][i][_CurrentInstance.HotelInfosTypeField] == "Style" || data[_CurrentInstance.HotelInfosArrayField][i][_CurrentInstance.HotelInfosTypeField] == "SpecialFeatures")
+    continue;#
+	<div class="rowBox" >
+	   <div class="cellBox linkTxt"><span data-localization="_#=data[_CurrentInstance.HotelInfosArrayField][i][_CurrentInstance.HotelInfosTypeField]#"></span></div>
+	   <div class="cellBox" ><span data-function="checkin">#=data[_CurrentInstance.HotelInfosArrayField][i][_CurrentInstance.HotelInfosLongDescField]#</span></div>
+	</div>	   
+  #}#
+  </div>	
+</script>

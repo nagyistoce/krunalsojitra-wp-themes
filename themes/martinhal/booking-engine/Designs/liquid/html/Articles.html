@@ -1,0 +1,117 @@
+﻿<div id="articleToCart" class="msgBox" data-function="addArticleMessagebox">
+    <h3 data-localization="_iArticleAdded" class="pNoMargin">The item was added to your cart.</h3>
+    <p data-function="addArticleMessagebox" data-localization="_iArticleTeaser">To enhance your stay we recommend the following additional articles</p>
+</div>
+<h2 data-localization="_AdditionalArticles">Additional services/packages</h2>
+	<div class="buttonPanel">
+        <div class="buttonPanelR"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  value="Zu den Warenkorb" id="ShowBasketBtn1Top"  data-localization="_ShowBasketBT" type="button"></div>
+    	<div class="buttonPanelL"><input  class="wbeButton"  onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  value="Zurück zu den Suchergebnissen"  data-localization="_BackToSearchResults" id="ButtonBackTo3Top"  type="button"></div>
+    </div>
+	<div class="clear"></div>  
+
+    <div id="articles">
+    
+    </div>
+
+	<div class="clear"></div>
+	<div class="buttonPanel">
+        <div class="buttonPanelR"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  value="Zu den Warenkorb" id="ShowBasketBtn1"  data-localization="_ShowBasketBT" type="button"></div>
+    	<div class="buttonPanelL"><input  class="wbeButton"  onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  value="Zurück zu den Suchergebnissen"  data-localization="_BackToSearchResults" id="ButtonBackTo3"  type="button"></div>
+    </div>
+
+<script id="ArticleTabTemplate" type="text/x-kendo-template">
+<div data-layoutfunction="CreateArticleTabs" id="articlesTabWrapper">
+<ul id="ArticleTabs" class="k-reset-margins"> 
+
+# for(i=0;i < data.length;i++){
+var class1="";
+if(i == 0){ 
+class1="k-state-active";
+}#
+<li id="articleTab#=data[i].id#" class="#=class1#" >#=data[i].name#</li>
+#}#
+</ul>
+
+#for(var i=0;i < data.length;i++){#
+<div data-function="agroup#=data[i].id#" id="agroup#=data[i].id#"></div>
+#}#
+</div>
+</script>
+
+
+<script id="ArticleItemTemplate" type="text/x-kendo-template"> 
+# for(var i=0;i < data.length;i++){#
+ #var image = "";#
+ #var style = "";#
+ #var intervall = "";#
+
+  #if(typeof data[i][_CurrentInstance.ArticleImageArrayField] != "undefined" && data[i][_CurrentInstance.ArticleImageArrayField].length > 0){#
+    #image = data[i][_CurrentInstance.ArticleImageArrayField][0][_CurrentInstance.ArticleImagefileField];
+	} else{#
+	  #style="display:none;";#
+  #}#
+  
+  #if(data[i][_CurrentInstance.ArticleBookingIntervalField] == "Daily"){
+  intervall = WbeLocalization._Daily+" ";
+  } #
+	#var articleDescription="";#
+	#if(typeof data[i][_CurrentInstance.ArticleDescriptionField] != "undefined"){#
+ 		#articleDescription=data[i][_CurrentInstance.ArticleDescriptionField];#
+ 	#}#
+  
+   
+ <div class="cart-item tableArticle" data-articleitem="#=data[i][_CurrentInstance.ArticleIdField]#">
+ 
+			
+				<div class="tableBox">
+					<div class="rowBox">
+						<div class="cellBox imgCell">
+							<p><img border="0" src="#=image#" class="imgArticle" style="#=style#" data-articleimage="#=data[i][_CurrentInstance.ArticleIdField]#" /><img class="emptyImg" src="#_CurrentInstance.CurrentImagePath+'clear.gif'#" style="width:1px;"></p></div>
+						<div class="cellBox articleCell21">
+								<p class="borderBottomLight txt11em txtB">#=data[i][_CurrentInstance.ArticleNameField]#</p>
+								<p>#=articleDescription#</p>
+										<div class="searchLine" >
+												<p><span data-localization="_ArticleQty">Quantity</span></p>
+												<fieldset><input class="selectClass" data-article-count="#=data[i][_CurrentInstance.ArticleIdField]#" name="quantity" /></fieldset>
+										</div>
+										<div class="searchLine">
+													<p class="txt11em" data-localization="_ArticlePrice">Price</p>
+													<div data-article-price="#=data[i][_CurrentInstance.ArticleIdField]#"><p class="articlePrice">#=kendo.toString(kendo.parseFloat(data[i][_CurrentInstance.ArticleAmountField], "en-GB"), "n2") + " "+	data[i][_CurrentInstance.ArticleCurrencyField]# </p></div>
+										</div>
+
+
+								</div>
+					
+						<div class="cellBox">
+								<p>
+									<!-- Show Icon add to Cart -->
+									<!--<a id="ButtonBackTo4" class="articleToCartBtn icon_generated" data-icon="c" href="javascript: void(0)"  data-btarticle="#=data[i][_CurrentInstance.ArticleIdField]#" ></a>-->
+									<!-- Show text link Add to Cart  -->
+									<a id="ButtonBackTo4" class="articleToCartBtn" href="javascript: void(0)"  data-btarticle="#=data[i][_CurrentInstance.ArticleIdField]#" data-localization="_AddArticleToCart" >/*Add to cart*/</a>
+								</p>
+						</div>
+					</div>
+					<div class="rowBox">
+					<div class="cellBox"></div>
+						<div class="cellBox"><div class="displayNone" data-articleItemMessage="#=data[i][_CurrentInstance.ArticleIdField]#"><p class="txtInfoLine">&quot;#=data[i][_CurrentInstance.ArticleNameField]#&quot; <span data-localization="_ArticleAddedToCart">added to cart</span></p></div></div>					
+					</div>
+					<div class="cellBox"></div>
+				</div>
+
+
+</div>
+<div class="clear"></div>
+
+    #}#
+
+ </script>
+
+<script type="text/javascript" language="javascript">
+
+    protelWBE.RegisterShowBasketButton('ShowBasketBtn1');
+    protelWBE.RegisterArticleContainer('articles');
+    protelWBE.RegisterBackToResultButton('ButtonBackTo3');
+    protelWBE.RegisterBackToResultButton('ButtonBackTo4');
+    protelWBE.RegisterShowBasketButton('ShowBasketBtn1Top');
+    protelWBE.RegisterBackToResultButton('ButtonBackTo3Top');	
+</script>

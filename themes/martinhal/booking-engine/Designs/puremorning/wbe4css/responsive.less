@@ -1,0 +1,650 @@
+@media screen and (min-width:320px), screen and (max-device-width: 760px){
+	body {
+		font-size: 100%; /*16px default browser font-size*/
+	}
+	h1, h2, h3 { 	font-size:1.5em }
+	h4, h5 {	font-size:1.3em}
+	h6 {	font-size:1.1em}
+	#extraHeader { display:none; }	
+/*	#page { margin: 0 auto; padding:10px 3px;}*/
+	#fb-root > div { width:100px; overflow:hidden; }
+	#phoneBigNo {font-weight:bold;}
+	.divLine {margin:10px 0;}
+
+	/****Smaller text font size****************/
+	.showRoomCategoryArea, #AvailCalenderLegend ul li, #articles, #basketPanel, #phoneBigNo, #preCheckout ul { font-size:0.875em;}
+	.avail, .notavail, .minstay { font-size:10px;}
+
+	/***HEADER**********************/
+	#headerLogo {padding:10px 0;}
+	#headerLogo img { 
+		width: auto; /* ie8 */ 
+		max-width: 275px;	}
+	#headerWBE4 { padding:0; }
+	#HeaderMenuContainer {float:none; margin: 0; }
+	#myaccount>span.k-link {padding:0;}
+	#hLanguageSelectionTxt, #hPersonalBookPhoneTxt, #hPersonalWelcome, #HeaderMenuContainer {display:none;}
+	#headerBtnPhone, .headerBtnWrap, #headerBtnLanguage, #headerBtnAccount {width:44px; height:44px;}
+	#hLanguageSelection, #hPersonalBookPhone {margin-right:10px; float:left;}
+	#personaDiv {float:left;}	
+	#headerBtnPhone {background-position:0 -1090px;}
+	#headerBtnLanguage {background-position:0 -990px;}
+	#headerBtnAccount {background-position:0 -1140px;}
+	#div_basket { float:right;}
+	#SocialLogin {width: 100%; min-width:16em;}
+
+	/**SEARCH***********/
+	#TabSelectorSearchBox {
+		display: block;
+		z-index: 98;
+		margin:0;	}
+	.searchLine, .searchLineButton {
+		display:inline-block;
+		min-height:28px;
+		margin:4px 10px; }
+	.searchLineButton { 	text-align:right; 	}
+	#Search-Box-Container {float:none; }
+	#HeaderMenuContainer { white-space:nowrap; float:right;}	
+	.tableBox{	float:left; margin:0; }
+	.rowBox{}
+	.cellBox  {margin:2em auto;  }
+	#hotelPoliciesBox .cellBox  {margin:4px auto; }
+	#RoomtypeDescription .cellBox, .cellBox {float:left;min-width:100%; }
+	#RoomtypeDescription .cellBox, #tableCOBookingData .cellBox, .cellBoxRes{ margin:6px auto;  }
+	#homePage .tableBox, #reurningCustomer {display:none;}
+
+	/***SearchPage**********************/
+	.showRatesResults3Image { float:none; text-align:center;padding-top: 20px; }
+	.showRatesResults3Txt, .showRatesResults8Txt, .showResultsN { float:none; margin:0 0.25em; text-align:center}
+	.showRatesResults3Txt { max-width:96%; }
+	.showRatesResults3 { clear:both;  }
+	.showRatesResults3Txt h4 {margin:10px 0 0 0;}
+	.showRatesResults8Txt h5 {margin:0;}
+	#HotelTabs li {	display:block; border-radius:0; margin:1px 0;}
+	#HotelTabs  li.k-state-active {border-radius:0;  margin:1px 0; padding:0px; }
+	#HotelTabs li:first-child, #HotelTabs  li:first-child.k-state-active {
+		border-top-left-radius: @radius;
+		border-top-right-radius: @radius; 	}
+	#HotelTabs a.k-link{ font-size:1.1em; }
+	
+	/****NO Avail Result Page***************/
+	#divNoAvailabilitiesCallBack, #divNoAvailabilitiesWriteBack {float:none; width:100%; clear:left;}
+	#noAvailabilityForm .searchLine {float:none; display:block}
+	.AlternateDatesBox ul {text-align:center;}
+
+	/****DetailView*******************/
+	#RoomTypeSelect {	width:100%; }
+	#RoomConfigurator { 	min-width:99%; }
+	#AvailCalender, #AvailCalenderLegend  {  margin-top:0; /*width:99%; */ width:100%; }
+	#AvailCalender {margin-top:40px;}
+	.checkOutBtnPanel { float:none; margin-top:10px;}
+	.showRoomsLeft {float:none; padding-left:5.625em; clear:left;}
+
+	/****Room Config*******************/
+	.roomConfigMainPanel .floatLeftBox {margin-bottom:10px; float:none; }
+	#ratesLegend {display:block;}
+
+	/***Hotel Info *********************************/
+	.displayResultsBox .tableBox {width:100%;}
+	.hFacilitiesBox {float:none; margin:0 20px;}
+	.hotelFeatureGroupLi {margin-top:20px;}
+	#hotelFacilitiesIcons {text-align:center;}
+	
+	/***Calendar************/
+	#AvailCalenderLegend ul li{ display:block;}
+
+	/****Articles*******************/
+	.tableArticle img {	display:none;}
+	.tableArticle .tableBox {width:100%}
+	.articleCellBoxHead {font-weight:bold;
+						padding-right:20px;
+						content:" "attr(data-label)" ";}
+	.articleCell22, .articleCell23 {float:left;}		
+	.articleCell2 {width:100%;}
+	.articleCellBox .icon_generated {position: relative; top:2*@space_unit;}
+
+	/****BASKET********/
+	#enterCouponTxt, #enterVoucherTxt { margin:6px 6px 0 6px;}
+	.shoppingTypeRoom:first-child{padding-top:20px;} 
+	/***PRE-CHECKOUT*************************/
+	.checkoutBox {float:none; width:100%; border-left:none;}
+	.checkoutBox h2 {border-bottom:@fontColor 1px solid; }
+	#preCheckout fieldset label {display:block;}
+	#preCheckout #preCheckoutAgreeTOS fieldset label {display:inline;}
+	#preCheckout li {display:block; margin:20px 0; }
+	
+	/***CHECKOUT*********************/
+	#couponBarBox, #voucherBarBox { float:left; }
+	#couponBox, #voucherBox {float:left;}
+	.buttonPanelL, .buttonPanelR {margin: 20px 0; float:none;}
+	#newProfileTOS span.k-tooltip, #checkOutTOS span.k-tooltip {   margin-top:20px; }
+	
+	/**VOUCHERS******/
+	#VoucherImage {width:100%; clear:both; margin: 0 auto;}
+	#voucherImgBox {margin:0 auto;}
+	#voucherBoxContent {padding:20px; min-height:112px;}
+	#voucherHotel h5 { font-weight:bold; font-size:1em;}
+
+	/**MAP**************************/
+	.mapDiv { min-width: 316px; width:100%; max-width:480px; height: 220px; }
+	
+	/**Special Offer Box****/
+	#Special-Offer-Box { margin:10px 0; padding:10px; }
+
+	/***IMG GALLERY**********************************/
+	.bxcaption { width:280px;}
+	.slidesclass {	width:320px; margin:0 auto; float:none;}
+	#thumbPanel {
+		float:none;
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;
+		left:-10px;	}
+	#thumbDiv {
+		float:none;
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;	}
+	#thumbPagination {line-height:2.6em;}
+	.pag-lk-prev,  .pag-lk-next, .pag-lk {padding:0.45em 1.5em;}
+	
+	/***Buttons**********************/
+	.wbeButton, .wbeButton_hover, .applyButton, .applyButton_hover, .bookButton, .bookButton_hover { width:100%;}
+	
+	/***FOOTER***/
+	#footerHMenu ul li {	line-height:2em;	}
+	
+	/***FORM*****************/
+	fieldset input, fieldset textarea {	padding: 10px; }
+	#tableCOBookingData fieldset label {	display:block}
+	td input{ margin:10px 0; }
+	fieldset label {font-size:0.875em;}
+	fieldset textarea { width:95%; }
+	fieldset input { width:13.438em; }
+	#tableCOBookingData fieldset label, #checkOutPayment fieldset label { width:7.429em;}
+	
+	/***MyReservation*********************/
+	.cellBoxRes, .rowBoxRes,.tableBoxRes {display:block;}
+	.rowBoxResHead, .articleCellHead { top:-1000px; position:absolute;}
+	.rowBoxRes {border:@wbeColored-border-color 1px solid; margin:0 auto;  padding:10px;}
+	.rowBoxRes:hover {background-color: @wbeBasketTableHover-background; color: @wbeBasketTableHover-fontColor;}
+	.showHeaderBefore:before, #BasketTable td:not(:first-child):before{ /* prints the value of data-label attribute before the column data */
+		font-weight:bold;
+		padding-right:20px;
+		content:" "attr(data-label)" ";	/* call the attribute value of data-label and adds a string // */
+	}
+	#divMyReservationCancelInside, #divMyReservationCallBack, #divMyReservationSendMsg { padding:10px;}
+	#divMyReservationCallBack, #divMyReservationSendMsg { margin-top:10px;}
+
+	/*** ShoppingBasket responsive 
+	!!!  IE (even 9 and 10 preview) don't like setting table elements as display: block;  */
+	#BasketTable table, #BasketTable thead, #BasketTable tbody, #BasketTable th, #BasketTable td, #BasketTable tr {  display: block;  	}
+	
+	/* Hide table headers */
+	#BasketTable thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;	}
+	#BasketTable tr { border: 1px solid @wbeBasketTable-background; }
+	#BasketTable td { 
+		border: none;
+		position: relative;
+		vertical-align:top;}
+	#BasketTable #basketContentTable .txtCrt, #BasketTable #basketContentTable .txtRight  {text-align:left;}
+
+	/***responsiveLogin****************/
+	.socialLoginBox { margin:0 4px 4px; padding: 4px 12px; border:1px solid @wbeWhite-border-color; }
+	.socialLoginBox fieldset input {width:100%;}
+	#responsiveLogin #SocialLogin {width:auto;}
+	#responsiveLogin .applyButton {padding:4px 10px; margin-top:10px;}
+	#responsiveLogin h4, #LanguageBox h4{border-bottom:	1px solid @wbe-light-border-color;/*margin-top:0;*/}
+
+	/***LanguageSelectionresponsive******************************/
+	#LanguageBox img {margin-right:10px;}
+
+	/*temporary here*/
+	#Search-Results  {display:none;}
+
+}
+
+@media screen and (min-width:490px){
+	body {font-size: @font-size; /*13px*/}
+	fieldset label {font-size:1em;}
+	.tableBox, #reurningCustomer { display:block;}	
+
+	/***Back to normal font size***************/	
+	.showRoomCategoryArea, #AvailCalenderLegend ul li, #articles, #basketPanel, #preCheckout ul {font-size:1em;}
+	.avail, .notavail, .minstay { font-size:0.846em;}
+
+	/***HEADER**********************/	
+	#topPersonalLine {float:right;margin-right:3px;}
+	#div_basket p.translate{ display:inline; }
+	#phoneBigNo {font-size:1em;}
+
+	/**SEARCH***********************/
+	.startBox { float:none; }
+	.startBoxContent { padding:20px; margin:20px; }
+	.startBoxContent h4 {margin-top:0;}	 
+	#homePage .tableBox, #reurningCustomer { display:block;	margin:0 10%; float:none; }
+
+	/***SearchPage**********************/
+	.showRatesResults3 {width:100%;}	
+	.showRatesResults3Image { float:left; padding-bottom: 20px; padding-left:20px; }
+	.showRatesResults3Txt, .showRatesResults8Txt { float:left; margin:10px 20px 0 20px; text-align:left;}
+	.showRatesResults3Txt { max-width:57%; }
+	#HotelTabs a.k-link{ font-size:1.2em; }	
+
+	/***DETAIL VIEW********************************/
+	#addToBasketPanel input { margin-left:10px;}
+	#hotelRatesBottomListing.tableBox {width:100%;}
+
+	/***Calendar************************************/
+	#AvailCalenderLegend  {  width:auto;  }
+	#AvailCalenderLegend ul li{ display:inline;}
+	
+	/**VOUCHERS************************************/
+	#VoucherImage {width:90%;}
+	#voucherHotel h5 {font-size:1.2em; font-weight:normal;}
+	
+	/**MAP**************************************/
+	.mapDiv { min-width: 480px; width:100%; max-width:640px; height: 382px; }
+	
+	/**Special Offer Box**********************/
+	#Special-Offer-Box { padding:10px; }
+
+	/***IMG GALLERY**********************************/
+	.bxcaption { width:400px;}		
+	#thumbPagination {line-height:1.6em;}	
+	.pag-lk-prev,  .pag-lk-next, .pag-lk {padding:0 1.5em; }	
+	
+	/**FORM*************************************/
+	fieldset input, fieldset textarea {	padding: 6px; }
+	td fieldset input{ margin:6px 0; }
+	fieldset input { width:11em; }
+	fieldset textarea { width:97%; }
+	#tableCOBookingData fieldset label, #checkOutPayment fieldset label { width:6.5em;}
+	#newProfileTOS span.k-tooltip, #checkOutTOS span.k-tooltip {   margin-top:0; }
+	
+	/***Buttons**********************/
+	.wbeButton, .wbeButton_hover, .applyButton, .applyButton_hover, .bookButton, .bookButton_hover { width:auto;}
+	.buttonPanelL {float:left; }
+	.buttonPanelR {float:right; margin-right:2px;}
+	
+	/**preCheckOut*/
+	#preCheckout .buttonPanel {margin:0;}
+	
+	/*temporary here*/
+	#Search-Results  {display:none;}
+}
+
+
+@media screen and (min-width:640px){
+
+	/***HEADER*************************/	
+	#headerLogo { float:left; }
+	#headerLogo img { width: 100%; max-width: 225px; }
+	#headerPower {	box-shadow: rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color, @boxshadow_alfa/2) @unit_size @unit_size 2*@unit_size;	}	
+	#headerPersonal {margin-right:0; float:right; text-align:right; }
+	#topPersonalLine {margin-right:3px;}
+	#hLanguageSelection, #personaDiv {display:inline;}
+	#hLanguageSelectionTxt, #hPersonalBookPhoneTxt, #hPersonalWelcome, #HeaderMenuContainer {display:block;}
+	#hPersonalBookPhoneTxt {margin-top:4px;}
+	#headerBtnPhone, .headerBtnWrap, #headerBtnLanguage, #headerBtnAccount {display:none;}
+	#hPersonalWelcome {max-width:220px;}
+	#phoneBigNo {margin-top:3px;}
+	#hLanguageSelection, #hPersonalBookPhone {float:left; margin-right:10px; }
+	#personaDiv {float:left; }
+	#Search-Box-Container { float:left; margin:0; }		
+	#hLanguageSelection  {text-align:right;}
+	#SocialLogin {width: 100%; min-width:100%;}
+
+	/**SEARCH***********/
+	#TabSelectorSearchBox {
+		position: absolute;
+		width: 340px;
+		margin:-20px 0 0 20px;	}
+	.searchLine, .searchLineButton {
+		display:block;
+		clear:both;
+		min-height:28px;	
+		min-width:300px;
+		margin:10px 0;	}
+	.searchRight {	float:none;}
+	.searchLineButton { text-align:right; 	}
+	#headerPower {
+		height:240px;
+		width:100%;
+		}
+	.headerPowerImg {background-image:url("../wbe4img/hotelPowerImage-@{themeName}.jpg");}
+
+	/*.headerPower01 {background-image:url("../wbe4img/hotelPowerImage-@{themeName}-01.jpg");}
+	.headerPower02 {background-image:url("../wbe4img/hotelPowerImage-@{themeName}-02.jpg");}
+	.headerPower03 {background-image:url("../wbe4img/hotelPowerImage-@{themeName}-03.jpg");}
+	.headerPower04 {background-image:url("../wbe4img/hotelPowerImage-@{themeName}-04.jpg");}*/
+
+	#reurningCustomer { float:right; margin:20px 0; }
+
+	/**SEARCH PAGE***********/	
+	#HotelTabs li {	display:inline-table; 	
+		border-top-left-radius: @radius;
+		border-top-right-radius: @radius; 
+		margin:0;}
+	#HotelTabs  li.k-state-active {	
+		border-top-left-radius: @radius;
+		border-top-right-radius: @radius; }
+	#HotelTabs a.k-link{ font-size:1.1em; }	
+	
+	/****NO Avail Result Page***************/
+	#divNoAvailabilitiesCallBack, #divNoAvailabilitiesWriteBack {float:left; width:49%; clear:none;}
+	#divNoAvailabilitiesCallBack{margin-right:10px;}
+	
+	/***Detail View****************************/
+	.checkOutBtnPanel { float:right;}
+	.showRoomsLeft {float:right; margin-left:0.625em; padding:0; clear:none;}
+	
+	/***Room Config**************************/
+	.roomConfigMainPanel .floatLeftBox {margin-left:20px;  margin-bottom:10px; width:45%; float:left;}
+	.roomConfigMainPanel .floatLeftBox:nth-child(2n+1) {clear:left; }
+	#NbrAdultDiv.floatLeftBox {margin-left:0;}
+	
+	/***Hotel Info************************/
+	.hFacilitiesBox {float:left; margin:20px; min-width:43%; }
+	.hFacilitiesBox:nth-child(2n+1) {clear:left; }
+	.hotelFeatureGroupLi {margin-top:0;}
+	#hotelFacilitiesIcons {text-align:left;}
+		
+	/**MAP**************************/
+	.mapDiv { min-width: 640px; width:100%; max-width:760px; height: 382px; }
+	
+	/**Special Offer Box**********************/
+	#Special-Offer-Box { float:right; max-width:175px; margin:20px 20px 0 0; padding:20px;	}
+	.SpecialOfferBoxBackground { 
+		border:1px solid @wbeWhite-border-color;
+		background-color: @wbeLighterGrey-background;
+		opacity:0.75;
+		filter:alpha(opacity=75); /* For IE8 and earlier */
+		}
+
+	/**Vouchers****************************/
+	#VoucherImage {width:100%;}
+	#voucherImgBox {width:460px; margin:0 auto;}
+	#voucherBoxContent {padding:20px; min-height:112px;}
+	
+	/***IMG GALLERY**********************************/
+	.slidesclass {	width:400px; margin:0 auto; float:none;}
+
+	/***PRE-CHECKOUT*************************/
+	.checkoutBox {float:left; border-left:1px solid @wbe-light-border-color; width:31%; padding:0 1%; min-height:190px;}
+	.checkoutBox:first-child {border-left: none; padding:0 1% 0 0;}
+	.checkoutBox h2 {border-bottom:none;}
+	#preCheckout li {display: inline-block; margin:20px 20px 20px 0; }
+
+	/***FORM***********************************/
+	#tableCOBookingData fieldset label {	display:inline;}
+	fieldset textarea { width:98.5%; }
+	
+	/***ShoppingtBasket Force to table*******************/
+	#BasketTable table, #BasketTable thead, #BasketTable tbody { 
+		display: table;
+		width:100%;	}
+	#BasketTable tr { display:table-row; }
+	#BasketTable tr:nth-of-type(2n+1) {background:none;}
+	#BasketTable td, #BasketTable th { display:table-cell; }
+	#BasketTable thead tr {  position: relative; top:0; left:0;}
+	#BasketTable td { border: 1px solid @wbe-lighterGrey-border-color; vertical-align:middle;}
+	
+	#BasketTable td:nth-child(3):before, #BasketTable td:nth-child(4):before   { 
+		font-weight:normal;
+		padding-right:0;
+		content:"";
+	}
+	#BasketTable td:nth-child(1), #BasketTable th:nth-child(1) {width:70%;}
+
+	#BasketTable td:not(:first-child), #BasketTable th:not(:first-child) {width:10%;}
+	#BasketTable td.shoppingTypeRoom{padding-top:20px;}	
+	
+	#BasketTable .k-grid-header .txtCrt.k-header, 	#BasketTable #basketContentTable .txtCrt {text-align:center;}
+	#BasketTable .k-grid-header .txtRight.k-header, #BasketTable #basketContentTable .txtRight {text-align:right;}
+
+}
+
+@media screen and (min-width:760px), screen and (min-device-width : 768px) and (max-device-width : 1024px){
+
+	#extraHeader	{display:block;	}
+	#page, #footer2, #footerProtel	{
+		min-width:700px;
+		max-width:940px;
+		padding:10px;		}		
+	#headerLogo img { width: 100%; max-width: 300px; }
+	#hLanguageSelection, #hPersonalBookPhone {margin-right:20px; }	
+	/***HEADER***********************************/			
+	.searchRight {	float:left;}
+
+	/**Search Page*****************/
+	#HotelTabs a.k-link{ font-size:1.2em; }	
+
+	/****DetailView*******************/
+	
+	/**Article*******************/
+	.tableArticle img {	display:block; overflow:hidden; max-width:180px; max-height:135px; margin:0 auto;} 
+	.emptyImg {height:1px;}
+	.articleCell2 {width:72%;}
+
+	/*PRE-CHEKOUT************************/
+	#SocialLogin li {display: inline-block;}
+
+	/*CHEKOUT************************/
+	#couponBarBox, #voucherBarBox { float:none; }
+	#voucherBox {float:right;}
+	
+	/**MAP**************************/
+	.mapDiv { min-width: 760px; width:100%; max-width:938px; height: 382px; }
+
+	/**SpecialBox**************************/
+	#Special-Offer-Box { max-width:300px; min-width:200px;}
+	
+}
+
+@media only screen and (min-width:992px) {
+
+/**ANIMATABLE - BOX Animation: created with animatable.com ************************************************************/
+#articleToCart {
+	-webkit-animation: animation0 5s ease 1s 1 both; 
+	-moz-animation: animation0 5s ease 1s 1 both; 
+	-ms-animation: animation0 5s ease 1s 1 both; 
+	-o-animation: animation0 5s ease 1s 1 both; 
+	z-index:0;
+	left:6px;
+	top:30px; 
+	border:1px solid @wbe-light-border-color;
+	.rounded-corners;
+}
+@-webkit-keyframes animation0 {
+	0% { 
+		width:898px;
+		height:52px;
+		opacity: 1;
+		color: @fontColor;
+		-webkit-transform: scale(1, 1);
+		-moz-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-o-transform: scale(1, 1);
+		}
+	75% {
+		color: rgba(33,33,33,1);
+		-webkit-transform: scale(1, 1);
+		-moz-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-o-transform: scale(1, 1);
+		} 
+	80% {
+		color: rgba(33,33,33,0);
+		-webkit-transform: scale(1, 1.2);
+		-moz-transform: scale(1, 1.2);
+		-ms-transform: scale(1, 1.2);
+		-o-transform: scale(1, 1.2);
+		}
+	93% {
+		-webkit-transform: scale(1, 1.2);
+		-moz-transform: scale(1, 1.2);
+		-ms-transform: scale(1, 1.2);
+		-o-transform: scale(1, 1.2);
+		color: rgba(33,33,33,0);
+		width:898px;
+		height:52px;
+		opacity: 1;
+		}
+	98% { 
+		width:1px;
+		height:1px;
+		-webkit-transform: scale(1, 1.2);
+		-moz-transform: scale(1, 1.2);
+		-ms-transform: scale(1, 1.2);
+		-o-transform: scale(1, 1.2);
+		color: rgba(33,33,33,0);
+		opacity: 1;
+		}
+	100% { 
+		width:1px;
+		height:1px;
+		-webkit-transform: scale(1, 1.2);
+		-moz-transform: scale(1, 1.2);
+		-ms-transform: scale(1, 1.2);
+		-o-transform: scale(1, 1.2);
+		color: rgba(33,33,33,0);
+		opacity: 0;
+		  } 
+}
+
+#articleToCart h3, #articleToCart p{  -webkit-animation: animation0h3 5s ease 500ms 1 both;  }
+@-webkit-keyframes animation0h3 {
+ 0% {
+  opacity:1;
+  }
+ 75% {
+  opacity:1;
+  }
+ 80% {
+  opacity:0;
+  }
+ 100% {
+  opacity:0;
+  }
+}
+
+#stage { position: absolute; font-size: 16px;}
+#stage img, #stage p, #stage figure, #stage div { position: absolute; }
+#stage div { background:@wbeWhite-background; }
+/***Animatable ends here**********************************/
+
+	#headerWBE4, #content { 	width:940px; }
+	#homePage .tableBox {display:block;	margin:0;}
+	.tableBox, .tableBoxRes
+				{display:table; 	
+				margin:0;
+				float:left; 
+				border-collapse: separate;
+				position:relative; 
+				}
+	.tableBoxRes { width:100%; left:-2px;}
+	.tableBox {border-spacing: 20px 20px; left:-20px;}
+	.cellBox{ min-width: 220px;}
+	.rowBox, .rowBoxRes, .rowBoxResHead { display:table-row;  }
+	.rowBoxResHead, .articleCellHead { top:0px; position:relative; vertical-align:bottom;}
+	#RoomtypeDescription .cellBox, .cellBox, .cellBoxRes, .articleCellBox, .articleCellBoxHead { float:none; display:table-cell; }
+	#RoomtypeDescription .cellBox {min-width:160px; }
+	.startBoxContent {padding:20px; width:220px; 	min-height:120px;}
+	.startBox { width:220px; }
+	.divLine {margin:4px 0 0 0;}
+	
+	/**HEADER************/
+	/*	Design First: Remove the comment in the next line for having the logo automatically resized to a max-height=65px. The design is created for this height. Otherwise just change the top value for #extraHeader */
+	#headerLogo img { max-width: 300px; /*max-height:65px; width:auto; height:auto;*/	}
+	#personaDiv, #hPersonalBookPhone {float:left;}
+	#hPersonalWelcome {float:none; 	#hPersonalWelcome {max-width:460px;} }
+	#hPersonalBookPhone { margin-right:20px}
+	#HeaderMenuContainer {float:right;}
+	#personaDiv{margin:0; min-width:0; width:auto;}
+	#phoneBigNo {font-size:1.4em; font-weight:normal;	}	
+	
+	/**SearchPage**/
+	#search-button { text-align:right; margin:0;}
+	.showRatesResults3Image{ float:none; padding:0; max-width:100%; max-height:100%; }
+	.showRatesResults3Txt, .showRatesResults8Txt {float:none; max-width:100%; margin:0; padding:0 6px;}
+.showRatesResults3Txt {border-left:1px solid @wbeResultBoxes-background; }
+.showRatesResults3Txt:hover {border-left:1px solid @wbeResultBoxesHover-background;}
+	 
+	.displayResultsBox .tableBox {width:auto;}
+	.showRatesResults3, .showRatesResults8 { width:220px;}
+	.showRatesResults8Txt h5 {margin:0;}
+	.AlternateDatesBox ul {text-align:left;}
+	.AlternateDatesLi:first-child { margin-left:0;}
+	.showResultsN{width:107px;}
+	
+	/****DetailView*******************/
+	#RoomTypeSelect {	width:517px; margin-right:20px; float:left; display:block;}
+	#RoomConfigurator { width:100%; }
+	#hotelRatesBottomListing.tableBox {width:auto;}
+	
+	/***Hotel Info****************************/
+	.hFacilitiesBox {float:left; margin:20px 40px 20px 0; min-width:28%;}
+	.hFacilitiesBox:nth-child(2n+1) {clear:none; }
+	.hFacilitiesBox:nth-child(3n+1) {clear:left;}
+
+	/***Calendar*******************/
+	#AvailCalender  {  margin-top:0; width:400px!important; float:right; }
+
+	/**Articles*****************************/
+	.tableArticle img {	max-width:218px;} 
+	.articleCell22, .articleCell23 {float:none;}
+	.articleCell2 {width:72%;}
+	.articleCell21 {width:70%;}
+	.articleCell22 {width:10%;}
+	.articleCell23 {width:10%;}
+	.articleCell24 {width:10%;}	
+	.articleCellBoxHead {vertical-align:bottom;}
+	.showHeaderBefore:before{ /* prints the value of data-label attribute before the column data */
+		font-weight:normal;
+		padding-right:0;
+		content:"";	/* call the attribute value of data-label and adds a string // */
+	}
+	.articleCell3 {float:left;}
+	#hotelPoliciesBox .rowBox, #hotelPoliciesBox .tableBox {width:100%;}
+	.cellBox.largeCellBox {width:80%;}
+	.articleCellBox .icon_generated {position: relative; top:0;}
+
+	/***PRE-CHECKOUT*************************/
+	#preCheckout fieldset label { float: left;  width: 7.231em;}
+	#preCheckout #preCheckoutAgreeTOS fieldset label {float:none; width:100%;}
+	
+	/*CHEKOUT************************/
+	#couponBarBox, #voucherBarBox { float:left; margin-top:6px;}
+	
+	/**MAP**************************/
+	.mapDiv { width: 938px; height: 382px;}
+	
+	/**Special Offer Box****/
+	#Special-Offer-Box { min-width:300px;}
+
+	/***Room page************************/
+	#ratesLegend {display:none;} 
+	
+	/***IMG GALLERY***********************************/
+	.slidesclass {	width:400px; float:left;}
+	#thumbPanel { float:left; left:0px; }
+	#thumbDiv { float:left; margin: 0; }
+	
+	/***MyReservation******************************/
+	.cellBoxRes { padding:10px; vertical-align:middle; border-bottom:1px solid @wbeColored-border-color;}	
+	#tblMyReservationDetails .cellBoxRes {border-bottom:1px solid @wbeWhite-border-color;}
+	#divMyReservationCancelInside, #divMyReservationCallBack, #divMyReservationSendMsg { padding:20px;}
+	#divMyReservationCallBack, #divMyReservationSendMsg { width:45%; float:left;}
+	
+	/*FOOTER**/
+	#footerFacebook { background:url(../wbe4img/icons/socialMediaIcons_24x24.png) 0% 0px no-repeat; }
+	#footerTwitter { background:url(../wbe4img/icons/socialMediaIcons_24x24.png) 0% -48px no-repeat;  }
+	#footerGooglePlus { background:url(../wbe4img/icons/socialMediaIcons_24x24.png) 0% -24px no-repeat; }
+
+/*productPreview*/
+#WBE4Productpreview #ImageModul {margin: 0 auto; width: 940px;}
+}

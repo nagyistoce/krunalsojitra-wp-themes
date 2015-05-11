@@ -1,0 +1,24 @@
+﻿ <div class="socialLoginBox" id="LanguageBox">
+	 <div class="searchLine">
+         <h2 data-localization="_LanguageResponsiveH">Language</h2>
+         <div id="LanguageSelectBox">
+         
+         </div>
+  	</div>
+  </div>
+
+<script id="LanguageSelectTemplate" type="text/x-kendo-tmpl"> 
+
+#for(i=0; i < data.length; i++){#
+					<a data-langselect="#=data[i].value#" href="\\#" class="linkLk">        
+							<div>
+								 <p><img src="#=data[i].icon#" >#=data[i].name#</p>
+							</div>
+                    </a>	
+#}#
+</script>
+
+<script language="javascript" type="text/javascript">
+    protelWBE.RegisterResponsiveLanguageSelection('LanguageSelectBox');
+
+</script>

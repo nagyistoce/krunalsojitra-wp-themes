@@ -1,0 +1,149 @@
+/***BORDER=NONE******************/
+.wbe4Wrapper { 
+
+#TabSelectorSearchBox, 
+#HotelTabs, 
+#Search-Results .k-tabstrip,
+#Search-Results .k-tabstrip .k-content, 
+.k-panelbar .k-tabstrip .k-content, 
+#AvailCalender td.k-state-selected, 
+#AvailCalender td.k-state-hover,
+/*#hLanguageSelection .k-widget .k-dropdown-wrap,*/
+#hLanguageSelection .k-dropdown-wrap.k-state-default .k-input,
+#basketPanel .k-widget, #articlesTabWrapper{	border:none; }
+
+
+/**Overwriting dropdown settings, less language selector *************************/
+.k-list li.k-item/*, .k-dropdown-wrap.k-state-default .k-input*/ {color:@fontColor-black;}
+.k-list li.k-item:hover, .k-list li.k-item:active{color:@fontColor-white;}
+/*.k-dropdown-wrap.k-state-default .k-input {background: @wbeInput-background; border: 1px solid @wbeInput-border-color;}*/
+
+/**Overwriting dropdown language selector *************************/
+#hLanguageSelection .k-dropdown-wrap.k-state-default .k-input {box-shadow: none; background: @wbeLanguageSelect-background;}
+#languageselection-list {background: @wbeLanguageList-background;}
+
+#hLanguageSelection .k-dropdown {width:11*@space_unit;}
+
+#Search-Results .k-tabstrip {
+	padding:0;
+	margin:0; }
+
+#TabSelectorSearchBox {
+    display: block;
+    z-index: 98;
+	opacity:1;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}	
+
+#articlesTabWrapper ul li.k-state-active {
+	border: 1px solid @wbe-artTabsActive-border-color; 
+	border-bottom: 0px;
+	background:		@wbe-artTabsActive-background; 
+	& a { color: @wbe-artTabsActive-fontColor; }
+}
+#articlesTabWrapper ul li {
+	background:	@wbe-artTabs-background; 
+	& a {color: @wbe-artTabs-fontColor; }
+}
+#articlesTabWrapper .k-content.k-state-active {
+	background: @wbe-artTabsAreaInside-background;
+	border: 1px solid @wbe-artTabsAreaInside-border-color;
+}
+#articlesTabWrapper ul li:hover { background: @wbe-artTabsHover-background; 
+	border: 1px solid @wbe-artTabsHover-border-color; 
+	border-bottom: 0px;
+	& a:hover {color: @wbe-artTabsHover-fontColor; }
+}
+
+
+
+
+#Search-Box-Container .TabSelector ul li.k-item {
+	color: @wbeSearchBoxTab-fontColor; 
+	background: @wbeSearchBoxTab-background;  
+	& a:hover {
+		text-decoration: underline;
+	 }	
+}
+
+#Search-Box-Container .TabSelector ul li.k-state-active, #Search-Box-Container .TabSelector .k-content{
+		//border-bottom: 1px solid @wbeSearchBox-background!important; 
+		background:@wbeSearchBox-background; 
+}
+
+#Search-Box-Container .TabSelector ul li.k-state-active a {		color:@wbeSearchBoxActiveTab-fontColor;	}	 
+#Search-Box-Container .TabSelector ul li.k-item:not(.k-state-active) a.k-link {color: @wbeSearchBoxTab-fontColor;}
+
+#TabSelectorSearchBox .k-link:hover { background:@wbeSearchBoxHover-background; color:@wbeSearchBoxHover-fontColor!important;}
+
+#HotelTabs a.k-link{ color: @wbe-hotelTabs-fontColor; }
+#HotelTabs { border-bottom:2*@unit_size @wbe-hotelTabs-borderBottom-color solid; margin:0;}
+#HotelTabs a.k-link:hover{ color: @wbe-hotelTabsHover-fontColor; }
+#HotelTabs li.k-state-active a.k-link{  color:@wbe-hotelTabsActive-fontColor;}
+#HotelTabs li {
+	background-color: @wbe-hotelTabs-background;
+	vertical-align:bottom;
+	white-space:nowrap;
+}
+#HotelTabs  li.k-state-active {
+	padding:@smallspace_unit 0 0 0; 
+	border-color:@wbe-hotelTabsActive-border-color;
+	background-color:@wbe-hotelTabsActive-background;
+	color:@wbe-hotelTabsActive-fontColor;	}
+#HotelTabs  li:hover{ z-index:2; background: @wbe-hotelTabsHover-background; border-color:@wbe-hotelTabsHover-border-color; border-bottom: 0px; }
+#Search-Results .k-tabstrip .k-content, .k-panelbar .k-tabstrip .k-content {padding:0; margin:0; }
+#Search-Results .k-tabstrip .k-tabstrip-items {padding:0; background: @wbeTabsArea-background;}
+#Search-Results  .displayResultsBox {background: @wbeResultBoxesContainer-background;}
+/**Calendar**/
+#AvailCalender { border:@unit_size solid @bigCalendar-border; }
+#AvailCalender td {min-height:4em; min-width:3.3em; width:100%; background-color:@wbeAvailCalendarTd-background!important;}
+#AvailCalender td.k-state-hover {background: @wbeAvailCalendarHover-background!important; }
+#AvailCalender td.k-state-selected {background:@wbeAvailCalendarSelected-background!important; }
+#AvailCalender .k-header, #AvailCalender .k-link .k-nav-fast {white-space:nowrap;}
+#AvailCalender.k-calendar .k-content .k-link {line-height:normal; min-height:4em; }
+#AvailCalender .k-header a.k-link {color:@bigCalendarHead-fontColor; background: @bigCalendarHead-background;
+	&:hover { color:@bigCalendarHeadHover-fontColor; background: @bigCalendarHeadHover-background;}
+}
+
+.DayCellAvailCalender {height:2em; border:none; }
+#AvailCalender .k-footer { margin:0; padding:0; height:3*@unit_size; }
+.k-calendar .k-link, .k-link:hover, .k-calendar .k-link:hover {text-decoration:none;}
+.k-link.DayCellAvailCalender>div:first-child {color:@wbeAvailCalendarDaysTop-fontColor; }
+.k-other-month .k-link.DayCellAvailCalender {color:@wbeAvailCalendarNextMonth-fontColor; font-size:0.9em; cursor:default;}
+div.emptydays  { color:@wbeAvailCalendarEmptyDaysTop-fontColor; padding: @unit_size; height: 3.571em; width: 3.571em;}
+
+.k-calendar, #AvailCalender .k-header, #AvailCalender .k-content, #AvailCalender td {	background: @bigCalendar-background;}		 	 
+#AvailCalenderLegend, #AvailCalender th  { background: @bigCalendar-elements-background;  }
+
+
+#HotelTabs.k-tabstrip-items .k-link {padding:0.5em;}
+
+/**HotelInfo***************/
+#Search-Results .k-content:not(#AvailCalender) {background:none;}
+
+/***GTC*****************************/
+.k-window.k-widget {background-color:@wbeResultBoxes-background; color: @wbeResultBoxes-fontColor;}
+
+/***Error handling*****************************/
+span.k-tooltip {
+	white-space:normal;
+   	position: relative;
+    display: block;
+    border-width: @unit_size;
+    padding: 0.5em;
+	text-align:left;
+	margin:@smallspace_unit 0; 
+	width:11.4em;
+	}
+	span.k-icon.k-warning {margin-right: 0!important }
+#newProfileTOS span.k-tooltip, #checkOutTOS span.k-tooltip {   position: absolute; margin:2*@space_unit 0; width:auto; }
+span.k-icon.k-warning {background:none; margin:0; width:0;}
+
+/***DesignSelector*********************************/
+.slide-out-div-designsettings {
+	background: @wbeWhite-background;
+	border:1px solid @wbe-lighterGrey-border-color; 
+}
+.slide-out-div-designsettings h4 {margin-top:0;}
+
+}

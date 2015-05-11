@@ -1,0 +1,310 @@
+﻿<div id="checkOutTitleDiv"><h2 data-localization="_CheckOutTitle"><!-- Check Out --></h2></div>
+<div class="clear"></div>
+
+<div id="checkOutFormInfo" class="colorLine">
+  <p data-localization="_iBookerCheckOutForm" ><!-- Um die Buchung entgegenzunehmen, benötigen wir folgende Daten. Die <strong>hervorgehobenen</strong> Felder sind   Pflichtfelder. --></p>
+</div>
+<div class="clear"></div>
+<div id="checkOutPersonalTitle" class="checkOutEntity">
+  <p class="checkOutEntityTitle txt11em" data-localization="_BookerCheckOutTitle"><!-- Shipping Info --></p>
+  
+  <div id="checkOutPersonalDiv1">
+  <fieldset>
+    <table id="tableCOPersonalData1" >
+      <tbody>
+        <tr>
+          <td><label for="Type" data-localization="_FormSelectAddress"><!-- Adresse --></label></td>
+          <td>
+           	<input id="PrivateCheck" value="1" data-private-ckeck="booker" checked="checked" type="radio"  name="Type" tabindex="1" />
+            <label for="PrivateCheck" data-localization="_FormSelectPrivat"><!-- Privat --></label>
+            <input id="CompanyCheck" value="2" data-company-ckeck="booker" type="radio" name="Type" tabindex="2" />
+            <label for="CompanyCheck" data-localization="_FormSelectCompany"><!-- Firma --></label>
+          </td>
+        </tr>
+         <tr>
+          <td><label for="Company_Input" data-localization="_FormSelectCompanyName"><!-- Firma --></label></td>
+          <td><input  type="text" id="Company_Input" data-company="booker" name="Company_Input" tabindex="3" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Salutation_Select" data-localization="_FormSalutation"><!-- Anrede --></label></td>
+          <td><input id="Salutation_Select" value="" name="Salutation_Select" data-salutation="booker" tabindex="4" />
+          </td>
+        </tr>
+        <tr>
+
+          <td><label for="Firstname_Input_Booker" data-function="labelbookerFirstname" data-localization="_FormFirstname"><!-- Vorname --><span class="requiredSmb"></span></label></td>
+          <td><input id="Firstname_Input_Booker"  type="text" data-firstname="booker" tabindex="5" maxlength="50" name="Firstname_Input_Booker" validationMessage="_firstnameRequired"  />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Lastname_Input_Booker" data-function="labelbookerLastname" data-localization="_FormLastname"><!-- Nachname --><span class="requiredSmb"></span></label>
+            </td>
+          <td><input id="Lastname_Input_Booker" type="text"  value="" data-lastname="booker" tabindex="6" maxlength="50" name="Lastname_Input_Booker" validationMessage="_lastnameRequired" /></td>
+        </tr>
+        <tr>
+          <td><label for="Email_Input_Booker" data-localization="_FormEmail" data-function="labelbookerEmail"  ><!-- E-Mail --></label>
+            </td>
+
+          <td><input id="Email_Input_Booker" type="email" value="" tabindex="7" data-email="booker" maxlength="50" name="Email_Input_Booker" validationMessage="_emailRequired" />
+            <br />
+            <p id="EmailNoteLabel" class="showVerticalMargins txtDarkGrey" data-localization="_iEmailBooker"><!-- Buchungsbestätigung wird an die   E-Mail-Adresse gesendet. --></p></td>
+        </tr>
+      </tbody>
+    </table>
+   </fieldset>
+  </div>
+  <div id="checkOutPersonalDiv2">
+   <fieldset>
+    <table  id="tableCOPersonalData2">
+      <tbody>
+        <tr>
+          <td><label for="Street-Input" data-localization="_FormStreet" data-function="labelbookerStreet"><!-- Straße --></label></td>
+          <td><input id="Street-Input" type="text" value=""  data-street="booker" tabindex="8" maxlength="50" name="Street-Input" validationMessage="_streetRequired" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Zip_Input" data-localization="_FormZip" data-function="labelbookerZip"><!-- ZIP --></label></td>
+          <td><input id="Zip_Input" data-zip="booker" type="text" value="" tabindex="9" maxlength="10" name="Zip_Input" validationMessage="_zipRequired" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="City_Input_Booker" data-localization="_FormCity" data-function="labelbookerCity"><!-- Stadt --></label></td>
+          <td><input id="City_Input_Booker"  value="" type="text" data-city="booker" tabindex="10" maxlength="50" name="City_Input_Booker" validationMessage="_cityRequired" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="countryselect_booker" data-localization="_FormCountry" ><!-- Land --></label></td>
+          <td><input id="countryselect_booker"  value="" tabindex="11" name="countryselect_booker" data-country="booker"/>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Telefon_Input_Booker" data-localization="_FormPhone" data-function="labelbookerPhone"><!-- Telefon --></label></td>
+          <td><input id="Telefon_Input_Booker" type="text" value="" data-phone="booker" tabindex="12" maxlength="50" name="Telefon_Input_Booker" validationMessage="_phoneRequired" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Fax_Input_Booker" data-localization="_FormFax" data-function="labelbookerFax"><!-- Fax --></label></td>
+          <td valign="top"><input id="Fax_Input_Booker" type="text" value="" data-fax="booker" tabindex="13" maxlength="50" name="Fax_Input_Booker" validationMessage="_faxRequired" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </fieldset>
+  </div>
+  <div class="clear"></div>
+
+<p class="checkOutEntityTitle txt11em" data-function="showinvoiceformwrapper"><a href="#" data-function="showInvoiceForm" id="btShowInvoce" name="btShowInvoce" class="morelk" data-localization="_billingDataFormTxt"><!-- Billing Data --></a></p>
+  <div class="displayNone" data-function="invoiceForm">
+  <div id="checkOutPersonalDiv12" >
+	<fieldset>  
+    <table id="tableCOPersonalData12" >
+      <tbody>
+        <tr>
+          <td><label for="TypeI" data-localization="_FormSelectAddress"><!-- Adresse --></label></td>
+          <td>
+          	<input id="PrivateCheckI" value="1" data-private-ckeck="invoiceI" checked="checked" type="radio"  name="TypeI"  tabindex="14" />
+            <label for="PrivateCheckI" data-localization="_FormSelectPrivat"><!-- Privat --></label>
+            <input id="CompanyCheckI" value="2" data-company-ckeck="invoice" type="radio" name="TypeI"  tabindex="15" />
+            <label for="CompanyCheckI" data-localization="_FormSelectCompany"><!-- Firma --></label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Company_InputI" data-localization="_FormSelectCompanyName"><!-- Firma --></label></td>
+          <td><input  type="text" id="Company_InputI" data-company="invoice" name="Company_InputI" tabindex="16" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Salutation_SelectI" data-localization="_FormSalutation"><!-- Anrede --></label></td>
+          <td><input id="Salutation_SelectI" value="" name="Salutation_SelectI" data-salutation="invoice" tabindex="17" />
+          </td>
+        </tr>
+        <tr>
+
+          <td><label for="Firstname_Input_invoiceI" data-localization="_FormFirstname" data-function="labelinvoiceFirstname"><!-- Vorname --></label>
+            </td>
+          <td><input id="Firstname_Input_invoiceI"  type="text" data-firstname="invoice" tabindex="18" maxlength="50" name="Firstname_Input_invoiceI" validationMessage="_firstnameRequired" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Lastname_Input_invoiceI" data-localization="_FormLastname" data-function="labelinvoiceLastname"><!-- Nachname --></label>
+            </td>
+
+          <td><input id="Lastname_Input_invoiceI" type="text"  value="" data-lastname="invoice" tabindex="19" maxlength="50" name="Lastname_Input_invoiceI" validationMessage="_lastnameRequired" /></td>
+        </tr>
+        <tr>
+        	<td><label for="Email_Input_Invoice" data-localization="_FormEmail" ><!-- Nachname --></label></td>
+           <td><input id="Email_Input_Invoice" type="email" value="" tabindex="20" data-email="invoice" maxlength="50" name="Email_Input_Invoice" validationMessage="_emailRequired" />
+            <br />
+           </td>
+        </tr>
+      </tbody>
+    </table>
+    </fieldset>
+  </div>
+  <div id="checkOutPersonalDiv22">
+   <fieldset>
+    <table  id="tableCOPersonalData22">
+      <tbody>
+        <tr>
+          <td><label for="Street-InputI" data-localization="_FormStreet" data-function="labelinvoiceStreet"><!-- Straße --></label></td>
+          <td><input id="Street-InputI" type="text" value=""  data-street="invoice" tabindex="21" maxlength="50" name="Street-InputI"  validationMessage="_streetRequired"/>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Zip_InputI" data-localization="_FormZip" data-function="labelinvoiceZip"><!-- ZIP --></label></td>
+          <td><input id="Zip_InputI" data-zip="invoice" type="text" value="" tabindex="22" maxlength="10" name="Zip_InputI" validationMessage="_zipRequired" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="City_Input_invoiceI" data-localization="_FormCity" data-function="labelinvoiceCity"><!-- Stadt --></label></td>
+          <td><input id="City_Input_invoiceI"  value="" type="text" data-city="invoice" tabindex="23" maxlength="50" name="City_Input_invoiceI" validationMessage="_cityRequired" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="countryselect_invoiceI" data-localization="_FormCountry"><!-- Land --></label></td>
+          <td><input id="countryselect_invoiceI"  value="" tabindex="24" name="countryselect_invoiceI" data-country="invoice"/>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Telefon_Input_invoiceI" data-localization="_FormPhone" data-function="labelinvoicePhone"><!-- Telefon --></label></td>
+          <td><input id="Telefon_Input_invoiceI" type="text" value="" data-phone="invoice" tabindex="25" maxlength="50" name="Telefon_Input_invoiceI"  validationMessage="_phoneRequired" />
+          </td>
+        </tr>
+        <tr>
+          <td><label  for="Fax_Input_invoiceI" data-localization="_FormFax" data-function="labelinvoiceFax"><!-- Fax --></label></td>
+          <td valign="top"><input id="Fax_Input_invoiceI" type="text" value="" data-fax="invoice" tabindex="26" maxlength="50" name="Fax_Input_invoiceI" validationMessage="_faxRequired" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </fieldset>        
+  </div>
+  </div>
+
+<div class="clear"></div>
+
+  <div id="checkOutPersonalDiv3" data-function="AdditionalLoginData">
+    <h5 class="checkOutRoomTitle" data-localization="_CreateAccount"><!-- Create your account --></h5>
+   <fieldset>
+    <table id="tableCOPersonalData3" >
+      <tbody>
+        <tr>
+          <td><label for="username_Input"  data-localization="_Username" data-function="labelbookerLogin"  ><!-- Username: --></label></td>
+          <td><input  type="text" id="username_Input" data-login="booker" name="pass_Input" tabindex="27" disabled validationMessage="_usernameRequired"/>
+	          <p id="createAccountUsername" class="usernameClass" data-localization="_CreateAccountEmailMsg">Your email address is registered as username</p>
+            </td>
+        </tr>
+        <tr>
+          <td><label for="vpass_Input" data-localization="_Password" data-function="labelbookerPassword"><!-- Passwort: --></label></td>
+          <td><input   id="vpass_Input"  type="password" data-password="booker" name="vpass_Input" tabindex="28" validationMessage="_CreateAccountPassMsg" />
+	          <p id="createAccountEmailNote" class="showVerticalMargins txtDarkGrey" data-localization="_CreateAccountPassMsg" >6 character minimum including numbers or symbols</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+	</fieldset>
+  </div>
+</div>
+<div class="clear"></div>
+
+<div id="GuestOnRooms" data-function="GuestDetails">
+
+</div>
+ <div class="clear"> </div>
+		<div id="checkOutPayment" class="checkOutEntity" >
+			<p class="checkOutEntityTitle txt11em" data-localization="_CheckOutPaymentTitle"><!-- Payment --></p>	 
+			<fieldset><label for="paymentmethods"  data-localization="_CheckOutPaymentMode"><!-- Zahlungmittel: --></label> <input id="paymentmethods" name="paymentmethods" data-paymentselect="payment" tabindex="98"/></fieldset>
+		</div>
+<div class="clear"></div>
+
+<!-- Credit Cart plugin here -->
+
+<div id="checkOutComment" class="checkOutEntity">
+  <p class="checkOutEntityTitle txt11em pNoMargin" data-localization="_FormAddNote"><!-- Anmerkungen --></p>
+  <fieldset><textarea  rows="5" id="comment" name="comment" maxlength="150" data-function="notes"  tabindex="104" ></textarea></fieldset>
+</div>
+
+<div class="clear"></div>
+
+<div id="basketPanel">
+
+<table id="BasketTable" >
+  <thead>
+  <tr>           
+       <th data-field="Description"><span data-localization="_CartProductDesc"><!-- Description --></span></th>  
+       <th data-field="Count"><span data-localization="_CartProductCount"><!-- Count --></span></th>        
+       <th data-field="Price"><span data-localization="_CartProductPrice"><!-- Price --></span></th>      
+  </tr>
+  </thead>
+  <tbody id="basketContentTable">
+
+  </tbody>
+</table>
+</div>
+<div class="clear"></div>
+<div id="checkOutTOS">
+ <input id="Checkbox1" required  data-function="gtc" type="checkbox"   tabindex="105" maxlength="50" name="TOSAgree_Booker" validationMessage="_TOSRequired" /><span class="requiredSmb"></span><label for="TOSAgree_Booker"><span  data-localization="_checkOutTOSAgree"><!-- I agree with terms of use  --></span> (<a class="linkLk" href="#" tabindex="106" data-function="checkoutgtc" data-localization="_checkOutTOS"><!-- read more --></a> )</label>
+</div>
+<div class="clear"></div>
+
+<div id="checkOutSubmitBtn" class="buttonPanel txtRight">
+	<input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';" data-localization="_CheckOutNextbt"  value="Weiter"  id="LastCheckOutButton"  type="button" tabindex="107">
+</div>
+
+<div id="paymentformdiv"></div>
+<script id="RoomGuestTemplate" type="text/x-kendo-template">
+#if(typeof data.basketItems != "undefined" &&  data.basketItems.length > 0){# 
+<div class="clear"></div>
+<div id="checkOutBookingTitle" class="checkOutEntity">
+	<p class="checkOutEntityTitle txt11em pNoMargin" data-localization="_CheckOutGuestsH">Arriving guests</p>
+	 
+<div id="tableCOBookingData" class="tableBox">
+ #var j=0;#
+  #var Room = 1;#
+ # for(var i=0;i < data.basketItems.length;i++){# 
+ #var nbrguests = data.basketItems[i].numAdults + data.basketItems[i].numChild1 + data.basketItems[i].numChild2 +data.basketItems[i].numChild3 +data.basketItems[i].numChild4+ data.basketItems[i].addBeds +data.basketItems[i].cots;#
+ #var nbrrooms = data.basketItems[i].count;#
+
+ #for(var r=0; r < nbrrooms;r++){#
+
+  #j++;#
+
+	 <div class="rowBox pNoMargin">
+		<div class="cellBox" ><h5 class="checkOutRoomTitle"><span data-localization="_Room" >Room</span> #=Room#</h5></div>
+	</div>	
+#Room++;#	
+ #for(var g=1; g<= nbrguests;g++){#
+ #j++;#
+	 <div class="rowBox pNoMargin">
+		<div class="cellBox" ><span data-localization="_Guest" class="txtB">Guest</span> <span class="txtB">#=g#</span></div>
+		<div class="cellBox" ><fieldset><label for="Firstname#=r+'_'+g#" data-localization="_FormFirstname">/*Vorname*/</label><span class="requiredSmb"></span><input data-guestfirstname="#=data.basketItems[i].id#" data-guestroomnr="#=r#"  data-guestindex="#=g#" id="Firstname#=r+'_'+g+'_'+j#" tabindex="#=j+40#" maxlength="100" name="Firstname#=r+'_'+g#" type="text" validationMessage="_firstnameRequired" required /></fieldset></div>
+		<div class="cellBox" ><fieldset><label for="LastName#=r+'_'+g#" data-localization="_FormLastname">/*Nachname*/</label><span class="requiredSmb"></span><input  data-guestlastname="#=data.basketItems[i].id#" data-guestroomnr="#=r#" data-guestindex="#=g#" id="Lastname#=r+'_'+g+'_'+j#" tabindex="#=j+41#" maxlength="100" name="LastName#=r+'_'+g#" type="text"  validationMessage="_lastnameRequired" required/></fieldset></div>
+	</div>	
+
+
+ #}#
+ #}#
+ #}#
+ #}#
+</div>
+</div>	 
+	
+</script>
+<div id="GTCWindowCheckoutBox" data-function="GTCWindowCheckout">
+	
+	
+</div>
+
+<script language="javascript" type="text/javascript">
+
+    protelWBE.RegisterPaymentSelectContainer('checkOutPayment');
+    protelWBE.RegisterSalutationBookerSelect('Salutation_Select');
+   protelWBE.RegisterCountryInvoiceSelect('countryselect_invoiceI');
+    protelWBE.RegisterCountryBookerSelect('countryselect_booker');
+    protelWBE.RegisterSalutationInvoiceSelect('Salutation_SelectI');
+    protelWBE.RegisterConfirmCheckoutButton('LastCheckOutButton');
+</script>
+
+
+

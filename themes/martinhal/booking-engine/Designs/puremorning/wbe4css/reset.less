@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***RESET DEFAULT CSS***/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;     padding:0;     border:0;     outline:0;     font-size:100%;     vertical-align:baseline;     background:transparent; font-weight:normal; }
+body { 
+	line-height:@baselineheight; 	
+	font-size: @font-size; /*FONT BASE: 16px = 13px**/ 
+	font-family: @font-family;
+	color:@fontColor;
+	background-color:@wbePage-background;
+	}
+article,aside,details,figcaption,figure, 
+footer,header,hgroup,menu,nav,section { 
+    display:block; }
+ul {     list-style:none; }
+blockquote, q {     quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after {     content:'';     content:none; }
+a { margin:0; padding:0; font-size:100%;  vertical-align:baseline;   background:transparent; color:@wbeNoColorLK-color; text-decoration:underline; }
+a:hover, a:active { outline: none; color: @wbeNoColorLKHover-color;}
+
+del {     text-decoration: line-through; }
+abbr[title], dfn[title] {border-bottom:1px dotted; cursor:help;}
+table {     border-collapse:collapse;     border-spacing:0;}
+hr {     display:block;     height:1px;     border:0; border-top:1px solid @grey; margin:10px 0; padding:0; }
+input, select {     vertical-align:middle; }
+
+::selection {	background-color: @wbeSelection-background;	color:@wbeSelection-fontColor; }
+
+.clear { 	clear:both }
+.displayNone {display:none;}
+.displayInline {display: inline;}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+	text-shadow:1px 1px 0px @fontColor-shadow;
+	color:@fontColor-h;
+	margin:1.538em 0 0 0;
+	line-height: @baselineheight; }
+	
+	h1 { 	font-size:2.154em }
+	h2 { 	font-size:1.846em }
+	h3, h4 {	font-size:1.5em}
+	h5 {	font-size:1.3em}
+	h6 {	font-size:1.1em}
+
+p {	font-size:1em;
+	margin:10px 0;
+	line-height:@p-lineheight; }
+.rounded-corners (@radius:4px) { border-radius: @radius; }
+.pag-lk-prev,  .pag-lk-next, .pag-lk, .showRatesResults3, .showRatesResults8, .showResultsN .startBox, .startBoxContent, #voucherImgBox, #voucherBoxContent, .showRoomCategoryRed, .showRoomCategoryGreen, .showRoomCategorySelected, .SpecialOfferBoxBackground , .errorBox, #AvailCalender td.k-state-selected, #AvailCalender td.k-state-hover{	
+	.rounded-corners;
+	border:1px solid @wbe-light-border-color; }
+
+	fieldset input, span input, fieldset textarea {
+		.rounded-corners;
+		border:1px solid @wbeInput-border-color; 
+	}
+.pag-lk-prev,  .pag-lk-next, .pag-lk, .SpecialOfferBoxBackground, .errorBox, #hotelDescription p .morelk, #hotelDescription p .lesslk { box-shadow: rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color, @boxshadow_alfa/2) @unit_size @unit_size 2*@unit_size; }
+.avail:not(li), .notavail:not(li), .minstay:not(li), .k-other-month .avail, .k-other-month .notavail, .k-other-month .minstay {
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 80%, from(@gradientColorStart), to(@gradientColorStop));
+ 	background-image: -moz-linear-gradient(bottom, @gradientColorStart 80%, @gradientColorStop);
+	background-image: -o-linear-gradient(bottom, @gradientColorStart 80%, @gradientColorStop);
+	background-image: -ms-linear-gradient(top, @gradientColorStart 80%,@gradientColorStop 100%); /* IE10+ */
+	background-image: linear-gradient(bottom, @gradientColorStart 80%, @gradientColorStop); }
+
+.borderBottomLight, .startSimpleBox h4, #AvailCalenderLegend h5, #BasketTable td, .checkOutRoomTitle, .checkOutEntityTitle { border-bottom: 1px solid @wbe-light-border-color;}
+	.paddingClass { padding:10px; }
+	.leftMargin{ margin-left:10px; }
+
+/***SPRITEBIG***/
+#footerFBIcon, #footerYouTubeIcon, #footerTwitterIcon,
+#SocialLogin li a,
+#headerBtnPhone, #headerBtnLanguage, #headerBtnAccount
+{ background:url("../wbe4img/icons/spriteWBE4-@{themeName}.png") no-repeat;}
+
+/*ENTITIES***/
+#Search-Results .k-tabstrip,
+#Search-Results .k-tabstrip .k-content,
+.k-panelbar .k-tabstrip .k-content,
+{	background-color:@wbeTabsArea-background; 	  }
+  #TabSelectorSearchBox  {	background-color:@wbeSearchBoxTabsArea-background; 	  }
+
+
+.LoginFormClass, #MemberContent, #headerPersonal #HeaderMenuContainer ul, #headerPersonal a:hover, #headerPersonal a:active, #headerPersonal .k-link:hover,
+#headerPersonal a:visited, #headerPersonal .k-link:visited, #headerPersonal .k-state-border-down,
+{	background-color: @wbeHeaderBoxes-background; 	 }
+
+.showRoomCategoryRed, .showRoomCategoryGreen, 
+.showRatesResults3, .showRatesResults8, .showResultsN, .startBox, .startBoxContent, #voucherImgBox, #voucherBoxContent, #alternativeRates ul
+{	background-color:@wbeResultBoxes-background;
+	color:@wbeResultBoxes-fontColor;}
+
+#Search-Results .k-tabstrip,
+#TabSelectorSearchBox,
+#Search-Results .k-tabstrip .k-content,
+.k-panelbar .k-tabstrip .k-content, #alternativeRates ul,
+#checkOutFormInfo, #checkOutVoucherFormInfo,
+#hotelDescription p .morelk, #hotelDescription p .lesslk,
+.sOuter ul li img, #thumbDiv .thumbs li img, ul.slidesclass li img
+{	.rounded-corners;}
+
+#footerWBE4, #extraHeader, .showRoomCategorySelected /*, .highlightBg*/ {background-color:@wbePageColorElements-background;}
+#activeReservation, .activeMyReservation {background-color:@wbeBasketTable-background; 	color:@wbeBasketTable-fontColor;}
+
+/***CALENDAR:  */
+.k-calendar, #AvailCalender .k-header, #AvailCalender .k-content, #AvailCalender td {	background:@bigCalendar-background;}		 	 
+#AvailCalenderLegend, #AvailCalender th  { background:@bigCalendar-elements-background; }
+
+/***Invalid Item***/
+.invalidItem {text-decoration:line-through; background-color:@wbeLighterGrey-background; color:@fontColor-grey; }

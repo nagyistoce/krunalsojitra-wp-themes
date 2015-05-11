@@ -1,0 +1,309 @@
+
+/*!
+Crafted by DMSQD
+dmsqd.com
+ */
+/******************************************************************
+Site Name:
+Author: DMSQD
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+******************************************************************/
+
+
+//
+// IMPORTING STYLES
+//
+// import normalize
+@import "normalize";
+
+
+
+
+// import mixins
+@import "mixins";
+
+// import csswizardry-grids - please do not modify this file.
+// See https://github.com/csswizardry/csswizardry-grids
+$mobile-first: true;
+$pull: true;
+$push: true;
+$responsive: true;
+$use-markup-fix: true;
+$use-silent-classes: false;
+@import "grid";
+
+/*
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*/
+
+// styles in base.scss
+@import "base";
+@import "custom";
+
+
+@media only screen and (max-width: 1370px) {
+	.logo-main { float: left; margin-bottom:4px;}
+}
+
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (min-width: 481px) {
+
+	// styles in 481up.scss
+	@import "481up";
+
+} // end of media query
+
+
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 768px) {
+
+	// styles in 768up.scss
+	@import "768up";
+
+} // end of media query
+
+
+
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 1030px) {
+
+	// styles in 1030up.scss
+	@import "1030up";
+
+} // end of media query
+
+
+
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+@media only screen and (min-width: 1240px) {
+
+	// styles in 1240up.scss
+	@import "1240up";
+
+} // end of media query
+
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+	// styles in 2x.scss
+	@import "2x";
+
+} // end of media query
+
+/*
+iPHONE 5 MEDIA QUERY
+Want to get fancy for no good reason? Knock yourself out.
+*/
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+
+  // iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
+
+}
+
+/*
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*/
+@media print {
+	@import "print";
+}
+
+
+@media only screen and (max-width: 1370px) {
+	.logo-main { float: left; margin-bottom:0;}
+	
+}
+
+
+@media only screen and (max-width: 1024px) {
+	.side-bar .counder span { font-size: 12px;}
+	.side-bar .recent-post h4 { font-size: 13px; background-size: auto 20px;}
+	.side-bar h4 { font-size: 15px;} 	
+	.side-bar { width: 34.5%;  padding: 0 0 0 10px;}
+	.home-post { width: 65%; padding:0 0 0 25px;}
+	.contant-home { width: 100%;}
+	.contant-home form { float: left;}
+	.banner-text h1 { font-size:55px;}	
+	.banner-text.bridg .start { font-size:32px;}
+	.nav-main #menu-main-menu li a { padding-right:20px;}
+	.verify h3 { font-size: 23px; }
+	.commentlist li .children { padding-left:20px !important;}
+} 
+
+@media only screen and (max-width: 980px) {
+	.banner-text h1 { font-size:45px;}
+	.banner-text.bridg .start { font-size:30px;}
+	.nav-main #menu-main-menu { margin-top:1px;}
+	.nav-main #menu-main-menu li a { font-size:14px; padding:5px 10px 5px 30px; background-size:auto 20px !important; }
+	.nav-main { margin-top:3px;}
+	.nav-main #menu-main-menu li.menu-item-setting.current-menu-item, .nav-main #menu-main-menu li.menu-item-setting:hover { padding-bottom:4px;}
+	.nav-main #menu-main-menu li.menu-item-setting .sub-menu { top:45px;}
+}
+
+@media only screen and (max-width: 767px) {
+	header { padding-top :40px;}
+	.banner-text .img-wrap img { width: 80%; float:none;}
+	.banner-text h1 { font-weight: bold;}
+	.banner-text span { font-size: 31px;}
+	.contant section { margin:0 0 12px; width: 49%;}
+	.contant section:nth-child(2n+2) { float: right;}
+	.nav-main { margin: 13px -35px 0 0;}
+	
+	.nav-main #menu-main-menu li a  { font-size:0.1px;  color: transparent; padding: 26px 1px 4px 34px; display:block; background-position:center 0 !important;}
+	.nav-main #menu-main-menu li.menu-item-setting.current-menu-item, 
+	.nav-main #menu-main-menu li.menu-item-setting:hover { padding-bottom:0; border-width:3px;}
+	.nav-main #menu-main-menu li:hover,
+	.nav-main #menu-main-menu li.current-menu-item { border-bottom: 3px solid #2c5895; padding-bottom: 2px; }
+	
+	.nav li a { border-bottom: none;}
+	.nav { border: none;}
+	.nav li:hover { border-bottom: 4px solid #2c5895; cursor: pointer; padding-bottom: 8px;}
+	.nav-main #menu-main-menu li.menu-item-setting .sub-menu { top: 35px;}	
+/*	.nav-main #menu-main-menu li.menu-item-setting:hover .sub-menu { display:block; }	*/
+	
+	.side-bar {  width: 40.5%; padding: 0 0 0 10px;} 
+	.home-post { width: 57%;  padding: 0 10px 0 0;}
+	.contant-home {width: 89%;}
+	.contant .home-post section { width: 100%;}
+	.contant-home { width: 100%;}
+	.contant-home form { float: left;}
+	.contant-home form .sect-txbx { width: 175px;} 
+	.banner-text.bridg .start { font-size:28px;}	
+	.nav-main #menu-main-menu li.menu-item-setting .sub-menu { display:none;}
+	.nav-main #menu-main-menu { margin-top:1px;}
+	.verify h3 { font-size: 21px; padding:15px;}
+	.nav-main #menu-main-menu li.menu-item-setting a { margin:0;}
+
+	#main .singe_post { width:100% !important;}
+	.nav-main #menu-main-menu li a { padding-left:28px; }
+	.nav-main #menu-main-menu li .notifications_count { right:5px;}
+	.nav-main #menu-main-menu li:hover,
+	.nav-main #menu-main-menu li.current-menu-item { padding-bottom:0;}
+	/*.nav-main #menu-main-menu li:hover a,
+	.nav-main #menu-main-menu li.current-menu-item a { padding-bottom:0;}*/
+}
+
+@media only screen and (max-width:640px) {
+	.banner-text .img-wrap img {  width: 75%;}
+	.banner-text h1 { font-size: 40px; margin-bottom:5px;}
+	.banner-text span { font-size: 24px;}
+	.contant { margin: 60px 0 0;}
+	.contant section {margin: 0 0 8px;}
+	.home-box h3 { font-size: 25px;}
+	.home-banner { margin: 50px auto; width: 100%; padding:0 10px;}
+	.home-banner .home-box .left-img { width:37.5%;}
+	.home-banner .home-box .left-img img {width:auto; max-width:100%; height:30%;}
+	.home-banner .home-box .right-img {width:58%;}
+
+	.home-banner .home-box .right-img a { font-size: 10px; color: #434343;}
+	.nav-main { margin: 13px -35px 0 0;}
+	.nav li a { border-bottom: none;}
+	.nav { border: none;}  
+	.nav li:hover { border-bottom: 4px solid #2c5895; cursor: pointer; padding-bottom: 8px;}
+	.side-bar {  width: 60%; margin: 0 auto 20px; display:table; padding:0; float:none;}
+	.home-post { width: 100%; padding:0;    float: none; margin: 0 auto;  max-width: 300px;  display:table;} 
+	.contant-home h6 {font-size: 22px;}
+	.contant-home form .sect-txbx { width: 220px;}
+	.contant-home {  width: 100%;}
+	.main { width: 100%;}
+	.contant-home form { float: left;}
+	.contant .home-post section {  width: 100%;}
+	.banner-text.bridg .start { font-size:24px; }	
+	.my-pro-form { width:100%;}
+	.upload_img {width:100%; margin:20px 0 0;}
+	.home-banner .home-box .right-img img { width:25% !important;}
+	
+	.main { width:100%;}
+	.grid { margin:0;}
+	.grid__item { padding-left:0;}
+	.home-banner .home-box #description-error { top:60px;}
+	.commentlist li .children { padding-left:10px !important; } 
+	.ui-dialog.ui-widget-content .ui-dialog-content.ui-widget-content textarea { height:80px; }
+	.ui-dialog.ui-widget-content.ui-corner-all { height:256px !important; width:90% !important;}
+	
+
+}
+
+@media only screen and (max-width: 480px) {
+	header { padding-top: 40;}
+	.banner-text h1 { font-size: 30px; }
+	.banner-text span { font-size: 17px;}
+	.contant section { width: 100%;}
+	.home-box h3 { font-size: 18px;}
+	.home-banner .home-box .left-img img { width: 50%;}
+	.home-banner .home-box .right-img a { font-size: 8px;}
+	/*.home-banner .home-box .right-img { width: 50%;}
+	.home-banner .home-box .right-img img { width: 227px; height: 98px; margin: 5px 0 0;}*/
+	.nav-main { margin: 13px -33px 0 0;}
+	.nav li a { border-bottom: none;}
+	.nav { border: none;}  
+	.nav li:hover { border-bottom: 4px solid #2c5895; cursor: pointer; padding-bottom: 8px;}
+	.side-bar { width: 91%;}
+	.contant-home h6 { font-size: 21px;}
+	.main { width: 100%;}
+	.contant-home { width: 100%;}
+	.home-post { width: 100%;}
+	.contant-home form .sect-txbx { width: 200px;}
+	.contant-home form .gray-but { padding: 4px 7px; font-size: 11px; margin-left: 5px;}
+	.contant .home-post section { width: 100%;}
+	.side-bar .recent-post h4 { font-size: 23px;}
+	.banner-text.bridg .start { font-size:20px;}	
+	.contant section .image-main img { float:none;}
+	.verify h3 { font-size: 18px; }
+	.side-bar { width:80%;}
+	.home-post .wpcf7-form, .my-pro-form { width:100%;}
+	.home-post .wpcf7-form .wpcf7-not-valid-tip { right:0; left:auto; text-align:right;  top:32px; font-size:10px;}
+	.contant-home form .sect-txbx { width: 190px;} 
+}
+@media only screen and (max-width: 369px){
+	.side-bar { width:100%;}
+	.home-banner .home-box .left-img { width:49%;}
+	.home-banner .home-box .right-img { width: 49%; }
+	.home-banner .home-box .right-img img { width:50% !important;}	
+	.wrap { width:88%;}
+	.nav-main { margin: 13px 0px 0 0;} 
+
+	
+}
+
+
+@media only screen and (max-width: 320px) {
+	.side-bar .counder span {  font-size: 7px;}
+	.banner-text.bridg .start { font-size:18px;}	
+}

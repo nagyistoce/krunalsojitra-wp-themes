@@ -1,0 +1,89 @@
+﻿<div id="search-bar-basic" >
+	<fieldset>
+        <div class="searchLine">
+            <label for="arrdate"  data-localization="_arrivaldate">Start date:</label>
+            <input id="arrdate" value="" required />
+        </div>
+        <div class="searchLine">
+            <label for="depdate"  data-localization="_departuredate">End date:</label>
+            <input id="depdate" value="" required />
+        </div>
+        <!-- E08 - div #search-hotellocation-selection moved in front of #search-hotel-selection -->
+        <div class="searchLine" id="search-hotellocation-selection" data-function="hotellocationselection">
+            <label for="hotellocation" data-localization="_hotellocation">City:</label>
+            <input id="hotellocation" value=""    />
+        </div>
+        <div class="searchLine" id="search-hotel-selection" data-function="hotelselection">
+            <label for="hotelselect" data-localization="_hotelselect">Hotel:</label>
+            <input id="hotelselect" value=""    />
+        </div>
+        <!--E08 ends -->  
+		
+        <div class="searchLine" id="search-button">
+			<a href="#" title="search" id="SearchButtonLink" class="wbeButton" id="SearchRatesbutton" data-localization="_searchBtnSearchBarContent">Search</a>
+		</div>
+		</fieldset > 
+		<div class="clear"></div>
+		<div id="RequestOptionLinkBox" data-function="moreOptionLinkContainer"><a href="#" id="RequestOptionLink" data-localization="_moreoptions" >More Options</a></div>
+		<div id="Request-Option_Container" data-function="moreOptionContainer">
+			<fieldset>
+			<div class="searchLine" id="search-roomtype-selection">
+				 <label for="RoomTypeSelect" data-localization="_roomtypeselect" data-function="hotelroomtypeselection">Room type:</label>
+				<input id="RoomTypeSelect" value="" />
+			</div>
+			
+			<div class="searchLine" id="search-hoteltype-selection">
+				<label for="hoteltypselect" data-localization="_hoteltypeselect" >Hotel type:</label>
+				<input id="hoteltypselect" value="" />
+			</div>
+
+			<div class="searchLine" id="search-hotelrating-selection">
+				<label for="hotelratingselect" data-localization="_hotelratingselect" >Stars:</label>
+				<input id="hotelratingselect" value="" />
+			</div>
+			 <div class="searchLine" id="Div2">
+				<label for="promocodeBox" data-localization="_promocode">Promo code:</label>
+				<input id="promocodeBox" value="" data-function="promocode" type="text"  />
+			</div>
+			</fieldset> 
+			<div id="search-hotelfeature-selection" >
+			
+			</div>
+		</div>    
+  	
+</div>
+ <script id="HotelFeatureItemTemplate" type="text/x-kendo-template"> 
+  #for(i=0;i<data.length;i++){#
+  #if((data.length%2)==0) {#
+	  	#var half = Math.floor(data.length/2);#
+  #} else {# 
+		#var half = Math.floor(data.length/2)+1;#
+  #}#
+  #if(data.length < 5){#
+    #half=0;#
+  #}#
+  
+  #if(i==0 || i == half){#
+		<div class="searchLine">
+  #}#
+	  <div class="searchLine" style="clear:left">
+		<input id="#=data[i][_CurrentInstance.HotelFeatureFieldName]#" data-function="hotelfeature" value="#=data[i][_CurrentInstance.HotelFeatureFieldID]#" type="checkbox" /><label for="#=data[i][_CurrentInstance.HotelFeatureFieldName]#" >#=data[i][_CurrentInstance.HotelFeatureFieldName]#</label>
+	  </div> 
+   #if(i==data.length-1 || i == half-1){#
+        </div>
+    #}#
+
+  #}#
+ </script>
+<script type="text/javascript" language="javascript">
+    protelWBE.CreateHotelDropDownBox('hotelselect');
+    protelWBE.CreateArrivalDateInput('arrdate');
+    protelWBE.CreateDepartureDateInput('depdate');
+    protelWBE.CreateHotelTypeDropDownBox('hoteltypselect');
+    protelWBE.CreateRoomTypeSelection('RoomTypeSelect');
+    protelWBE.RegisterSearchRatesButton('SearchButtonLink');
+    protelWBE.CreateSearchBoxToggleButton('RequestOptionLink', 'Request-Option_Container');
+    protelWBE.RegisterHotelFeatureSelectContainer('search-hotelfeature-selection');
+    protelWBE.CreateHotelLocationDropDownBox('hotellocation');
+    protelWBE.CreateHotelRatingDropDownBox('hotelratingselect');
+</script>

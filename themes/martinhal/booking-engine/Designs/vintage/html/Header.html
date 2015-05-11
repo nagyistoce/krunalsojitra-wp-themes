@@ -1,0 +1,72 @@
+﻿<div id="headerTop" class="contentOut" >
+      <div id="headerLogo">
+          <a href="#"><img src="" data-function="hotellogo"  alt="protel Hotel Group Logo" border="0" /></a>
+        </div>
+</div>    
+    
+<div class="clear"></div>
+
+    <div id="headerPower" class="contentOut" data-function="headerwithSearchbox">
+        <div id="headerSearch" >
+           <a name="SearchbarContent" id="SearchbarContent"></a>
+            <div class="clear"></div>
+              <div id="Search-Box-Container" >
+               <!-- Header-Left-Content-SearchBox.html //-->
+              </div>
+              <div  id="Special-Offer-Box" class="SpecialOfferBoxBackground">
+                 <!-- SpecialOfferBoxContent.html //-->
+              </div>
+        </div>      
+    </div>
+
+<div class="clear"></div>
+
+<div id="headerPersonalMobil">
+    <div class="showMobileMenu showMobileColor1"><a href="#" ><i class="icon icon-home"></i></a></div>
+    <div class="showMobileMenu showMobileColor2"><a href="#" id="ResponsivelangSelectionBt" name="ResponsivelangSelectionBt"><i class="icon icon-flag"></i></a></div>
+    <div class="clear"></div>
+    <div class="showMobileMenu showMobileColor2"><a data-function="hotlinemobileLink" href="tel:+49231915930"  ><i class="icon icon-phone"></i></a></div>
+    <div class="showMobileMenu showMobileColor1"><a href="#" id="LoginResponsive" name="LoginResponsive"><i class="icon icon-user"></i></a></div>
+</div>  
+
+<div id="headerPersonal">
+
+
+            <div id="personaDiv"  class="item">
+                <div id="HeaderMenuContainer">
+                  <ul id="MyHeaderMenu" class="showInline">
+                      <li id="myaccount"><span class="icon"><i class="icon-user"></i></span><p class="translate" data-localization="_MyAccount">My Account</p>
+                        <ul ><div id="MemberContent" class="k-content" style="z-index:10000"></div></ul>    
+                      </li>    
+                  </ul>
+                </div>
+            </div>              
+            <div id="hPersonalBookPhone" class="item">
+                <a data-function="hotlinemobileLink" href="tel:+49231915930"  ><i class="icon icon-phone"></i><span id="phoneBigNo" data-function="hotlinemobile" >+49.231.915.930</span></a>
+            </div>                    
+            <div id="hLanguageSelection" class="item">
+              <i class="icon icon-flag"></i><span id="hLanguageSelectionTxt"><input id="languageselection" name="languageselection" /></span>
+            </div>
+</div> 
+
+
+    <div data-function="VoucherHeader">
+      <a href="#" class="morelk linkTxt" data-localization="_showOnlyVouchers">Gutscheine anzeigen</a>	
+	 </div>
+<div class="clear"></div>
+
+<script language="javascript" type="text/javascript">
+    protelWBE.RegisterLanguageSelection('languageselection');
+    protelWBE.RegisterMemberLoginContainer("MemberContent");
+    protelWBE.RegisterHeaderMenu('MyHeaderMenu');
+    protelWBE.RegisterSpecialOfferBox('Special-Offer-Box');
+    protelWBE.RegisterShowCancellationButton('hPersonalCancelReservationTxt');
+    protelWBE.RegisterShowCancellationResponsiveButton('CancelReservationResponsive');
+    protelWBE.RegisterResponsiveLoginButton('LoginResponsive');
+    protelWBE.RegisterResponsiveLanguageSelectionButton('ResponsivelangSelectionBt');
+</script>
+
+
+<script id="LanguageSelectionTemplate" type="text/x-kendo-template">
+<div><div style="float:left;padding-top:6px;"><img src="${ data.icon }" alt="${ data.name }" width="16px" height="11px" /></div><div style="float:left;padding-left:3px;">${ data.name }</div></div><div class="clear"></div>
+</script>

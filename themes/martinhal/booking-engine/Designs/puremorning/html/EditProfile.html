@@ -1,0 +1,98 @@
+﻿<div id="profileBoc">
+<h2 data-localization="_ChangeCustomerProfile">Kundenprofil ändern</h2>
+</div>
+<div id="profileTitle" class="checkOutEntity">
+<p class="checkOutEntityTitle txt11em" data-localization="_YourPersonalData">Ihre Daten</p>
+
+<fieldset>
+<div id="checkOutPersonalDiv1">
+	<table id="tableCOPersonalData1" >
+	  <tbody>
+		<tr>
+		  <td><label for="Company_Input" data-localization="_FormSelectCompanyName">Firma</label></td>
+		  <td><input  type="text" id="Company_Input" data-company="profile" name="Company_Input" />
+		  </td>
+		 </tr>
+		<tr>
+		  <td><label for="Salutation_Select" data-localization="_FormSalutation">Salutation</label></td>
+		  <td><input id="Salutation_Select" tabindex="2"   value="" name="Salutation_Select" data-salutation="profile" />
+		  </td>
+		 </tr>
+		<tr>
+		  <td><label for="Firstname_Input_profile" data-localization="_FormFirstname">FirstName</label></td>
+		  <td><input id="Firstname_Input_profile"  type="text" data-firstname="profile" tabindex="3" maxlength="50" name="Firstname_Input_profile" validationMessage="_firstnameRequired" />
+		  </td>
+		</tr>
+		<tr>
+		  <td><label for="Lastname_Input_profile" data-localization="_FormLastname">LastName</label><span class="requiredSmb"></span></td>
+		  <td><input id="Lastname_Input_profile" type="text"  value="" data-lastname="profile" tabindex="4" maxlength="50" name="Lastname_Input_profile" validationMessage="_lastnameRequired" /></td>
+		</tr>
+		<tr>
+		  <td><label for="Email_Input_profile" data-localization="_FormEmail">E-Mail</label><span class="requiredSmb"></span></td>
+		  <td><input id="Email_Input_profile" type="email" value="" tabindex="5" data-email="profile" maxlength="50" name="Email_Input_profile" validationMessage="_emailRequired" />
+		 		
+		  </td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<div id="checkOutPersonalDiv2">
+	<table  id="tableCOPersonalData2">
+	  <tbody>
+		<tr>
+		  <td><label for="Street-Input" data-localization="_FormStreet">Street</label></td>
+		  <td>
+		  	<input id="Street-Input" type="text" value=""  data-street="profile" tabindex="6" maxlength="50" name="Street-Input" validationMessage="_streetRequired" />
+		  </td>
+		</tr>
+		<tr>
+		  <td><label for="Zip_Input" data-localization="_FormZip">ZIP</label></td>
+		  <td><input id="Zip_Input" data-zip="profile" type="text" value="" tabindex="7" maxlength="10" name="Zip_Input" validationMessage="_zipRequired" />
+		  </td>
+		</tr>
+		<tr>
+		  <td><label for="City_Input_profile" data-localization="_FormCity">City</label></td>
+		  <td><input id="City_Input_profile"  value="" type="text" data-city="profile" tabindex="8" maxlength="50" name="City_Input_profile" validationMessage="_cityRequired" />
+		  </td>
+		</tr>
+		<tr>
+		  <td><label for="countryselect_profile" data-localization="_FormCountry">Country</label></td>
+		  <td><input id="countryselect_profile"  value="" tabindex="9" name="countryselect_profile" data-country="profile"/>
+		   </td>
+		</tr>
+		<tr>
+		  <td><label for="Telefon_Input_profile" data-localization="_FormPhone">Phone</label></td>
+		  
+		  <td><input id="Telefon_Input_profile" type="text" value="" data-phone="profile" tabindex="10" maxlength="50" name="Telefon_Input_profile" validationMessage="_phoneRequired" />
+		  </td>
+		</tr>
+		<tr>
+		  <td><label for="Fax_Input_profile" data-localization="_FormFax">Fax</label></td>
+		  
+		  <td valign="top"><input id="Fax_Input_profile" type="text" value="" data-fax="profile" tabindex="11" maxlength="50" name="Fax_Input_profile" validationMessage="_faxRequired" />
+		  </td>
+		</tr>
+
+		</tbody>
+	</table>
+</div>
+</fieldset>
+<div class="clear"></div>
+<div id="newsletterSubscription" class="checkOutEntity">
+  <input id="newsletterSubscription_newProfile" type="checkbox" data-gtccheck="newsletterSubscription" tabindex="100" maxlength="50" name="newsletterSubscription_newProfile" /><label for="newsletterSubscription_newProfile"><span data-localization="_newsletterSubscriptionAgree" class="txtB" > Yes, sign me in for the Newsletter</span></label>
+</div>
+
+<div class="clear"></div>
+
+
+<div class="buttonPanel">
+                	
+                    <div class="buttonPanelL"><input  class="wbeButton morelk" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  data-localization="_SaveProfilBt" value="Save" id="SaveProfileBt"  type="button"></div>
+                </div>
+</div>
+<script language="javascript" type="text/javascript">
+    protelWBE.RegisterSaveProfileButton('SaveProfileBt');
+    protelWBE.RegisterSalutationProfileSelect('Salutation_Select');
+    protelWBE.RegisterCountryProfileSelect('countryselect_profile');
+</script>

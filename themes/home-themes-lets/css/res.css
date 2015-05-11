@@ -1,0 +1,304 @@
+@media screen and (max-width:1370px){h2{font-size:45px;}
+#main h1{margin-top:16%;font-size:38px;}
+#main .cta{font-size:16px;}
+#services.section ul{margin-top:5%;}
+#portfolio ul li{width:16%;}
+#portfolio ul li img{width:100%;float:left;}
+#about ul{margin-top:40px;}
+#about ul li p{overflow:hidden;}
+#contact span.line{margin-bottom:20px;}
+h4{font-size:36px;}
+#contact .cnt-left .mail,
+#contact .cnt-left .call{font-size:25px;margin-top:15px;}
+#contact .cnt-left address{margin-top:20px;}
+#contact .cnt-left .ft-social li img{width:28px;}
+#contact .cnt-left .ft-social li a{font-size:20px;}
+#contact .cnt-left .ft-social{margin-top:10px;}
+.section h2{margin-top:5px;}
+#main{min-height:700px;}
+#services{padding-bottom:150px}
+.cbp-l-grid-team .cbp-item{min-height:328px;}
+}
+@media screen and (max-width:1300px){h1{font-size:73px;}
+h2{font-size:45px;}
+#services{padding-bottom:130px}
+.inner-page .banner h5{}
+.inner-page .post h6{font-size:26px;}
+.inner-page .post ul li{padding:0 20px;}
+#main h1{font-size:36px;}
+}
+@media screen and (max-width:1180px){.container{width:auto;margin:0 10px;}
+#services{padding-bottom:120px}
+.inner-page .banner h5{}
+.portfolio_right{width:53%;}
+#main h1{font-size:34px;}
+}
+@media screen and (max-width:1200px){h1{font-size:68px;}
+h2{font-size:46px;}
+#services{padding-bottom:100px}
+.inner-page .banner h5{border-width:4px;}
+#main h1{font-size:32px;}
+}
+@media screen and (max-width:1080px){h1{font-size:63px;}
+h2{font-size:43px;}
+.section .sub-head{font-size:28px;}
+#about ul{margin-top:80px;}
+h4{font-size:40px;}
+#contact .cnt-left .mail,
+#contact .cnt-left .call{font-size:32px;}
+#services{padding-bottom:80px}
+#about{background-size:auto 100%;}
+.inner-page .banner h5{}
+#main h1{font-size:30px;}
+}
+@media screen and (max-width:1024px){h1{font-size:58px;}
+.section{padding-top:70px;}
+h2{font-size:40px;}
+.section .sub-head{font-size:26px;}
+#main .cta{font-size:19px}
+h4{font-size:38px;}
+#contact .cnt-left .mail,
+#contact .cnt-left .call{font-size:30px;}
+#services{padding-bottom:40px}
+.inner-page .banner h5{}
+.inner-page .post ul li{padding:0 10px;}
+#main h1{font-size:28px;}
+}
+@media screen and (max-width:980px){h1{font-size:53px;}
+h2{font-size:37px;}
+.section .sub-head{font-size:24px;}
+.section p{font-size:18px;}
+.section p br{display:none;}
+#main .cta{font-size:18px}
+#about ul{margin-top:60px;}
+h4{font-size:36px;}
+#contact .cnt-left .mail,
+#contact .cnt-left .call{font-size:28px;}
+#contact .cnt-left .ft-social li a{font-size:22px;}
+#main{min-height:550px;}
+.inner-page .banner h5{}
+.inner-page .post h6{font-size:23px;}
+.inner-page .blogs aside{padding-left:15px;}
+.inner-page .blogs aside .follow ul li{margin-right:5px;}
+.inner-page .blogs .blog-left article .blog-detail{width:78%;}
+.inner-page .blogs .blog-left{padding-right:15px;}
+.inner-page .blogs .blog-left article .blog-detail{width:81%;}
+.inner-page .blogs .blog-left article .blog-detail h4{font-size:23px;}
+.portfolio_left{float:none;margin:0 auto;width:100%;}
+.portfolio_right{width:97%;}
+.detail_port h4{text-align:center;}
+#main h1{font-size:26px;}
+#main .cta{padding:12px 25px;}
+}
+@media screen and (max-width:900px){h1{font-size:48px;}
+header nav ul li{margin-right:20px;}
+header nav ul li a{font-size:15px;}
+.section{padding-top:55px;}
+h2{font-size:34px;}
+.section .sub-head{font-size:22px;}
+#main .cta{font-size:17px}
+#about ul li p{font-size:14px;}
+h4{font-size:34px;}
+#contact .cnt-left .mail,
+#contact .cnt-left .call{font-size:26px;}
+.inner-page .banner h5{}
+.inner-page .blogs aside .follow ul li img{width:35px;}
+.inner-page .blogs .blog-left article .blog-detail{width:78%;}
+.inner-page .blogs .blog-left article .blog-detail h4{font-size:19px;}
+.main #main{background-size:auto 100% !important;}
+#main h1{font-size:24px;}
+}
+@media screen and (max-width:800px){h1{font-size:43px;}
+h2{font-size:31px;}
+.section .sub-head{font-size:20px;}
+.section p{font-size:16px;}
+#main .cta{font-size:16px}
+#about ul{margin-top:40px;}
+h4{font-size:32px;}
+#contact .cnt-left .mail,
+#contact .cnt-left .call{font-size:24px;}
+#main{min-height:500px;}
+.inner-page .blogs aside .blg-pst ul li a{font-size:12px;}
+header nav .menu-responsive-menu-container{display:block;}
+header nav > .menu-collapser{display:none !important;}
+header nav{position:static;width:205px;}
+header nav ul.slimmenu li{position:initial;padding:0;position:relative;}
+.slimmenu > li:hover{background:none repeat scroll 0 0 rgba(0,0,0,0.3);padding:0;}
+ul.slimmenu li .sub-collapser{background:url(../images/down.png) center no-repeat;}
+header nav ul li ul{margin:0;width:100%;float:left;background:rgba(0,0,0,0.8);}
+header{position:absolute;}
+ul.slimmenu li .sub-collapser{display:block;}
+#about ul li{margin-right:3%;}
+.read-more{display:none;}
+#main h1{font-size:22px;}
+.Offer_page{width:100%;}
+#portfolio.section{height:auto;}
+#about.section{height:auto;}
+.portfolio_home{width:100%;}
+#about ul li h3{min-height:108px;}
+.testimonial p{font-size:11px;}
+}
+@media screen and (max-width:768px){h1{font-size:38px;}
+.section{padding-top:40px;}
+h2{font-size:28px;}
+.section .sub-head{font-size:18px;}
+#main .cta{font-size:15px}
+h4{font-size:30px;}
+#contact .cnt-left .mail,
+#contact .cnt-left .call{font-size:22px;}
+#contact .cnt-left .ft-social li a{font-size:20px;}
+#services{padding-bottom:30px}
+.inner-page .blogs .blog-left{width:100%;padding:0;border:none;}
+.inner-page .blogs aside{padding:0;width:100%;}
+.inner-page .blogs aside form{width:48%;}
+.inner-page .blogs aside .blg-pst{width:48%;float:right;margin-top:25px;}
+.page-id-4760 .inner-page .blogs aside .blg-pst{width:48%;float:left;margin-top:25px;margin-right:12px;}
+.inner-page .blogs .blog-left article .blog-detail{width:85%;}
+.inner-page .blogs .blog-left .numbers{width:100%;}
+.inner-page .blogs .blog-left .last{width:100%;}
+.testimonial-authorimg{float:none;margin:0 auto;text-align:center;width:140px;}
+}
+@media screen and (max-width:740px){#services.section ul li img{width:80%;margin:0 10%;}
+#services.section ul{margin-top:20px;}
+#services.section ul li a{font-size:20px;}
+#contact .cnt-left{width:50%;}
+.inner-page .banner h5{border-width:2px;}
+.inner-page .blogs .blog-left article .blog-detail{width:83%;}
+#main h1{font-size:20px;}
+#main .cta{padding:8px 20px;}
+}
+@media screen and (max-width:640px){body{overflow:auto !important;}
+#superContainer{transform:none !important;height:auto !important;float:left;}
+.section,
+.scrollable,
+.slimScrollDiv,
+.tableCell{height:auto !important;}
+h1{font-size:33px;}
+.section#main{min-height:450px;}
+.section#services{min-height:600px;}
+#main h1{margin-top:15%;}
+.section{padding-top:40px;}
+h2{font-size:25px;}
+.section p{font-size:15px;}
+#main .cta{font-size:14px}
+#portfolio ul{margin-bottom:10px;}
+#portfolio ul li{width:33.33%;}
+#portfolio ul li a img{width:100%;}
+#about ul{margin-top:20px;}
+#about ul li p{line-height:24px;}
+#about ul li{width:100%;margin:0 0 30px 0;}
+#contact .cnt-left{width:100%;}
+#contact form{width:100%;margin-top:20px;}
+#contact .cpy{font-size:14px;}
+h4{font-size:28px;}
+#contact .cnt-left .mail,
+#contact .cnt-left .call{font-size:20px;}
+#contact .cnt-left address{font-size:15px;}
+#menu{width:60px;height:60px;margin-left:-30px;}
+#menu img{width:100%;}
+#contact{background-size:auto 100%;}
+.inner-page .banner h5{}
+.inner-page .post h6{font-size:20px;}
+.inner-page .post ul li{padding:0;width:100%;margin-bottom:20px;}
+.inner-page .post ul li img{width:30%;}
+.inner-page .post ul li h2{margin:0;}
+.inner-page .post ul li h2,
+.inner-page .post ul li p{width:66%;float:right;}
+.inner-page .blogs .blog-left article .blog-detail{width:81%;}
+.inner-page .blogs .blog-left article .blog-detail h4{font-size:17px;}
+#main h1{font-size:18px;}
+#about ul li h3{min-height:51px;}
+}
+@media screen and (max-width:580px){h1{font-size:30px;}
+header .logo{width:40%;}
+header .logo a img{width:100%;}
+header{padding-bottom:11px;}
+ul.slimmenu.collapsed{top:76px;}
+.section{padding-top:30px;}
+h2{font-size:25px;}
+.section .sub-head{font-size:16px;}
+#main .cta{font-size:13px}
+#about ul li p{font-size:13px;line-height:20px;}
+h4{font-size:26px;}
+#contact .cnt-left .mail,
+#contact .cnt-left .call{font-size:18px;}
+#contact .cnt-left .ft-social li a{font-size:18px;}
+#services.section ul li a{font-size:18px;}
+#services{padding-bottom:20px}
+.inner-page .blogs .blog-left article .blog-detail{width:77%;}
+.portfolio_home{width:100%;}
+#clients .right{width:100%;}
+#clients .left{width:100%;}
+.read-more{display:none;}
+.side-navigation.hide-mobile{display:none;}
+.main_img > img{width:100%;}
+.container >h4{font-size:17px;}
+}
+@media screen and (max-width:480px){
+h1{font-size:26px;}
+h1 br{display:none;}
+header .logo{width:59px;overflow:hidden;}
+header .logo a img{width:auto;}
+header a.get-but{font-size:15px;margin-top:16px;}
+.menu-collapser{margin-top:16px;}
+.collapse-button{padding:6px 10px;}
+ul.slimmenu.collapsed{top:115px;}
+#main h1{margin-top:25%;}
+.section{padding-top:20px;}
+h2{font-size:25px;}
+#services.section ul li{width:100%;margin-bottom:10px;}
+#services.section ul li img{float:none;width:45%;margin:0 20px;}
+#services.section ul li a{width:100%;text-align:center;float:left;display:inline-block;vertical-align:middle;margin-top:8%;}
+#services.section ul li a span{font-size:18px;}
+#portfolio ul li{width:50%;}
+h4{font-size:24px;}
+#contact .cnt-left .mail,
+#contact .cnt-left .call{font-size:16px;}
+#contact .cnt-left address{font-size:14px;}
+#contact .cnt-left .ft-social li a{font-size:16px;}
+#portfolio{background-size:auto 100%;}
+#contact form ul li.half{width:100%;}
+.inner-page .banner h5{}
+#main h1{font-size:16px;}
+.inner-page .post ul li img{width:40%;}
+.inner-page .post ul li h2,
+.inner-page .post ul li p{width:56%;}
+.inner-page .blogs aside form{width:100%;}
+.inner-page .blogs aside .blg-pst{width:100%;}
+.inner-page .blogs .blog-left article .blog-detail{width:70%;}
+.inner-page .blogs .blog-left article .blog-detail h4{font-size:15px;}
+.portfolio_right span{width:100%;margin:0;}
+.flexslider.home_port{width:100%;}
+header{background:none repeat scroll 0 0 #083782 !important;}
+.home #main{display:none;}
+.home #services{background:#275db2;color:#fff;padding-top:50px;}
+#services.section ul li a span{color:#fff;font-family:arial;}
+#services.section span.line{border-bottom:2px solid #083782;}
+.home #clients{display:none;}
+.cnt-left{display:none;}
+header.sml-hd .logo{width:14%;}
+header a.get-but{margin-top:14px;}
+.inner-page .page_rightbar{display:none;}
+.portinline{width:300px;}
+.in_cpoy, #contact .cpy{padding-bottom:13px;font-size:13px;}
+#portfolio h2, #about h2{margin-top:20px !important;}
+#portfolio, #about{padding-bottom:10px;}
+#fade{visibility:hidden;}
+.full-width ul{padding: 0px;width: 50%;}
+}
+@media screen and (max-width:369px){header a.get-but{margin-right:10px;}
+h2{font-size:22px;}
+.section .sub-head{font-size:14px;margin-top:20px;}
+#contact .cpy{font-size:12px;}
+h4{font-size:22px;}
+.inner-page .post ul li img{width:100%;}
+.inner-page .post ul li h2{margin-top:10px;}
+.inner-page .post ul li h2,
+.inner-page .post ul li p{width:100%;}
+.inner-page .blogs .blog-left article .blog-detail{width:100%;margin-top:20px;}
+.inner-page .blogs .blog-left article .date{float:none;margin:0 auto;display:table;}
+.container.ft-menu ul{width: 100%;}
+.container.ft-menu li{padding: 0 3px;}
+}
+@media only screen and (max-width:600px) and (orientation:portrait){.section{background-size:auto 100% !important;}
+}

@@ -1,0 +1,47 @@
+﻿<div id="homePage">
+ <div data-function="ratetable" class="tableBox">
+  <div class="rowBox pNoMargin">
+    <div class="cellBox startBox startBox1" >
+        <div class="startBoxContent">
+              	<h4><a href="\\#"  title=""  id="LinkShowTommorw" class="roomBoxLk" data-localization="_tRoomTomorrow">Rooms for tomorrow</a></h4>
+                <p data-localization="_tRoomTomorrowText">Looking for last-minute deals? Or just decided to travel now?</p>
+                <p class="btnStartBoxHolder"><input  class="bookButton" onmouseover="this.className='bookButton_hover';"  onmouseout="this.className='bookButton';" data-localization="_ShowOffersBt1"  value="Book here" id="ButtonShowTommorw"  type="button"/></p>
+			</div>              
+    </div>
+    <div class="cellBox startBox startBox2">
+         <div class="startBoxContent">
+              	<h4><a href="\\#"  title="" class="roomBoxLk" id="LinkShowNWeekend" data-localization="_tRoomnextWeek">Rooms for next weekend</a></h4>
+                <p data-localization="_tRoomnextWeekText">Look and plan an amazing weekend</p>
+				<p class="btnStartBoxHolder"><input  class="bookButton" onmouseover="this.className='bookButton_hover';" onmouseout="this.className='bookButton';" data-localization="_ShowOffersBt2"  value="Book now" id="ButtonShowNWeekend"  type="button"/></p>
+          </div>
+    </div>
+    <div class="cellBox startBox startBox3"  >
+    	<div class="startBoxContent">
+              	<h4><a href="\\#"   title="" class="roomBoxLk" id="LinkShowAll" data-localization="_tShowAll" >Show me all</a></h4>
+                <p data-localization="_tShowAllText">See our full range of dates and prices</p>
+				<p class="btnStartBoxHolder"><input  class="bookButton" onmouseover="this.className='bookButton_hover';" data-localization="_ShowOffersBt3" onmouseout="this.className='bookButton';"  value="Just book" id="ButtonShowAll"  type="button"/></p>
+		</div>
+    </div>
+  </div>
+</div>      
+
+<div id="reurningCustomer"  class="icon_generated" data-icon="❤">
+            <div id="reurningCustomerTxt">
+                <h4 data-localization="_tReturningCustomer" >Returning customer?</h4>
+                <p class="txt11em"><a href="#" onclick="protelWBE.GoToLogin();" class="lkColor" data-localization="_iSignIn" >Sign in</a> <span data-localization="_iSeePersonalOffers">to see personalized offers</span></p>
+              </div>
+             
+ </div>
+<div class="clear"></div>
+</div>
+
+<script language="javascript" type="text/javascript">
+
+    protelWBE.RegisterShowTomorrowButton('ButtonShowTommorw');
+    protelWBE.RegisterNextWeekendButton('ButtonShowNWeekend');
+    protelWBE.RegisterShowAllButton('ButtonShowAll');
+    protelWBE.RegisterShowTomorrowButton('LinkShowTommorw');
+    protelWBE.RegisterNextWeekendButton('LinkShowNWeekend');
+    protelWBE.RegisterShowAllButton('LinkShowAll');
+    protelWBE.RegisterReturningCustomerBox('reurningCustomer');
+</script>

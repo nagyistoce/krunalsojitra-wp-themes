@@ -1,0 +1,644 @@
+@charset "utf-8";
+/* CSS Document */
+
+.pNoMargin {margin:0;}
+.txtCrt {text-align:center;}
+.txtRight {text-align:right;}
+.priceClass {font-size:1.3em; }
+.txt11em {font-size:1.1em; }
+.msgBox { padding:@space_unit; 
+		/*background-color: @roomConfig-background;*/
+		background-image:url("../wbe4img/bg-@{themeName}_defaultPattern.png");
+		border:none;
+		-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		-moz-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;  }
+
+*.unselectable, *.unselectable:hover {-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+				 color:@wbeInputDisabled-fontColor; /*background:@wbeInputDisabled-background;}*/
+			 	 background:transparent;
+				 cursor: text;
+				}
+.morelk:after, .lesslk:after {
+		font: 1.33em Baskerville, Georgia, Times New Roman, serif;
+		display:inline-block; }
+.morelk:after {	content: ' » ';}	
+.lesslk:after {	content: ' « ';}
+.notavail, #calendarLegendBoxNotavail.icon_generated {color:@wbe-not-availale;}
+.notavail:not(.icon_generated:before) {text-decoration:line-through; cursor:default;}
+.minstay, #calendarLegendBoxMinstay.icon_generated  {color:@wbe-minimum-stay;}
+.avail, #calendarLegendBoxAvail.icon_generated {color:@wbe-availale;}
+ul.showInline li{ display:inline;}
+.floatLeftBox { float:left;}
+.opaqueImg {
+ 	zoom: 1;
+	filter: alpha(opacity=40);
+	opacity: 0.4; }
+#DetailView-Content {margin:@space_unit @space_unit 4*@space_unit @space_unit;}
+.cellBox {margin-top:@space_unit;}
+.startBox, #returningCustomer, #Special-Offer-Box  {padding:@space_unit 2*@space_unit; margin:@space_unit;}
+.pag-lk-prev,  .pag-lk-next, .pag-lk, .msgBox, fieldset input, fieldset textarea, .showResultsBox, #carouselkatview, .showResultsN, .startBox, .showRoomCategoryRed, .showRoomCategoryGreen, .showRoomCategorySelected, .SpecialOfferBoxBackground , .errorBox, #AvailCalender td.k-state-selected, #AvailCalender td.k-state-hover, .showResultsBoxImage img, .tableArticle img, #Special-Offer-Box, #alternativeRates ul, .paintBox  {	border-radius: @radius;}
+fieldset input, fieldset textarea  { border:@unit_size solid @wbeInput-border-color; }
+.errorBox {	box-shadow: rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color, @boxshadow_alfa/2) @unit_size 0 @unit_size }
+.showResultsBoxImage img, .tableArticle img {	box-shadow: rgba(@boxshadow_color/10,@boxshadow_color/10,@boxshadow_color/10, @boxshadow_alfa) 2*@unit_size 2*@unit_size 2*@unit_size;}
+.borderBottomLight, #AvailCalenderLegend h5 { border-bottom: @unit_size solid @wbe-border; }
+/*E092 -lines added */
+	.paddingClass { padding:@space_unit; }
+	.leftMargin{ margin-left:@space_unit; }
+/*E092 Ends*/
+
+
+/***Page STRUCUTRE************************************************************************************************/
+	#header, #footerWBE4, #content {width:100%; margin:0 auto;}
+	#header {overflow:hidden;}
+	#Search-Results {display:block;}
+
+/***HEADER*****************************************************************************/
+	#headerTopLine {padding-bottom:2*@space_unit;}
+	.searchLine, .blockLine {margin:@space_unit @space_unit 0 0;}
+	.searchLine, .formLine {float:left;}
+	.formLine {margin:@space_unit 2*@space_unit 0 0; min-height:4em; width:15em;}
+	.activeMyReservation .searchLine{float:none; }
+	#search-button.searchLine, #responsiveLogin-button.searchLine{top:1.3em; position:relative; min-height:3em;}
+	#MemberContent	{
+		padding:@space_unit 0;
+		width:41.7em;
+		text-align:left;
+		border: @wbe-border @unit_size solid; 
+		background:@wbe-border;}
+	#headerLogo {float:left; margin:1em; }
+	#HeaderMenuContainer {width:11.250em; white-space:nowrap; float:right;}
+	#headerPersonal {float:right; margin:0 @smallspace_unit;}
+	#div_basket.item {clear:both;}
+	#headerPersonal #HeaderMenuContainer ul {	border:none;}
+	#HeaderMenuContainer  ul li { border:none; display:inherit;	}
+	#myaccount .translate{ display:inline; margin:0; }
+	#headerPersonal a {color:@widget-text-color; /*from kendo.silver.css, to keep uniformity*/ text-decoration:none;}
+	#headerPersonal a:hover, #headerPersonal a:active, #headerPersonal .k-link:hover {color:@hover-text-color; /*from kendo.silver.css, to keep uniformity*/	}
+	#headerPersonal a:hover span#ShowMyBasket { text-decoration: underline;}
+	#myaccount .k-link:hover {text-decoration:none;}
+	#headerPersonal .k-link:hover {background:@wbeDark-background;}
+	#hLanguageSelectionTxt {text-align:left;} 
+	#headerPersonal ul li {list-style:none; display:inline;}
+	#Search-Box-Container {margin:0 @smallspace_unit; min-width:20*@space_unit;}
+	.item:not(#div_basket) .icon, .item:not(#div_basket) .icon a { color: @wbeHeaderIcon-color!important; }
+	#div_basket.item .icon, #div_basket.item .icon a { color: @wbeShoppingCartIcon-Color!important; }
+	
+
+
+/***CONTENT ***/	
+	#content {	clear: left;	margin: 2*@space_unit auto; }	
+
+/***FOOTER***/		
+	#footerHMenu {	text-align:center;	padding:@space_unit 0; background-color:@wbeFooter-background; background-image:url("../wbe4img/bg-@{themeName}_defaultPattern.png"); margin-top:4*@space_unit; color: @wbeFooter-fontColor;}	
+	#footerHMenu ul li { 
+		display:inline;
+		margin:0 @space_unit;
+		list-style:none;
+		padding:@space_unit/3 @space_unit; }
+	#footerHMenu ul li a  { text-decoration:none; text-shadow:@unit_size 0 @unit_size @black;  color: @wbeFooter-fontColor;
+		&:hover {color:@wbeFooter-fontColorHover;}
+	}	
+	.pag-lk:hover, .pag-lk:active, .pag-lk-next:not(.off):hover, .pag-lk-next:not(.off):active, .pag-lk-prev:not(.off):hover, .pag-lk-prev:not(.off):active { color:@wbeGalleryImageBtnsHover-fontColor; text-shadow:@unit_size 0 @unit_size darken(@wbeGalleryImageBtnsHover-background, 20%);}	
+	#footerMark, #footerHSMedia {margin:@space_unit 0; width:100%; text-align:center;}
+	#footerMark img {max-width:9em;}
+	.touch {margin:@space_unit; padding: 2*@space_unit @space_unit/2 0;}
+	.touch:first-child {margin-left:0; padding-left: 0;}	
+	.footerSocialIcons { width:32px; height:32px; display:inline-table;}
+	#footerFBIcon {background-position:100% -187px;}
+	#footerYouTubeIcon {background-position:100% -289px;}
+	#footerTwitterIcon {background-position:100% -255px;}
+
+/**FORM*****************************************************************/
+	fieldset { margin: 0 0 @space_unit 0; }
+	fieldset label {
+		line-height: 1.4em;
+		word-wrap: break-word;
+		color: @wbeLabel-fontColor;
+	}
+	fieldset input[type="text"], fieldset input[type="email"], fieldset input[type="password"],  fieldset input[type="number"] { margin:0;}
+	fieldset input:not([type="radio"]):not([type="checkbox"]), fieldset select { display:block;}
+	fieldset input:not([type="button"]), fieldset textarea {
+		color: @wbeInput-fontColor;
+		background-color: @wbeInput-background;
+		-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+		-moz-transition: background all 0.9s;
+		-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+		transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+		border: @unit_size solid @wbeInput-border-color;  	
+	}
+	fieldset textarea {margin:0.5em 0; width:100%; }
+	fieldset input[type="radio"], fieldset input[type="checkbox"], input[type="checkbox"] { width:1.5*@space_unit; margin:@smallspace_unit; }
+	fieldset input:not([type="button"]):hover, fieldset textarea:hover, input:focus, textarea:focus { background: @wbeInputHover-background; color:@wbeInput-fontColor; }
+
+	#checkOutPersonalDiv1 input[type="radio"], #checkOutPersonalDiv12 input[type="radio"]{ margin-left:2*@space_unit;}
+	#checkOutPersonalDiv1 input:first-child, #checkOutPersonalDiv12 input:first-child{ margin-left:0;}
+	#search-hotellocation-selection span.k-dropdown, #search-hotel-selection span.k-dropdown, #hLanguageSelectionTxt span.k-dropdown {border: none;}
+
+
+	fieldset:last-child {margin: 0;}
+	fieldset select, fieldset .selectClass{width:4.5em; }
+	.selectClass {  width:4.5em;}
+	.searchLine #Button2 { margin-top:2*@space_unit; margin-bottom:@space_unit;}
+	.formFieldNote {margin:@space_unit 0; color:@fontColor; }
+	fieldset input[disabled], fieldset input[disabled]:hover, fieldset input[disabled]:active {		
+		background:@wbeInputDisabled-background;
+		border: 1px solid @disabled-border;
+		color: @wbeInputDisabled-fontColor;  }
+	input:disabled, input:disabled:hover, .addToCartButton_disabled, .addToCartButton_disabled:hover { 
+				color: @disabled-fontColor;
+				cursor:default; }
+	input:disabled[type="button"] {
+		padding:@smallspace_unit 2*@space_unit;
+		border-radius: 0 @radius; }
+
+/**StartPage***************/
+	#homePage h4, #hotelRatesBottomListing h6 {margin-top:@space_unit;}
+
+/**Login Div**/
+	.LoginFormClass {
+		margin-top:@space_unit;
+		padding: 0 0 @space_unit;
+		}
+	.LoginFormAlternate, .LoginFormAuth {margin-left:@space_unit;}
+	#LoginFormAuthID h4, #LoginFormAuthID p {display:inline;}
+	
+/*****Search Box**************************/
+	#RequestOptionLinkBox {padding:@space_unit 0; clear:left;}
+	#search-hotelfeature-selection { clear:left; overflow:hidden; margin:@space_unit 0;}
+	.searchLeft { 	float:left; min-width:8em; }
+	
+	/**Display block as most elements are not input type, but span*******************/
+	.searchLine label, .formLine label, .clear label {display:block; color:@wbeLabel-fontColor;}
+	#search-hotelfeature-selection .searchLine label {color:@wbeSearchBoxTab-fontColor;	}
+	#search-hotelfeature-selection .searchLine label{display:inline;}
+	.searchBoxDiv h2 {	margin-bottom:0;}
+	#newProfileTOS label, #sendVoucherByEmail label  {display:inline;}
+	#newProfileTOS.formLine{width:100%;}
+	#sendVoucherByEmail.formLine {width:31.25em;}
+	#search-hotel-selection-advanced {padding-bottom:2*@space_unit;}
+	
+	/**Social Buttons**/
+	#SocialLogin {width: 100%;}
+	#SocialLogin ul { display:inline; }
+	#SocialLogin li {
+		list-style: none;
+		display:inline; }
+	#SocialLogin li a {
+		background-color: @wbe-background;
+		background-position:100% 0;
+		border: none;
+		color:@fontColor; 
+		display: inline-block;
+		height: 34px;
+		line-height: 2.571em;
+		margin:@space_unit/2 0;
+		padding-left: @space_unit;
+		position: relative;
+		text-decoration: none;
+		width: 159px;
+		border-top-right-radius: 30px;
+		border-bottom-right-radius: 30px;
+		-webkit-transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		-moz-transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		-o-transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease; }
+	#SocialLogin li#addAccount {display:block; }
+	#SocialLogin li#addAccount a:hover{width:500px;}
+	#MemberContent fieldset input[type="text"],#MemberContent fieldset input[type="email"],#MemberContent fieldset input[type="password"] {width:149px;}
+	#MemberContent fieldset input[type="button"] {width:166px; margin-top:20px;}
+	.opacity #SocialLogin li a {
+		opacity: .40; }
+	#SocialLogin li a:hover,
+	#SocialLogin li a:focus {
+			opacity: 1; }
+	.rgba #SocialLogin li a:hover,.rgba #SocialLogin #logout a:hover, 
+	.rgba #SocialLogin li a:focus,.rgba #SocialLogin #logout a:focus {
+		text-shadow: @unit_size 0 @unit_size @fontColor-shadow;
+		width: 185px;
+		-webkit-transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		-moz-transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		-o-transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease; }
+	#SocialLogin #facebook   a { background-position: 100% 0px; 	background-color: @wbeLogin-facebook-bg; }
+	#SocialLogin #google     a { background-position: 100% -36px; 	background-color: @wbeLogin-google-bg; }
+	#SocialLogin #twitter    a { background-position: 100%  -72px; 	background-color: @wbeLogin-twitter-bg; }
+	#SocialLogin #addAccount a { background-position: 100% 236px; background-color: @wbeLogin-addAccount-bg; }
+	#SocialLogin #logout    a  { background-position: 100% 236px; background-color: @wbeLogin-logout-bg; }  
+	#SocialLogin #myreservation    a { background-position: 100%  -106px; 	background-color: @wbeLogin-myreservation-bg;}
+	#SocialLogin #manageprofile    a { background-position: 100%  -140px; 	background-color: @wbeLogin-manageprofile-bg; }
+	
+	#facebook   a:hover, #facebook   a:focus { background-color: @wbeLogin-facebook-bg; }
+	#google     a:hover, #google     a:focus { background-color: @wbeLogin-google-bg; }
+	#twitter    a:hover, #twitter    a:focus { background-color: @wbeLogin-twitter-bg; }
+	#logout     a:hover, #logout     a:focus { background-color: @wbeLogin-logout-bg; }
+	#addAccount    	  a:hover, #addAccount    	 a:focus { background-color: @wbeLogin-addAccount-bg; }
+	#manageprofile    a:hover, #manageprofile    a:focus { background-color: @wbeLogin-manageprofile-bg;}
+	#myreservation    a:hover, #myreservation    a:focus { background-color: @wbeLogin-myreservation-bg; }
+	
+	.rgba #facebook   a { background-color: rgba(26,  144, 198, 0); }
+	.rgba #google     a { background-color: rgba(218,  56,  48, 0); }
+	.rgba #twitter    a { background-color: rgba( 40, 175, 255, 0); }
+	.rgba #logout     a { background-color: @wbeLogin-logout-bg; }
+	.rgba #addAccount    a { background-color: @wbeLogin-addAccount-bg; }
+	.rbga #manageprofile a { background-color: @wbeLogin-manageprofile-bg;}
+	.rbga #myreservation a { background-color: @wbeLogin-myreservation-bg; }
+	
+	.rgba #facebook   a:hover, .rgba #facebook   a:focus { background-color: rgba( 26,  144, 198, .82); }
+	.rgba #google     a:hover, .rgba #google     a:focus { background-color: rgba(218,  56,  48, .82); }
+	.rgba #twitter    a:hover, .rgba #twitter    a:focus { background-color: rgba( 40, 175, 255, .82); }
+	.rgba #logout 	  a:hover, .rgba #logout     a:focus     a { background-color: @wbeLogin-logout-bg; }
+	.rgba #addAccount    	a:hover, .rgba #addAccount    a:focus { background-color: @wbeLogin-addAccount-bg; }
+	.rbga #manageprofile    a:hover, .rbga #manageprofile    a:focus {background-color: @wbeLogin-manageprofile-bg;  }
+	.rbga #myreservation    a:hover, .rbga #myreservation    a:focus { background-color: @wbeLogin-myreservation-bg; }
+
+/***MyReservations********************************/
+	.activeMyReservation, .rowBoxRes.activeMyReservation {margin:@space_unit 5%;}
+	.rowBoxRes {border:@wbe-border @unit_size solid; margin:0 auto;  padding:@space_unit;}
+	#divMyReservationCancelInside, #divMyReservationCallBack, #divMyReservationSendMsg { margin:@space_unit 2*@space_unit; padding-top:2*@space_unit; padding-bottom:2*@space_unit; width:auto; height:auto;}
+	.activeMyReservation, #tblMyReservationDetails.tableBoxRes {clear:both;}
+
+/**SHOW HOTEL RESULTS************************************************/
+	h2.rateHotelH2 span {color: @wbeResultHotelName-fontColor;
+		&.icon-star {color: @wbeStars-Color;}
+	}
+	.hotelOverviewPanel { margin:2*@space_unit 0 0 0; }
+
+/**RATE- SHOW****************************/
+	.showResultsBox  { overflow:hidden;}
+	.rateHotelAddress { margin:0 0 2*@space_unit 0;	}
+	.showResultsBox, .showResultsN,.startBox, .SpecialOfferBoxBackground, #thankYouBox, #searchResultEmptyBox, .paintBox {
+		background-color: @wbeResultBoxes-background;
+		background-image:url("../wbe4img/bg-@{themeName}_defaultPattern.png");
+		background-repeat:repeat;
+		border:none;
+		-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		-moz-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;	}	
+	.showResultsBox:hover, .startBox:hover, .SpecialOfferBoxBackground:hover, .showResultsN:hover  {
+		background-color:@wbeResultBoxesHover-background; color: @wbeResultBoxesHover-fontColor!important; 		}	
+	.paintBox { padding: @space_unit; margin:@space_unit 0; }
+
+	#showHotelResults { margin:@space_unit 0 0 0 0;  display:table-cell; }
+
+	.startBox:hover *:not(.wbeButton):not(.wbeButton_hover), #Special-Offer-Box:hover *:not(.wbeButton) { color:@wbeResultBoxesHover-fontColor;}
+	#roomFacilitiesIconsBox img {max-width:48px;}
+	.showResultsBoxImage img, #voucherImgLogo img{overflow:hidden; max-width:12.2em; max-height:10.385em; }
+
+/**ROOM CAtegory**/	
+	#roomConfigMainPanel .searchLine {margin-right:2*@space_unit;}
+	.msgBox>.showRoomCategorySelected {background: @roomConfigHeader-background;}
+	.showRoomCategoryArea { width:100%; 	margin:@space_unit 0;
+		.showRoomCategoryRed, .showRoomCategoryGreen, .showRoomCategorySelected {
+			border:none;
+			margin:@smallspace_unit 0; 
+			overflow:hidden; 
+			clear:both; 
+			padding:@space_unit; 
+			-webkit-transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+			-moz-transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+			-o-transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+			transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+			color:@fontColor;}
+	}		
+
+	.showNoUsers { width:6em; 
+					float:left; 
+					height:1.1em;
+					margin:0 @space_unit 0 0;	}
+	.showNoUsersN, .showNoUsersP {padding-left:0; float:left; height:1.1em; color:@wbeRoomUsersIcon-Color; }
+	.roomCatShortList .showNoUsers {float:none; display:inline-block;	text-align:right;}
+	.roomCatShortList .showNoUsersN, .roomCatShortList .showNoUsersP {float:none; margin-right:-4px; color:@wbeRoomUsersSearchResultsIcon-Color; }
+	.showRoomCategoryTxt { float:left;}
+	.showRoomsLeft {float:right; margin-left:@space_unit;}
+	.showRoomCategoryArea  {
+		.showRoomCategoryRed:hover,  .showRoomCategoryGreen:hover, .showRoomCategorySelected:hover {	background:@wbeSelectRoomHoover-background; color: @wbeSelectRoomHoover-fontColor;  }
+		.showRoomCategoryRed { color: @wbeSelectRoomLimited-fontColor; }
+		.showRoomCategoryRed:hover { color: @wbeSelectRoomLimitedHover-fontColor; }
+		.showRoomCategoryRed:first-child, .showRoomCategoryGreen:first-child {	margin:0; }
+		.showRoomCategorySelected {	color:@wbeSelectRoomSelected-fontColor;  background: @wbeSelectRoomSelected-background;}
+	}
+	.roomCatShortList ul, #alternativeRates ul {margin:@space_unit 0;}
+	#alternativeRates ul { background-color:@wbeDark-background; padding:@space_unit @space_unit/2;}
+	.roomCatShortList ul li {display:block; padding:@space_unit/4 0; white-space: normal;}
+	#alternativeRates ul li {display:inline; padding:@space_unit @space_unit 0 0; }
+	.priceDiv { margin:0.769em 0; display:inline-block;}
+	#addToBasketPanel input[type="button"] { margin-left:@space_unit; }
+	#rateresultsdetail .showResultsBox {padding:@space_unit;}
+	.showRoomCategorySelected h5 {margin-top:@space_unit;}
+/**Image Gallery*---NOTE---KEEP IN PX*/
+	#thumbPanel { overflow:hidden;}
+	#carouselkatview {
+		margin: 2*@space_unit auto; 
+		padding:2*@space_unit 0 4*@space_unit 0;
+		max-width:67.5em;	}
+	#Slides {	width:400px;}
+	#Slides li {text-align:center;}
+	.outer li {	list-style:none;}
+	#thumbDiv .thumbs li { 	display:inline;	
+							margin:0 0 20px 20px;    
+							overflow:hidden;	
+							position: relative; }
+	#thumbDiv .thumbs li img {
+		position: absolute;
+		bottom:0;
+		width:100%; }
+	#thumbPagination {
+		height: 20px;
+		position: relative;
+		bottom:0;
+		left:10px;
+		text-align:center;
+		background-color: @wbeGalleryImageLine-background;
+		margin: 0 auto ;
+		overflow:hidden;}
+	.pag-lk-next.off, .pag-lk-prev.off, .pag-lk-prev,  .pag-lk-next, .pag-lk {	margin:0 @space_unit; text-decoration:none; position:relative; }
+	.pag-lk:hover, .pag-lk:active, .pag-lk-next:hover, .pag-lk-next:active, .pag-lk-prev:hover, .pag-lk-prev:active, #hotelDescription p .morelk:hover, #hotelDescription p .lesslk:hover, #hotelDescription p .morelk:active, #hotelDescription p .lesslk:active { background-color:@wbeGalleryImageBtnsHover-background; }
+	.pag-lk-next.off, .pag-lk-prev.off, .pag-lk-next.off:hover, .pag-lk-prev.off:hover {background-color:@disabled-background; cursor:default; text-decoration:none; color:@disabled-fontColor;}
+	.bxcaption {
+	   	background: @wbeGalleryImageLine-background;
+		font-size: 1.1em;
+		height: 20px;
+		opacity: 0.6;
+		position:absolute;
+		z-index: 90;
+		text-align:center;
+		text-shadow:@unit_size 0 @unit_size @fontColor-shadow;
+		color:@wbeGalleryImageLine-font-color;}
+	.slidesclass	{list-style:none; }
+	
+/***Hotel Info Page***/
+	#DetailViewHotelContainer,  {
+		padding: 2*@space_unit; 
+		background-color: @wbeResultBoxes-background;
+		background-image:url("../wbe4img/bg-@{themeName}_defaultPattern.png");
+		border:none;
+		-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		-moz-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+	}
+	.hFacilitiesBox {margin:0 2*@space_unit;}
+	#hotelFacilitiesIcons {margin:2*@space_unit 0 0 0}
+	.hotelFeatureGroupLi { border-bottom: @unit_size solid @actionColor; margin-top:2*@space_unit;}
+
+/**Maps**/
+	.mapDiv {margin:2*@space_unit 0;	border: @unit_size solid @wbe-border;  float: left; color:@fontColorContrast; }
+
+/**Calendar**/
+	#AvailCalender { width:auto; max-width: 100%;  margin-top:4*@space_unit; background-image:url("../wbe4img/bg-@{themeName}_defaultPattern.png");  }
+	#AvailCalenderLegend  { padding:1em;}
+	#AvailCalenderLegend ul li.icon_generated:before {padding-right:0;}
+
+/****DetailView*******************/
+	#roomTypeTitle, #rateTitle, #voucherTitle { 	clear:both; 	}
+	#roomTypeTitle, #rateTitle, #voucherTitle { 	clear:both; 	}
+	#hiddenElement {visibility:hidden; float:right;}
+	#roomFacilitiesIcons {margin:2*@space_unit 0; clear:both;}
+	#RoomTypeSelect{     display:block; }
+	#RoomConfigurator {width:100%;}
+	#RoomConfigurator { 	clear:both;     display:block;     float:left; 
+		.msgBox {background-color: @roomConfig-background;}
+	}
+	#roomFacilitiesIconsBox {margin:@space_unit 0;}
+	#addToBasketPanel {float:right; text-align:right;}
+	#DetailViewContainer h2 { font-size:2.4em;}
+
+	ul#rateListItems {margin:2*@space_unit;}
+	ul#rateListItems li {line-height: 1.4em; list-style: square outside none; }
+
+/**Article add to cart*****************/
+	.tableArticle, #BasketTable {margin:2*@space_unit 0; width:100%;}
+	#articleToCart p{ margin:@space_unit 0 0 0;}
+
+	/****Articles*******************/
+	.cellBoxRes, .rowBoxRes, .cellBoxRes:before, .tableBoxRes:not(.activeMyReservation) {padding-bottom:@space_unit;}
+	.tableArticle .tableBox {width:100%; border-spacing:0; left:0;}
+	.articleCell22, .articleCell23, .articleCell24 {float:left;}		
+	.articleCell22:not(.articleCellBoxHead):before, .articleCell23:not(.articleCellBoxHead):before, #BasketTable td:not(.noDataLabel):before, .cellBoxRes:not(.c6):not(.cN):before{ /*E061 ":not(.noDataLabel)" added*/
+		padding-right:20px;
+		content:" "attr(data-label)": ";	/* call the attribute value of data-label and adds a string // */
+			}
+	.articleCell1, .articleCell2 {margin-right:@space_unit; display:inline; }
+	.articleCell1 {width:25%;}
+	.articleCellBox.articleCell21 {vertical-align:bottom;}
+	.articleCell21, .articleCell22, .articleCell23 {padding-right:@space_unit;}
+	.pag-lk, .pag-lk-prev,  .pag-lk-next, #hotelDescription p .morelk, #hotelDescription p .lesslk {padding:@space_unit; clear:left;  background-color:@wbeGalleryImageBtns-background; border-radius: @radius;
+					color:@wbeGalleryImageBtns-fontColor;	text-shadow: @unit_size 0 @unit_size lighten(@wbeGalleryImageBtns-background, 16%);}
+
+	.txtInfoLine {padding:2*@space_unit 0 0 0; clear:left;  color:@wbeStrongColored-fontColor; background-color: @wbeStrongColored-background;	border-bottom: 1px solid @wbeStrongColored-border;}
+.txtInfoLine.articleLine {
+	color:@wbeArticleAddedToCart-fontColor;
+ 	border-bottom: 1px solid @wbeArticleAddedToCart-border;
+ }
+
+	.articleToCartBtn.icon_generated {font-size:2em; text-decoration:none; color:@wbeAddToCartIcon-Color; } 
+	.articleToCartBtn.icon_generated:hover {color:@wbeAddToCartIconHover-Color;} 
+
+/***Basket***/
+	#BasketTable { border:none; }
+	#BasketTable td  { border-top:0px;border-left:0px;border-right:0px; padding-bottom:0; padding-top:0; }
+	#BasketTable td#totalRowLabel, #BasketTable td#totalRowPrice  {padding-top:@space_unit; padding-bottom:@space_unit;}	 /*E064 line added*/
+	#BasketTable th, .totalRow, .rowBoxResHead, .cellBoxResHead {
+		background-color: @wbeBasketTableTH-background!important;
+		margin:0;
+		border:0;
+		color:@wbeBasketTableTH-fontColor!important;
+		text-transform:uppercase;}
+		
+	.rowBoxResHead	 {text-align:left;}
+	.totalLabel {text-transform:uppercase;}
+	#basketPanel { width:100%;}
+	#BasketTable h6 {font-size:1.2em; margin-top:0;} /* E062: line added*/
+		#BasketTable tr:nth-of-type(2n), .bgDark, .bgCell, #activeReservation, .activeMyReservation {background:@wbeBasketTable2n-background; color: @wbeBasketTable2n-fontColor;}
+		#BasketTable tr:nth-of-type(2n+1), .bgLight {background:@wbeBasketTable2n1-background; color: @wbeBasketTable2n1-fontColor;}
+		.tableBoxRes:hover *:not(.applyButton):not(.applyButton_hover), .highlightBg  {background:@wbeBasketTableHover-background;
+			color:@wbeBasketTableHover-fontColor;				 }
+	#BasketTable tr:hover * {background-color: @wbeBasketTableHover-background; color:@wbeBasketTableHover-fontColor; }
+	a.linkDeleteLk, a.linkAddLk {text-decoration:none;}
+	a.linkDeleteLk:before, a.linkAddLk:before {
+		font-family: fico;
+		text-decoration:none;
+		padding-right:@space_unit;
+		font-weight:bold;
+		font-size:1.8em;
+		top:-0.50em;	}
+	a.linkDeleteLk:before { content:'_';	 position:relative;} /* "-" looks too small and odd*/
+	a.linkAddLk:before { content:'+'; 	}
+	#BasketTable h5, #BasketTable p {margin: 0;}
+	/*Basket Plus-Minus btns*/
+	.basketQtyMinus, .basketQtyPlus {text-decoration: none; cursor: pointer;
+		&.icon_generated:before {padding-right: @space_unit/2; padding-left: @space_unit/2;}
+	}
+	
+
+/***PRe-checkout********************************/
+
+/***CheckOut**/
+	#couponBox, #voucherBox {margin:@space_unit 0;}
+	#promoBarBox div {padding:0 @smallspace_unit 0 0;}
+	#invoiceLk {color:@fontColor-Gold; text-decoration:none;}
+	#invoiceLk:hover {color:@fontColorContrast;}
+	#divNoRoomAvailable {width:100%;}
+	.textareaTxt { margin: 2*@space_unit 0 0 0; text-transform:uppercase;}
+	.txtEntityTitle {
+		padding:@space_unit 0 @smallspace_unit @smallspace_unit; 
+		text-align:left;
+		background-color: @wbeEntityHighlight-background;
+		color:@wbeEntityHighlight-fontColor;
+		border-top-right-radius: @radius;
+		border-bottom-right-radius: @radius;
+		margin:4*@space_unit 0 2*@space_unit 0;	}
+	.txtEntityTitle span.icon {
+		position:relative;
+		left:-0.750em;
+		font-size: 1.5em;
+		margin-right: -@space_unit;
+		color: @wbeEntityHighlight-iconColor;		}
+	.txtEntityTitle span:not(.icon) {
+		margin-left:-@space_unit;
+		padding-left:0;	}
+	.txtEntityTitle span a {color: @wbeEntityHighlight-iconColor;	 text-decoration:none;} 
+	.buttonPanel {width:100%; overflow:hidden; margin: 4*@space_unit 0 2*@space_unit 0;}
+
+/**NoAvailability*****/
+	#divNoAvailabilitiesCallBack, #divNoAvailabilitiesWriteBack, .AlternateDatesBox {margin:4*@space_unit 0;}
+	.AlternateDatesLi {margin:2*@space_unit @space_unit; display:inline-block; min-width:12%; width:auto;}
+	.AlternateDatesLi:last-child{margin-right:0;}
+	.AlternateDatesLi a {text-decoration:none;}
+	.showResultsNTop,  .showResultsNBottom {text-align:center;}
+	.showResultsNTop {padding:@space_unit 2*@space_unit @space_unit/2 2*@space_unit;}
+	.showResultsNBottom {
+		padding:@space_unit/2 2*@space_unit @space_unit 2*@space_unit;
+		border-top:2*@unit_size solid @wbeAction-border;
+		-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+		-moz-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+		-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+		transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s; }
+	.showResultsNBottom:hover {border-top:2px solid @wbeContrast-border;	}
+ 
+/*HOME*/
+	#Special-Offer-Box a {text-decoration:none;}
+	.btnStartBoxHolder { margin:2*@space_unit 0 0 0;}
+
+/**Vouchers*/
+	#voucherBoxContent {padding:2*@space_unit;}
+	#VoucherViewContainer .txtInfoLine {margin:4*@space_unit 0 0 0;}
+
+/**THANK YOU PAGE**/
+	#thankYouBox, #searchResultEmptyBox {padding:2*@space_unit; margin:0 0 4*@space_unit 0; border-radius: 0 0 @radius @radius;  }
+	#searchResultEmptyBox h2, #voucherHotelVoucherData h5 {margin-top:0;}
+
+	/*Keep for the next release, when specialOffer box is implemented
+	#specialOfferButton { text-align:right; margin:0.667em 0 0 0;}
+	#specialOfferButton, #Special-Offer-Box span, #Special-Offer-Box h4, #Special-Offer-Box p {display:inline;}
+	#Special-Offer-Box h4, #Special-Offer-Box p {margin-right:@space_unit;}	*/
+
+/**BUTTONS****************************/
+	.wbeButton, .wbeButton_hover, .applyButton, .applyButton_hover, #popup_panel input  {
+		border-radius: 0 @radius;
+		display:inline-block;
+		margin:0;
+		font-size:1em;
+		text-align: center;
+		cursor: pointer;
+		border-style:none;
+		text-decoration:none;
+		line-height:1.4em;	
+	}
+
+	.wbeButton, #popup_panel input {
+		padding:@smallspace_unit 2*@space_unit;
+		color:@wbe-actionButton-fontColor;
+		background-color:@wbe-actionButton-background;
+		text-shadow:@unit_size 0 @unit_size @wbe-actionButton-fontColorShadow;	}
+	.wbeButton:hover, .wbeButton_hover, #popup_panel input:hover {
+		padding:@smallspace_unit 2*@space_unit;		
+		background-color:@wbe-actionButtonHover-background;
+		color:@wbe-actionButton-fontColorHover;
+		text-shadow:@unit_size 0 @unit_size @wbe-actionButton-fontColorHoverShadow; 	}
+	.applyButton {
+		padding:@smallspace_unit 2*@space_unit;
+		background-color:@wbe-secondaryButton-background;
+		color:@wbe-secondaryButton-fontColor; 
+		text-shadow:@wbe-secondaryButton-fontColorShadow @unit_size 0 @unit_size;	}
+	.applyButton_hover, .applyButton:hover, .applyButton:active  {
+		padding:@smallspace_unit 2*@space_unit;
+		background-color:@wbe-secondaryButtonHover-background;
+		color:@wbe-secondaryButton-fontColorHover!important; 
+		text-shadow:@wbe-secondaryButton-fontColorHoverShadow @unit_size 0 @unit_size;	}
+
+/*Error*/
+	.errorBox { margin:2*@space_unit auto; background-color:@validation-background;  padding:2*@space_unit;}
+	.errorLBox, .errorRBox { float:left; }
+	.errorLBox { width:9*@space_unit; }
+	.errorLBox  img {margin:0 2*@space_unit 0 0;}
+	.errorRBox H1, .errorRBox p {
+			line-height:1.2em; 	
+			font-family: Mako;	}
+	.errorRBox H1 {margin:0; font-size:2.8em; }
+	.errorRBox p {margin:2*@space_unit 0; font-size:1.3em; }
+	
+	
+/***FONT ICONS_FICO******************/
+	@font-face {
+		font-family: icons;
+		src: url("@{ficoIconUrl}/fico.eot");
+		src: url("@{ficoIconUrl}/fico.eot?#iefix") format('embedded-opentype'),
+			url("@{ficoIconUrl}/fico.ttf") format('truetype'),
+			url("@{ficoIconUrl}/fico.svg#Fico") format('svg'); 
+
+
+
+			}
+	.icon, .icon_generated:before, .requiredSmb:before{
+		font-family: icons;
+		font-weight: normal !important;
+		font-style: normal !important;
+		text-transform: none !important;
+		padding-right: @smallspace_unit;
+		font-size:1.3em;
+		position:relative;
+		bottom:-0.125em;	}
+	.icon_generated:before {
+			content: attr(data-icon);
+			padding-right: @space_unit;		}
+	/**Large Icons*******************/ #Special-Offer-Box .icon, #div_basket .icon, #returningCustomer .icon {font-size:2.5em;}
+	#Special-Offer-Box .icon {color:@fontColorContrast; } /**Not used yet********************/
+		#returningCustomer .icon { color:@wbeReturningUserIcon-Color; }
+
+	/**No_Right_Padding Icons*********/#div_basket .icon, #hLanguageSelectionTxt .icon, .rateHotelH2 .icon_generated:before, .showNoUsers .icon_generated:before { padding-right: 0; }
+	/**float left Icons**************/ #returningCustomer .icon, #Special-Offer-Box .icon {float:left; }
+	.rateHotelH2 .icon_generated:before {	padding-left: @smallspace_unit; top: -@space_unit; 
+	}
+	.rateHotelH2 .icon_generated:first-child {margin-left:2em;}
+	.showNoUsers  .icon_generated:before, #BasketTable .icon_generated:before { font-size:1em; 	bottom:0;}
+	.showNoUsers  .icon_generated:before {padding:0; margin:0;}
+	.showNoUsers  .showNoUsersP.icon_generated:before  {font-size:0.6em;}
+	.requiredSmb:before {
+		content: '★';
+		float: left;
+		height: 0;
+		left: -1.2em;
+		position: relative;
+		top: -1.7em;
+		color: @requestedIcon-fontColor;
+		font-size:0.75em;
+		} /*THIS is printed from wbe.js. Graphically, in this version, is overwrited by data-icon in label*/
+	
+	#newProfileTOS .requiredSmb:before, #preCheckoutAgreeTOS .requiredSmb:before, #checkOutTOS .requiredSmb:before, #divMyReservationMsg .requiredSmb:before, #myReservationTOS .requiredSmb:before {top:0;}
+
+/***GTC**********************/
+	#GTCWindowAccountBox, #GTCWindowCheckoutBox, #GTCWindowBox {background:@wbeAlerts-window-background;  /*display: none; Use display:none missing translation. The window is displayed by JS anyway */
+	 }
+
+/***PRINT*******************/
+	#printMsg {display:none;}

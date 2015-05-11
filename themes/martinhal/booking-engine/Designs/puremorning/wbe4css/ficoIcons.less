@@ -1,0 +1,32 @@
+/***FONT ICONS_FICO***/
+@ficoIconUrl : '../ficoFonts';
+
+	@font-face {
+		font-family: icons;
+		src: url("@{ficoIconUrl}/fico.eot");
+		src: url("@{ficoIconUrl}/fico.eot?#iefix") format('embedded-opentype'),
+			url("@{ficoIconUrl}/fico.ttf") format('truetype'),
+			url("@{ficoIconUrl}/fico.svg#Fico") format('svg'); 
+			}
+	.icon, .icon_generated:before, .requiredSmb:before{
+		font-family: icons;
+		font-weight: normal !important;
+		font-style: normal !important;
+		text-transform: none !important;
+		padding-right: @smallspace_unit;
+		font-size:1.3em;
+		position:relative;
+		}
+
+	.icon_generated:before  {
+			content: attr(data-icon);
+			padding-right: @space_unit;	
+			text-shadow:1px 1px 0px @grey; }
+	
+	.requiredSmb:before	{
+		font-size: 0.9em;
+		position: relative;
+		top:-@space_unit;
+		padding-right: 0;
+         text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+	}

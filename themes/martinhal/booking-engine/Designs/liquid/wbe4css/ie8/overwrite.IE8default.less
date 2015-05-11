@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document  IE8 only for Polar color theme*/
+.wbe4Wrapper {
+
+	.tableBoxRes .rowBoxRes, .activeMyReservation {background:@wbeLighterGrey-background;}
+	.tableBoxRes:hover *  {background-color:@wbeColored-background; color:@fontColor-white; } 
+	.fixIE8Table.tableBox .rowBox {border-bottom:@space_unit @wbeWhite-border-color solid; }
+.fixIE8Table.tableBox {table-layout: fixed; width: 100%;}
+
+/***FORM ELEMENTS***/
+fieldset input[type="text"], fieldset input[type="email"], fieldset input[type="password"], fieldset textarea, .k-dropdown-wrap.k-state-default .k-input { 
+	background-color:@wbeInput-background;
+	border: @unit_size solid @wbeInput-border-color; 
+	}
+
+/*SearchTab*/
+#Search-Box-Container .TabSelector ul li.k-item.k-last a.k-link, #Search-Box-Container .TabSelector ul li.k-item.k-first a.k-link {color: @wbeSearchBoxTab-fontColor; }
+#Search-Box-Container .TabSelector ul li.k-item.k-state-active a.k-link {color: @wbeSearchBoxActiveTab-fontColor!important; }
+
+} 

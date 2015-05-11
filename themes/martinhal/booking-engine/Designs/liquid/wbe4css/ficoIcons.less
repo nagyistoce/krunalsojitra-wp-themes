@@ -1,0 +1,63 @@
+/***FONT ICONS_FICO***/
+	@font-face {
+		font-family: icons;
+		src: url("@{ficoIconUrl}/fico.eot");
+		src: url("@{ficoIconUrl}/fico.eot?#iefix") format('embedded-opentype'),
+			url("@{ficoIconUrl}/fico.ttf") format('truetype'),
+			url("@{ficoIconUrl}/fico.svg#Fico") format('svg'); }
+	.icon, .icon_generated:before, .requiredSmb:before{
+		font-family: icons;
+		font-weight: normal !important;
+		font-style: normal !important;
+		text-transform: none !important;
+		font-size:1.3em;
+		position:relative;
+		padding-right: 20px; 
+	} 
+	.icon_generated:before {content: attr(data-icon);	}
+
+	/***Large Icons***/ #Special-Offer-Box .icon, #div_basket .icon, #returningCustomer .icon {font-size:2.5em;}
+	/***No_Right_Padding Icons***/.rateHotelH2 .icon_generated:before, .showNoUsers .icon_generated:before { padding-right: 0; }
+	/***float left Icons***/ #returningCustomer .icon, #Special-Offer-Box .icon {float:left; }
+
+	#headerPersonal .icon {color: @wbeHeaderIcon-color; }
+	.iconLanguage {position: relative; bottom: 8px;}
+	#headerPersonal #div_basket .icon {color: @wbeShoppingCartIcon-Color;}
+	#returningCustomer .icon {color: @wbeReturningUserIcon-Color;}
+	.rateHotelH2 .icon_generated:before {	padding-left: @smallspace_unit; font-size:0.8em; position: relative; top:-@space_unit; color:@wbeStars-Color;}
+	.rateHotelH2 .icon_generated:first-child {margin-left:2em;}
+	.showNoUsers .icon_generated:before, #BasketTable .icon_generated:before { font-size:1em; 	bottom:0;}
+
+	.showNoUsers .icon_generated:before {padding:0; margin:0;}
+	/*UNCOMENT FOR USING THIS .showRoomCategoryArea .showNoUsers  .icon_generated:before {color:@wbeRoomUsersIcon-Color; } 	//color for users icon in detail-view page*/
+	
+	.roomCatShortList .showNoUsers .showNoUsersN, .roomCatShortList .showNoUsersP {color: @wbeRoomUsersSearchResultsIcon-Color;} 
+	.avail, #calendarLegendBoxAvail.icon_generated {color:@wbe-availale;}
+	/*Calendar Icons*/
+	.notavail, #calendarLegendBoxNotavail.icon_generated {color:@wbe-not-availale;}
+	.minstay, #calendarLegendBoxMinstay.icon_generated  {color:@wbe-minimum-stay;}
+
+	/*Add To Cart Icons*/
+	.articleToCartBtn.icon_generated{color:@wbeAddToCartIcon-Color;
+		&:hover {color:@wbeAddToCartIconHover-Color;}
+	}
+	.txtEntityTitle span.icon {		color: @wbeEntityHighlight-iconColor;		}
+
+	.showNoUsers .showNoUsersP.icon_generated:before  {font-size:0.6em;}
+	.requiredSmb:before {
+		content: '★';
+		float: left;
+		height: 0;
+		left: -1em;
+		position: relative;
+		top: -1.5em;
+		color:@requestedIcon-fontColor;
+		font-size:0.9em;
+		} /*THIS is printed from wbe.js. Graphically, in this version, is overwrited by data-icon in label*/
+	
+	#newProfileTOS .requiredSmb:before, #preCheckoutAgreeTOS .requiredSmb:before, #checkOutTOS .requiredSmb:before, #divMyReservationMsg .requiredSmb:before, #myReservationTOS .requiredSmb:before {top:0; left: -1.2em;}
+	#returningCustomer .icon {
+		font-size: 2em;
+		position: relative;
+		top: @smallspace_unit;
+		margin-right: @smallspace_unit;} 

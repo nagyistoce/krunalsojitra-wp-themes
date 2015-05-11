@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***RESET DEFAULT CSS***/
+html, body {height: 100%;}
+#wbecontent {height: 100%;}
+
+body, div,span,object,html, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;     padding:0;     border:0;     outline:0;     font-size:100%; font-weight:normal; }
+
+.wbe4Wrapper {	
+	line-height:1; 	
+	font-size: @basefontsize; 
+	font-family: @basefont;
+	color:@fontColor;
+	margin:0 auto;
+	height: 100%;
+}
+::selection {
+	background: @wbeSelection-background; /* Safari */
+	color: @wbeSelection-fontColor;
+	}
+::-moz-selection {
+	background: @wbeSelection-background; /* Firefox */
+	color: @wbeSelection-fontColor;
+}
+
+html {
+	height:100%; width:100%;
+		background: url("../wbe4img/@{wbePage-backgroundImage}") no-repeat center center fixed @wbePage-backgroundColor;  
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../wbe4img/@{wbePage-backgroundImage}', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../wbe4img/@{wbePage-backgroundImage}', sizingMethod='scale')";
+		background-color:@wbePage-backgroundColor;
+
+}
+
+
+.wbe4Wrapper { 
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footerWBE4, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;     padding:0;     border:0;     outline:0;     font-size:100%;  font-weight:normal; }
+
+article,aside,details,figcaption,figure, footerWBE4,header,hgroup,menu,nav,section { display:block; }
+
+ul {     list-style:none; }
+blockquote, q {     quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after {     content:'';     content:none; }
+ 
+a { margin:0; padding:0; font-size:100%;  vertical-align:baseline;   background:transparent; color:@linkcolor; text-decoration:underline; }
+a:hover, a:active { outline: none; color:@linkcolor;}
+
+
+del { text-decoration: line-through; }
+abbr[title], dfn[title] {border-bottom:@unit_size dotted; cursor:help;}
+table {border-collapse:collapse; border-spacing:0;}
+hr {display:block; height:@unit_size; border:0; border-top:@inputborderwidth @inputborderstyle @wbeBase-borderColor; margin:1em 0; padding:0; }
+
+//::selection { background:red; @wbeSelection-background; color:@wbeSelection-fontColor; }
+
+
+.clear { 	clear:both }
+.displayNone {display:none;}
+.displayInline {display:inline;}
+.nowrap {white-space:nowrap;}  
+
+h1, h2, h3, h4, h5, h6, .txtEntityTitle {
+	font-family:@baseheadingfont;
+	font-weight:normal;
+	color:@fontColor-h;
+	margin:2*@space_unit 0 0 0;
+}
+h1, h2,  { 	font-size:2em }
+h3 { 	font-size:1.8em }
+h4,  {	font-size:1.6em}
+h5, h6, .txtEntityTitle {	font-size:1.4em}
+
+h2{/*margin:2*@space_unit 0 @space_unit 0;*/
+	margin:@space_unit 0;
+}
+
+p {	font-size:1em;
+	margin:@space_unit 0;
+	line-height:@baselineheight;
+	clear:left;}
+
+	
+/***SPRITEBIG***/
+#footerFBIcon, #footerYouTubeIcon, #footerTwitterIcon,
+#SocialLogin li a
+{ background:url("../wbe4img/icons/spriteWBE4-@{themeName}.png") no-repeat;}
+
+}
+
+/*Kendo TRICK - let the added wraper transparent*/
+.bgKfix { background: transparent!important; 
+	margin: 1px 0; }

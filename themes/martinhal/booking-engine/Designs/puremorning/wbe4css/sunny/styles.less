@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+@themeName: "sunny";																//replace with theme's name
+@themeImgSrc: "";  																	//Keep empty for default theme, othervise replace with the theme's name ( eg. "grey/")
+@image-folder: "../wbe4img/kendoImgs/Silver";										//KENDU UI: folder for loading Kendo UI images/sprite - the absolute path is NOT supported
+@texture-url: url("../../wbe4img/kendoImgs/textures/clear.gif"); 						//KENDU UI:  path to Kendo UI texture - the absolute path is NOT supported
+
+
+@import "variables.less";										//configuration 
+
+
+@import "../kendo.silver.less";									//Kendo UI color configuration
+@import "../template.less";										//Kendo UI template 
+@import "../reset.less";											//WBE4 reset + comon stylesheet
+@import "../ficoIcons.less";										//loads fico icons. http://fico.lensco.be/
+@import "../responsive.less";										//WBE4 responsive stylesheet
+@import "../layout.less";											//WBE4 main stylesheet
+@import "../overwrite.kendo.less";									//WBE4 overwrite Kendo UI (increasing specificity)
+@import "../jquery.alerts.less";									//jQuery Alert stylesheet
+
+@import "../wbe4-overwriteThisDesign.less";						//This file is empty. Add extra rules here
+
+
+
+//GRAPHICS USED
+//Features icons:  created or generated with owned (Fotolia, thinkStock ) and free  photoshop shapes www.shapes4free.com 
+//Fico Icons http://fico.lensco.be Important! The share and use of Fico Icons (http://fico.lensco.be/) is strictly limited to the use of protel WBE4. To use FICO ICONS for other purposes please contact Fico Icons http://fico.lensco.be
+//Footer Social icons: Free icons by http://icondock.com/free/vector-social-media-icons
+//Icons used for Kendo UI  controls: Kendo Ui wbe4img/kendoImgs/;  Kendo UI license
+//Patterns: http://subtlepatterns.com
+//Some icons/graphics uses the Ui Toolkit - http://www.uiparade.com/store/ (licensed)

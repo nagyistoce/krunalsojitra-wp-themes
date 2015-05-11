@@ -1,0 +1,46 @@
+﻿
+<div id="roomtypesresults" class="displayResultsBox">
+
+        <div data-function="roomtypetable" class="tableBox fixIE8Table" >
+
+      </div>
+<div class="clear"></div>
+
+
+
+
+
+
+</div><a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateRoomtypesArrayField][i][_CurrentInstance.CategorieNameField] #" >      </a>
+ <script id="RoomTypeItemTemplate" type="text/x-kendo-template"> 
+
+  # for(i=0;i < data[_CurrentInstance.RateRoomtypesArrayField].length;i++){#
+  #var image = "";#
+  #var style = "";#
+ 
+
+ 
+  #if(typeof data[_CurrentInstance.RateRoomtypesArrayField][i][_CurrentInstance.RoomImageField] != "undefined" ){#
+  #image = data[_CurrentInstance.RateRoomtypesArrayField][i][_CurrentInstance.RoomImageField];} else{ image="#_CurrentInstance.CurrentImagePath+'clear.gif'#"; style="height:1px; box-shadow:none";}#
+  <div class="showHotelResultsLine rowBox">
+  <div class="showResultsBox" data-rRoomtypeitem="#=data[_CurrentInstance.RateRoomtypesArrayField][i][_CurrentInstance.CategorieIdSingleField]#" data-hotelRroomtypeitem="#= data[_CurrentInstance.HotelIdField] #" >
+		<div class="cellBox showResultsBoxImage" ><a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateRoomtypesArrayField][i][_CurrentInstance.CategorieNameField] #" ><img src="#=image#" style="#=style#" alt="#= data[_CurrentInstance.RateRoomtypesArrayField][i][_CurrentInstance.CategorieNameField] #" /></a></div>
+        <div class="cellBox showResultsBoxTxt descriptionCell">
+			<h6>#= data[_CurrentInstance.RateRoomtypesArrayField][i][_CurrentInstance.CategorieNameField] #</h6>
+            <p>#= data[_CurrentInstance.RateRoomtypesArrayField][i][_CurrentInstance.CategorieShortDescriptionField]#</p>
+		</div>
+		<div class="cellBox showResultsBoxTxt priceCell">
+			<div class="roomCatShortList">
+				<ul>
+					#var rates = jlinq.from( data[_CurrentInstance.RateRoomtypesArrayField][i][_CurrentInstance.RateArrayField]).sort("sortOrder").select();#
+                    # for(a=0;a <rates.length;a++){#
+						<li><a href="\\#" data-function="DetailView" data-rate="#=rates[a][_CurrentInstance.RateIDField]#">#=rates[a][_CurrentInstance.RateNameField]#: <span class="roomCatPrice">#=rates[a][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceValueField] + " "+rates[a][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceCurrencyField]#</span></a></li>
+					#}#
+				</ul>
+			</div>
+<!--			<p><span class="priceClassTxt" data-localization="_PriceLabel">Price:</span> <span class="priceClass">#= rates[0][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceValueField] + " "+rates[0][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceCurrencyField]#</span></p>-->
+		</div>
+    </div>
+</div>  
+#}#
+</script>

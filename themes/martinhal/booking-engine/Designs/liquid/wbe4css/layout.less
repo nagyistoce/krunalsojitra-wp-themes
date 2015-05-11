@@ -1,0 +1,694 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wbe4Wrapper { 
+
+.pNoMargin {margin:0;}
+.txtCrt {text-align:center;}
+.txtRight {text-align:right;}
+.priceClass {font-size:1.3em; color:@fontColor-price; }
+.txt11em {font-size:1.1em; }
+.colorTxt {color: @fontColor-Colored;}
+
+*.unselectable, *.unselectable:hover {-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+				 color:@disabled-fontColor; background:transparent;
+				 cursor: text;
+				}
+.morelk:after, .lesslk:after {
+		font: 1.33em Baskerville, Georgia, Times New Roman, serif;
+		display:inline-block; }
+.morelk:after {	content: ' » ';}	
+.lesslk:after {	content: ' « ';}
+.blueLk {color:@fontColor-Colored;}
+.linkLk { white-space: nowrap;	}
+.blueLk:hover  {color:@wbeLink-color;}
+.blueTxt, .minstay,  a.blueDeleteLk, a.blueDeleteLk:visited, a.blueAddLk, a.blueAddLk:visited, #hotelDescription p .morelk, #hotelDescription p .lesslk  {color:@fontColor-Colored;}
+a.blueDeleteLk:hover, a.blueAddLk:hover  {color:@fontColor;}
+
+.notavail {cursor:default;}
+
+a.blueDeleteLk, a.blueAddLk { padding:0 0 0 1.846em; text-decoration:none;}
+.blueTxtBasket{ cursor:pointer; text-decoration:underline;}
+ul.showInline li{ display:inline;}
+.floatLeftBox {float:left; margin: @space_unit @space_unit 0 0;}
+.opaqueImg {
+ 	zoom: 1;
+	filter: alpha(opacity=40);
+	opacity: 0.4; }
+#DetailView-Content {margin:@space_unit @space_unit 4*@space_unit @space_unit;}
+.cellBox {margin-top:@space_unit;}
+#returningCustomer, #Special-Offer-Box  {padding:@space_unit 2*@space_unit; margin:@space_unit;}
+.startBox {padding:@space_unit; margin:@space_unit;}
+#homePage .tableBox {border-spacing: 2*@space_unit @space_unit; }
+.pag-lk-prev,  .pag-lk-next, .pag-lk, .msgBox, .showResultsBox, #carouselkatview, .showResultsN, .startBox,  .showRoomCategoryRed, .showRoomCategoryGreen, .showRoomCategorySelected, .SpecialOfferBoxBackground , #AvailCalender td.k-state-selected, #AvailCalender td.k-state-hover, .showResultsBoxImage img, .tableArticle img, #Special-Offer-Box, #alternativeRates ul  {	border-radius: @smallspace_unit;}
+.showResultsBox, .showResultsN, .startBox,  .showRoomCategoryRed, .showRoomCategoryGreen, .showRoomCategorySelected, .errorBox, #AvailCalender td.k-state-selected, #AvailCalender td.k-state-hover { border:@unit_size solid @wbe-light-border-color; }
+.showResultsBoxImage img, .tableArticle img.imgArticle { box-shadow: rgba(@boxshadow_color/10,@boxshadow_color/10,@boxshadow_color/10, @boxshadow_alfa) 2*@unit_size 2*@unit_size 2*@unit_size;}
+.borderBottomLight, #AvailCalenderLegend h5 { border-bottom: @unit_size solid @wbeGrey-border-color;}
+#AvailCalender td, .tableArticle, #SocialLogin a  { font-size:0.85em;}
+#AvailCalender td { border-bottom:@unit_size solid @wbe-lighterGrey-border-color; border-left:@unit_size solid @wbe-lighterGrey-border-color;  }
+
+.LoginFormClass, #MemberContent, #headerPersonal #HeaderMenuContainer ul,#headerPersonal a:hover, #headerPersonal a:active, #headerPersonal .k-link:hover,
+#headerPersonal a:visited, #headerPersonal .k-link:visited, #headerPersonal .k-state-border-down
+{	background-color: @wbeHeaderBoxes-background; 	 }
+
+
+/***Page STRUCUTRE************************************************************************************************/
+	#header, #footerWBE4, #content {width:100%; margin:0 auto;}
+	#header {overflow:hidden;}
+	#Search-Results {display:block;}
+
+/***HEADER*****************************************************************************/
+	#headerTopLine {padding-bottom:2*@space_unit;}
+	.searchLine, .blockLine {margin:@space_unit @space_unit 0 0;}
+	.searchLine, .formLine {float:left;}
+	.formLine {margin:@space_unit 2*@space_unit 0 0; min-height:4em; /*width:15em;*/}
+	.activeMyReservation .searchLine{float:none; }
+	#search-button.searchLine, #responsiveLogin-button.searchLine{top:1.3em; position:relative; min-height:3em;}
+	#MemberContent	{
+		padding:@space_unit 0;
+		text-align:left;
+		border:@wbe-lighterGrey-border-color @unit_size solid; 
+	}
+	#HeaderMenuContainer {width:11.250em; white-space:nowrap; float:right;margin:0;}
+	#div_basket.item {clear:both;}
+	#headerPersonal #HeaderMenuContainer ul {	border:none;}
+	#HeaderMenuContainer  ul li { border:none; display:inherit;	}
+	#myaccount .translate{ display:inline; margin:0; }
+	#headerPersonal a {text-decoration:none; color:@wbeNoColorLK-color;}
+	#headerPersonal a:hover, #headerPersonal a:active, #headerPersonal .k-link:hover, #myaccount .translate:hover {color:@wbeNoColorLKHover-color;  }
+	#myaccount .k-link:hover {text-decoration:none;}
+	#headerPersonal .k-link:hover {background:@wbeWhite-background;}
+	#hLanguageSelectionTxt {text-align:left; overflow: hidden;} 
+	#headerPersonal ul li {list-style:none; display:inline;}
+	#Search-Box-Container {margin:0 @smallspace_unit; min-width:20*@space_unit;}
+	#ShowMyBasket { margin-right:1.714em;}
+
+/***CONTENT ***/	
+	#content {	clear: left;	margin: 2*@space_unit auto; }	
+
+/***FOOTER***/		
+	#footerWBE4 {margin:4*@space_unit auto 0 auto;}
+	#footerMark {margin:@space_unit 0; width:100%; text-align:right; border-top: 2*@unit_size solid @wbeFooter-border-color;  padding-top:@space_unit; 	
+	background-color:@wbeFooterProtelMark-background; color: @fontColor-footer;}
+	#footerMark img {max-width:9em;}
+	
+
+fieldset { margin: 0 0 @space_unit 0; border:solid white  0px!important;}
+fieldset label {
+	line-height: 1.4em;
+	word-wrap: break-word; 
+	color:@wbeLabel-fontColor;}
+
+	
+	fieldset input {/* padding:@smallspace_unit; */
+		margin:0; 
+		width:12.4em;
+		padding: 0;
+		font-size: 1em;
+		text-indent: 4px;
+		height: 2.40em; /*to emulate Kendo styles*/
+		line-height:1.5em;
+	 }		
+	.k-dropdown-wrap .k-input, .k-picker-wrap .k-input { padding:@smallspace_unit 0;}
+
+	.k-dropdown-wrap.k-state-border-down, .k-picker-wrap.k-state-border-down, .k-dropdown-wrap.k-state-border-up, .k-picker-wrap.k-state-border-up {padding: 0!important;}
+fieldset input, fieldset textarea, .k-picker-wrap input, .k-dropdown-wrap .k-input {border-radius: @smallspace_unit!important;}
+
+	fieldset input[type="text"], fieldset input[type="email"], fieldset input[type="password"] { 
+
+	}
+
+	fieldset input:not([type="radio"]):not([type="checkbox"]), fieldset select { display:block;}
+			
+fieldset input:not([type="button"]), fieldset textarea, .k-dropdown-wrap.k-state-default .k-input {	
+	background-color:@wbeInput-background;
+	box-shadow: rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color, @boxshadow_alfa/4) @unit_size @unit_size 2*@unit_size;
+	-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	-moz-transition: background all 1s;
+	-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	border: @unit_size solid @wbeInput-border-color; }
+fieldset textarea {margin:0.5em 0; width:100%; }
+fieldset input[type="radio"], fieldset input[type="checkbox"] { width:1.5*@space_unit; margin:@smallspace_unit; }
+fieldset input:not([type="button"]):hover, fieldset textarea:hover, input:focus, textarea:focus { color:@wbeInput-fontColor; }
+	#checkOutPersonalDiv1 input[type="radio"], #checkOutPersonalDiv12 input[type="radio"]{ margin-left:2*@space_unit;}
+	#checkOutPersonalDiv1 input:first-child, #checkOutPersonalDiv12 input:first-child{ margin-left:0;}
+	fieldset:last-child {margin: 0;}
+	
+	fieldset select, fieldset .selectClass{width:4.5em; }
+	.selectClass {  width:4.5em;}
+	.searchLine #Button2 { margin-top:2*@space_unit; margin-bottom:@space_unit;}
+	.formFieldNote {margin:@space_unit 0; color:@fontColor; }
+
+	fieldset input[disabled], fieldset input[disabled]:hover, fieldset input[disabled]:active {background:@wbeInputDisabled-background; color: @wbeInputDisabled-fontColor;}
+	input:disabled, input:disabled:hover, .addToCartButton_disabled, .addToCartButton_disabled:hover { 
+				color: @disabled-fontColor;
+				cursor:default; }
+	input:disabled[type="button"] {
+		padding:@smallspace_unit 2*@space_unit;
+		border-radius:0 @smallspace_unit; }
+/**StartPage***************/
+	#homePage h4, #hotelRatesBottomListing h6 {margin-top:@space_unit;}
+
+/**Login Div**/
+	.LoginFormClass {
+		margin-top:@space_unit;
+		padding: 0 0 @space_unit;
+	}
+	.LoginFormAlternate, .LoginFormAuth {margin-left:@space_unit;}
+	#LoginFormAuthID h4, #LoginFormAuthID p {display:inline;}
+	
+/*****Search Box**************************/
+	#RequestOptionLinkBox {padding:@space_unit 0; clear:left;}
+	#search-hotelfeature-selection { clear:left; overflow:hidden; margin:@space_unit 0;}
+	.searchLeft { 	float:left; min-width:8em; }
+	
+	/**Display block as most elements are not input type, but span*******************/
+	.searchLine label, .formLine label {display:block;}
+	#search-hotelfeature-selection .searchLine label{display:inline;}
+	#Search-Box-Container .searchLine label, #Search-Box-Container a {color: @wbeSearchBoxActiveTab-fontColor;	}
+	 #Search-Box-Container a:hover {color:@wbeSearchBoxActiveTabAHover-fontColor;}	
+
+	.searchBoxDiv h2 {	margin-bottom:0; color:@wbeResultHotelName-fontColor;}
+	#sendVoucherByEmail.formLine {width:31.25em;}
+	#search-hotel-selection-advanced {padding-bottom:2*@space_unit;}
+
+	
+	/**Social Buttons**/
+	#SocialLogin {width: 100%;}
+	#SocialLogin ul { display:inline; }
+	#SocialLogin li {
+		list-style: none;
+		display:inline; }
+	#SocialLogin li a {
+		background-color: @wbeLighterGrey-background;
+		background-position:100% 0;
+		border: none;
+		color:@fontColor-white; 
+		display: inline-block;
+		height: 34px;
+		line-height: 2.571em;
+		margin:@space_unit/2 0;
+		padding-left: @space_unit;
+		position: relative;
+		text-decoration: none;
+		width: 159px;
+		border-top-right-radius: 30px;
+		border-bottom-right-radius: 30px;
+		-webkit-transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		-moz-transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		-o-transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease; }
+	#SocialLogin li#addAccount {display:block; }
+	#SocialLogin li#addAccount a:hover{width:500px;}
+	#MemberContent fieldset input[type="text"],#MemberContent fieldset input[type="email"],#MemberContent fieldset input[type="password"] {width:149px;}
+	#MemberContent fieldset input[type="button"] {width:166px; margin-top:20px;}
+	.opacity #SocialLogin li a {
+		color: @fontColor-white;
+		opacity: .40; }
+	#SocialLogin li a:hover,
+	#SocialLogin li a:focus {
+		color: @fontColor-white;
+		opacity: 1; }
+	#SocialLogin li a:hover,.rgba #SocialLogin #logout a:hover, 
+	#SocialLogin li a:focus,.rgba #SocialLogin #logout a:focus {
+		text-shadow: @unit_size @unit_size @unit_size @fontColor-shadow;
+		width: 185px;
+		-webkit-transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		-moz-transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		-o-transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+		transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease; }
+	#SocialLogin #facebook   a { background-position: 100% 0px; 	background-color: @wbeLogin-facebook-bg; }
+	#SocialLogin #google     a { background-position: 100% -38px; 	background-color: @wbeLogin-google-bg; }
+	#SocialLogin #twitter    a { background-position: 100%  -72px; 	background-color: @wbeLogin-twitter-bg; }
+	#logout    	a:hover, #logout     a:focus, #responsiveLogin #logout a { background-color: @wbeLogin-logout-bg;}
+	#SocialLogin #addAccount a, #SocialLogin #logout    a { background-position: 100% 236px; background-color: @wbeLogin-addAccount-bg; }
+	#SocialLogin #myreservation    a { background-position: 100%  -106px; 	background-color:@wbeLogin-myreservation-bg;}
+	#SocialLogin #manageprofile    a { background-position: 100%  -140px; 	background-color:@wbeLogin-manageprofile-bg; }
+	
+	#facebook   a:hover, #facebook   a:focus { background-color: @wbeLogin-facebook-bg; }
+	#google     a:hover, #google     a:focus { background-color: @wbeLogin-google-bg; }
+	#twitter    a:hover, #twitter    a:focus { background-color: @wbeLogin-twitter-bg; }
+	#addAccount a:hover, #addAccount a:focus { background-color: @wbeLogin-addAccount-bg; }
+	#logout     a:hover, .rgba #logout     a:focus { background-color: @wbeLogin-logout-bg;}
+	#manageprofile    a:hover, #manageprofile    a:focus { background-color: @wbeLogin-myreservation-bg;}
+	#myreservation    a:hover, #myreservation    a:focus { background-color: @wbeLogin-manageprofile-bg; }
+	
+	
+/***MyReservations********************************/
+
+	.rowBoxRes {border:@wbe-lighterGrey-border-color @unit_size solid; margin:0 auto;  padding:@space_unit;}
+	#divMyReservationCancelInside, #divMyReservationCallBack, #divMyReservationSendMsg { margin:@space_unit 2*@space_unit; padding-top:2*@space_unit; padding-bottom:2*@space_unit; height:auto; float:left;}
+	#divMyReservationCallBack, #divMyReservationSendMsg {width: 44%}
+	#divMyReservationSendMsg {margin-right:0;}
+	.activeMyReservation, #tblMyReservationDetails.tableBoxRes {clear:both; margin:@space_unit 5%; width:90%; }
+	.rowBoxRes.activeMyReservation {margin:@space_unit 5%;}
+	.activeMyReservation {overflow:hidden;}
+	.activeMyReservation h4 {margin-top:0;}
+
+/**SHOW HOTEL RESULTS************************************************/
+	.hotelOverviewPanel { margin:2*@space_unit 0 0 0; }
+
+/**RATE- SHOW****************************/
+	.showResultsBox  { 
+		overflow:hidden; 
+		box-sizing:border-box;
+		-moz-box-sizing:border-box; /* Firefox */
+		-webkit-box-sizing:border-box; /* Safari */ }
+	.rateHotelAddress { margin:0 0 2*@space_unit 0;	}
+	.showResultsBox, .showResultsN,.startBox, .SpecialOfferBoxBackground, /*#thankYouBox,*/ #searchResultEmptyBox {
+		background-color: @wbeResultBoxes-background;
+		border:none;
+		-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		-moz-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+		color:@wbeResultBoxes-fontColor;	}	
+	#thankYouBox {background-image:none;}
+
+	.showResultsBox:hover *:not(.blueLk):not(input) { color:@wbeResultBoxesHover-fontColor;}
+	.showResultsBox:hover .blueLk { color:@wbeNoColorLKHover-color;}
+	.showResultsBox:hover, .startBox:hover, .SpecialOfferBoxBackground:hover, .showResultsN:hover  {
+		background-color:@wbeResultBoxesHover-background; 
+		background-image:url("../wbe4img/bg-@{themeName}_hoverPattern.png");
+		background-repeat:repeat;
+		color:@wbeResultBoxesHover-fontColor;}	
+
+	#showHotelResults { margin:@space_unit 0 0 0 0;  display:table-cell; }
+	.startBox *, #Special-Offer-Box * { color:@wbeResultBoxes-fontColor;}
+	.startBox:hover *:not(.wbeButton):not(.wbeButton_hover), #Special-Offer-Box:hover *:not(.wbeButton) { color:@wbeResultBoxesHover-fontColor;}
+	.cellBox.startBox { min-width:14em; width:auto;}
+	.startPageDivRow2 {min-width:14em; margin:0 20%;}
+	#roomFacilitiesIconsBox img {max-width:48px;}
+	.showResultsBoxImage img, #voucherImgLogo img, .tableArticle img.imgArticle {overflow:hidden; max-width:12.2em; max-height:10.385em; }
+	.cellBox.showResultsBoxMain	{width: 100%;}
+
+
+/**ROOM CAtegory**/	
+	#roomConfigMainPanel .searchLine {margin-right:2*@space_unit;}
+	.showRoomCategoryArea { width:100%; 	margin:@space_unit 0;}
+	.showRoomCategoryRed, .showRoomCategoryGreen, .showRoomCategorySelected {
+		border:none;
+		margin:@smallspace_unit 0; 
+		overflow:hidden; 
+		clear:both; 
+		padding:@space_unit; 
+		-webkit-transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+		-moz-transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+		-o-transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+		transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+		color:@fontColor;}
+	.showNoUsers { width:6.5em; 
+					float:left; 
+					height:1.1em;
+					margin:0 @space_unit 0 0;	}
+	.showNoUsersN, .showNoUsersP {padding-left:0; float:left; height:1.1em; }
+	.roomCatShortList{min-width:17em; white-space:nowrap;}
+	.roomCatShortList .showNoUsers {float:none; display:inline-block;	text-align:right; }
+	.roomCatShortList .showNoUsersN, .roomCatShortList .showNoUsersP {float:none; margin-right:-4px;}
+	.showRoomCategoryTxt { float:left;}
+	.showRoomsLeft {float:right; margin-left:@space_unit;}
+	.showRoomCategoryRed:hover, .showRoomCategoryGreen:hover, .showRoomCategorySelected:hover, .showRoomCategorySelected {	background:@wbeSelectRoomHoover-background;}
+	.showRoomCategoryRed:hover { color: @red; }
+	.showRoomCategoryGreen:hover { 	color:@wbe-availale; 	}
+	.showRoomCategorySelected:hover { 	color:@wbeSelectRoomSelected-fontColor; }
+	.showRoomCategoryRed:first-child, .showRoomCategoryGreen:first-child {	margin:0; }
+	.showRoomCategorySelected {	color:@wbeSelectRoomSelected-fontColor; background-color:@wbeSelectRoomSelected-background; }
+	.roomCatShortList ul, #alternativeRates ul {margin:@space_unit 0;}
+	#alternativeRates ul { background-color:@wbeWhite-background; padding:@space_unit @space_unit/2;}
+	.roomCatShortList ul li {display:block; padding:@space_unit/4 0;  white-space: normal;}
+	#alternativeRates ul li {display:inline; padding:@space_unit @space_unit 0 0; }
+	.priceDiv { margin:0.769em 0; display:inline-block;}
+	#addToBasketPanel input[type="button"] {margin-left:@space_unit; }
+	#rateresultsdetail .showResultsBox {padding:@space_unit;}
+	.showRoomCategorySelected h5 {margin-top:@space_unit;}
+
+/**Image Gallery*---NOTE---KEEP IN PX*/
+	#thumbPanel { overflow:hidden; left:0px; margin: 0 auto; }
+	#carouselkatview {
+		margin: 2*@space_unit auto; 
+		padding:2*@space_unit 0 4*@space_unit 0;
+		background-color: @wbeLighterGrey-background;
+		background-image:url("../wbe4img/bg-@{themeName}_defaultPattern.png");
+		background-repeat:repeat;
+		max-width:67.5em;	}
+	#Slides {	width:400px;}
+	#Slides li {text-align:center;}
+	.outer li {	list-style:none;}
+	#thumbDiv {margin: 0 auto;	overflow:hidden;}
+	#thumbDiv .thumbs li { 	display:inline;	
+							margin:0 0 20px 20px;    
+							overflow:hidden;	
+							position: relative; }
+	#thumbDiv .thumbs li:nth-child(3n+1) {margin:0 0 20px 10px;}
+	#thumbDiv .thumbs li img {
+		position: absolute;
+		bottom:0;
+		width:100%; }
+
+	#thumbPagination, .bxcaption {background: @wbeGalleryImageLine-background; opacity: 0.6;}
+	#thumbPagination {
+		height: 20px;
+		position: relative;
+		bottom:0;
+		text-align:center;
+		margin: 0 auto ;
+		overflow:hidden;
+			}
+	.pag-lk-next.off, .pag-lk-prev.off, .pag-lk-prev,  .pag-lk-next, .pag-lk, #hotelDescription p .morelk, #hotelDescription p .lesslk {	margin:0 @space_unit; text-decoration:none; position:relative; top:3px;
+		clear:left;
+		border-radius:@smallspace_unit;
+		padding:@unit_size 2*@space_unit;
+		background-color:@wbeGalleryImageBtns-background;
+		color:@wbeGalleryImageBtns-fontColor;
+		text-shadow:0 1px 0  @fontColor-shadow;
+		&:hover {
+			 background-color: @wbeGalleryImageBtnsHover-background;
+			 color: @wbeGalleryImageBtnsHover-fontColor; }
+		}
+	.pag-lk-next.off, .pag-lk-prev.off, .pag-lk-next.off:hover, .pag-lk-prev.off:hover {background-color:@disabled-background; cursor:default; text-decoration:none; color:@disabled-fontColor;}
+	.bxcaption {
+	   	font-size: 1.1em;
+		height: 20px;
+		opacity: 0.6;
+		position:absolute;
+		z-index: 90;
+		text-align:center;
+		
+		color:@fontColor-white;}
+	.slidesclass {list-style:none; width:400px; float:none; margin:@space_unit auto;}
+
+	
+/***Hotel Info Page***/
+	#DetailViewHotelContainer {padding:@space_unit 0; }
+	.hFacilitiesBox {float:left; margin:0 2*@space_unit; min-width:43%;}	
+	.hFacilitiesBox:nth-child(2n+1) {clear:left; }
+	#hotelFacilitiesIcons {margin:2*@space_unit 0 0 0}
+	.hotelFeatureGroupLi { border-bottom: @unit_size solid @wbe-light-border-color; margin-top:1.538em;}
+
+/**Maps**/
+	.mapDiv {margin:2*@space_unit 0; border: @unit_size solid @wbeWhite-border-color; float: left; min-width: 500px; max-width: 1800px; height: 382px; width:100%; color:@fontColor-black; }
+
+/**Calendar**/
+	#AvailCalender { width:100%;  }
+	#AvailCalenderLegend  { background:@wbeLighterGrey-background; padding:1em;}
+	#AvailCalenderLegend ul li.icon_generated:before {padding-right:0;}
+
+/****DetailView*******************/
+	#roomTypeTitle, #rateTitle, #voucherTitle { 	clear:both; 	}
+	#hiddenElement {visibility:hidden; float:right;}
+	#roomFacilitiesIcons {margin:2*@space_unit 0; clear:both;}
+	#RoomTypeSelect, #productConfigRight {display:block; float:left; width:47.75%;  min-width: 23em;}	
+	#RoomTypeSelect{margin-bottom:@space_unit; margin-right:2*@space_unit; }	
+	#RoomConfigurator {width:100%;}
+	#roomFacilitiesIconsBox {margin:@space_unit 0;}
+	#addToBasketPanel {float:right; text-align:right;}
+	#DetailViewContainer h2 { font-size:2.4em;}
+	.msgBox { padding:@space_unit; border: @unit_size solid @roomConfig-border; background-color: @roomConfig-background; }
+	
+/**Article add to cart*****************/
+	.tableArticle, #BasketTable {margin:2*@space_unit 0; width:100%;}
+	#articleToCart p{ margin:@space_unit 0 0 0;}
+	
+	/****Articles*******************/
+	.cellBoxRes, .rowBoxRes, .cellBoxRes:before, .tableBoxRes:not(.activeMyReservation) {padding-bottom:@space_unit;}
+	div.cellBox.imgCell{max-width: 12.2em; }
+	.tableArticle .tableBox {width:100%; }
+	.articleCell21 {width: 100%;}
+	.cellBox p.txtInfoLine{background: @wbeArticleAddedToCart-background; color: @wbeArticleAddedToCart-fontColor;  padding:@space_unit 2*@space_unit; clear:left; border-radius:@smallspace_unit;	}
+	div.txtInfoLine { clear:left;
+		& p {border-bottom: 1px solid @wbeStrongColored-background; }		
+		}		 			
+	.articleToCartBtn.icon_generated {font-size:2em; text-decoration:none;  } 
+
+	/*Articles -by tabs - when this option is active*/
+	 #articlesTabWrapper {background: @wbe-artTabsArea-background; margin:2*@space_unit 0; }
+
+/***Basket***/
+	#BasketTable { border:none; }
+	#BasketTable td  { border-top:0px;border-left:0px;border-right:0px; padding:@space_unit; }
+	#BasketTable td#totalRowLabel, #BasketTable td#totalRowPrice  {padding-top:@space_unit; padding-bottom:@space_unit;} 
+	
+	#BasketTable th, .totalRow, .rowBoxResHead {
+		margin:0;
+		border:0;
+		text-transform:uppercase;
+		text-shadow:0 1px 0  @fontColor-mediumShadow; 
+		background-color: @wbeBasketTableTH-background!important;
+		color: @wbeBasketTableTH-fontColor;
+	}
+
+	.rowBoxResHead	 {text-align:left;}
+	.totalLabel {text-transform:uppercase;}
+	#basketPanel { width:100%;}
+	#BasketTable h6 {font-size:1.2em; margin-top:0;} 
+	.bgDark, .bgCell, #activeReservation, .activeMyReservation {background:@wbeBasketTable-background; color:@wbeBasketTable-fontColor; }
+
+
+	#BasketTable tr {background: @wbeBasketTable-background; color: @wbeBasketTable-fontColor;}
+	#BasketTable tr:nth-of-type(2n+1), .bgLight {background:@wbeBasketTable2n1-background;}
+	.tableBoxRes:hover *:not(.applyButton):not(.applyButton_hover), .highlightBg  {
+		color:@fontColor-white; 
+		text-shadow:0 1px 0  @fontColor-shadow; 
+		background: @wbeColored-background;
+		}
+	#BasketTable tr:hover:not(.k-header) {color: @wbeBasketTableHover-fontColor;	 background: @wbeBasketTableHover-background; text-decoration: none;} 
+		 
+	a.linkDeleteLk, a.linkAddLk {text-decoration:none;
+		&:hover {text-decoration:none;}
+	}
+	a.linkDeleteLk:before, a.linkAddLk:before {
+		font-family: fico;
+		text-decoration:none;
+		padding-right:@space_unit;
+		font-weight:bold;
+		font-size:1.8em;
+		top:-0.50em;	}
+	a.linkDeleteLk:before { content:'_';	 position:relative;} /* "-" looks too small and odd*/
+	a.linkAddLk:before { content:'+'; 	}
+	/*Basket Plus-Minus btns*/
+	.basketQtyMinus, .basketQtyPlus {text-decoration: none; cursor: pointer;
+		&.icon_generated:before {padding-right: @space_unit/2; padding-left: @space_unit/2;}
+	}
+	
+
+
+/***PRe-checkout********************************/
+	#preCheckout {margin-top: 2*@space_unit; }
+	.checkoutBox { float:left; min-height: 22em; width: 27%; padding:2*@space_unit 4*@space_unit 0 0; margin:0;}
+	.checkoutBox:first-child { margin-left:0; border-left: 0;}
+	#preCheckout .LoginFormAlternate {margin-left:0;}
+
+
+/***CheckOut**/
+	#couponBox, #voucherBox {margin:@space_unit 0;}
+	#promoBarBox div { text-align:right;}
+	#promoBarBox fieldset input, #voucherBox fieldset input {display:inline;}
+	
+	//#invoiceLk {color:@fontColor-Colored; text-decoration:none;}
+	//#invoiceLk:hover {color:@fontColor-Colored;}
+
+	#divNoRoomAvailable {width:100%;}
+	.textareaTxt { margin: 2*@space_unit 0 0 0; text-transform:uppercase;}
+	.txtEntityTitle {
+		padding:@space_unit 0 @smallspace_unit @smallspace_unit; 
+		text-align:left;
+		border-top-right-radius: @smallspace_unit;
+		border-bottom-right-radius: @smallspace_unit;
+		color:@wbeEntityHighlight-fontColor;
+		margin:4*@space_unit 0 2*@space_unit 0;	
+		background-color: @wbeEntityHighlight-background; 
+		text-shadow:0 1px 0  @fontColor-mediumShadow;	}
+	.txtEntityTitle span.icon {
+		position:relative;
+		left:-0.750em;
+		font-size: 1.5em;
+		margin-right: -@space_unit;	}
+	.txtEntityTitle span:not(.icon) {
+		padding-left:0;	}
+	.txtEntityTitle span a {color:@fontColor-white; text-decoration:none;} 
+	.buttonPanel {width:100%; margin: 4*@space_unit 0 2*@space_unit 0; /*clear:both;*/}
+	.buttonPanelL { float:left}
+	.buttonPanelR { float:right}
+
+/**NoAvailability*****/
+	#divNoAvailabilitiesCallBack, #divNoAvailabilitiesWriteBack {float:left; width:47%;}
+	#divNoAvailabilitiesCallBack {margin-right:6%;}	
+	.AlternateDatesLi {margin:2*@space_unit @space_unit; display:inline-block; min-width:12%; width:auto;}
+	.AlternateDatesLi a:hover {}
+	.AlternateDatesLi:last-child{margin-right:0;}
+	.AlternateDatesLi a {text-decoration:none;}
+	.showResultsNTop,  .showResultsNBottom {text-align:center;}
+	.showResultsNTop {padding:@space_unit 2*@space_unit @space_unit/2 2*@space_unit;}
+	.showResultsNBottom {
+		padding:@space_unit/2 2*@space_unit @space_unit 2*@space_unit;
+		border-top:2*@unit_size solid @wbeWhite-border-color;
+		-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+		-moz-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+		-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+		transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s; }
+	.showResultsNBottom:hover {border-top:2px solid @wbeColored-border-color;}
+ 
+/*HOME*/
+	#Special-Offer-Box a {text-decoration:none;}
+	.btnStartBoxHolder { margin:2*@space_unit 0 0 0; text-align:right; }
+
+/**Vouchers*/
+	#voucherBoxContent {padding:2*@space_unit;}
+	#VoucherViewContainer .txtInfoLine {margin:4*@space_unit 0 0 0;}
+	
+	#voucherImgLogo {float:left; margin-right:3%;}
+	#voucherHotelVoucherData {float:left;}
+
+/**THANK YOU PAGE**/
+	#thankYouBox, #searchResultEmptyBox {padding:2*@space_unit; margin:0 0 4*@space_unit 0; border-radius:0 0 @smallspace_unit @smallspace_unit; }
+	#searchResultEmptyBox h2 {margin-top:0;}
+
+	/*Keep for the next release, when specialOffer box is implemented
+	#specialOfferButton { text-align:right; margin:0.667em 0 0 0;}
+	#specialOfferButton, #Special-Offer-Box span, #Special-Offer-Box h4, #Special-Offer-Box p {display:inline;}
+	#Special-Offer-Box h4, #Special-Offer-Box p {margin-right:@space_unit;}	*/
+
+/**BUTTONS****************************/
+	.wbeButton, .wbeButton_hover, .applyButton, .applyButton_hover, #popup_panel input, input.wbeButton  {
+		border-radius:0 @smallspace_unit;
+		display:inline-block;
+		margin:0;
+		font-size:1em;
+		text-align: center;
+		cursor: pointer;
+		border-style:none;
+		text-decoration:none;
+		line-height:1.4em;	}
+	.wbeButton, input.wbeButton {
+		background-color:@wbe-actionButton-background;
+		background-image:-webkit-gradient(linear, left top, left bottom, from(@wbe-actionButton-startColor), to(@wbe-actionButton-stopColor) );
+		background-image:-moz-linear-gradient(90deg, @wbe-actionButton-stopColor 0%, @wbe-actionButton-startColor 100%);
+		background-image: -o-linear-gradient(top,  @wbe-actionButton-stopColor 0%,@wbe-actionButton-startColor 100%);
+		background-image: -ms-linear-gradient(top,  @wbe-actionButton-stopColor 0%,@wbe-actionButton-startColor 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-actionButton-stopColor , endColorstr=@wbe-actionButton-startColor, GradientType=0 ); /* IE6-9 */			
+	    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+		color:@wbe-actionButton-fontColor; 
+		padding:9px 27px;		
+		text-shadow: @unit_size @unit_size 2*@unit_size rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color,2*@boxshadow_alfa) ;	} 
+
+	.wbeButton:hover, .wbeButton_hover  {
+		background-color:@wbe-actionButtonHover-background;
+		background-image:-webkit-gradient(linear, left top, left bottom, from(@wbe-actionButtonHover-startColor), to(@wbe-actionButtonHover-stopColor) );
+		background-image:-moz-linear-gradient(90deg, @wbe-actionButtonHover-stopColor 0%, @wbe-actionButtonHover-startColor 100%);
+		background-image: -o-linear-gradient(top,  @wbe-actionButtonHover-stopColor 0%,@wbe-actionButtonHover-startColor 100%);
+		background-image: -ms-linear-gradient(top,  @wbe-actionButtonHover-stopColor 0%,@wbe-actionButtonHover-startColor 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-actionButtonHover-stopColor , endColorstr=@wbe-actionButtonHover-startColor, GradientType=0 ); /* IE6-9 */			
+	    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+		color:@wbe-actionButton-fontColorHover;
+		padding:9px 27px;		
+		text-shadow: @unit_size @unit_size 2*@unit_size rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color,2*@boxshadow_alfa) ;
+				}
+	.applyButton, #popup_panel input {
+		padding:@smallspace_unit 2*@space_unit;
+		background: -moz-linear-gradient(top, @wbe-lightButton-startColor 0%, @wbe-lightButton-stopColor 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@wbe-lightButton-startColor), color-stop(100%,@wbe-lightButton-stopColor));
+		background: -webkit-linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		background: -o-linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		background: -ms-linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		background: linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-lightButton-startColor , endColorstr=@wbe-lightButton-stopColor, GradientType=0 ); /* IE6-9 */							
+		background-color:@wbe-lightButton-background;
+		color:@wbe-lightButton-fontColor; 
+		text-shadow:@wbeLighterGrey-background @unit_size @unit_size 2*@unit_size;	}
+	.applyButton_hover, .applyButton:hover, .applyButton:active  {
+		padding:@smallspace_unit 2*@space_unit;
+		background: @wbe-lightButtonHover-background;
+		background: -moz-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%, @wbe-lightButtonHover-stopColor 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@wbe-lightButtonHover-startColor), color-stop(100%,@wbe-lightButtonHover-stopColor));
+		background: -webkit-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		background: -o-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		background: -ms-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-lightButtonHover-startColor, endColorstr=@wbe-lightButtonHover-stopColor, GradientType=0 ); /* IE6-9 */									
+		background: linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		color:@wbe-lightButton-fontColorHover; 
+		text-shadow:@lightergrey @unit_size @unit_size 2*@unit_size;	}
+
+/*Error*/
+	/*.errorBox { margin:2*@space_unit auto; background-color:red;  padding:2*@space_unit;}
+	.errorLBox, .errorRBox { float:left; }
+	.errorLBox { width:9*@space_unit; }
+	.errorLBox  img {margin:0 2*@space_unit 0 0;}
+	.errorRBox H1, .errorRBox p {
+			line-height:1.2em; 	
+			font-family: Mako;	}
+	.errorRBox H1 {margin:0; font-size:2.8em; }
+	.errorRBox p {margin:2*@space_unit 0; font-size:1.3em; }*/
+	ul#rateListItems {margin:2*@space_unit;}
+	ul#rateListItems li {line-height: 1.4em; list-style: square outside none; }
+	
+
+
+/***GTC**TOS********************/
+	#newProfileTOS label, #sendVoucherByEmail label  {display:inline;}
+	#newProfileTOS.formLine{width:100%;}
+	.k-window-titlebar.k-header {height: 2.5em; background: @wbeTOS-windowTitle-background; 
+		& .k-window-title {
+			font-size: 1.3em;
+			padding: @space_unit 0;
+			color: @wbeTOS-windowTitle-fontColor;
+		 }
+	}
+	
+	#GTCWindowAccountBox, #GTCWindowCheckoutBox, #GTCWindowBox {background: @wbeTOS-window-background; 
+		 min-height: 20em;  
+		/*display: none; Use display:none missing translation. The window is displayed by JS anyway */
+	 }
+	.k-window-content.k-content div {padding: @space_unit;} 
+	
+/**************************************/
+#fb-root > div { width:6.250em; overflow:hidden; }
+
+.wbeContentOut {width:100%; }
+.contentIn { margin:0 @space_unit;}
+
+	#hLanguageSelection, #hPersonalCancelReservation,#hPersonalBookPhone {float:left;}
+	#hPersonalBookPhone {padding: .5em .9em .4em; /*Same as in kendo.min - widget*/}
+	
+	#personaDiv {float:left; clear:none;}
+	#headerPersonal {float:right;	}
+	.item {margin:@space_unit 0; text-align:right;}
+	.item .icon {padding-left: 2*@space_unit; padding-right: @smallspace_unit;}
+	.tableBoxRes, .tableBox{
+		display:table; 	 
+		margin:0;
+		border-collapse: separate;
+		position:relative;
+		float:none;	 }
+	.tableBoxRes {margin-top:@space_unit; width:100%;}
+	.tableBox	{ border-spacing: 2*@space_unit 2*@space_unit; width:100%;}
+	.rowBox, .rowBoxRes, .rowBoxResHead {display:table-row; }
+	.cellBox { display:table-cell; margin-top:@space_unit;  vertical-align: top;}
+	.cellBoxRes {display:table-cell; padding:@space_unit; }
+	.showHotelResultsLine {margin:0;}
+	.showResultsBoxImage {text-align:center;}
+			.showResultsBoxImage img, #voucherImgLogo img, .tableArticle img.imgArticle {
+				-webkit-transition: -webkit-transform 0.5s ease-in-out; 
+				-moz-transition: -moz-transform 0.5s ease-in-out; 
+				-o-transition: -o-transform 0.5s ease-in-out; 
+				transition: transform 0.5s ease-in-out; }
+			.rotateImg() {
+				transform: scale(1.1);
+				-webkit-transform: scale(1.1); 
+				-o-transform: scale(1.1); 
+				-moz-transform: scale(1.1); }
+			.showResultsBoxImage img:hover, #voucherImgLogo img:hover, .tableArticle img.imgArticle:hover {.rotateImg() }
+			.showResultsBox h6 {margin:0;}
+
+/**For IE8 ONLY*************************************/
+.fixIE8Table.tableBox .rowBox {border-bottom:@space_unit @wbeWhite-border-color solid; }
+
+}
+/***PRINT*******************/
+	#printMsg {display:none;}

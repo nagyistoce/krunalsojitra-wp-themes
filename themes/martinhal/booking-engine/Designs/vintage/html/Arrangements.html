@@ -1,0 +1,42 @@
+﻿<div id="arrangementsresults" class="displayResultsBox">
+		<h4 id="arrangementsTitle" data-localization="_ArrangementsTitle"><!-- Arrangements --></h4>
+        <div data-function="arrangmenttable" class="tableBox fixIE8Table" >
+
+      </div>
+<div class="clear"></div>
+
+</div><a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField] #" >      </a>
+ <script id="ArrangementItemTemplate" type="text/x-kendo-template"> 
+  # for(i=0;i < data[_CurrentInstance.RateArrayField].length;i++){#
+  #var image = "";#
+  #var style = "";#
+ 
+  #if(typeof data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateImageField] != "undefined" ){#
+    #image = data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateImageField];} else{#
+	#style="display:none;";#
+  #}#
+<div class="showHotelResultsLine rowBox">
+<div class="showResultsBox box" data-arrangementitem="#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateIDField]#" data-hotelarrangementitem="#= data[_CurrentInstance.HotelIdField] #" >
+	<div class="cellBox showResultsBoxImage" >
+		<a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField] #" ><img src="#=image#" style="#=style#" alt="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField] #" max-height="163" /></a>
+	</div>
+	<div class="cellBox">
+		<div  class="showResultsBoxTxt">
+			<h6><a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField]#" >#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField] #</a></h6>
+    	    <p>#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateShortDescriptionField]#</p>
+			<!-- Uncomment for use	<p><span class="showResultsBoxMore"><a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField] #" class="morelk" data-localization="_rateDetailsLk"  >details</a></span></p>		-->
+		</div>			
+		<div class="roomCatShortList">
+			<ul>
+				#var rooms = jlinq.from( data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField]).sort(_CurrentInstance.RatePriceField+'.'+_CurrentInstance.RatePriceValueField).select();#
+                # for(a=0;a <rooms.length;a++){#
+					<li><a href="\\#" data-function="DetailView" data-roomtype="#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField][a][_CurrentInstance.CategorieIdSingleField]#"  class="lkUnderlineHC">#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField][a][_CurrentInstance.CategorieNameField]#: <span class="roomCatPrice">#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField][a][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceValueField] + " "+data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField][a][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceCurrencyField]#</span></a></li>
+                #}#
+			</ul>
+        </div>
+		<!--	Uncomment for going live <p><span class="priceClassTxt">Preis:</span> <span class="priceClass">#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField][0][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceValueField] + " "+data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField][0][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceCurrencyField]#</span></p>-->
+    </div>
+</div>
+</div>
+#}#
+</script>

@@ -1,0 +1,56 @@
+﻿<div id="VoucherBasketModule">
+  <!-- Voucher module -->
+</div>
+
+<div id="basketTitlePanel"><h2  data-localization="_MyCartTitle">Cart</h2></div>
+<div id="basketPanel">
+
+<table id="BasketTable" >
+  <thead>
+  <tr>           
+     <th data-field="Description" class="txtLeft "><span data-localization="_CartProductDesc">Description</span></th> 
+      <!--E04 - Extra Column added for action buttons------------------------>
+     <th data-field="Action"  class="txtLeft"></th>   
+     <!--E04 EN --> 
+     <th data-field="Count" class="txtCrt"><span data-localization="_CartProductCount">Count</span></th>        
+   <th data-field="Price" class="txtCrt"><span data-localization="_CartProductPrice">Price</span></th>      
+
+  </tr>
+  </thead>
+  <tbody id="basketContentTable">
+
+  </tbody>
+</table>
+</div>
+     <div class="clear"></div>
+
+ <div id="promoBarBox">
+ 	<div id="couponBox" data-function="couponToCash">
+           <fieldset>
+               <label for="coupon-Code" data-localization="_CouponCode" >Enter Coupon Code:</label>
+               <input id="coupon-Code"  type="text"  tabindex="3" maxlength="50" name="coupon-Code" data-function="Couponcode" />
+                <input  class="applyButton" data-function="resolveCoupon" onmouseover="this.className='applyButton_hover';"   onmouseout="this.className='applyButton';" data-localization="_AddCoupon" value="Apply" id="applyCoupon"  type="button" />
+			</fieldset>                
+			</div>              
+		<div id="voucherBox" data-function="voucherToCash" >
+		       <fieldset>
+               <label for="couponCode" data-localization="_VoucherCode">Enter Voucer Code:</label>
+                <input id="voucherCode"  type="text"  data-function="vouchercode"  tabindex="4" maxlength="50" name="voucher-Code" />
+               <input  class="applyButton" onmouseover="this.className='applyButton_hover';" data-function="resolveVoucher"  onmouseout="this.className='applyButton';"  value="Apply" id="applyVouchers"  type="button" data-localization="_AddVoucher" />
+          </fieldset>
+			</div>                
+        <div class="clear"> </div>
+     </div>
+	<div class="clear"></div>
+	<div class="buttonPanel">
+		<div class="buttonPanelR"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';" data-localization="_Checkoutbt" value="Checkout" id="CheckOutBtn"  type="button"></div>
+        <div class="buttonPanelL"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"   data-localization="_backbasketbt" value="Zurück" id="Button4"  type="button"></div>
+    </div>
+	<div class="clear"></div>
+<script type="text/javascript">
+    protelWBE.RegisterShoppingBasketGrid("BasketTable");
+    protelWBE.RegisterCheckOutButton("CheckOutBtn");
+    protelWBE.RegisterBackToResultButton('Button4');
+ </script>
+
+

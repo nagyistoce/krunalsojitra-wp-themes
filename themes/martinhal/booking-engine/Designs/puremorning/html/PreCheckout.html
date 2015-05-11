@@ -1,0 +1,65 @@
+﻿<div id="preCheckout">
+<div class="checkoutBox">
+	<h2  data-localization="_loggedCheckOutH">I have an account</h2>
+    
+	<div id="LoginFormAuthID" >
+        <fieldset>
+            <div class="searchLine">
+	           	<label for="Username" data-localization="_Username">Username:</label>
+				<input id="UsernameForCheckout" value=""  type="text">
+			</div>                
+           <div class="searchLine">
+	           <label for="Password" data-localization="_Password">Password:</label>
+				<input id="PasswordForCheckout" value="" type="password">
+           </div>
+        </fieldset>  
+        <div class="buttonPanel"><div class="buttonPanelL"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';" data-localization="_loginbt" value="Log in" id="LoginButtonForCheckout"  type="button"></div></div>
+       	<div class="clear"></div>  
+        <a href="#" title="search" class="linkLk" data-localization="_PasswordForgot" >Forgotten your password?</a>
+	</div>
+</div>
+
+<div class="checkoutBox">
+	<h2 data-localization="_newAccountCheckOutH">I am a new client</h2>
+    <p data-localization="_newAccountCheckOutTxt">Your account will be created and you will check-out using the provided personal data.</p>
+    <div id="preCheckoutAgreeTOS">
+    	<input id="TOSAgree_Booker" type="checkbox"  checked="checked" data-function="gtccreateaccount" tabindex="100" maxlength="50" name="TOSAgree_Booker" required validationMessage="_newProfileTOSRequired"/> <span class="requiredSmb"></span><label for="TOSAgree_Booker"><span data-localization="_newAccountCheckOutAgree">Yes, I want to set up a new account</span> (<a class="linkLk" data-function="showgtc" href="#" tabindex="101" data-localization="_newAccountCheckOutTOS">Terms of use</a>)</label>
+	</div>
+	<div class="buttonPanel"><div class="buttonPanelL"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';" data-localization="_newAccountCheckOutBtn" value="Next" id="CreateAccountBtPreCheckOut"  type="button"></div></div>
+
+    </p>
+</div>
+<div class="checkoutBox"><h2 data-localization="_guestCheckOutH">Check out as guest</h2>
+<p data-localization="_guestCheckOutTxt">Your personal data will not be stored, but you will still have to provide your data next time when shopping on this web site.</p>
+<div class="buttonPanel"><div class="buttonPanelL"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';" data-localization="_guestCheckOutBtn" value="Next" id="CheckOutAsGuestBt"  type="button"></div></div>
+</div>
+
+	<div class="clear"></div>  
+      
+   	<div id="LoginFormAlternate">
+		<h5 data-function="socialmediatitle" data-localization="_socialCheckOutH">Log in using your social media</h5>
+    	<div id="SocialLogin">
+        	<ul>
+            	<li id="facebook"><a href="#" class="url" data-localization="_FacebookLogin" id="FacebookLoginLink1" >Sign in with Facebook</a></li>
+                <li id="google"><a href="#" class="url" data-localization="_GoogleLogin" id="GoogleLoginLink1">Sign in with Google</a></li>
+                <li  id="twitter"><a href="#" class="url" data-localization="_TwitterLogin" id="TwitterLoginLink1">Sign in with Twitter</a></li>
+			</ul>    
+		</div>  
+	</div>
+</div>
+<div id="GTCWindowBox" data-function="GTCWindowAccount">
+	
+	
+</div>
+<script type="text/javascript">
+
+
+    protelWBE.RegisterSimpleLogin('UsernameForCheckout', 'PasswordForCheckout', 'LoginButtonForCheckout');
+    protelWBE.RegisterGoogleLoginButton('GoogleLoginLink1');
+    protelWBE.RegisterTwitterLoginButton('TwitterLoginLink1');
+    protelWBE.RegisterFacebookLoginButton('FacebookLoginLink1');
+    protelWBE.RegisterCheckOutAsGuestButton('CheckOutAsGuestBt');
+    protelWBE.RegisterCheckOutAndCreateAccountButton('CreateAccountBtPreCheckOut');
+ 
+   
+</script>

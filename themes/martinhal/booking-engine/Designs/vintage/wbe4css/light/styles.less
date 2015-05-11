@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+@themeName: "vintage";																//replace with theme's name
+@themeImgSrc: "";  																	//Keep empty for default theme, othervise replace with the theme's name ( eg. "grey/")
+@image-folder: "../wbe4img/kendoImgs/Metro";										//KENDU UI: folder for loading Kendo UI images/sprite - the absolute path is NOT supported
+@texture-url: url("../../wbe4img/kendoImgs/textures/clear.gif"); 						//KENDU UI:  path to Kendo UI texture - the absolute path is NOT supported
+
+
+// 1. ROOT 					==============================
+
+// CSS reset
+@import "../reset.less";
+
+// Variables and mixins
+@import "variables.less";
+@import "../mixins.less";
+
+// Site wide styles
+@import "../common-sense.less";
+
+// 2. TYPOGRAPHY 			==============================
+
+// 3. COLOUR 				==============================
+// Colour interaction semantics
+@import "../colour.less";
+
+// 4. TEXTURE 				==============================
+
+// Alerts, badges, boxes and gradients
+@import "../texture.less";
+
+// Font Awesome icon fonts (optional)
+@import "../font-awesome.less";
+
+
+// 5. ELEMENTS 				==============================
+
+// Figures, images and other elements
+@import "../elements.less";
+
+
+// Standard form controls
+@import "../forms.less";
+
+// Kendo
+@import "../kendo.silver.less";
+@import "../template.less";
+
+// 6. LAYOUT 			==============================
+
+// Page level layout styles (banner, navigation, content, contentinfo)
+@import "../wbe_layout.less";
+@import "../wbe_overwrite.kendo.less";
+@import "../wbe_jquery.alerts.less";
+
+@import "../slideUpBoxes.less";
+
+
+//  7. VENDOR-SPECIFIC 		==============================
+//  8. MODERNIZR 			==============================
+
+
+//  9. TEMPLATE SPECIFICS 	==============================
+//  10. MEDIA QUERIES 		==============================
+
+@media print {
+	@import "../print.css";
+}
+
+@import "../wbe_responsive.less";
+@import "light.less";
+
+//GRAPHICS USED
+//Features icons:  created or generated with owned (Fotolia, thinkStock ) and free  photoshop shapes www.shapes4free.com 
+//Font Awesome http://fortawesome.github.io/Font-Awesome/
+//Icons used for Kendo UI  controls: Kendo Ui wbe4img/kendoImgs/;  Kendo UI license
+//Patterns: http://subtlepatterns.com
+//Some icons/graphics uses the Ui Toolkit - http://www.uiparade.com/store/ (licensed)

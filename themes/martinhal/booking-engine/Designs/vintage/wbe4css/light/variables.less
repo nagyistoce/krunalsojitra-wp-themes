@@ -1,0 +1,339 @@
+// ==========================================================
+
+
+/* CSS Variables =================================================== */
+
+// 1. COLOUR DECLARATION	 			==============================
+
+@basecolor 					 		: #FFFFF5;//#F2F7F4; 
+@compcolor 							: #F9F5D5; 
+@colorAction						: #57B000;										//light-lime green
+@colorActionA						: #111111; 
+@colorActionB						: #3E7E00; 										//green-darker
+@contrastColor						: #FFBA06;//#F3E65B;//#FFD400;  									//yellow
+@red 								: #CD5C5C;
+
+
+// GREYSCALE
+@white								: #FFFFFF;
+@darkgrey							: #161616;
+@grey 								: #999999;
+@lightgrey							: #CCCCCC;
+@lightergrey						: #F5F4F2;
+@black 								: #000000;
+
+//2. Design Elements: Fonts, Borders, Backgrounds, Shadows ==============================
+
+//----Fonts
+@fontColor 							: #2E0F0F;
+@fontColor-B						: @colorActionA; 								//goldish
+@fontColor-base						: @basecolor; 									//dark maroon
+@fontColor-dark						: @black;
+@fontColor-light					: @white;
+@fontColor-h						: @fontColor;									//for h tags, where not specified
+@fontColor-directOnBg				: @fontColor;								//for h2 tags ( title on top of the page), not contained in .paintBox boxes/withouth background. For some color variations this setting can be usefull
+
+
+//for H tags
+@fontColor-Contrast					: @contrastColor;
+@fontColor-price					: @fontColor-B;									//129  Price font color
+
+//----backgrounds
+@wbeColored-background				: @white; 						
+@wbeBase-background					: @basecolor;
+@wbeAction-background				: @colorAction;
+@wbeLight-background				: @colorActionA;
+@wbeLight2-background				: @colorActionB;
+@wbeContrast-background				: @contrastColor;
+@wbeComp-background					: @compcolor; 						
+
+
+//----borders
+@wbeColored-borderColor				: @black; 						
+@wbeBase-borderColor				: @basecolor;
+@wbeAction-borderColor				: @colorAction;
+@wbeLight-borderColor				: @colorActionA;
+@wbeLight2-borderColor				: @colorActionB;
+@wbeContrast-borderColor			: @contrastColor;
+
+
+
+//----Shadows
+@wbeShadow-dark						: @white;//@black;	
+@wbeShadow-light					: @black; //@colorActionA
+@boxshadow_color 					: 255; 											//rgba
+@boxshadow_alfa 					: 0.40;
+
+//----Disabled  ***
+@disabled-background				: @lightergrey;									//130 
+@disabled-fontColor					: @grey;										//131 
+
+
+//----3.TYPOGRAPHY 			==============================
+@basefont							: Arial; 										//1
+@baseheadingfont					: 'Dosis', sans-serif;							//2 | this is only information. The font MUST be changed in content-holder.html, top js 
+@baselineheight 					: 1.5em;										//3
+@basefontsize 						: 0.875em;										// | 14px; Browser default 16PX. This is a fix design for 1024px. If the font increases, please change the left/right colomns sizes.
+@baseheadingfontweight 				: normal;
+@fontSmallSize						: 0.75em; 
+
+
+// 4. DESIGN ELEMENTS 		==============================
+
+//----Page background ***
+	@wbePage-backgroundColor				: @colorActionB;		 				//5
+	@wbePage-backgroundImage				: 'img-light2.jpg';			 			//6 IMAGE should be located under the ../wbe4img/ folder, otherwisae change the path under common-sense.less  Image is not displayed for @media only screen and (max-width: 599px) 
+	@wbePage-backgroundTransparentImage		: 'selectionWhite_bg.png';//'selectionDark_bg.png';				//7 IMAGE should be located under the ../wbe4img/ folder, otherwisae change the path under common-sense.less This is a dark, semi-transparent BG. For a light one use selectionLight_bg.png
+	
+// Links ***
+	@linkcolor 								: @colorAction;							//8 in this case, identical with the font color, but underlined. Some other classes apply, too
+	@linkcolorhover 						: @colorActionB;					
+	@linkcolorvisited   					: darken(@linkcolorhover, 10);
+	@linkcolorfocus 						: darken(@colorActionB, 10);
+
+//Form	
+	@wbeInput-background					: @wbeColored-background; 				//9   
+	@wbeInputHover-background				: @wbeColored-background;				//10   
+	@wbeSelect-background					: @wbeColored-background;  				//11 | settings for @select-background-color in kendo.silver.less Also affects all select kendo obj. Keep same with  @wbeInputHover-background for a drop-box look
+	@wbeInputDisabled-background			: @disabled-background; 				//12  
+	@wbeInputDisabled-fontColor				: @disabled-fontColor;					//13  
+	@wbeInput-border-color					: @wbeLight2-borderColor; 				//14 	
+	@wbeSelect-border-color					: @wbeLight2-borderColor; 				//137 |the Search box select boxes are having different settings under 	//SearchBox
+	@wbeInput-fontColor						: @fontColor; 							//15  | @input-text-color in kendo.silver.less
+	@wbeLabel-fontColor						: @fontColor; 			 				//17 
+	@inputborderwidth						: 1px;
+	@inputborderstyle						: solid;
+	@wbeInputHover-border-color 			: @wbeContrast-borderColor; 			//138 | same as @select-border-color in Kendoo, to keep it common
+	@wbeInputFocus-border-color				: @wbeContrast-borderColor;		 		//139
+
+//WIDGETS
+	@wbeWidget-background					: @wbeBase-background; 					//140 | @widget-background-color in kendo.silver.less. Apply to Login Box and Select panel: calendars*/
+	@wbeWidget-border-color					: @wbeLight2-borderColor;				//156 | @widget-border-color  in kendo.silver.less
+	@wbeWidget-fontColor					: @fontColor-B;							//157 | @widget-text-color in kendo.silver.less. Apply to "My account" text p.translate and days of the week in AvailCalender, drop-downs, etc
+	@wbeWidget-hoverFontColor 				: @fontColor;							//158
+	@wbeWidget-selectedFontColor			: @fontColor;							//159
+	@wbeWidget-hoverBgColor					: @wbeContrast-background;				//160
+	@wbeWidget-selectedBgColor				: @wbeAction-background;				//161
+	@wbeWidget-activeBgColor				: @wbeBase-background;					//162
+	@wbeWidget-hoverBorderColor				: @wbeContrast-borderColor;  			//163
+	@wbeWidget-selectedBorderColor			: @wbeAction-borderColor; 				//164
+	@wbeWidget-activeBorderColor			: @wbeLight2-borderColor;				//165
+	
+//BUTTONS -Strong-Colored Buttons: aka .wbeButton ***
+	@wbe-actionButton-background			: @wbeAction-background;				//18
+	@wbe-actionButton-startColor			: @wbeAction-background;				//19
+	@wbe-actionButton-stopColor				: darken(@wbeAction-background, 5%);	//20	
+	@wbe-actionButton-fontColor				: @fontColor-light;						//21
+	@wbe-actionButtonHover-background		: darken(@wbeAction-background, 5%);	//22
+	@wbe-actionButtonHover-startColor		: darken(@wbeAction-background, 5%);	//23
+	@wbe-actionButtonHover-stopColor		: @wbeAction-background;				//24	
+	@wbe-actionButton-fontColorHover		: @fontColor-light;						//25	
+	
+//BUTTONS: Light-Colored Buttons	: aka .applyButton ***
+	@wbe-lightButton-background				: @wbeBase-background;					//26
+	@wbe-lightButton-startColor				: @wbeBase-background;					//27	
+	@wbe-lightButton-stopColor				: darken(@wbeBase-background, 10%);		//28	
+	@wbe-lightButton-fontColor				: @fontColor;							//29
+	@wbe-lightButtonHover-background		: darken(@wbeBase-background, 10%); 	//30
+	@wbe-lightButtonHover-startColor		: darken(@wbeBase-background, 10%);		//31	
+	@wbe-lightButtonHover-stopColor			: @wbeBase-background;					//32
+	@wbe-lightButton-fontColorHover			: @fontColor;							//33
+
+//Error-Handling
+	@validation-fontColor					: @fontColor-base; 							//34
+	@validation-border 						: @wbeColored-borderColor;				//35
+	@validation-background					: lighten(@wbeAction-background, 10%);	//36
+	@requestedIcon-fontColor				: @contrastColor;							//37
+
+//Alert messages - jquery.alerts.less  ***
+	@wbeAlert-background 					:@wbeBase-background;					//38
+	@wbeAlert-fontColor 					:@fontColor;							//39
+
+
+//5. PAGE ELEMENTS - by function ==============================
+
+//Box, another than specified ***
+	@wbeBox-background 						: @wbeBase-background; 					//99 
+	@wbeBox-fontColor 						: @fontColor;							//98
+
+//Start Page: ***
+	@wbeStartBox-background					: @wbeBase-background;					//16 
+	@wbeStartBox-fontColor					: @fontColor;							//50	
+	@wbeStartBoxHover-background			: @colorActionA;						//52
+	@wbeStartBoxHover-fontColor				: @fontColor-light;						//53		
+
+//LeftColumn
+	@wbeLeftColomn-backgroundColor			: @wbeBase-background;					//166
+	@wbeLeftColomn-backgroundImg			: 'clear.gif';							//167
+	@wbeLeftColomn-width					: 220px;								//168
+	@wbeLeftColomn-lMargin					: 0;									// change in relation with @wbeLeftColomn-width
+
+//RightColumn
+	@wbeRightColomn-backgroundColor			: transparent;							//169
+	@wbeRightColomn-backgroundImg			: 'clear.gif'; 							//170 
+	@wbeRightColomn-width					: 750px;								//171
+	@wbeRightColomn-rMargin					: 0;									// change in relation with @wbeRightColomn-width
+
+	
+
+//SearchBox ***
+	@wbeSearchBox-backgroundColor			: @wbeBase-background;					//40	
+	@wbeSearchBox-backgroundImg				: 'clear.gif';							//47
+	@wbeSearchBoxActiveTab-fontColor		: @wbeLabel-fontColor;					//41 
+	@wbeSearchBoxActiveTabAHover-fontColor	: @fontColor;							//42 
+	@wbeSearchBoxTab-background 			: @wbeColored-background;				//43
+	@wbeSearchBoxTab-fontColor 				: @fontColor;							//44	
+	@wbeSearchBoxHover-fontColor			: @fontColor;							//45
+	@wbeSearchBoxHover-background			: @wbeContrast-background;				//46	
+	@wbeSearchBoxSelect-border-color		: @wbeLight2-borderColor;				//136  | Apply to searchBox elements AND to language selector
+
+//Header Icons ***
+	@wbeHeaderIcon-color					: @fontColor-B;							//48
+
+//Shopping Cart  ***
+	@wbeShoppingCartIcon-Color				: #4682B4;								//49 
+	@wbeShoppingCartLk-Color				: #4682B4;								//172
+
+//Login, Social login ***
+	@wbeLogin-facebook-bg					: #1a90c6;								//54
+	@wbeLogin-google-bg						: #da3830;								//55
+	@wbeLogin-twitter-bg 					: #28adff;								//56
+	@wbeLogin-addAccount-bg					: @black;								//57
+	@wbeLogin-logout-bg						: @black;								//58
+	@wbeLogin-manageprofile-bg 				: @wbeAction-background;				//59
+	@wbeLogin-myreservation-bg 				: @wbeContrast-background;				//60
+
+//Result Boxes ***
+	@wbeResultHotelName-fontColor			: @fontColor-light;						//51
+	@wbeResultHotelDescription-fontColor	: @fontColor-light;						//65
+	@wbeResultBoxesContainer-background		: transparent;							//61		
+	@wbeResultBoxes-background				: @wbeBase-background;					//62			
+	@wbeResultBoxesHover-background			: @wbeColored-background; 				//63	
+	@wbeResultBoxes-fontColor				: @fontColor;							//64
+	
+//hotel tabs ***
+	@wbeTabsArea-background					: transparent;			  				//78 |Recommended: keep the color of WBE page;
+	@wbe-hotelTabs-borderBottom-color		: darken(@colorAction, 5%);				//81	
+	@wbe-hotelTabsActive-background			: @wbeAction-background;				//82
+	@wbe-hotelTabsActive-fontColor			: @fontColor-light;						//83
+	@wbe-hotelTabsActive-border-color		: @colorAction;							//84
+	@wbe-hotelTabs-background				: @wbeLight2-background;				//85
+	@wbe-hotelTabs-fontColor				: @fontColor-light;						//86
+	@wbe-hotelTabsHover-fontColor			: @fontColor; 							//87 
+	@wbe-hotelTabsHover-background			: @wbeContrast-background; 				//106
+	@wbe-hotelTabsHover-border-color		: @wbeContrast-borderColor;				//107
+
+//Hotel Stars -color ***
+	@wbeStars-Color							: @contrastColor; 					//88
+
+//Hotel Rooms -no. Users Icons ***
+	@wbeRoomUsersSearchResultsIcon-Color	: @fontColor;  							//79 
+
+//Room Configuration Box ***
+	@roomConfig-background	 				: @wbeBase-background;					//111
+	@roomConfig-border		 				: @wbeBase-borderColor;					//112 For compatibility with Calendar
+
+//Room selection hoover .showRoomCategory*:hover ***
+	@wbeSelectRoomHoover-background			: @wbeContrast-background; 				//66
+	@wbeSelectRoomSelected-background		: @wbeAction-background; 				//67
+	@wbeSelectRoomSelected-fontColor		: @fontColor; 							//68
+
+//Calendar ***
+	@bigCalendar-background 				: @wbeColored-background;				//89
+	@bigCalendar-border 					: @wbeBase-borderColor;					//144 	
+	@bigCalendar-elements-background		: @wbeBase-borderColor; 				//90 |legend and week-Day th
+	@bigCalendarHead-fontColor				: @fontColor;  							//91 |Calendar head row font color
+	@bigCalendarHeadHover-fontColor			: @fontColor-B;							//92 |Calendar head row font color Hover
+	@bigCalendarHead-background				: @wbeAction-background;  				//93 |Calendar head row background*/
+	@bigCalendarHeadHover-background		: @wbeContrast-background;				//94 |Calendar head row background Hover
+
+//Calendar-Availabilities ***
+	@wbeAvailCalendarTd-background			: @wbeBase-background;					//95
+	@wbeAvailCalendarTd-border				: @wbeBase-borderColor;					//132
+	@wbeAvailCalendarHover-background		: @wbeContrast-background;				//96
+	@wbeAvailCalendarSelected-background	: @wbeAction-background;				//97
+	@wbeAvailCalendarDaysTop-fontColor		: @fontColor-B;							//100 
+	@wbeAvailCalendarEmptyDaysTop-fontColor	: @grey;								//101 
+	@wbeAvailCalendarNextMonth-fontColor	: @grey;								//102 
+	@wbe-not-availale						: #787878;								//103
+	@wbe-availale 							: @fontColor;							//104
+	@wbe-minimum-stay 						: #3BACD9;								//105
+
+//Image Gallery next-prev buttons  ***
+	@wbeGalleryImageLine-background			: @wbeColored-background;				//69
+	@wbeGalleryImageLine-fontColor			: @fontColor;							//133
+	@wbeGalleryImageBtns-background			: @wbeAction-background;  				//70
+	@wbeGalleryImageBtns-fontColor			: @fontColor;							//71  
+	@wbeGalleryImageBtnsHover-background	: @wbeAction-background;  				//72	
+	@wbeGalleryImageBtnsHover-fontColor		: @fontColor;  							//73
+
+//Articles ***
+	@wbeArticles-background					: @wbeBase-background;    				//134  			
+	@wbeArticles-fontColor					: @fontColor;  							//135
+	@wbeArticleAddedToCart-background		: @wbeContrast-background;  			//74 |Articles.html items added to cart - message
+	@wbeArticleAddedToCart-fontColor		: @fontColor; 							//75
+	@wbeAddToCartIcon-Color					: lighten(@fontColor-B, 10%);			//76 |see Articles.html to change from text link to btn 
+	@wbeAddToCartIconHover-Color			: @fontColor-B;							//77
+
+//Articles TABS (When this option is active in the cloud solution)	 ***
+	@wbe-artTabsArea-background				: transparent;  						//145 |Recommended: keep the color of WBE page;
+	@wbe-artTabsActive-background			: @wbeAction-background;				//147
+	@wbe-artTabsActive-fontColor			: @fontColor-light;						//148
+	@wbe-artTabsActive-border-color			: @wbeAction-borderColor;				//149
+	@wbe-artTabs-background					: @wbeLight2-background;				//150
+	@wbe-artTabs-fontColor					: @fontColor-light;						//151
+	@wbe-artTabsHover-fontColor				: @fontColor-dark;  					//152 
+	@wbe-artTabsHover-background			: @wbeContrast-background;  			//153
+	@wbe-artTabsHover-border-color			: @wbeContrast-borderColor; 			//154
+	@wbe-artTabsAreaInside-background		: @wbeColored-background;  				//146 |Recommended: keep the color of WBE page;
+	@wbe-artTabsAreaInside-border-color		: @wbeColored-borderColor;  			//155 |Recommended: keep the color of WBE page;	
+
+
+//Highligting line aka myAccount- .checkOutEntityTitle ***
+	@wbeEntityHighlight-border-color		: transparent;//108 XXX		
+	@wbeEntityHighlight-fontColor			: @fontColor;							//109
+	@wbeEntityHighlight-iconColor			: @colorAction;							//110 |XXX current design is display:none, but can be activated
+
+//Tables  -Applys to BASKET table and MYRESERVATIONS Elements, too ***
+	@wbeTable-background					: @wbeBase-background;					//113 | applys for (2n) child, too
+	@wbeTable-fontColor 					: @fontColor;							//114
+	@wbeTable2n1-background					: darken(@wbeBase-background, 5%);		//115
+	@wbeTableHover-background				: lighten(@wbeContrast-background, 14%);//116	
+	@wbeTableHover-fontColor				: @fontColor;							//117
+	@wbeTableTH-background					: @wbeAction-background;				//118
+	@wbeTableTH-fontColor					: @fontColor-light;						//119	
+
+
+//Footer
+	@wbeFooter-border-color					: @wbeContrast-borderColor;				//120
+	@wbeFooterProtelMark-background			: @wbePage-backgroundColor;				//121
+	@fontColor-footer						: @fontColor;							//122
+
+//TOS - GTC ***
+	@wbeTOS-windowTitle-background			: @wbeContrast-background;				//141
+	@wbeTOS-windowTitle-fontColor			: @fontColor;							//142
+	@wbeTOS-window-background				: @wbeBase-background;					//143
+
+
+//RESPONSIVE-Small Screen: TopMenu 
+	@wbeMobileMenu-background1				: @wbeLight2-background;				//175
+	@wbeMobileMenu-fontColor1				: @fontColor-light;						//176
+	@wbeMobileMenu-background2				: @wbeAction-background;				//177
+	@wbeMobileMenu-fontColor2				: @fontColor-light;						//178
+	@wbeMobileMenuCart-background			: @black;								//179
+	
+// 6. TEXTURE 				==============================
+
+//::selection  Selector - IE9+ ***
+	@wbeSelection-background				: @wbeAction-background; 				//123
+	@wbeSelection-fontColor					: @fontColor-light;						//124
+ 
+// 7. LAYOUT 				==============================
+	@unit_size								: 1px;									//125 |
+	@space_unit 							: 0.625em; 								//126 | 8px for font-base 16px
+	@smallspace_unit						: 0.375em; 								//127 | 56px for font-base 16px
+	@round									: 0.375em; 									//128 | 5px  for font-base 16px
+	@input_size								: 12.4em;
+
+	//REMOVE
+	@wbeEntityHighlight-background

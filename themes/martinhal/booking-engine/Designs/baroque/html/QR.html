@@ -1,0 +1,57 @@
+<div id="page" class="wbe4Wrapper">
+
+
+<div id="basketPanel" data-function="qrtable">
+
+	
+</div>
+ 
+
+
+	
+</div>
+
+<script id="QrInfoTemplate" type="text/x-kendo-template"> 
+
+<div  id="qrCodeDetails" class=" msgBox paddingTop" >
+	<h2  data-localization="_ManageReservations">Reservation Overview</h2>
+  #for(var i=0; i < data.length;i++){#
+ 		<h4>#=data[i].HotelData.name#</h4>
+		<p class="txt11em">
+			#=data[i].HotelData.address1#, 
+			#=data[i].HotelData.postalCode# 
+			#=data[i].HotelData.city# <br /> 
+			<span class="linkTxt" data-localization="_FormPhone">Tel:</span> #=data[i].HotelData.Phone#<br />
+			<span class="linkTxt" data-localization="_FormFax">Fax:</span> #=data[i].HotelData.Fax#<br />
+			#if (data[i].HotelData.latitude  && data[i].HotelData.longitude){#
+				<span class="linkTxt" _data-localization="_GeoCord">Geo</span> #=data.HotelData.latitude#,
+				#=data.HotelData.longitude#
+			#}#
+		</p>
+		
+			 #for(var a=0; a < data[i].Items.length;a++){#
+			 <h6 class="txtB">#=data[i].Items[a].RoomName#, #=data[i].Items[a].RateName#<!--<span >, Reservation No: XXX</span>--></h6>	
+			 <p>
+				<span class="linkTxt" data-localization="_arrivaldate"  >Anreise:</span> #=data[i].Items[a].Arrival#<br />
+				<span class="linkTxt" data-localization="_departuredate">Abreise :</span> #=data[i].Items[a].Departure#<br />
+				#if(data[i].HotelData.CheckIn != ""){#
+					<span class="linkTxt" data-localization="_CheckIn">Check-In :</span> #=data[i].HotelData.CheckIn#<br /> 
+				#}#
+				#if(data[i].HotelData.CheckOut != ""){#
+					<span class="linkTxt" data-localization="_CheckOut">Check-Out :</span> #=data[i].HotelData.CheckOut#<br />
+				#}#
+				<span data-localization="_FormNbrRooms">no. rooms </span>#=data[i].Items[a].Count#<br />
+			 	#=data[i].Items[a].Adults#<br /> #=data[i].Items[a].Childs#<br />
+				<span data-localization="_PriceLabel">Price:</span> #=data[i].Items[a].Price#</p>
+					
+				#for(var t=0; t < data[i].Items[a].Articles.length;t++){#
+					<h6>#=data[i].Items[a].Articles[t].Name#</h6>	
+					<p class="pNoMargin" data-localization="_CartProductCount"><span>No. items:</span>#=data[i].Items[a].Articles[t].Count#<br />
+					<span data-localization="_PriceLabel">Price:</span> #=data[i].Items[a].Articles[t].Price#</p>
+				#}#
+		
+			#}#
+ #}#
+</div>
+<div class="clear"></div>
+ </script>

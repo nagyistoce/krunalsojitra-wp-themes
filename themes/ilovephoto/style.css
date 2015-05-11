@@ -1,0 +1,99 @@
+/*
+Theme Name: I love Photography
+Theme URI: https://wordpress.org/themes/twentyfifteen
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Version: 1.0
+*/
+
+.full-height{height: 100%;}
+p{margin:0;}
+.alignleft {
+	display: inline;
+	float: left;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+blockquote.alignleft,
+.wp-caption.alignleft,
+img.alignleft {
+	margin: 0.4em 1.6em 1.6em 0;
+}
+
+blockquote.alignright,
+.wp-caption.alignright,
+img.alignright {
+	margin: 0.4em 0 1.6em 1.6em;
+}
+
+blockquote.aligncenter,
+.wp-caption.aligncenter,
+img.aligncenter {
+	clear: both;
+	margin-top: 0.4em;
+	margin-bottom: 1.6em;
+}
+
+.wp-caption.alignleft,
+.wp-caption.alignright,
+.wp-caption.aligncenter {
+	margin-bottom: 1.2em;
+}
+.formError{left: 85px !important;top: 382px !important;}
+p.wysija-paragraph{margin: 0 auto 7px;}
+.wysija-submit.wysija-submit-field { margin: 0 !important;}
+.wysija-submit.wysija-submit-field:hover{background: none repeat scroll 0 0 rgba(0, 0, 0, 0.45)}
+.index-contact .title{z-index: 1000 !important;}
+.index-contact .questions li > span label{font-size: 18px !important; line-height:26px !important;}
+.questions .focus-me{font-size: 18px !important;padding: 7px !important; background-color:rgba(51, 153, 153, 0.5)!important;}
+.index-contact textarea {   height: 101px !important;}
+#reallysimpletwitterwidget-2 a, #reallysimpletwitterwidget-2 a:hover, #reallysimpletwitterwidget-2 a:focus, a:before{color: #424242;}
+#reallysimpletwitterwidget-2 a:before{border-bottom: 2px solid #424242;}
+.simform .submit {
+    background: rgb(38,107,178);
+    border: medium none;
+    color: #fff;
+    font-size: 21px;
+    padding: 6px;
+}
+span.wpcf7-not-valid-tip{display: none;}
+.error{border: 1px solid red !important;}
+div.wpcf7-response-output{font-size: 18px; margin: 0px !important; padding: 0px !important; border: none !important;}
+.post-navigation .nav-next{float: right;width: 50%;}
+.post-navigation .nav-previous{float: left;width: 50%;}
+.index-single .grid figure{background: none !important;}
+.index-single .pagination .half{width: 100% !important;}
+.post-navigation .nav-next h2, .post-navigation .nav-next p{text-align: right !important;}
+.likepost {
+    background: url("img/like.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 50px;
+    width: 55px;
+    cursor: pointer;
+}
+.liked {
+    background: url("img/like-h.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 50px;
+    width: 55px;
+    cursor: pointer;
+}
+.likepost.liking{background: url("img/like-h.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.likepost:hover {
+    background: url("img/like-h.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    
+}
+h2.like_count{margin: 0px; line-height: 18px;}
+.fullwidth{margin-top: 15px;}
+div.wpcf7-response-output{color: #fff;}
+.content p{text-align:justify; }

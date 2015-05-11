@@ -1,0 +1,59 @@
+
+
+// FIGURES & IMAGES =============================================================================
+
+.wbe4Wrapper {			
+
+hr { 
+display : block; 
+margin : @space_unit 0; 
+padding : 0;
+height : @unit_size; 
+border : 0; 
+border-top : @inputborderwidth @inputborderstyle @wbeBase-borderColor;
+border-bottom : @inputborderwidth @inputborderstyle @wbeBase-borderColor; }
+
+// img
+
+img {
+border-width : 0; 
+vertical-align : middle; 
+-ms-interpolation-mode : bicubic; }
+
+
+
+
+svg:not(:root) {
+overflow : hidden; }
+
+// figure
+
+figure {
+	margin-bottom : @baselineheight; 
+img { margin-bottom : @baselineheight/4; }
+figcaption {
+	display : block;
+	font-weight : normal;
+	.font-size(14); 
+	color : @grey; }
+}
+
+
+// list-bordered
+
+.list-bordered {
+	list-style-type : none; 
+	margin : 0 0 @baselineheight 0;
+	padding : 0; 
+li {
+	margin-bottom : @baselineheight / 4; 
+	padding-bottom : @baselineheight / 4; 
+	border-bottom : @unit_size dashed @wbeBase-borderColor;
+}
+li:last-child {
+	margin-bottom : 0; 
+	padding-bottom : 0; 
+	border-bottom-width : 0; }
+}
+
+} /*ENDS .wbe4Wrapper */

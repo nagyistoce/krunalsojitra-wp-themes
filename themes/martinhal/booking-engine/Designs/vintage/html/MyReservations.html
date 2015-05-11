@@ -1,0 +1,106 @@
+<h2 data-localization="_myReservations">My Reservations</h2>
+<p  data-localization="_myReservationsEmpty"  data-function="emptyreservationmessage" class="displayNone">There is no reservation for this account.</p>
+
+<div data-function="reservationList" class="box"></div>
+<script id="ReservationItemTemplate" type="text/x-kendo-template">
+	<div class="tableBoxRes">
+			<div class="rowBoxResHead" >
+				<div class="cellBoxRes cellBoxResHead c1"><span data-localization="_reservationsAbr">Reservation No.</span></div>
+				<div class="cellBoxRes cellBoxResHead c2"><span data-localization="_reservationsCheckIn">From</span> - <span data-localization="_reservationsCheckOut">To</span></div>
+				<div class="cellBoxRes cellBoxResHead c4"><span data-localization="_reservationsHotelName">Hotel Name</span></div>
+				<div class="cellBoxRes cellBoxResHead c5"><span data-localization="_reservationsHotelLocation">Hotel Location</span></div>
+				<div class="cellBoxRes cellBoxResHead c6" ></div>
+            </div>    
+	</div>	
+# for(var i=0;i < data.length;i++){#
+<div class="clear"></div>
+	#var classColor='';#
+	#if (data.length>3) {(i%2==1)?classColor='bgDark':classColor='bgLight';} else {classColor='bgCell';}#	
+	<div id="myUpcomingReservations" class="tableBoxRes">
+			<div class="rowBoxRes #=classColor#" id="activeReservation#=data[i].reservationNumber#"  data-rowid="#=data[i].reservationNumber#">
+				<div class="cellBoxRes c1" data-label="_reservationsAbr"><span id="resNo#=i#">#=data[i].reservationNumber#</span></div>
+				<div class="cellBoxRes c2" data-label="_reservationsCheckIn"><span id="resCheckIn#=i#">#=data[i].from#</span> - <span id="resCheckOut#=i#" >#=data[i].to#</span></div>
+				<div class="cellBoxRes c4" data-label="_reservationsHotelName"><span id="resHotelName#=i#" >#=data[i].instance.name#</span></div>
+				<div class="cellBoxRes c5" data-label="_reservationsHotelLocation"><span id="resLocation#=i#">#=data[i].instance.city#</span></div>
+				<div class="cellBoxRes c6"><ul><li><a class="morelk" style="white-space:nowrap" href="\\#" id="myResDoDetails#=i#" data-localization="_reservationsOperationView"  data-function="showreservationdetails" data-resno="#=data[i].reservationNumber#">Details</a></li></ul></div>
+            </div>
+	</div>
+	<div data-resdetails="#=data[i].reservationNumber#" id="tblMyReservationDetails" class="tableBoxRes activeMyReservation" style="display:none"></div>
+	<div id="tblMyReservationCommunication" data-showcommunication="#=data[i].reservationNumber#" ></div>
+ #}#
+</script>
+<script id="ReservationDetailItemTemplate" type="text/x-kendo-template">
+
+ # for(var i=0;i < data.length;i++){#
+        <div class="rowBoxRes" data-itemid="#=data[0].id#"> 
+   				<div class="cellBoxRes cN"><span id="myResPackage#=i#Quantity">#=data[i].count# X</span> <span id="myResPackage#=i#">#=data[i].description#</span></div>
+				<div class="cellBoxRes cN"><span data-localization="_reservationsPrice">Price</span>: <span id="myResPackage#=i#Price">#=data[i].amount+ " " +data[i].currency#</span></div>
+                <div class="cellBoxRes cN"><ul><li class="cancelReservation">#if(data[i].cancel){#<a class="linkLk" href="\\#" id="myResDoCancel#=i#" data-function="cancellink" data-ref="#=data[i].id#" data-type="#=data[i].type#"  data-localization="_cancelReservedItem">Cancel</a>#}#</li></ul></div>                
+            </div>
+ #}#
+        <div class="rowBoxRes" data-function="communicationDetails"> 
+				<div class="cellBoxRes cN">
+                	<span id="myResHotelName#=i#">#=data[0].hotelname#</span><br />
+	                <span id="myResHotelAddress#=i#">#=data[0].hoteladdress#</span>
+                </div>
+                <div class="cellBoxRes cN">
+                	<p><span class="floatLeft" data-localization="_FormPhone">/*Phone*/</span> <span class="floatLeft" >&nbsp;<a class="linkLk" href="tel:#=data[0].hotelphone#" id="myResHotelPhone#=i#">#=data[0].hotelphone#</a></span></p>
+	                <p><span class="floatLeft" data-localization="_FormEmail">/*Email*/</span> <span class="floatLeft" >&nbsp;<a class="linkLk" href="mailto:#=data[0].hotelemail#" id="myResHotelEmail#=i#">#=data[0].hotelemail#</a></span></p>
+    	            <p><span class="floatLeft" data-localization="_FormURL">/*Web*/</span> <span class="floatLeft" >&nbsp;<a class="linkLk" href="#=data[0].web#" target="_blank"  id="myResHotelWeb#=i#">#=data[0].web#</a></span></p>
+                </div>
+				<div class="cellBoxRes cN"><ul><li class="sendMsg"><a class="linkLk" href="\\#" id="resOperationCancel#=i#" data-localization="_reservationsSendMsg" data-function"sendmail" data-resmessage="#=data[0].id#">Send Message</a></li></ul></div>
+			</div>
+</script>
+<script id="CommunicationTemplate" type="text/x-kendo-template">			
+<div class="clear"></div>
+<div id="divMyReservationMsg" class="activeMyReservation box"> 
+		<div id="divMyReservationCallBack" class="paintBox" >
+               <h4 data-localization="_myReservationCallBack">Request a Call Back</h4>
+	           <p data-localization="_myReservationCallBackTxt1" class="txtB">No time to call us? We can call you back!</p>
+                <fieldset>                
+	                <div class="blockLine">
+						<label for="callBack_Phone" data-localization="_FormPhone">Phone:</label><i class="requiredSmb icon-asterisk"></i>
+		  				<input id="Text1" data-function="phonenumber"  type="text" tabindex="1" name="callBack_Phone" validationMessage="_myReservationPhoneRequired" />
+    				</div>
+                  	<div class="buttonPanel"><div class="buttonPanelL"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';" data-function="callbackbutton" onmouseout="this.className='wbeButton';" data-localization="_callBackBtn" value="Request Call Back" id="Button1"  type="button" tabindex="3"></div></div>
+                </fieldset>                    
+            </div>
+	
+			<div id="divMyReservationSendMsg" class="paintBox">
+               <h4 data-localization="_myReservationSendMsg">Send Message</h4>
+	           <p data-localization="_myReservationReqMsgTxt1" class="txtB">Please write down your questions</span></p>
+                <fieldset>                
+	                <div class="blockLine">
+						<label for="callBack_Phone" data-localization="_FormEmail">E-mail:</label><i class="requiredSmb icon-asterisk"></i>
+		  				<input id="Email1"  type="email" tabindex="4" name="sendMessage_Email" data-function="MailEmailSender" validationMessage="_myReservationEmailMsgRequired" required />
+    				</div>
+	                <div class="blockLine">                    
+                        <label for="sendMsg_Comment" data-localization="_FormAddNote">Message:</label><i class="requiredSmb icon-asterisk"></i>
+                        <textarea  rows="5" id="Textarea2" name="sendMsg_Comment" tabindex="5" validationMessage="_missingText" data-function="MailMessage" required ></textarea>
+					</div>    
+                   	<div class="buttonPanel"><div class="buttonPanelL"><input  class="wbeButton" data-function="SendMailButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';" data-localization="_myReservationSendMsgBtn" value="Send Message" id="Button2"  type="button" tabindex="6"></div></div>
+                </fieldset>                    
+            </div>
+	<div class="clear"></div>
+</div>
+</script>
+<script id="CancelTemplate" type="text/x-kendo-template">
+ <div id="divMyReservationCancel" class="activeMyReservation">
+			<div id="divMyReservationCancelInside" class="paintBox" data-function="cancelcontainer#=data[0].reservationNumber#">
+                	<h4><span data-localization="_cancelReservationH">You are about to cancel:</span> <span data-localization="_reservationsAbr">Reservation No.</span> <span id="resNo1">#=data[0].reservationNumber#</span></h4>
+	                <p>
+	                <div class="blockLine">
+	                <fieldset>                					
+    	                <label for="CancelReasons_Select" data-localization="_CancelReservationReason">Please select the reason for cancellation</label> 
+        	            <input id="CancelReasons" value="" name="CancelReasons_Select" data-function="CancelReasons" tabindex="2" data-resid="#=data[0].reservationNumber#"  />
+	                </fieldset>                						
+    				</div>
+	                <div class="blockLine">                    
+                        <p data-localization="_CancelReservationEmailMsg">The cancellation confirmation will be send to your email address.</p>
+					</div>    
+	                <div id="myReservationTOS" class="blockLine">                                        
+						<input id="cancelReservationAgree" type="checkbox"  tabindex="3" name="cancelReservationAgree" validationMessage="_cancelReservationTOSAgree" /> <i class="requiredSmb icon-asterisk"></i><label for="cancelReservationAgree" data-localization="_cancelReservationTOSMsg">I understand that I am cancelling my full reservation</label></div>
+                    	<div class="buttonPanel"><div class="buttonPanelL"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';" data-localization="_cancelReservationBtn" data-function="cancelreservationbutton" data-hotelid="#=data[0].instance.id#" data-resid="#=data[0].reservationNumber#" value="Cancel Reservation" id="CheckOutBtn"  type="button" tabindex="4"></div></div>            
+            </div>
+		</div>
+</script>

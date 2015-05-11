@@ -1,0 +1,150 @@
+﻿<div id="DetailViewContainer"> 
+	        <h2><span id="rateTitle" data-function="ratename">Rate Name</span>: <span data-function="roomname"></span></h2>
+
+			<div id="ImageModul" class="imageModul">
+             
+            </div>
+            <div class="clear"></div>            
+            <div id="RoomDataBox">
+                <div id="RoomTypeSelect" >
+    	            <div id="RoomConfigurator" >
+	    	              <!-- loading ProductConfigPanel.html //-->
+            		</div>
+                 </div>
+                 <div id="AvailCalender" >
+                       <!---Calendar-------------->                
+                  </div>
+               <div class="clear"></div>
+
+               <!--ROOM Type Description-->
+               <div id="RoomtypeDescription">
+				          <h4 data-function="roomname"></h4>
+	                <p data-function="roomTypeDescription"></p>
+                  <div  class="tableBox"  data-function="additionalRoomData">
+                    <div class="rowBox" >
+                        <div class="cellBox linkTxt txtB" id="cell1" data-localization="_roomFeaturesDetailView" data-function="RoomFeatureLabel"></div>
+                        <div class="cellBox" id="cell2"><p data-function="roomFeatureEnum"></p></div>
+                    </div>
+                  </div>
+					        <div class="clear"> </div>
+                  <div id="roomFacilitiesIcons" data-function="RateFacilitiesIcons">
+                  </div>
+               </div>
+			   
+               <div class="clear"> </div>
+          		<!--RATE NAME & Description-->	 
+                <h4 id="rateTitle" data-function="ratename"></h4>
+          			<div id="rateDescription"><p data-function="rateDescription" ></p>
+                  <ul id="rateListItems" data-function="ListRateFeatures">
+                  </ul>
+                </div>
+
+        	    <div class="clear"></div>
+        			<div id="Clxbox">
+           			<h4 data-localization="_BookingPolicyDetailView" data-function="bookingconditionheadline"></h4>
+                <p  data-function="bookingcondition"></p>
+
+                    <h4 data-localization="_CancellationPolicy" data-function="cancelationtermsheadline"></h4>
+                    <p  data-function="cancelationterms"></p>
+                 </div>
+        
+        <div class="clear"></div>
+	</div> <!--ends RoomDataBox -->
+        <div class="buttonPanel">
+        <div class="buttonPanelL"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  data-localization="_backbt" value="Zurück" id="ButtonBackDetail"  type="button"></div>
+         <div class="buttonPanelR"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  data-localization="_AddRoomBt" value="In den Warenkorb" id="Button2AddToBasketBottom"  type="button" /></div>
+        </div>
+        <div class="clear"></div>
+
+        <h4 data-localization="_otherRates"></h4>
+        <div id="rateresultsdetail">
+                <div class="tableBox" data-function="crossratetable" id="hotelRatesBottomListing" >
+                
+                </div>
+                <div class="clear"></div>
+		</div>    
+</div>	
+
+  <script id="RoomFeatureItemIconTemplate" type="text/x-kendo-template"> 
+
+  <ul class="showInline">
+  #for(i=0; i < data[_CurrentInstance.RoomFeatureArrayField].length;i++){#
+   <li><img src="#=data[_CurrentInstance.RoomFeatureArrayField][i][_CurrentInstance.RoomFeatureFileField]#" alt="#=data[_CurrentInstance.RoomFeatureArrayField][i][_CurrentInstance.RoomFeatureFieldName]#" title="#=data[_CurrentInstance.RoomFeatureArrayField][i][_CurrentInstance.RoomFeatureFieldName]#" /></li>
+  #}#
+  </ul>
+
+ </script>
+
+
+ <script id="RateFeaturesTemplate" type="text/x-kendo-template"> 
+
+ <ul id="rateListItems">
+  #for(i=0; i < data[_CurrentInstance.RateFeatureArrayField].length;i++){#
+   <li>#=data[_CurrentInstance.RateFeatureArrayField][i][_CurrentInstance.RateFeatureFieldName]#</li>
+  #}#
+  </ul>
+
+ </script>
+
+  <script id="AlternateRatesTemplate" type="text/x-kendo-template"> 
+
+
+  #for(i=0; i < data[_CurrentInstance.RateAlternateArrayField].length;i++){#
+  <li><a href="\\#" data-function="alternaterate" data-rateid="#=data[_CurrentInstance.RateAlternateArrayField][i].ratecode#"  class="lkUnderlineHC">#=data[_CurrentInstance.RateAlternateArrayField][i][_CurrentInstance.RateAlternateNameField]#: #=data[_CurrentInstance.RateAlternateArrayField][i][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceValueFormattedField] +" "+ data[_CurrentInstance.RateAlternateArrayField][i][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceCurrencyField]#</a></li>
+  #}#
+
+
+ </script>
+
+ <script id="RateItemSmallTemplate" type="text/x-kendo-template"> 
+  #var rowcount=1;#
+  # for(i=0;i < data[_CurrentInstance.RateArrayField].length;i++){#
+ 
+  #if(i%4 == 0){#
+
+  <div class="showHotelResultsLine rowBox">
+  #var rowcount =1;#
+  #}#
+
+  <div class="showRatesResults8 cellBox" id="cell#=rowcount#" data-rateitem="#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateIDField]#" data-hotelitem="#= data[_CurrentInstance.HotelIdField] #" >
+						<div class="showRatesResults8Txt">
+                    	<h5>#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.HotelNameField] #</h5>
+						<div id="roomFacilitiesIconsBox">
+                        #if(data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateFeatureArrayField].length > 5){#
+			            	  <ul class="showInline">
+                                #for(a=0; a < 5;a++){#
+                                <li><img src="#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateFeatureArrayField][a][_CurrentInstance.RateFeatureFileField]#" alt="#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateFeatureArrayField][a][_CurrentInstance.RateFeatureFieldName]#" title="#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateFeatureArrayField][a][_CurrentInstance.RateFeatureFieldName]#" /></li>
+                                #}#
+                                </ul>
+                             #}#
+			            </div>
+						<p><span id="priceSmallLabel" data-localization="_priceSmallLabel">Starting at:</span> <span id="class="priceSmallId" class="priceSmall" >#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField][0][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceValueField] + " " + data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField][0][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceCurrencyField]#</span></p>
+						<p class="txtRight pNoMargin"><a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.HotelNameField] #" ><span data-localization="_alternaterateDetailsLk" class="morelk">Details</span></a></p>
+					  </div>
+				
+    </div>
+  
+  
+  #if(i%4 == 3 && i != 0){#
+  </div>
+  #}#
+  #rowcount++;#
+  #}#
+
+ </script>
+ 
+     				
+ 
+
+<script language="javascript" type="text/javascript">
+
+    protelWBE.RegisterDetailViewRoomDescription('pageTitle');
+	
+    protelWBE.RegisterRoomtypeImagePreview('ImageModul');
+    protelWBE.RegisterDetailViewRoomDescription('RoomtypeDescription');
+    protelWBE.RegisterDetailViewRoomConfigurator('RoomConfigurator');
+    protelWBE.RegisterAvailCalenderContainer ('AvailCalender');
+    protelWBE.RegisterDetailViewRoomTypeThumbSelector('RoomTypeBox');
+    protelWBE.RegisterBackToResultButton('ButtonBackDetail');
+     protelWBE.RegisterAddToCartButton('Button2AddToBasketBottom');
+</script>

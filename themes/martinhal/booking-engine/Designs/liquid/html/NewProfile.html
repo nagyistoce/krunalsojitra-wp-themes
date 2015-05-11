@@ -1,0 +1,98 @@
+﻿
+<div id="profileBoc">
+<h2 data-localization="_NewCustomerProfile">Kundenprofil ändern</h2>
+</div>
+<div id="profileTitle" class="checkOutEntity">
+<p class="txtEntityTitle"><span class="icon">b</span><span data-localization="_YourPersonalData">Ihre Daten</span></p>
+
+   
+    <div id="newProfileDiv1" class="icon_generated">
+    	 <div  class="blockLine">
+  			<input id="PrivateCheck" value="1" data-private-ckeck="booker" checked="checked" type="radio"  name="Type" />
+            <label for="PrivateCheck" data-localization="_FormSelectPrivat" tabindex="1"><!-- Privat --></label>
+            <input id="CompanyCheck" value="2" data-company-ckeck="booker" type="radio" name="Type" tabindex="2"  />
+            <label for="CompanyCheck" data-localization="_FormSelectCompany"><!-- Company --></label>
+  		</div>
+    	
+    	
+	     <fieldset>
+            <div  class="formLine">
+                <label for="Company_Input" data-localization="_FormSelectCompany">Company</label>
+                <input  type="text" id="Company_Input" data-company="profile" name="Company_Input" tabindex="1" />
+            </div>
+            <div  class="formLine">
+                <label for="Salutation_Select" data-localization="_FormSalutation">Salutation</label>
+                <input id="Salutation_Select" tabindex="2"   value="" name="Salutation_Select" data-salutation="profile" />
+            </div>
+            <div  class="formLine">
+                <label for="Firstname_Input_profile" data-localization="_FormFirstname">First Name</label><span class="requiredSmb"></span>
+                <input id="Firstname_Input_profile"  type="text" data-firstname="profile" tabindex="3" maxlength="50" name="Firstname_Input_profile" required validationMessage="_firstnameRequired" />
+            </div>
+            <div  class="formLine">
+                <label for="Lastname_Input_profile" data-localization="_FormLastname">Last Name</label><span class="requiredSmb"></span> 
+                <input id="Lastname_Input_profile" type="text"  value="" data-lastname="profile" tabindex="4" maxlength="50" name="Lastname_Input_profile" required validationMessage="_lastnameRequired" />
+            </div>
+            <div class="clear"></div>
+            <div  class="formLine">
+                <label for="Email_Input_profile" data-localization="_FormEmail">E-Mail</label><span class="requiredSmb"></span>
+                <input id="Email_Input_profile" type="email" value="" tabindex="5" data-email="profile" maxlength="50" name="Email_Input_profile" required validationMessage="_emailRequired" />
+               <p id="EmailNoteLabel" class="formFieldNote" data-localization="_CreateAccountEmailMsg">The email address will be used as username.</p>
+            </div>
+            <div  class="formLine">
+                <label for="Password_Input_profile" data-localization="_Password">Password:</label><span class="requiredSmb"></span>
+                <input id="Password1" type="password" value="" tabindex="6" data-password="profile" maxlength="50" name="Password_Input_profile" validationMessage="_CreateAccountPassMsg" />
+				<p id="createAccountEmailNote" class="showVerticalMargins formFieldNote" data-localization="_CreateAccountPassMsg" >6 character minimum including numbers or symbols</p>
+            </div>
+	 </fieldset>            
+    </div>                                                
+     <div class="clear"></div>
+	 
+
+    <div id="newProfileDiv2">
+	 <fieldset>    
+            <div  class="formLine">
+                <label for="Street-Input" data-localization="_FormStreet">Street</label>
+                <input id="Street-Input" type="text" value=""  data-street="profile" tabindex="7" maxlength="50" name="Street-Input" validationMessage="_streetRequired" />
+            </div>
+            <div  class="formLine">
+                <label for="Zip_Input" data-localization="_FormZip">ZIP</label>
+                <input id="Zip_Input" data-zip="profile" type="text" value="" tabindex="8" maxlength="10" name="Zip_Input" validationMessage="_zipRequired" />
+            </div>
+            <div  class="formLine">
+                <label for="City_Input_profile" data-localization="_FormCity">City</label>
+                <input id="City_Input_profile"  value="" type="text" data-city="profile" tabindex="9" maxlength="50" name="City_Input_profile" validationMessage="_cityRequired" />
+            </div>
+            <div  class="formLine">
+                <label for="countryselect_profile" data-localization="_FormCountry">Country</label>
+                <input id="countryselect_profile"  value="" tabindex="10" name="countryselect_profile" data-country="profile"/>
+            </div>
+            <div  class="formLine">
+                <label for="Telefon_Input_profile" data-localization="_FormPhone">Phone</label>
+                <input id="Telefon_Input_profile" type="text" value="" data-phone="profile" tabindex="11" maxlength="50" name="Telefon_Input_profile" validationMessage="_phoneRequired" />
+            </div>
+            <div  class="formLine">
+                <label for="Fax_Input_profile" data-localization="_FormFax">Fax</label>
+                <input id="Fax_Input_profile" type="text" value="" data-fax="profile" tabindex="13" maxlength="50" name="Fax_Input_profile" validationMessage="_faxRequired" />
+            </div>
+    </fieldset>            
+            <div class="clear"></div>
+			<div data-function="GTCWindowAccount" id="GTCWindowAccountBox"></div>
+            <div id="newProfileTOS" class="formLine">
+              <input id="TOSAgree_newProfile" type="checkbox" required data-gtccheck="createprofile"  tabindex="100" maxlength="50" name="TOSAgree_newProfile" requested validationMessage="_newProfileTOSRequired" /><span class="requiredSmb"></span><label for="TOSAgree_newProfile"><span data-localization="_newProfileTOSAgree" >I agree with terms of use</span> (<a href="" tabindex="101" data-function="gtcnewprofile" data-localization="_checkOutTOS">read more</a>)</label>
+            </div>
+
+			
+    </div>
+    <div class="clear"></div>
+    <div class="buttonPanel">
+        <div class="buttonPanelL"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  data-localization="_SaveProfilBt" value="Save" id="SaveProfileBt"  type="button"></div>
+    </div>
+
+</div>
+
+<script language="javascript" type="text/javascript">
+    protelWBE.RegisterCreateProfileButton('SaveProfileBt');
+    protelWBE.RegisterSalutationProfileSelect('Salutation_Select');
+    protelWBE.RegisterCountryProfileSelect('countryselect_profile');
+
+</script>

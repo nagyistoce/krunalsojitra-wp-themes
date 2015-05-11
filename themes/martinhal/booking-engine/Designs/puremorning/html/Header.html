@@ -1,0 +1,67 @@
+﻿    <div id="headerTop" >
+      <!-- Header-Top-Content.html //-->
+     	<div id="headerLogo">
+        	<div style="float: left;"><a href="http://192.168.1.70/martinhal/"><img src="http://www.imartinhal.com/wp-content/uploads/2014/04/logo1.png" /></a></div>
+        </div>
+
+    	<div id="headerPersonal">
+			<div id="topPersonalLine">
+                    <div id="hLanguageSelection"><!--ONLY FOR MOBILE--><div class="headerBtnWrap"><a href="#" id="ResponsivelangSelectionBt" name="ResponsivelangSelectionBt">
+                    <div id="headerBtnLanguage"></div></a></div><!--DESKTOP--><span id="hLanguageSelectionTxt"><span class="icon languageIcon">⚑</span><input id="languageselection" name="languageselection" /></span></div>
+	                <div id="hPersonalBookPhone" data-function="hotelphone"><!--MOBILE calls directly--><div class="headerBtnWrap"><a data-function="hotlinemobileLink" href="tel:+49231915930"><div id="headerBtnPhone" ></div></a></div><!--DESKTOP--><span id="hPersonalBookPhoneTxt"><span class="icon_generated" data-icon="a"></span><span  data-localization="_phoneHeaderTxt">Need Help?</span><span id="phoneBigNo"><a data-function="hotline" href="tel:+49231915930">+49.231.915.930</a></span></span></div>
+                    <div id="personaDiv">
+	                    <!--MOBILE--><div class="headerBtnWrap"><a href="#" id="LoginResponsive" name="LoginResponsive"><div id="headerBtnAccount"></div></a></div>
+                        <!--DESKTOP-->
+                        <div id="hPersonalWelcome"><a href="" data-function="salutuser"></a></div>
+                        <div id="HeaderMenuContainer">
+                             <ul id="MyHeaderMenu" class="showInline"> 
+                                 <li id="myaccount"><p class="icon_generated" data-icon="u" ></p><p class="translate" data-localization="_MyAccount" >My Account</p>
+                                  <ul >  <div id="MemberContent" class="k-content"></div>
+                                  </ul>    
+                                  </li>    
+                            </ul>
+                        </div>
+                    </div> 
+			</div>  
+            <div class="clear"></div>                        
+    	    <div id="div_basket"><!--<p class="translate icon_generated" data-icon="c"></p>-->
+            <p class="translate icon" data-icon="c">c</p> 
+                     <a href="#" id="ShowMyBasket" class="linkCartLk"></a>
+            </div>
+            <div class="clear"></div>            
+		</div>
+    <div class="clear">&nbsp;</div>
+	</div>
+ <div class="clear"></div>
+<div id="headerPower" class="headerPowerImg" data-function="headerwithSearchbox" > 
+<!--<div id="headerPower" data-function="headerwithSearchbox" style="background-image:url("../wbe4img/hotelPowerImage-04.jpg");">-->
+   <a name="SearchbarContent" id="SearchbarContent"></a>
+	<div class="clear"></div>
+      <div id="Search-Box-Container">
+       <!-- Header-Left-Content-SearchBox.html //-->
+      </div>
+      <div  id="Special-Offer-Box" class="SpecialOfferBoxBackground">
+         <!-- SpecialOfferBoxContent.html //-->
+      </div>
+</div>
+<div data-function="VoucherHeader">
+<a href="#" class="morelk linkTxt" data-localization="_showOnlyVouchers">Gutscheine anzeigen</a>	
+	
+</div>
+
+<script language="javascript" type="text/javascript">
+    protelWBE.RegisterShowBasketItemLink('ShowMyBasket');
+    protelWBE.RegisterLanguageSelection('languageselection');
+    protelWBE.RegisterMemberLoginContainer("MemberContent");
+    protelWBE.RegisterHeaderMenu('MyHeaderMenu');
+    protelWBE.RegisterSpecialOfferBox('Special-Offer-Box');
+    protelWBE.RegisterShowCancellationButton('hPersonalCancelReservationTxt');
+    protelWBE.RegisterShowCancellationResponsiveButton('CancelReservationResponsive');
+    protelWBE.RegisterResponsiveLoginButton('LoginResponsive');
+    protelWBE.RegisterResponsiveLanguageSelectionButton('ResponsivelangSelectionBt');
+</script>
+
+
+<script id="LanguageSelectionTemplate" type="text/x-kendo-template">
+<div><div style="float:left;padding-top:6px;"><img src="${ data.icon }" alt="${ data.name }" width="16px" height="11px" /></div><div style="float:left;padding-left:3px;">${ data.name }</div></div><div class="clear"></div>
+</script>

@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document  IE8 only for Polar color theme*/
+body { 
+	
+	font-size: 14px; 
+	}
+
+.fixIE8Table.tableBox {table-layout: fixed; clear: both; margin: 0 auto;
+ .rowBox { 
+  	.cellBox.startBox {width: 27%; float: left; }
+  	.showResultsBox .cellBox {
+	  	&.showResultsBoxImage {width: 24%; float: left;}
+	  	&.showResultsBoxTxt {width: 40%; float: left;}
+	  	&.priceCell {width: 34%;  float: right;}
+  		}
+ 	}
+}
+#returningCustomer {clear: left; text-align: left;}
+
+/*Header: from responsive*/
+#HeaderMenuContainerMobile, #hPersonalHome {display:none;}
+	#headerLogo {height:15em; width:30em;}	
+	#headerPersonal {float:right; margin:0 @smallspace_unit; }
+	#hLanguageSelection, #hPersonalHome, #hPersonalBookPhone, #personaDiv {float:left;}
+	#hLanguageSelectionTxt, #hPersonalCancelReservationTxt,#phoneBigNo, #hPersonalWelcome, #HeaderMenuContainer {display:inline;}
+	#hLanguageSelection, #hPersonalCancelReservation,#hPersonalBookPhone {float:left;}
+	#personaDiv {float:none; clear:left;}
+	#HeaderMenuContainer {margin: -2*@unit_size @unit_size 0 0; }
+	#hPersonalWelcome {top:0.643em; position:relative; margin:0 0 0.231em 0; }
+	#MemberContent	{ width:550px; }
+	.item {margin:@space_unit 0; text-align:right;}
+	.item .icon {padding-left: 2*@space_unit;}
+
+/*General*/
+.buttonPanelR, .buttonPanelL {margin-top: 0;}
+.buttonPanelL {float: left;}
+.buttonPanelR {float: right;}
+
+/*Start page*/
+#homePage .cellBox {width: 28%;}
+
+/*Images box*/
+#carouselkatview {width: 960px; }
+#thumbPanel {float: right;}
+#thumbDiv {float: left; height: 280px;}
+.slidesclass {	width:400px; float:left;}
+
+/*Room details*/
+	#RoomTypeSelect {float:left; width:47.75%; }
+	#productConfigRight {float:right; width:47.75%; }
+	.roomConfigMainPanel {display: none;}
+	#rateresultsdetail .cellBox.showResultsBox {width: 22%; float: left; margin-right:@space_unit; clear: right; }
+
+/***Articles*/	
+	.rowBoxResHead, .articleCellHead { top:0; position:relative;vertical-align:bottom;}
+	#articles {margin:4*@space_unit 0;}
+	.tableArticle, #BasketTable {}
+	#articleToCart p{ margin:0.667em 0 0 0;}
+	.tableArticle .tableBox {width:100%; border-spacing:0; left:0;}
+	.tableArticle img {display:block; overflow:hidden; margin:@space_unit auto;   max-width:12.2em;  max-height:9.125em;  }	
+	.articleCell1, .articleCell2 {float:left;}
+	.articleCellBox.articleCell21 {vertical-align:bottom;}
+	.articleCell21, .articleCell22, .articleCell23 {padding-right:@space_unit;}
+	.articleCell1 {width:25%; }
+	.articleCell2 {width:71%; }
+	.articleCellBoxHead, .articleCellBox {display:table-cell; }
+	.articleCell22, .articleCell23, .articleCell24 {margin:0 @space_unit; }
+	.articleCell24 {vertical-align:middle;}
+	.articleCell21 {width:70%;}
+	.articleCell22 {width:10%;}
+	.articleCell23 {width:10%;}	
+	.articleToCartBtn.icon_generated {font-size:2em; text-decoration:none; padding:1em; } 
+	
+
+/*Basket*/
+	#couponBox {float:left;}
+	#voucherBox {clear:none; float:right}
+	#BasketTable tr {background:@wbeBasketTable2n1-background; color: @wbeBasketTable2n1-fontColor;
+			td {border-bottom: 1px solid @wbe-border; }
+		}
+/*Pre Check-out		*/
+	.checkoutBox { float:left; max-width: 29%; padding:1%; margin:1%;}
+
+/*MyReservation*/	
+.c1{width:24%;}
+	.c2, .c3, .c5, .c6 {width:10%;}
+	.tableBoxRes {display:table; 	
+				margin:0;
+				float:left; 
+				border-collapse: separate;
+				position:relative; 
+				background-color: @wbeResultBoxes-background;
+				background-image:url("../../wbe4img/bg-@{themeName}_defaultPattern.png");
+				background-repeat:repeat;
+		:hover{background:@wbeBasketTableHover-background;
+			color:@wbeBasketTableHover-fontColor;} 		
+			}
+	.tableBoxRes {width:100%;}
+	.activeMyReservation, #tblMyReservationDetails.tableBoxRes {margin:@space_unit 5%; width:90%; }
+	.rowBoxRes, .rowBoxResHead {display:table-row; width:100%}
+	.cellBoxRes {display:table-cell; padding:@space_unit; }
+	#divMyReservationCallBack, #divMyReservationSendMsg {width:45%; float:left; }
+	#divMyReservationSendMsg {margin-left: 0;}
+	.activeMyReservation .cellBoxRes {border-bottom:1px solid #000;}
+
+.activeMyReservation {background:@wbeBasketTable2n-background; color: @wbeBasketTable2n-fontColor;}
+
+/*Hotel info*/
+#hotelPoliciesBox .cellBox.linkTxt {font-weight: bold; text-decoration: underline;}
+.hFacilitiesBox {float:left; margin:20px 40px 20px 0; width:28%;}
+
+/***FORM ELEMENTS***/
+fieldset input, fieldset textarea { 
+	background-color:@wbeInput-background;
+	border: 1px solid @wbeInput-border-color; 
+	padding: 6px;
+	color: @wbeInput-fontColor;
+	}
+
+/*Not available*/
+#divNoAvailabilitiesCallBack, #divNoAvailabilitiesWriteBack {float:left; clear:none; width:47%; padding:@space_unit; }

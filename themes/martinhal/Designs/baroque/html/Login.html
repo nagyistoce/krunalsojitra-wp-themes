@@ -1,0 +1,62 @@
+﻿<div id="LoginForm" class="LoginFormClass">
+	<div class="LoginFormAuth" id="LoginFormAuthID">
+        <fieldset>
+            <div class="searchLine" >
+	           	<label for="Username" data-localization="_Username" tabindex="1">Username:</label>
+				<input id="Username" value=""  type="text">
+			</div>                
+           <div class="searchLine">
+	           <label for="Password" data-localization="_Password" tabindex="2">Password:</label>
+				<input id="Password" value="" type="password">
+           </div>
+
+        <div class="searchLine"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';" data-localization="_loginbt" value="Log in" id="Button2"  type="button" tabindex="3">
+                <div class="clear"></div>
+		        <a href="#" title="search" data-localization="_PasswordForgot" >Forgotten your password?</a>
+		</div>
+        </fieldset>  
+ 	</div>
+	<div class="LoginFormAlternate">
+    	<div id="SocialLogin">
+        	<ul>
+                <li id="addAccount"><a href="#" data-localization="_CreateAccount">Create your account</a></li>
+                
+            	<li id="facebook"><a href="#" data-localization="_FacebookLogin" id="FacebookLoginLink" >Sign in with Facebook</a></li>
+                <li id="google"><a href="#" data-localization="_GoogleLogin" id="GoogleLoginLink">Sign in with Google</a></li>
+                <li  id="twitter"><a href="#" data-localization="_TwitterLogin" id="TwitterLoginLink">Sign in with Twitter</a></li>
+			</ul>    
+		</div>  
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div id="MemberContentContainer" class="LoginFormClass">
+	<div class="LoginFormAuth" id="LoginFormAuthID">
+		<h4 data-userfunction="username" >Mr. Mustermann</h4>
+		<p data-userfunction="email">(JohnDoe@myemail.com)</p>
+	 </div>
+    <div class="LoginFormAlternate">
+        <div id="SocialLogin">
+        <ul>
+            <li id="manageprofile" ><a href="#" id="changeprofilelink" data-localization="_ManageProfile">Manage Profile</a></li>
+            <li id="myreservation" ><a href="#" data-localization="_ManageReservations">My Reservations</a></li>
+            <li id="logout"><a href="#" data-localization="_LogOut" id="LogOutLink">Log Out</a></li>
+        </ul>
+	    </div>
+    <div class="clear" ></div>
+	</div>
+    <div class="clear" ></div>
+</div>
+
+
+<script language="javascript" type="text/javascript">
+    protelWBE.RegisterLoginBox('Username', 'Password', 'Button2', 'MemberContentContainer', 'LoginForm');
+    protelWBE.RegisterGoogleLoginButton('GoogleLoginLink');
+    protelWBE.RegisterChangeProfileButton('changeprofilelink');
+    protelWBE.RegisterShowMyReservationsButton('myreservation');
+    protelWBE.RegisterTwitterLoginButton('TwitterLoginLink');
+    protelWBE.RegisterFacebookLoginButton('FacebookLoginLink');
+    protelWBE.RegisterLogoutButton('LogOutLink');
+    protelWBE.RegisterNewAccountButton('addAccount');
+
+</script>

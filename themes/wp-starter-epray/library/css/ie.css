@@ -1,0 +1,51 @@
+/*
+Sass::SyntaxError: You may not @extend an outer selector from within @media.
+You may only @extend selectors within the same directive.
+From "@extend .desk--one-half" on line 412 of scss/_grid.scss.
+
+
+Backtrace:
+scss/_grid.scss:398
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/simple_sequence.rb:308:in `check_directives_match!'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/simple_sequence.rb:179:in `block (2 levels) in do_extend'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/simple_sequence.rb:179:in `each'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/simple_sequence.rb:179:in `block in do_extend'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/simple_sequence.rb:169:in `map!'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/simple_sequence.rb:169:in `do_extend'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/sequence.rb:101:in `block in do_extend'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/sequence.rb:99:in `map'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/sequence.rb:99:in `do_extend'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/comma_sequence.rb:69:in `block in do_extend'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/comma_sequence.rb:68:in `map'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/selector/comma_sequence.rb:68:in `do_extend'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/extend.rb:44:in `visit_rule'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/extend.rb:28:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/extend.rb:37:in `visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:38:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/extend.rb:28:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/extend.rb:15:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/root_node.rb:39:in `css_tree'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/engine.rb:285:in `render_with_sourcemap'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:329:in `block in watch'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:252:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Sass::SyntaxError: You may not @extend an outer selector from within @media.\A You may only @extend selectors within the same directive.\A From \"@extend .desk--one-half\" on line 412 of scss/_grid.scss.\A "; }

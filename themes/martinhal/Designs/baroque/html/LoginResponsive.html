@@ -1,0 +1,49 @@
+﻿<div id="responsiveLogin" data-function="ResponsiveLogin">
+	<div id="LoginFormAuthID"  class="socialLoginBox">
+	<h2 data-localization="_LogIn">Log in</h2>
+        <fieldset>
+            <div class="searchLine">
+	           	<label for="Username" data-localization="_Username">Username:</label>
+				<input id="UsernameResponsive" value=""  type="text">
+			</div>                
+           <div class="searchLine">
+	           <label for="Password" data-localization="_Password">Password:</label>
+				<input id="PasswordResponsive" value="" type="password">
+           </div>
+	        <div class="searchLine" id="responsiveLogin-button"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';" data-localization="_loginbt" value="Log in" id="LoginButtonResponsive"  type="button"></div>
+        </fieldset>  
+        
+        <div class="blockLine"><a href="#" title="search" class="wbeButton" data-localization="_PasswordForgot" >Forgotten your password?</a></div>
+        <div class="blockLine"><a href="#" class="wbeButton" data-localization="_CreateAccount" data-function="CreateAccountLink">Create your account</a></div>
+	</div>
+
+	<div class="clear"></div>  
+      
+   	<div id="LoginFormAlternate" class="socialLoginBox">
+    	<div id="SocialLogin" class="searchLine">
+        <h4>Social media log in</h4>
+        	<ul>
+            	<li id="facebook"><a href="#" class="url" data-localization="_FacebookLogin" id="FacebookLoginLink2" >Sign in with Facebook</a></li>
+                <li id="google"><a href="#" class="url" data-localization="_GoogleLogin" id="GoogleLoginLink2">Sign in with Google</a></li>
+                <li  id="twitter"><a href="#" class="url" data-localization="_TwitterLogin" id="TwitterLoginLink2">Sign in with Twitter</a></li>
+			</ul>    
+		</div>  
+	</div>
+    
+</div>
+<script type="text/javascript">
+    protelWBE.RegisterSimpleResonsiveLogin('UsernameResponsive', 'PasswordResponsive', 'LoginButtonResponsive');
+    protelWBE.RegisterGoogleLoginButton('GoogleLoginLink2');
+    protelWBE.RegisterTwitterLoginButton('TwitterLoginLink2');
+    protelWBE.RegisterFacebookLoginButton('FacebookLoginLink2');
+    protelWBE.RegisterNewAccountButton('addAccount1');
+</script>
+
+
+
+
+
+
+
+
+

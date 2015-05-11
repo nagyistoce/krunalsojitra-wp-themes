@@ -1,0 +1,60 @@
+﻿<div id="rateresults" class="displayResultsBox">
+
+        <div data-function="ratetable" class="tableBox fixIE8Table" >
+
+      </div>
+<div class="clear"></div>
+
+</div><a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField] #" >      </a>
+ <script id="RateItemTemplate" type="text/x-kendo-template"> 
+  # for(i=0;i < data[_CurrentInstance.RateArrayField].length;i++){#
+ 
+  #var image = "";#
+  #var style = "";#
+ 
+  #if(typeof data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateImageField] != "undefined" ){#
+	#image = data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateImageField];} else{ image="#_CurrentInstance.CurrentImagePath+'clear.gif'#"; style="height:1px; box-shadow:none;"; }#
+ <div class="showHotelResultsLine rowBox">
+	<div class="showResultsBox" data-rateitem="#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateIDField]#" data-hotelitem="#= data[_CurrentInstance.HotelIdField] #" >
+		<div class="cellBox showResultsBoxImage" >
+			<a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField] #" ><img src="#=image#" style="#=style#" alt="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField] #" /></a>
+		</div>
+		<div class="cellBox showResultsBoxTxt descriptionCell">
+                    	<h6><a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField]#" >#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField] #</a></h6>
+                        <p>#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateShortDescriptionField]#</p>
+						<p><span class="showResultsBoxMore"><a href="\\#"  data-function="DetailView" title="#= data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateNameField] #" class="morelk" data-localization="_details"  >details</a></span></p>
+        </div>
+		<div class="cellBox showResultsBoxTxt priceCell">
+			<div class="roomCatShortList">
+	        	<ul>
+    		    	#var rooms = jlinq.from( data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField]).sort('sortOrder').select();#
+            		# for(a=0;a <rooms.length;a++){#
+			        	<li><a href="\\#" data-function="DetailView" data-roomtype="#=rooms[a][_CurrentInstance.CategorieIdSingleField]#">
+							<div class="showNoUsers">
+									  #for(k=0; k <rooms[a][_CurrentInstance.RoomTypedefaultAdultOccupancyField]; k++){#
+										  	#if (k<4) {#<span class="showNoUsersN icon_generated" data-icon="u"></span>#}#
+										  	#if (k>=4) {#<span class="showNoUsersP icon_generated" data-icon="+"></span>#}#
+										#}#
+										
+										#if(typeof rooms[a][_CurrentInstance.RoomTypeMaxAdultOccupancyField] != "undefined" && rooms[a][_CurrentInstance.RoomTypeMaxAdultOccupancyField] > 0)#
+										#{#
+										#var diff = rooms[a][_CurrentInstance.RoomTypeMaxAdultOccupancyField] - rooms[a][_CurrentInstance.RoomTypedefaultAdultOccupancyField];#
+										  #for(k=0; k <diff; k++){#
+										  	#if ((k+rooms[a][_CurrentInstance.RoomTypedefaultAdultOccupancyField])<4) {#<span class="showNoUsersN opaqueImg icon_generated" data-icon="u"></span>#}#
+										  	#if ((k+rooms[a][_CurrentInstance.RoomTypedefaultAdultOccupancyField])>=4) {#<span class="showNoUsersP opaqueImg icon_generated" data-icon="+"></span>#
+										  	k=diff;}#
+										  #}#
+										
+										#}#
+							</div>
+								#=rooms[a][_CurrentInstance.CategorieNameField]#: <span class="roomCatPrice">#=rooms[a][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceValueField] + " "+rooms[a][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceCurrencyField]#</span>
+								</a></li>
+	    	       		#}#
+				</ul>
+			</div>
+			<!--<p><span class="priceClassTxt" data-localization="_PriceLabel">Preis:</span> <span class="priceClass">#=data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField][0][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceValueField] + " "+data[_CurrentInstance.RateArrayField][i][_CurrentInstance.RateRoomtypesArrayField][0][_CurrentInstance.RatePriceField][_CurrentInstance.RatePriceCurrencyField]#</span></p>-->
+        </div>
+    </div>
+ </div>
+ #}#
+ </script>

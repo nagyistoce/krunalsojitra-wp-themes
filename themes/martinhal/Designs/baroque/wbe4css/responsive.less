@@ -1,0 +1,355 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media screen and (max-width:760px), screen and (max-device-width: 760px){
+	body { }
+	@space_unit: 0.625em;
+	#fb-root > div { width:6.250em; overflow:hidden; }
+	
+	/**Header Mobile version:Not Show**/
+	.contentOut {width:100%; }
+	.contentIn { margin:0 @space_unit;}
+	
+	#headerLogo {max-height:12.5em; max-width:12.5em;}
+	#hLanguageSelectionTxt, #hPersonalCancelReservationTxt,#phoneBigNo, #hPersonalWelcome, #HeaderMenuContainer {display:none;}
+	#HeaderMenuContainerMobile {display:block;}
+	/**TO BE RESETED FOR OTHER MEDIA********************/
+	.item .icon {
+		font-size:2em; 
+		padding-right: 0;
+		line-height:1.8em;
+	}
+	#hLanguageSelection, #hPersonalHome, #hPersonalBookPhone, #personaDiv {float:left;}
+		#hPersonalBookPhone, #hLanguageSelection {background-color:@wbeHeaderIcon-background2; }
+	#personaDiv, #hPersonalHome {background-color:@wbeHeaderIcon-background1;}
+	#div_basket {background-color: @wbeHeaderBasketIcon-background;}
+	#headerPersonal {float:right; margin:0 0 0 1em;}
+	.item {width:4em; height:4em; text-align:center; margin:0;}
+	#div_basket.item {width:8em; line-height:1em; }
+	#hPersonalBookPhone {clear:left;}
+	#headerLine1 {float:left;}
+	#search-button.searchLine, #responsiveLogin-button.searchLine{top:1.3em; position:relative; min-height:3em;}
+	.showResultsBox, .startBox, .SpecialOfferBoxBackground  {	text-align:center;	}
+		
+	/**Font Small***********/
+	#AvailCalender td, #SocialLogin a { font-size:0.750em;}
+	
+	/**Search Results**************************/
+	#HotelTabs li {	display:block; border-radius:0; margin:1px 0;}
+	#HotelTabs  li.k-state-active {border-radius:0;  margin:1px 0; padding:0px; }
+	#HotelTabs li:first-child, #HotelTabs  li:first-child.k-state-active {
+		border-top-left-radius: @radius;
+		border-top-right-radius: @radius; 	}
+	#HotelTabs a.k-link{ font-size:1.1em; }
+	.showHotelResultsLine {margin:@space_unit 0;}
+	
+	/**No Float Buttons***************/
+	.buttonPanelL, .buttonPanelR {float:none; margin-top:@space_unit;}
+
+	/****Hotel Info Page*************************/
+	.hFacilitiesBox {float:none; }
+	#hotelFacilitiesIcons {text-align:center;}
+
+	/**Image Gallery*---NOTE---KEEP IN PX*/
+	.bxcaption { width:280px;}
+	.slidesclass {	width:308px; margin:0 auto; float:none;}
+	#thumbPanel {
+		float:none;
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;
+		left:-10px;	
+		top:20px; 
+		/***No height is set up in css, as you can find this in PictureBox.html************/
+		}
+	#thumbDiv {
+		float:none;
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;	}
+	.pag-lk-next.off, .pag-lk-prev.off, .pag-lk-prev,  .pag-lk-next, .pag-lk {	padding:@smallspace_unit 2*@space_unit; top:@space_unit; }		
+	#thumbPagination {	height:40px!important; }
+		
+	/**MAP**************************/
+	.mapDiv { min-width: 308px; max-width: 740px; height: 220px; width:100%; }
+	
+	/**Articles*******************/
+	.tableArticle img{display:none;}
+	.articleCellBoxHead {font-weight:bold;
+						padding-right:20px;
+						content:" "attr(data-label)" ";}
+	.articleCell2 {width:100%;}						
+
+	/**Check Out****/
+	.formLine.guestList{float:none; min-height:1em;}
+	.formLine.guestList p{ margin:2*@space_unit 0 0 0;}
+	
+	/***SmallScreen MyReservation*********************/
+	.rowBoxResHead, .articleCellHead { top:-1000px; position:absolute;}
+
+	/***NotAvailForm*********************************************/
+	#divNoAvailabilitiesCallBack, #divNoAvailabilitiesWriteBack, .AlternateDatesBox {float:none; width:100%; clear:left;}
+	#noAvailabilityForm .searchLine {float:none; display:block}
+	#divNoRoomAvailable .buttonPanel, #divMyReservationMsg .buttonPanel {margin-top:@space_unit;}
+	
+	/**Shopping Basket***********************************/
+	#voucherBox {clear:left;}
+	.shoppingTypeRoom:first-child{padding-top:2*@space_unit;}	/*E051 */
+
+	/***Basket********************************************************/
+	#BasketTable table, #BasketTable thead, #BasketTable tbody, #BasketTable th, #BasketTable td, #BasketTable tr { display: block; }
+		/* Hide table headers */
+	#BasketTable thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px; 	}
+	#BasketTable tr { border: 1px solid @wbe-border;}
+	#BasketTable td { 
+		border: none;
+		position: relative;
+		vertical-align:top;}
+	#BasketTable #basketContentTable .txtCrt, #BasketTable #basketContentTable .txtRight  {text-align:left;}
+
+	/**FORMS***********************************/
+	fieldset input[type="text"], fieldset input[type="email"], fieldset input[type="password"],  fieldset input[type="number"] {width:13.65em;}
+	fieldset input {	padding:0.571em; }
+	
+	/***LoginResponsive**********************************************/
+	#responsiveLogin .blockLine {margin:4*@space_unit 0;}
+
+	/***Voucher******************************************/
+	 #footerHMenu ul li a {	padding:@space_unit @space_unit; line-height:4*@space_unit;}
+
+	 /***ProductConfig*********************************************/
+	#ratesLegend {display:block; font-size:0.85em; } /*E092 - line addede*/
+
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media screen and (min-width:760px), screen and (min-device-width : 768px) and (max-device-width : 1024px){
+	body { font-size: 0.875em;}
+	@space_unit: 0.714em;
+	
+	/**Header Mobile version:Not Show**/
+	.contentIn { margin:0 @space_unit;}
+	#headerLogo {max-height:15em; max-width:30em;}	
+	#hLanguageSelectionTxt, #hPersonalCancelReservationTxt,#phoneBigNo, #hPersonalWelcome, #HeaderMenuContainer {display:inline;}
+	#hLanguageSelection, #hPersonalCancelReservation,#hPersonalBookPhone {float:left;}
+	#personaDiv {float:none; clear:left;}
+	#HeaderMenuContainer {margin: -2*@unit_size @unit_size 0 0;}
+	#hPersonalWelcome {top:0.643em; position:relative; }
+	#HeaderMenuContainerMobile, #hPersonalHome {display:none;}
+	
+	/**Font Small***********/
+	#AvailCalender td, .tableArticle, #SocialLogin a  { font-size:1em;}
+
+	/**HEADER*****************************/
+	/*#headerPersonal {float:right; margin:0 1em;}*/
+	.item {margin:@space_unit 0; text-align:right;}
+	.item .icon {padding-left: 2*@space_unit;}
+	#hPersonalWelcome {margin:0 0 0.231em 0;}
+		
+	/**FOOTER**************************************/
+	#footerHSMedia {float:left;  text-align:left; width:auto; }
+	#footerMark {float:right; text-align:right;}
+	#footerMark, #footerHSMedia {width:50%;}
+
+	/***START PAGE**************/
+	#returningCustomer {float:right; clear:left;}
+	.btnStartBoxHolder { text-align:right;}
+	.tableBox	{
+			display:table; 
+			border-collapse: separate;	
+			left:-2*@space_unit;
+			position:relative; 
+			margin:0;
+			border-spacing: 2*@space_unit 2*@space_unit;
+			width:100%;	}
+	#homePage .tableBox { left:0;}
+	.rowBox {display:table-row;}
+	.cellBox { display:table-cell; vertical-align: top;}
+	#homePage .cellBox { width:31%;}
+	
+	/**Float Buttons***************/
+	.buttonPanelL {float:left; margin-top:0;}
+	.buttonPanelR {float:right; margin-top:0;}
+	.wbeButton, .wbeButton_hover, .applyButton, .applyButton_hover  { width:auto;}		
+	.showResultsBox, .startBox, .SpecialOfferBoxBackground  { text-align:left;	}
+
+	/***DetailViewPage*******************************************/
+	.floatLeftBox { margin: @space_unit @space_unit @space_unit 0;}
+
+	/***IMG GALLERY**********************************/
+	.pag-lk-next.off, .pag-lk-prev.off, .pag-lk-prev,  .pag-lk-next, .pag-lk {	padding:0 2*@space_unit;  top:@space_unit/4; }		
+	.slidesclass {width:400px; margin:0 auto; float:none; margin-bottom:20px;}
+	#thumbPanel {margin: 0 auto;	}
+	#thumbDiv {overflow: hidden;}
+
+	/*Show Results*******************/
+	#HotelTabs  li.k-state-active {margin:0 -@unit_size 0 0;}
+	#HotelTabs a.k-link{ font-size:1.2em; }
+	.showHotelResultsLine {margin:0;}
+	.showResultsBoxImage img, #voucherImgLogo img {
+		-webkit-transition: -webkit-transform 0.5s ease-in-out; 
+		-moz-transition: -moz-transform 0.5s ease-in-out; 
+		-o-transition: -o-transform 0.5s ease-in-out; 
+		transition: transform 0.5s ease-in-out; }
+	.rotateImg() {
+		transform: scale(1.1);
+		-webkit-transform: scale(1.1); 
+		-o-transform: scale(1.1); 
+		-moz-transform: scale(1.1); }
+	.showResultsBoxImage img:hover, #voucherImgLogo img:hover {.rotateImg() }
+	.showResultsBox h6 {margin:0;}
+	.showResultsBoxImage {min-width:12.2em; width:10%; text-align:center; }
+	.descriptionCell{width:50%;}
+	.priceCell{ min-width:20em; width:29%; white-space:nowrap; }
+
+	/***MyReservations*/	
+	.c1{width:24%;}
+	.c2, .c3, .c5, .c6 {width:10%;}
+	.tableBoxRes {display:table; 	
+				margin:0;
+				float:left; 
+				border-collapse: separate;
+				position:relative; }
+	.tableBoxRes {width:100%;}
+	.activeMyReservation, #tblMyReservationDetails.tableBoxRes {margin:@space_unit 5%; width:90%; }
+	.rowBoxRes, .rowBoxResHead {display:table-row; width:100%}
+	.cellBoxRes {display:table-cell; padding:@space_unit; }
+	#divMyReservationCallBack, #divMyReservationSendMsg {width:45%; float:left; }
+	#divMyReservationSendMsg {margin-left: 0;}
+	.activeMyReservation .cellBoxRes {border-bottom:1px solid #000;}
+
+	/****Hotel Info Page*************************/
+	#hotelFacilitiesIcons {text-align:left;}
+	.displayResultsBox .tableBox {width:100%;}
+	.hFacilitiesBox {float:left; margin:0 2*@space_unit; min-width:43%;}	
+	.hFacilitiesBox:nth-child(2n+1) {clear:left; }
+	
+	/***Calendar Legend******************/
+	#AvailCalenderLegend ul li {display:inline; margin-right:@space_unit }
+
+	/**MAP**************************/
+	.mapDiv { min-width: 740px; max-width: 1000px; height: 382px; width:100%; }
+
+	/**Shopping Basket**********************************/
+	#promoBarBox fieldset input, #voucherBox fieldset input { display:inline;}
+	/*E053*/
+	#BasketTable td:not(.noDataLabel):before{ 
+		font-weight:normal;
+		padding-right:0;
+		content:"";		}
+	#BasketTable td.shoppingTypeRoom{padding-top:2*@space_unit;} /*E052 */
+	
+
+
+	/**Check Out****/
+	.formLine.guestList{float:left;}
+	.formLine.guestList p{ margin-top:0.286em;}
+	#checkOutBookingTitle .formLine { width:auto; margin-right:4*@space_unit;}
+
+	/**Articles****/
+	.articleCell1, .articleCell2  {float:left;}
+	.rowBoxResHead, .articleCellHead { top:-1000px; position:absolute;}
+	.articleCell2 {width:71%; }
+	.tableArticle img {display:block; overflow:hidden; margin:@space_unit auto; width:auto; max-width:12.2em;  height:auto; max-height:9.125em;  /*max-width: 170, max-height: 250*/}	
+
+	/**FORM*****************/
+	fieldset input[type="text"], fieldset input[type="email"], fieldset input[type="password"],  fieldset input[type="number"] {width:12.15em;}
+	fieldset input {	padding:0.429em; }
+
+	/***NotAvailForm*********************************************/
+	#divNoAvailabilitiesWriteBack fieldset .searchLine:nth-child(2) {clear:left; float:none;}
+	#divNoAvailabilitiesCallBack, #divNoAvailabilitiesWriteBack {float:left; clear:none; width:48%;}
+	#divNoAvailabilitiesCallBack {margin-right:2*@space_unit;}
+
+	/***Voucher******************************************/
+	#voucherImgLogo {float:left; margin-right:2*@space_unit;}
+	#voucherHotelVoucherData{float:left; width:auto; }
+}
+
+/* Desktops and laptops ----------- */
+@media screen and (min-width:992px) {
+	body { background-image:url('../wbe4img/bg-@{themeName}.png'); font-size: 0.875em;}
+	@space_unit: 0.714em;
+
+/***HEADER***************************/
+	.contentIn {
+		min-width:68.571em;
+		margin:0 2%;
+	}
+	#headerLine1 {float:left; font-size:0.9em;}
+	#headerLogo {float:left;}
+
+/***SHOW RESULTS***********************************/	
+
+/***IMG GALLERY***********************************/
+	.slidesclass {	width:400px; float:left;}
+	#thumbPanel { float:left; left:0px; margin-bottom:0; }
+	#thumbDiv { float:left; margin: 0; }
+	.pag-lk-next.off, .pag-lk-prev.off, .pag-lk-prev,  .pag-lk-next, .pag-lk {	padding:0 2*@space_unit; top:@space_unit/4; }		
+	
+	/****Hotel Info Page*************************/	
+	.hFacilitiesBox {float:left; margin:2*@space_unit 4*@space_unit 2*@space_unit 0; min-width:29%;}
+	.hFacilitiesBox:nth-child(2n+1) {clear:none; }
+	.hFacilitiesBox:nth-child(3n+1) {clear:left;}
+	#hotelDescription p .morelk, #hotelDescription p .lesslk {padding:@unit_size 2*@space_unit;}
+	
+	/**MAP**************************/
+	.mapDiv { min-width: 918px; max-width: 1800px; height: 382px; width:100%; }
+
+	/**Shopping Basket***************************************/
+	#couponBox {float:left;}
+	#voucherBox {clear:none; float:right}
+
+	/***PreCheckOut*****************************************************/
+	.checkoutBox { float:left; max-width: 29%; padding:1%; margin:1%;}
+	.checkoutBox:first-child { margin-left:0; border-left: 0;}
+
+	/***Cancel Reservation****************************************************************/
+	
+	/***Articles*/	
+	.rowBoxResHead, .articleCellHead { top:0; position:relative;vertical-align:bottom;}
+	.articleCell22:not(.articleCellBoxHead):before, .articleCell23:not(.articleCellBoxHead):before, .cellBoxRes:not(.c6):not(.cN):before{
+		font-weight:normal;
+		padding-right:0;
+		content:"";		}
+	.articleCellBoxHead, .articleCellBox {display:table-cell; float:none;}
+	.articleCell22, .articleCell23, .articleCell24 {float:none; margin:0 @space_unit; }
+	.articleCell24 {vertical-align:middle;}
+	.articleCell21 {width:70%;}
+	.articleCell22 {width:10%;}
+	.articleCell23 {width:10%;}
+	
+	/***Detail View********************/
+	#RoomTypeSelect {float:left; width:47.75%; }
+	
+	/**Calendar*********************************/
+	#productConfigRight {float:right; width:47.75%; }
+	#AvailCalender, #alternativeRates { margin-top:0;}
+
+	/***ProductConfig*********************************************/
+	#ratesLegend {display:none;} /*E093 - line addede*/
+}
+
+/* Desktops and laptops ----------- */
+@media screen and (min-width:1080px) {
+	/**re-write .contentIn margins, as, for given image gallery sizes, IE9 creates problems in 1024************************/
+	.contentIn {
+		min-width:68.571em;
+		margin:0 5%;
+		}
+}
+
+/* Medium Desktops ----------- */
+@media only screen and (min-width:1440px) {
+	.contentIn {
+		margin:0 10%;
+	}
+}
+/* Large Desktops ----------- */
+@media only screen and (min-width:1900px) {
+	.contentIn {
+		margin:0 15%;
+	}
+}

@@ -1,0 +1,68 @@
+/*
+	 CSS-Tricks Example
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+.slide-up-boxes {width: 280px;
+}
+	.slide-up-boxes a { 
+			display: block; 
+			height: 65px; 
+			margin: 0 0 @space_unit 0; 
+			overflow: hidden; 
+			color: @wbeStartBox-fontColor;
+		}
+		
+		.slide-up-boxes h4 { 
+			height: 85px; 
+			 opacity: 1;
+			 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    		-khtml-opacity: 1;
+    		-moz-opacity: 1;
+			 -webkit-transition: all 0.2s linear; 
+			 -moz-transition: all 0.2s linear; 
+			 -o-transition: all 0.2s linear;
+			 color: @wbeStartBox-fontColor;
+			 font-size:1.4em;
+			 text-shadow: 2px 1px 2px @wbeShadow-dark;
+			background: @wbeStartBox-background;
+			.rounded;
+			padding: @space_unit;
+		}
+		
+		.slide-up-boxes a:hover h4 { 
+			margin-top: -85px; 
+			opacity: 0; 
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    		-khtml-opacity: 0;
+    		-moz-opacity: 0;
+		}
+		
+		.slide-up-boxes div { 
+			position: absolute; 
+			color: @wbeStartBoxHover-fontColor; 
+			width: 260px; 
+			padding: 2*@space_unit @space_unit ; 
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		    -khtml-opacity: 0;
+		    -moz-opacity: 0;
+			opacity: 0; 
+			-webkit-transform: rotate(6deg); 
+			-webkit-transition: all 0.4s linear; 
+			-moz-transform: rotate(6deg); 
+			-moz-transition: all 0.4s linear; 
+			-o-transform: rotate(6deg); 
+			-o-transition: all 0.4s linear; 
+			background: @wbeStartBoxHover-background;
+			.rounded;
+		}
+		.slide-up-boxes a:hover div { 
+			opacity: 1; 
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+			-webkit-transform: rotate(0); 
+			-moz-transform: rotate(0); 
+			-o-transform: rotate(0); 
+		}

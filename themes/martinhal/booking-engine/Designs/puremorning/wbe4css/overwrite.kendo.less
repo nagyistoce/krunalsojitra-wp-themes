@@ -1,0 +1,132 @@
+
+#TabSelectorSearchBox, 
+#HotelTabs, 
+#Search-Results .k-tabstrip,
+#Search-Results .k-tabstrip .k-content, 
+.k-panelbar .k-tabstrip .k-content, 
+#AvailCalender td.k-state-selected, 
+#AvailCalender td.k-state-hover,
+#hLanguageSelection .k-widget .k-dropdown-wrap,
+#basketPanel .k-widget,  #articlesTabWrapper
+{	border:none; }
+
+#articles .k-tabstrip {border:0px;}
+input:disabled,input:disabled[type="button"],input:disabled[type="button"]:hover  {
+    background: @wbeInputDisabled-background;
+    color: @colorDisabled; }
+
+#Search-Results .k-tabstrip {
+	padding:0;
+	margin:0;}
+#TabSelectorSearchBox {
+    display: block;
+    z-index: 98;
+	opacity:1;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+ }	
+
+/*SearchBox Active Tab Header*/
+#Search-Box-Container .TabSelector ul li.k-item.k-state-active {
+		border-bottom: 1px solid @wbeSearchBox-background!important; 
+		background:@wbeSearchBox-background;  }
+#Search-Box-Container .TabSelector ul li.k-item.k-state-active a.k-link {color: @wbeSearchBoxActiveTab-fontColor; }
+
+/*SearchBox Inactive Tab Header*/
+#Search-Box-Container .TabSelector ul li.k-item.k-last{	background: @wbeSearchBoxTabInactive-background; }
+#Search-Box-Container .TabSelector ul li.k-item a.k-link {color: @wbeSearchBoxTabInactive-fontColor;}
+
+/*SearchBox Tabs Hoover*/
+#TabSelectorSearchBox .k-link:hover { background:@wbeWhite-background; color: @fontColor-action;}
+
+
+/*Articles Tabs*/
+#articlesTabWrapper ul li.k-state-active {
+	border: 1px solid @wbe-artTabsActive-border-color; 
+	border-bottom: 0px;
+	background:		@wbe-artTabsActive-background; 
+	& a { color: @wbe-artTabsActive-fontColor; }
+}
+#articlesTabWrapper ul li {
+	background:	@wbe-artTabs-background; 
+	& a {color: @wbe-artTabs-fontColor; }
+}
+#articlesTabWrapper .k-content.k-state-active {
+	background: @wbe-artTabsAreaInside-background;
+	border: 1px solid @wbe-artTabsAreaInside-border-color;
+}
+#articlesTabWrapper ul li:hover { background: @wbe-artTabsHover-background; 
+	border: 1px solid @wbe-artTabsHover-border-color; 
+	border-bottom: 0px;
+	& a.k-link:hover {color: @wbe-artTabsHover-fontColor; }
+}
+#HotelTabs { border-bottom:2px @wbe-hotelTabsActive-border-color solid; margin:0;}
+
+/***Some of these properties - moved in Responsice***/
+#HotelTabs a.k-link{ 	color: @wbe-hotelTabs-fontColor; 
+	&:hover {color:@wbe-hotelTabsHover-fontColor;}
+}
+
+#HotelTabs li.k-state-active a.k-link{ color:@wbe-hotelTabsActive-fontColor;}
+#HotelTabs li {
+	background-color: @wbe-hotelTabs-background;//@wbeLighterGrey-background; 
+	vertical-align:bottom;
+	white-space:nowrap;	}
+#HotelTabs  li:hover{ z-index:2; background: @wbe-hotelTabsHover-background; border-color:@wbe-hotelTabsHover-border-color; border-bottom: 0px; }	
+#HotelTabs  li.k-state-active {
+	background: @wbe-hotelTabsActive-background;
+	background-image: linear-gradient(bottom, @wbe-hotelTabsActive-stopColor 16%, @wbe-hotelTabsActive-startColor 80%);
+	background-image: -o-linear-gradient(bottom, @wbe-hotelTabsActive-stopColor 16%, @wbe-hotelTabsActive-startColor 80%);
+	background-image: -moz-linear-gradient(bottom, @wbe-hotelTabsActive-stopColor 16%, @wbe-hotelTabsActive-startColor 80%);
+	background-image: -webkit-linear-gradient(bottom, @wbe-hotelTabsActive-stopColor 16%, @wbe-hotelTabsActive-startColor 80%);
+	background-image: -ms-linear-gradient(bottom, @wbe-hotelTabsActive-stopColor 16%, @wbe-hotelTabsActive-startColor 80%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-hotelTabsActive-startColor , endColorstr=@wbe-hotelTabsActive-stopColor, GradientType=0 ); /* IE6-9 */	
+	padding:6px 0px 0px 0px; 
+	margin:0 -1px 0 0;
+	border-color:@wbe-hotelTabsActive-border-color;		}
+#Search-Results .k-tabstrip .k-content, .k-panelbar .k-tabstrip .k-content {padding:0; margin:0;}
+#Search-Results .k-tabstrip .k-tabstrip-items {padding:0}
+
+/**Calendar**/
+#AvailCalender {.rounded-corners; border:1px solid @bigCalendar-border;}
+#AvailCalender .k-header {.rounded-corners;}
+#AvailCalender td.k-state-hover {background: @wbeLighterGrey-background; }
+#AvailCalender td.k-state-selected {background-color:@wbeAvailCalendarSelected-background; 
+}
+#AvailCalender .k-state-hover .k-link:hover  {color:@fontColor-grey; background:@wbeColored-background; }
+#AvailCalender a.k-link {padding:1px; height:42px; text-decoration:none; color:@fontColor-calendarHead;}
+#AvailCalender a.k-link:hover {color:@fontColor-calendarHeadHover;}
+#AvailCalender div.k-link {height:42px;}
+#AvailCalender .k-header .k-link {height:28px;}
+#AvailCalender.k-calendar .k-content .k-link {line-height:normal;}
+.k-other-month .k-link:hover { color:@fontColor; } 
+.DayCellAvailCalender {height:32px;  border:none; }
+#AvailCalender .k-footer { margin:0; padding:0; height:3px; }
+.emptydays {color:@colorDisabled; text-decoration:line-through; font-size:0.9em; cursor:default;}
+div.emptydays  { padding: 1px; height: 42px; width: 42px;}
+.k-link:hover, .k-calendar .k-link:hover {text-decoration:underline;}
+#hLanguageSelectionTxt .k-dropdown-wrap {background-color:@wbeLanguageSelect-background; padding:0 22px 0 0; line-height:0;}
+#page .k-icon.k-warning {margin-left:0px; display:none;}
+.k-link.DayCellAvailCalender>div:first-child {color:@fontColor;}
+
+
+/***Error handling***/
+span.k-tooltip
+{   position: relative;
+    display: block;
+    border-width: @unit_size;
+    padding: 2*@unit_size 0;
+	text-align:left;
+	white-space:normal;}
+#newProfileTOS span.k-tooltip, #checkOutTOS span.k-tooltip {   position: absolute; margin-left:25px ; width:auto; }
+
+/***GTC Layer***/
+.k-window { left:0!important; margin:0 10%!important; width:79%;}
+.k-window .k-window-content {min-width:260px!important; min-height:300px!important; padding-bottom:40px;}
+.k-window .k-window-title {font-size:1.2em; overflow:visible;}
+
+/***DesignSelector***/
+.slide-out-div-designsettings {
+	background:@wbeLighterGrey-background;
+	.rounded-corners;
+	border:1px solid @wbe-light-border-color; 
+}

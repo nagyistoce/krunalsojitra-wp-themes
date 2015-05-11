@@ -1,0 +1,87 @@
+﻿<div id="search-bar-basic" >
+	<fieldset>
+        <div class="searchLine">
+            <div class="searchLeft"><label for="arrdate"  data-localization="_arrivaldate">Start date:</label></div>
+            <div class="searchRight"><input id="arrdate" value="" required /></div>
+        </div>
+        <div class="searchLine">
+            <div class="searchLeft"><label for="depdate"  data-localization="_departuredate">End date:</label></div>
+            <div class="searchRight"><input id="depdate" value="" required /></div>
+        </div>
+	    <div class="clear"></div>
+
+         <div class="searchLine" id="search-hotellocation-selection" data-function="hotellocationselection">
+            <div class="searchLeft"><label for="hotellocation" data-localization="_hotellocation">Ort:</label></div>
+            <div class="searchRight"><input id="hotellocation" value=""    /></div>
+        </div>
+    <div class="searchLine" id="search-hotel-selection" data-function="hotelselection">
+            <div class="searchLeft"><label for="hotelselect" data-localization="_hotelselect">Hotel:</label></div>
+            <div class="searchRight"><input id="hotelselect" value=""    /></div>
+        </div>        
+     
+    </fieldset >   
+    <div id="RequestOptionLinkBox" data-function="moreOptionLinkContainer"><a href="#" id="RequestOptionLink" class="lkUnderlineHC" data-localization="_moreoptions" >More Options</a></div>
+    <!--content printed dynamically -->
+    <div id="Request-Option_Container"  data-function="moreOptionContainer">
+		<fieldset>
+        <div class="searchLine" id="search-roomtype-selection">
+             <div class="searchLeft"><label for="RoomTypeSelect" data-localization="_roomtypeselect" data-function="hotelroomtypeselection" >Room type:</label></div>
+            <div class="searchRight"><input id="RoomTypeSelect" value="" /></div>
+      	</div>
+        <div class="searchLine" id="search-hoteltype-selection" data-function="hoteltypeselection">
+            <div class="searchLeft"><label for="hoteltypselect" data-localization="_hoteltypeselect" >Hotel type:</label></div>
+            <div class="searchRight"><input id="hoteltypselect" value="" /></div>
+        </div>
+
+        <div class="searchLine" id="search-hotelrating-selection" data-function="hotelstarsselection">
+            <div class="searchLeft"><label for="hotelratingselect" data-localization="_hotelratingselect" >Sterne:</label></div>
+            <div class="searchRight"><input id="hotelratingselect" value="" /></div>
+        </div>
+          <div class="clear"></div>
+         <div class="searchLine" id="Div2">
+            <div class="searchLeft"><label for="promocodeBox" data-localization="_promocode">Promocode:</label></div>
+            <div class="searchRight"><input id="promocodeBox" value="" data-function="promocode"  /></div>
+        </div>
+        </fieldset>
+        <div class="clear"></div>
+ 
+      	<div   id="search-hotelfeature-selection" >
+		
+		</div>
+	</div>    
+
+	<div class="searchLine" id="search-button">
+    	<a href="#" title="search" id="SearchButtonLink" class="wbeButton" id="SearchRatesbutton" data-localization="_searchBtnSearchBarContent" >Search</a>
+    </div>
+</div>
+ <script id="HotelFeatureItemTemplate" type="text/x-kendo-template"> 
+  #for(i=0;i<data.length;i++){#
+  #var half = Math.floor(data.length/2);#
+  
+  #if(data.length < 5){#
+    #half=0;#
+  #}#
+  
+  #if(i==0 || i == half){#
+		<div class="searchLine">
+  #}#
+  <input id="#=data[i][_CurrentInstance.HotelFeatureFieldName]#" data-function="hotelfeature" value="#=data[i][_CurrentInstance.HotelFeatureFieldID]#" type="checkbox" /><label for="#=data[i][_CurrentInstance.HotelFeatureFieldName]#" >#=data[i][_CurrentInstance.HotelFeatureFieldName]#</label><div class="clear" ></div>
+   
+   #if(i==data.length-1 || i == half-1){#
+        </div>
+    #}#
+
+  #}#
+ </script>
+<script type="text/javascript" language="javascript">
+    protelWBE.CreateHotelDropDownBox('hotelselect');
+    protelWBE.CreateArrivalDateInput('arrdate');
+    protelWBE.CreateDepartureDateInput('depdate');
+    protelWBE.CreateHotelTypeDropDownBox('hoteltypselect');
+    protelWBE.CreateRoomTypeSelection('RoomTypeSelect');
+    protelWBE.RegisterSearchRatesButton('SearchButtonLink');
+    protelWBE.CreateSearchBoxToggleButton('RequestOptionLink', 'Request-Option_Container');
+    protelWBE.RegisterHotelFeatureSelectContainer('search-hotelfeature-selection');
+    protelWBE.CreateHotelLocationDropDownBox('hotellocation');
+    protelWBE.CreateHotelRatingDropDownBox('hotelratingselect');
+</script>

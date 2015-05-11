@@ -1,0 +1,21 @@
+﻿
+<div id="forgotPasswort1" class="searchLine" data-function="forgotPassword" style="height:400px;">
+		<h2  data-localization="_forgotPasswort" >Forgot Password</h2>
+		<p data-localization="_forgotPasswortMsg">Please enter your username below and press the send button.<br />A password reset link will be sent to you.</p>
+        <fieldset>
+			<div class="searchLine"><input id="forgotPasswortInput" data-function="fusername" value="" name="forgotPasswortInput" tabindex="1"  required validationMessage="_emailRequired" type="email" /></div>
+			<div class="searchLine"><input  class="applyButton" data-localization="_Send"  value="Send" data-function="sendforgotpassword" id="forgotPasswortBtn"  type="button" tabindex="2"></div>                
+        </fieldset>
+		<p data-localization="_forgotPasswortInstructions" data-function="fpasswordResultMessage">An email with instructions for resetting your password has been sent.</p>
+</div>
+
+<div id="resetPasswort2"  data-function="resetPassword" style="height:400px;">
+		<h2  data-localization="_resetPasswort" >Reset Password</h2>
+		<p data-localization="_forgotPasswortMessage">Please enter a new password for your account.<br />Passwords should be greater than 6 characters, less than 32 characters, and include at least one letter and one number.</p>
+         <fieldset>
+	        <div class="searchLine"><label for="resetPasswortInput" data-localization="_newPassword"></label><span class="requiredSmb"></span> <input id="resetPasswortInput" value="" type="password" name="resetPasswortInput" tabindex="1" validationMessage="_resetPasswortInputMsg" /></div>
+	         <div class="searchLine"><label for="confirmPasswortInput" data-localization="_confNewPassword"></label><span class="requiredSmb"></span> <input id="confirmPasswortInput" value="" type="password" name="confirmPasswortInput" tabindex="2"  data-function="fpassword" validationMessage="_confirmPasswortInputMsg" /></div>
+             <div class="searchLine" id="search-button"><input  class="applyButton" data-localization="_Send"  value="Send"  id="forgotPasswortBtn" data-function="resetPasswordBt" type="button" tabindex="2"></div>
+		</div>        
+        </fieldset>
+</div>

@@ -1,0 +1,115 @@
+﻿    <div id="VoucherViewContainer" data-function="ReceiverForm"> 
+
+			<h2 id="voucherTitle" data-function="Vouchername"><!-- Voucher Name --></h2>
+            <div id="voucherDescription"><p data-function="VoucherDescription"><!-- Voucher description text --></p></div>
+            <div class="clear"> </div>
+                      <div id="voucherBoxContent" class="showResultsBox box">
+                         	<div id="voucherImgLogo">
+                           		<img border="0" alt="Hotel Logo" data-function="hotellogo" src="">
+                            </div>
+                            <div id="voucherHotelVoucherData">
+                               	<h5 data-function="Vouchername"><!-- Voucher Name --></h5>
+                                <h4 data-function="VocherHotelname"><!-- Hotel Name --></h4>
+    	                        <p data-function="VocherHotelAddress"><!-- Hotel address --></p>
+                                <div id="ValueSelect">
+                                    <p data-localization="_qVoucherTotal"><!-- Voucher amount --></p>
+                                    <span><input  type="number" data-function="VoucherValue"  id="vouchervalue" /></span>
+                                </div>
+							</div>
+						<div class="clear"></div>                            
+                      </div>
+					<div class="clear"></div>
+
+                <div class="txtInfoLine"><p data-localization="_iVoucherFormReceiver"><!-- Please enter the data on the voucher recipient. The fields marked with asterisk are required. --></p></div>
+				
+                <div id="checkOutBox" class="clear paintBox">
+					<p class="txtEntityTitle"><i class="icon-bookmark"></i><span data-localization="_VoucherReceiverData"><!-- Recipient Info --></span></p>                
+					<div id="checkOutPersonalDiv1">
+                        <div  class="blockLine">
+                            <label for="Type" data-localization="_FormSelectAddress"><!-- Address --></label>
+                            <input id="PrivateCheck_VReceiver" value="1" data-private-ckeck="VoucherReceiver" checked="checked" type="radio"  name="Type" /><label for="PrivateCheck_VReceiver" data-localization="_FormSelectPrivat"><!-- Personal --></label>
+                            <input id="CompanyCheck_VReceiver" value="2" data-company-ckeck="VoucherReceiver" type="radio" name="Type"  /> <label for="CompanyCheck_VReceiver" data-localization="_FormSelectCompany">Company</label>
+                        </div>
+                        <fieldset>                        
+                        <div  class="formLine">
+                            <label for="Company_Input" data-localization="_FormSelectCompany"><!-- Company --></label>
+                            <input  type="text" id="Company_Input_VReceiver" data-company="VoucherReceiver" name="Company_Input" />
+                        </div>
+                        <div class="clear"></div>
+                        <div  class="formLine">
+                            <label for="Salutation_Select" data-localization="_FormSalutation"><!-- Salutation --></label>
+                            <input id="Salutation_Select_VReceiver" tabindex="2"   value="" name="Salutation_Select" data-salutation="VoucherReceiver" /></div>
+                       
+                        <div  class="formLine">
+                            <label for="Firstname_Input_Booker"  data-localization="_FormFirstname" data-function="labelvoucherFirstname" ><!--First name--></label><span class="requiredSmb"></span>
+                            <input id="Firstname_Input_VReceiver"  type="text" data-firstname="VoucherReceiver" tabindex="3" maxlength="50" name="Firstname_Input_VReceiver" validationMessage="_firstnameRequired" />
+                        </div>
+                        <div  class="formLine">
+                            <label for="Lastname_Input_Booker"  data-localization="_FormLastname" data-function="labelvoucherLastname"><!--Last name--></label><span class="requiredSmb"></span>
+                            <input id="Lastname_Input_VReceiver" type="text"  value="" data-lastname="VoucherReceiver" tabindex="4" maxlength="50" name="Lastname_Input_VReceiver" validationMessage="_lastnameRequired" />
+                       </div>
+                    </div>            
+					<!-- <div class="clear"></div> -->
+					<div id="checkOutPersonalDiv2" class="clear">
+					<fieldset>
+                        <div  class="formLine">
+                            <label for="Street-Input" data-localization="_FormStreet"><!-- Street --></label>
+                            <input id="Street-Input_VReceiver" type="text" value=""  data-street="VoucherReceiver" tabindex="6" maxlength="50" name="Street-Input" validationMessage="_streetRequired" />
+                        </div>
+                        <div  class="formLine">
+                            <label for="Zip_Input"  data-localization="_FormZip"><!-- ZIP --></label>
+                            <input id="Zip_Input_VReceiver" data-zip="VoucherReceiver" type="text" value="" tabindex="7" maxlength="10" name="Zip_Input" validationMessage="_zipRequired" />
+                        </div>
+                        <div class="clear"></div>
+                        <div  class="formLine">
+                            <label for="City_Input_VReceiver" data-localization="_FormCity"><!-- City --></label>
+                            <input id="City_Input_VReceiver"   type="text" data-city="VoucherReceiver" tabindex="8" maxlength="50" name="City_Input_VReceiver" validationMessage="_cityRequired" />
+                        </div>
+                        <div  class="formLine">
+                            <label for="countryselect_VReceiver" data-localization="_FormCountry"><!-- Country --></label>
+                            <input id="countryselect_VReceiver"  value="" tabindex="9" name="countryselect_VReceiver" data-country="VoucherReceiver"/>
+                        </div>
+                        <div class="clear"></div>
+                        <div  class="formLine">
+                            <label for="Telefon_Input_VReceiver" data-localization="_FormPhone"><!-- Phone --></label>
+                            <input id="Telefon_Input_VReceiver" type="text" value="" data-phone="VoucherReceiver" tabindex="10" maxlength="50" name="Telefon_Input_VReceiver" validationMessage="_phoneRequired" />
+                        </div>
+                        <div  class="formLine">
+                            <label for="Fax_Input_VReceiver" data-localization="_FormFax"><!-- Fax --></label>
+                            <input id="Fax_Input_VReceiver" type="text" value="" data-fax="VoucherReceiver" tabindex="11" maxlength="50" name="Fax_Input_VReceiver" validationMessage="_faxRequired" />
+                        </div>
+					</fieldset>
+                    </div>                                            
+				<!-- <div class="clear"></div> -->
+                <div  class="blockLine clear">
+                        <div  id="sendVoucherByEmail" class="formLine" data-function="voucherSendMail">
+							<input id="SendWithMail" type="checkbox" tabindex="5" data-sendMail="VoucherReceiver" maxlength="50" name="SendWithMail" />
+		  					<label for="SendWithMail" data-localization="_qFormEmailVoucher"><!-- Sent by email? --></label>
+						</div>
+						<div  class="formLine">
+						<fieldset><label for="Email_Input_Booker" data-localization="_FormEmail"><!-- E-Mail --></label>
+						<input id="Email_Input_VReceiver" type="email" value="" tabindex="5" data-email="VoucherReceiver" maxlength="50" name="Email_Input_VReceiver" /></fieldset>
+						</div>				
+				</div>
+				<!-- <div class="clear"></div> -->
+                 <div  class="blockLine clear">
+				  <p class="txtEntityTitle"><i class="icon-bookmark"></i><span data-localization="_qFormNoteVoucher"><!-- Message --></span></p>
+				 	<fieldset><textarea rows="5" id="Note" name="Note"  data-note="VoucherReceiver"></textarea></fieldset>
+                 </div>
+
+                </div>
+                 
+				<div class="clear"></div>
+				<div class="buttonPanel">
+                	<div class="buttonPanelR"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  value="In den Warenkorb" data-localization="_addVoucherToBbt"  id="AddVoucherToBasket"  type="button"></div>
+                    <div class="buttonPanelL"><input  class="applyButton" value="Zurück" id="Button4" data-localization="_backbt"  type="button"></div>
+                </div>
+				<div class="clear"></div>
+
+</div>
+<script type="text/javascript" language="javascript">
+    protelWBE.RegisterVoucherValueSelect('vouchervalue');
+    protelWBE.RegisterBackToResultButton('Button4');
+    protelWBE.RegisterAddToCartButton('AddVoucherToBasket');
+
+</script>

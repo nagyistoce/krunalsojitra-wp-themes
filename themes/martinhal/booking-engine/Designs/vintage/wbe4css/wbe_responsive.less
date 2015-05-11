@@ -1,0 +1,123 @@
+//All devices smaller than a small tablet - 320- 480 -600px
+@media only screen and (max-width: 599px) 
+{
+	@import "smallScreenCommon.less";
+	.wbe4Wrapper {
+		.wbeBackground {background-image: none;}
+		.startPageDiv1 {display: none;}
+		.wbeContentIn	{width: 100%;}
+		#headerWBE4 {background-color: transparent; background-image: none;}
+		#headerWBE4,  .wbeRightPanel {float: none; width: auto; margin: 0 @space_unit;  }
+		#div_basket, #headerPersonalMobil {position: absolute; float: none; right:10px;}
+		#hLanguageSelection {float: none;
+			& .icon.icon-flag {display: none;}
+		}
+		#div_basket {top: 84px; width: 84px; height: 32px; background: @wbeMobileMenuCart-background; margin-top: 0!important; padding-top: 10px;  text-align: left; }
+		#ShowMyBasket {font-size: 0.50em; margin-right: 0;}
+
+		#headerPersonalMobil {top: 0;}
+		#divNoAvailabilitiesCallBack, #divNoAvailabilitiesWriteBack, #RoomTypeSelect, #productConfigRight, .buttonPanelR, .buttonPanelL {float: none; width: 100%;}
+		.wbeButton, input[type="button"], .wbeButton:hover { clear: both; margin:@space_unit 0;}
+		.checkoutBox {float: none; max-width: 100%; min-height: auto; overflow: hidden;}
+		#HotelTabs li {width: 100%;}
+		#divNoAvailabilitiesWriteBack {clear: left; padding-top: 2*@space_unit;}
+		.cellBox {display: block; padding: @smallspace_unit;}
+		#headerPersonalMobil {display: block;}
+		#headerPersonal {display: none;}
+		.showMobileMenu {width: 42px; height: 42px; float: left;
+			& a {text-decoration: none;
+				& .icon { font-size: 2.4em; padding: 6px 0 0  6px;}
+			}
+		}
+		.showMobileColor1 {background:@wbeMobileMenu-background1;
+			& a {
+				& i.icon {color: @wbeMobileMenu-fontColor1;}
+			}
+		}
+		.showMobileColor2 {background:@wbeMobileMenu-background2;
+			& a {
+				& i.icon {color: @wbeMobileMenu-fontColor2;}
+			}
+		}
+		#AvailCalender {font-size: 0.75em;}
+
+
+		/**Articles*******************/
+		.tableArticle img{display:none;}
+		.articleCellBoxHead {font-weight:bold;
+							padding-right:20px;
+							content:" "attr(data-label)" ";}
+		.articleCell2 {width:100%;}	
+		
+		/***SmallScreen MyReservation*********************/
+		.rowBoxResHead, .articleCellHead { top:-1000px; position:absolute;}
+		.tableBoxRes, .rowBoxResHead, .cellBoxRes {display: block;}
+		.cellBoxRes, .rowBoxRes, .cellBoxRes:before, .tableBoxRes:not(.activeMyReservation) {padding-bottom:@space_unit;}
+		#BasketTable td:not(.noDataLabel):before, .cellBoxRes:not(.c6):not(.cN):before{ 
+			padding-right:20px;
+			content:" "attr(data-label)": ";
+			color: @fontColor-B;	}
+		.cellBoxRes.cN {clear: both;}
+
+		/***Basket********************************************************/
+		#BasketTable table, #BasketTable thead, #BasketTable tbody, #BasketTable th, #BasketTable td, #BasketTable tr { display: block; }
+		#BasketTable thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px; 	}
+		#basketContentTable td:nth-child(2) {display: none;}
+		#BasketTable tr { border-bottom: @inputborderwidth @inputborderstyle @wbeLight-borderColor; }
+		#BasketTable td { 
+			border: none;
+			position: relative;
+			vertical-align:top;}
+		#BasketTable #basketContentTable .txtCrt, #BasketTable #basketContentTable .txtRight  {text-align:left;}
+
+	}
+}
+
+// 600px
+@media only screen and (min-width: 600px) and (max-width: 767px) 
+{
+	@import "smallScreenCommon.less";
+	.wbe4Wrapper {
+		.wbeContentIn	{width: 100%;}
+		#homePage {position: relative;}
+		#headerPersonalMobil {display: none;}
+		#headerPersonal {display: block;}
+		#headerWBE4 {background-color: transparent; background-image: none;}
+		#headerWBE4,  .wbeRightPanel {float: none; width: auto; margin: 0 @space_unit;}
+		#div_basket, #headerPersonal {position: absolute; float: none; right: @space_unit;}
+		#hLanguageSelection {float: none;
+			& .icon.icon-flag {display: none;}
+		}
+		#div_basket {top: 5*@space_unit;}
+		#headerPersonal {top: @space_unit;}
+		#RoomTypeSelect, #productConfigRight {float: none; width: 100%;}
+		.checkoutBox {float: none; max-width: 100%; min-height: auto; overflow: hidden;}
+	}
+}
+
+// 768px
+@media only screen and (min-width: 768px) and (max-width: 991px), screen and (min-device-width : 768px) and (max-device-width : 1024px)
+{
+		@import "smallScreenCommon.less";
+		.wbe4Wrapper {
+			.wbeContentIn	{width: 100%;}
+			#homePage {position: relative;}
+			#headerWBE4 {background-color: transparent; background-image: none;}
+			#headerPersonalMobil {display: none;}
+			#headerWBE4,  .wbeRightPanel {float: none; width: auto;  margin: 0 @space_unit; }
+			#div_basket, #headerPersonal {position: absolute; float: none; right: @space_unit;}
+			#div_basket {top: 3*@space_unit;}
+			#headerPersonal {top: @space_unit;}
+		}
+}
+
+// 992px
+@media only screen and (min-width: 992px) {
+.wbe4Wrapper {
+	
+
+}
+}

@@ -1,0 +1,36 @@
+﻿<div id="voucherresults" class="displayResultsBox">
+
+	<div data-function="vouchertable" class="tableBox" >
+	</div>
+</div>
+ 
+ <script id="VoucherItemTemplate" type="text/x-kendo-template"> 
+
+#for(i=0;i < data.length;i++){#
+	#var image = "";#
+   	#var style = "";#
+   	#var shortDescription="";#
+ 	
+	#if(typeof data[i][_CurrentInstance.VoucherTypesShortDescriptionField] != "undefined"){#
+ 		#shortDescription=data[i][_CurrentInstance.VoucherTypesShortDescriptionField];#
+ 		#}#
+  	#if(typeof data[i][_CurrentInstance.VoucherFilesField] != "undefined"  && data[i][_CurrentInstance.VoucherFilesField].length > 0){#
+		#image = data[i][_CurrentInstance.VoucherFilesField][0][_CurrentInstance.VoucherUrlField];} else{ image=_CurrentInstance.CurrentImagePath+'clear.gif'; style="height:1px"; }#
+
+	<div class="showHotelResultsLine rowBox" >
+	<div class="showResultsBox box" data-voucherid="#=data[i][_CurrentInstance.VoucherTypesIdField]#">
+			<div class="cellBox showResultsBoxImage" >
+				<a href="\\#" data-function="VoucherDetail" title="#=data[i][_CurrentInstance.VoucherTypesNameField]#" ><img src="#=image#" style="#=style#" alt="#=data[i][_CurrentInstance.VoucherTypesNameField]#" /></a>
+			</div>
+			<div class="cellBox">
+				<div class="showResultsBoxTxt">
+					<h6><a href="\\#"  data-function="VoucherDetail" title="#=data[i][_CurrentInstance.VoucherTypesNameField]#" >#=data[i][_CurrentInstance.VoucherTypesNameField]#</a></h6>
+					<p>#=shortDescription#</p>
+					<p><span class="priceClassTxt" data-localization="_PriceLabel">Preis:</span> <span class="priceClass">#=kendo.toString(kendo.parseFloat(data[i][_CurrentInstance.VoucherTypesMinValueField], "en-GB"),"n2") + " "+data[i][_CurrentInstance.VoucherTypesCurrencyField]#</span></p>
+					<p><span class="showResultsBoxMore"><a href="\\#"  data-function="VoucherDetail" title="#=data[i][_CurrentInstance.VoucherTypesNameField]#" class="morelk" data-localization="_details" >details</a></span></p>
+				</div>
+			</div>
+ 	</div>
+	</div>
+#}#
+ </script>

@@ -1,0 +1,614 @@
+@charset "utf-8";
+/* CSS Document */
+
+.pNoMargin {margin:0;}
+.txtCrt {text-align:center;}
+.txtRight {text-align:right;}
+.txtLeft {text-align:left;}
+.priceClass, .priceSmall {color:@fontColor-price; }
+.priceClass {font-size:1.6em; }
+.priceSmall {font-size:1.3em;}
+.txtDarkGrey { color:@fontColor-grey;}
+.txt11em {font-size:1.1em; }
+.txtB {font-weight:bold;}
+.nowrap {white-space:nowrap;} 
+.colorLine { margin:20px 0; background-color:@wbeWhite-background; color:@fontColor; text-shadow: 1px 1px 1px @light-shadow; }
+.msgBox { 
+	padding:10px; 
+	.rounded-corners;
+	border:1px solid @roomConfig-border; 
+	background: @roomConfig-background;
+}
+.bgWhiteSmoke {background: @wbeLighterGrey-background;}
+.smallDiv {width:140px;}
+.txtJustify{text-align:justify;}
+.displayBlock {display:block;}
+.linkTxtBasket, .linkTxt, a.linkLk, a.linkLk:visited, a.linkCartLk, a.linkCartLk:visited, a.linkDeleteLk, a.linkDeleteLk:visited, a.linkAddLk, a.linkAddLk:visited, #hotelDescription p .morelk, #hotelDescription p .lesslk {color:@wbeLink-color;}
+.linkTxtBasket:hover, a.linkLk:hover, a.linkDeleteLk:hover, a.linkAddLk:hover, a.linkCartLk:hover, a.lkColor, a.lkColor:visited, .colorTxt, a.lkUnderlineHC:hover, a.lkUnderlineHC:active, a.lkColor:hover, a.lkColor:active, a.roomBoxLk, a.roomBoxLk:visited, #hotelDescription p .morelk:hover, #hotelDescription p .lesslk:hover  {color:@wbeNoColorLKHover-color;}
+.linkTxtBasket{ cursor:pointer; text-decoration:underline;}
+a.linkDeleteLk, a.linkAddLk {text-decoration: none;}
+.morelk:after, .lesslk:after { font: 1.33em Baskerville, Georgia, Times New Roman, serif; display:inline-block;}
+.morelk:after {	content: ' » ';}	
+.lesslk:after {	content: ' « ';}	
+
+a.roomBoxLk, a.roomBoxLk:visited  {text-decoration:none;}
+ul.showInline li{ display:inline;}
+.hUnderline {background:url(../wbe4img/heading_underline.png) repeat-x; padding:6px 0 0 0; margin:0 auto;	}
+.floatLeftBox { float:left;}
+.showVerticalMargins {margin:10px 0;}
+*.unselectable, *.unselectable:hover {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	 color:@disabled-fontColor; 
+	 background:transparent;
+	 cursor: text;
+	}
+.opaqueImg {
+ 	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5; }
+
+/***Page STRUCUTRE************************************************************************************************/
+#page {	background-color:@wbePage-background;   margin: 0 auto; padding:10px 3px;}
+#Search-Results {display:block;}
+
+/***HEADER*****************************************************************************/
+#extraHeader {
+	position:absolute; top:@wbeTopBackgroundLine-top; height:220px; width:100%; margin:0 auto; z-index:-1; 
+	background-image:url("../wbe4img/icons/bg_noise-@{themeName}.png");
+	background-repeat:repeat;
+	 } 
+
+/*****Search Box**************************/
+.searchBoxDiv {margin:20px 0;}
+#search-hotelfeature-selection, #RequestOptionLinkBox {margin:10px 0;}
+#search-hotelfeature-selection .searchLine { margin:0;}
+.searchLeft { 	float:left; min-width:100px; }
+.searchRight input { width:145px;}
+
+/***CONTENT ***/	
+#content {	margin: 20px 0; clear:both;}	
+
+/***FOOTER***/		
+#footerWBE4 {border-top: solid 3px @wbeFooter-border-color; color: @fontColor-footer; }
+.footerBg {width:100%; background:url("../wbe4img/icons/bg_noise-@{themeName}.png") repeat @wbeFooterProtelMark-background;  }
+#footer2	{
+	height:100%;
+	margin:0 auto;
+	clear:both;
+	overflow:hidden;	 }
+#footerHMenu, #footerHSMedia {
+	width:100%; /*940*/
+	text-align:center;
+	padding:10px 0;	}	
+#footerProtel {
+	color:@fontColor-footer;
+	text-align:right;
+	margin:0 auto;	}
+#footerProtel img { width:180px;}	
+.touch {margin:10px; padding: 20px 4px 0;}
+.footerSocialIcons { width:32px; height:32px; display:inline-table;}
+#footerFBIcon {background-position:100% -187px;}
+#footerYouTubeIcon {background-position:100% -289px;}
+#footerTwitterIcon {background-position:100% -255px;}
+#footerHMenu ul li { 
+	display:inline;
+	margin:0 10px;
+	list-style:none; }
+#footerFaceBookLk, #footerYouTubeLk, #footerTwitterLk { width:32px; height:32px; background-color:@wbeColored-border-color-darker; float:left;}
+#footerHMenu ul li a { text-shadow: @footerFontColor-shadow 1px 1px 2px; text-decoration:none; color:@wbeLink-footer}	
+#footerHMenu ul li a:hover { 	color:@wbeLink-footer;   text-decoration:underline;}	
+
+/***Header ***/
+#div_basket {margin:20px 0 0 0; }
+//#div_basket .icon_generated {color: @wbeShoppingCartIcon-Color; font-size: 1.8em; margin-right: 0; display: inline;}
+#div_basket .icon {color: @wbeShoppingCartIcon-Color; font-size: 2.8em; margin-right: 0; display: inline;}
+#headerLogo {float:left;}
+#headerPersonal {float:right;}
+#hLanguageSelection .k-dropdown { width:100px;}
+#hLanguageSelection .k-input:hover {	color:@fontColor;  } 
+#hPersonalWelcome {margin:0 0 3px 0;}
+#HeaderMenuContainer {margin: -2px 1px 0 0; width:105px; }
+#headerPersonal #HeaderMenuContainer ul {	border:none;}
+#HeaderMenuContainer  ul li { border:none; display:inherit;	}
+#myaccount .translate{ display:inline; margin:0;  padding: 0; text-decoration:underline; }
+#myaccount .translate:hover {text-decoration:none; }
+#myaccount .icon_generated {color: @wbeMyAccountIcon-Color; display: inline;  margin-right: 0; font-size: 0.875em; 	}
+#headerPersonal a:hover, #headerPersonal a:active, #headerPersonal .k-link:hover  {color:@wbeNoColorLKHover-color;  }
+#phoneBigNo {display:block;}
+/***Language icon**/
+span.languageIcon {z-index: 2; position: relative; right: -28px; top:2px;  color: @wbeLanguageIcon-Color;}
+/***PhoneNo Icon***/
+#hPersonalBookPhoneTxt .icon_generated {color: @wbePhoneNoIcon-Color; position: relative; bottom: 0;}
+
+/**Login Div**/
+#MemberContent	{	
+	width:540px;
+	overflow: visible;
+	text-align:left;
+	border:@wbe-lighterGrey-border-color 1px solid; 
+		& fieldset {float: left;
+			& .searchLine {float: left; clear:none; min-width: 100px; width: auto; margin-left:10px; }	 
+		}
+		& .buttonPanel {width: auto; float: left; margin:10px 0 0 10px;}
+
+}
+#MemberContent fieldset .searchLine:first-child {margin-left:0;}
+.LoginFormClass { 	margin-left:10px; 	}
+.LoginFormAuth {margin-top: 10px; 
+ & h4 {white-space:normal;}
+ }
+.LoginFormAlternate {margin:20px 0 10px 0;}
+#LoginFormAlternate h5 {margin-top: 40px; border-bottom: 1px solid @wbe-light-border-color;}
+
+/**FORM*****************************************************************/
+fieldset { margin: 0 0 10px 0; border:solid @wbeInput-border-color  0px!important;}
+fieldset label {
+line-height: 1.4em;
+word-wrap: break-word; }
+fieldset input, fieldset textarea, .k-widget span input {
+	color:@wbeInput-fontColor;
+	background-color: @wbeInput-background;
+	box-shadow: rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color, @boxshadow_alfa/4) @unit_size @unit_size 2*@unit_size;
+	-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	-moz-transition: background all 1s;
+	-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;}
+fieldset textarea {margin:10px 0; }
+fieldset input[type="radio"], fieldset input[type="checkbox"] { max-width:20px;  border: 0;  }
+fieldset input:hover, fieldset textarea:hover, input:focus, textarea:focus { 	background:@wbeWhite-background; 	color:@fontColor;  }
+#checkOutPersonalDiv1 fieldset input[type="radio"], #checkOutPersonalDiv12 fieldset input[type="radio"] { margin-left:20px;}
+fieldset:last-child {margin: 0;}
+fieldset select, fieldset .selectClass{     width:60px; }
+.selectClass {  width:60px;}
+#tableCOPersonalData1 tr td:first-child, #tableCOPersonalData2 tr td:first-child {width:6.5em;}
+.LoginFormAuth fieldset label {display: block;}
+a#Button2.wbeButton {color:@fontColor-white; }
+fieldset input[disabled], fieldset input[disabled]:hover, fieldset input[disabled]:active {
+		background:@disabled-background;
+		color: @disabled-fontColor; 	}
+
+
+
+/*** Print symbol (star) for required fields***/
+.requiredSmb:after {	
+	content:"*";
+	font-weight:bold;
+	padding:0;
+	font-size:1.5em;
+	font-style:normal;
+	color:@fontColor-validation;}
+#newProfileTOS .requiredSmb:before, #preCheckoutAgreeTOS .requiredSmb:before, #checkOutTOS .requiredSmb:before, #divMyReservationMsg .requiredSmb:before, #myReservationTOS .requiredSmb:before { top:0; left: -0.5em;}
+#checkOutSubmitBtn.buttonPanel, #newProfileSubmitBtn.buttonPanel { margin:40px 0;} 
+
+/**Social Buttons**/
+#SocialLogin ul li {list-style: none; float: left; display: block;
+	#responsiveLogin & { float: none; display:inline; }
+&#addAccount {clear: left; display: block;} }
+
+#SocialLogin li a {
+	background-color: @wbeLogin-default-bg;
+	background-position:100% 0;
+	border: none;
+	color:@fontColor; 
+	display: block;
+	height: 34px;
+	line-height: 28px;
+	margin:3px;
+	padding-left: 6px;
+	position: relative;
+	text-decoration: none;
+	width: 12em; 
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	-webkit-transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	-moz-transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	-o-transition: background-color .25s ease-in-out, color .5s ease-in-out, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	transition: background-color .25s ease, color .5s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease; 
+	&:first-child {margin-left: 0;}
+}
+.opacity #SocialLogin li a {
+	color: @fontColor-black;
+	opacity: .70; }
+#SocialLogin li a:hover,
+#SocialLogin li a:focus {
+	color: @fontColor-black;
+	opacity: 1; }
+.rgba #SocialLogin li a:hover,
+.rgba #SocialLogin li a:focus {
+	text-shadow: 1px 1px 1px @light-shadow;
+	width: 13.5em; 
+	box-shadow: rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color, @boxshadow_alfa) @unit_size @unit_size 2*@unit_size;
+	-webkit-transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	-moz-transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	-o-transition: background-color .25s ease, width .2s ease-out, color .25s ease, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	transition: background-color .25s ease, color .25s ease, width .2s ease-out, box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease; }
+#SocialLogin #facebook   a { background-position: 100% 0px; }
+#SocialLogin #google     a { background-position: 100% -36px; }
+#SocialLogin #twitter    a { background-position: 100%  -72px; }
+#SocialLogin #addAccount a, #SocialLogin #logout    a {  background-position: 100%  230px; }
+#SocialLogin #myreservation    a { background-position: 100%  -106px; }
+#SocialLogin #manageprofile    a { background-position: 100%  -140px; }
+
+#google     a:hover, #google     a:focus, #preCheckout #google a, #responsiveLogin #google a{ background-color: @wbeLogin-google-bg; }
+#facebook   a:hover, #facebook   a:focus, #preCheckout #facebook a, #responsiveLogin #facebook a{ background-color: @wbeLogin-facebook-bg; }
+#twitter    a:hover, #twitter    a:focus, #preCheckout #twitter a, #responsiveLogin #twitter a { background-color: @wbeLogin-twitter-bg; }
+#addAccount a:hover, #addAccount a:focus { background-color: @wbeLogin-addAccount-bg;}
+#logout    	a:hover, #logout     a:focus, #responsiveLogin #logout a { background-color: @wbeLogin-logout-bg;}
+#manageprofile    a:hover, #manageprofile    a:focus, #preCheckout #manageprofile a, #responsiveLogin #manageprofile a { background-color: @wbeLogin-manageprofile-bg;}
+#myreservation    a:hover, #myreservation    a:focus, #preCheckout #myreservation a, #responsiveLogin #myreservation a { background-color: @wbeLogin-myreservation-bg; }
+
+.rgba #facebook   a:hover, .rgba #facebook   a:focus { background-color: @wbeLogin-facebook-bg; }
+.rgba #google     a:hover, .rgba #google     a:focus { background-color: @wbeLogin-google-bg; }
+.rgba #twitter    a:hover, .rgba #twitter    a:focus { background-color: @wbeLogin-twitter-bg; }
+.rbga #addAccount a:hover, .rgba #addAccount a:focus { background-color: @wbeLogin-addAccount-bg;}
+.rbga #logout     a:hover, .rgba #logout     a:focus { background-color: @wbeLogin-logout-bg;}
+.rbga #manageprofile    a:hover, .rbga #manageprofile    a:focus {background-color: @wbeLogin-manageprofile-bg; }
+.rbga #myreservation    a:hover, .rbga #myreservation    a:focus { background-color: @wbeLogin-myreservation-bg;  }
+
+/***MyReservations********************************/
+.rowBoxRes:hover {background-color: @wbeBasketTableHover-background; color: @wbeBasketTableHover-fontColor;}
+.activeMyReservation {width:90%; margin:10px 5%; }
+#myReservations .tableBoxRes {top:-10px; position:relative;}
+#myReservations .tableBoxRes:first-child {top:10px; position:relative;}
+#divMyReservationCancelInside h4, #divMyReservationCallBack h4, #divMyReservationSendMsg h4 {margin:0;}
+#myResPackage1Price {white-space:nowrap;}
+
+/**SHOW HOTEL RESULTS************************************************/
+.hotelOverviewPanel { margin:20px 0 0 0; }
+.searchBoxDiv h2 {line-height:1.5em; margin-top:0; color:@wbeResultHotelName-fontColor; }
+.hotelOverviewPanel h2:first-child {margin-top:-20px 0 10px 0; float:left;}	
+.hotelStars.icon_generated {
+	color:@wbeStars-Color;
+	margin-right: 0;
+	padding-right: 0;
+	position: relative;
+	top: -@space_unit;
+
+}
+
+/**RATE- SHOW****************************/
+.rateHotelStars {
+		margin:0 0 0 10px;
+		float:left; }	
+.rateHotelStars img { width:24px; height:24px;}	
+.rateHotelAddress { margin:0 0 20px 0;	}
+.showRatesResults3, .showRatesResults8, .showResultsN, .startBox, .startBoxContent, #voucherImgBox, #voucherBoxContent  {
+	box-shadow: rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color, @boxshadow_alfa/4) 2*@unit_size 2*@unit_size 4*@unit_size;
+	border:none;
+	-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	-moz-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s; }	
+.showRatesResults3:first-child, .showRatesResults8:first-child { margin:20px 0 0 0;}
+.showRatesResults3 a:hover, .showRatesResults8 a:hover, .showResultsN a:hover, .startBoxContent a:hover {color: @fontColor-action; }
+.showRatesResults3:hover, .showRatesResults8:hover, .startBoxContent:hover, .showResultsN:hover, .showResultsNBottom:hover, #voucherBoxContent:hover {text-decoration:none; background:@wbeResultBoxesHover-background; color: @wbeResultBoxesHover-fontColor;}
+.showRatesResults3Image img  { max-height:164px; max-width:218px; overflow:hidden; } 
+.showHotelResultsLine{margin:0;}
+
+/**ROOM CAtegory**/	
+.showRatesResults3More {float:right; margin:0 0 10px 0;}
+.showRoomCategoryArea { width:100%; margin:10px 0;}
+.showRoomCategorySelected {
+	background-color: @wbeSelectRoom-background; }
+.showRoomCategoryRed, .showRoomCategoryGreen, .showRoomCategorySelected {
+	border:none;
+	margin:4px 0; 
+	overflow:hidden; 
+	clear:both; 
+	padding:10px; 
+	-webkit-transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+	-moz-transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+	-o-transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+	transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;	}
+.showNoUsers { width:5em; 
+				float:left; 
+				height:1em;
+				margin:0 0.625em 0 0;
+				text-align:right;}
+.showNoUsers .icon_generated:before {margin-right: 0; padding-right: 0; font-size: 14px; color:@wbeRoomUsers-Color;}
+
+.showRoomCategoryTxt { float:left;}
+.showRoomCategoryRed:hover, .showRoomCategoryGreen:hover, .showRoomCategorySelected:hover {	background: @wbeSelectRoomHoover-background;  }
+.showRoomCategoryRed, .showRoomCategoryGreen, .showRoomCategorySelected{color:@fontColor;  }
+.showRoomCategoryRed:hover { color: @fontColor-action; }
+.showRoomCategoryGreen:hover, .avail { 	color: @wbe-availale; 	}
+.showRoomCategorySelected:hover { 	color:@fontColor-black; }
+.minstay {color:@wbe-minimum-stay;}
+.notavail {color:@wbe-not-availale;}
+.showRoomCategorySelected {	color:@fontColor-black; border:1px solid @wbeColored-border-color;}
+.roomCatShortList ul, #alternativeRates ul {margin:10px 0;}
+#alternativeRates ul {padding:10px; }
+.roomCatShortList ul li {list-style:none; display:block; padding:2px 0; white-space: normal;}
+#alternativeRates ul li {list-style:none; display:inline; padding:2px 20px 0 0;}
+.priceDiv { margin:10px 0; display:inline-block;}
+#roomConfigOptionalMsg {clear:left;}
+
+/***Room Config***************************/
+.roomConfigMainPanel {margin:10px;}
+#advancedRoomConfig {width:100%;}
+.roomConfigLabel{width:9.6em; float:left;}
+#NbrRoomsDiv fieldset label, #NbrAdultDiv fieldset label { font-size:1.2em;}
+#RoomConfigurator .msgBox {overflow:hidden;}
+#moreOptionsID {clear:left; margin-bottom:20px;}
+.roomConfigMainPanel .floatLeftBox label { margin-right:10px;}
+
+/**Image Gallery*---NOTE---KEEP IN PX*/
+#carouselkatview {width:100%; margin: 20px auto; }
+#Slides {	width:400px;}
+#Slides li {text-align:center;}
+.outer li {	list-style:none;}
+#thumbDiv .thumbs li { 	display:inline;	
+						margin:0 0 20px 20px;    
+						overflow:hidden;	
+						position: relative;}
+#thumbDiv .thumbs li img {
+	position: absolute;
+	bottom:0;
+	width:100%; }
+#thumbPagination {
+	height: 20px;
+	overflow: hidden;
+	position: relative;
+	bottom:0;
+	left:10px;
+	text-align:center;
+    background: none repeat scroll 0 0 @wbeColored-background;
+	opacity: 0.7;
+	margin: 0 auto; }
+.pag-lk{	color:@fontColor-black;	text-decoration:none; }
+.pag-lk:hover, .pag-lk:active { color:@wbeLink-color; text-decoration:underline; }
+.pag-lk-prev,  .pag-lk-next, .pag-lk, #hotelDescription p .morelk, #hotelDescription p .lesslk {	margin:0.25em;	background-color: @wbeGalleryImageBtns-background; 	}
+.pag-lk-next.off, .pag-lk-prev.off{ 	background-color: @wbeGalleryImageBtnsDesabled-background; }
+.bxcaption {
+	background: none repeat scroll 0 0 @wbeColored-background;
+	font-size: 1.1em;
+	height: 20px;
+    opacity: 0.6;
+	position:absolute;
+    z-index: 100;
+	text-align:center;
+	text-shadow:1px 1px 0px @fontColor-shadow;
+	color:@fontColor-black;}
+.slidesclass	{list-style:none; margin-bottom:20px;  }
+
+/***Hotel Info Page***/
+#hotelFacilitiesIcons {margin:20px 0 0 0}
+#hotelDescription p {margin-top:20px;}
+#hotelDescription p .morelk, #hotelDescription p .lesslk {padding:2px 10px;}
+
+/**Maps**/
+.mapDiv {margin:20px 0;	border: 1px solid @wbeWhite-border-color;  float: left; }
+
+/**Calendar**/
+/*.avail, .notavail, .minstay, */.k-other-month .avail, .k-other-month .notavail, .k-other-month .minstay { background-color: @wbeLighterGrey-background; }
+#AvailCalenderLegend  { padding:10px; 	.rounded-corners;}
+#AvailCalenderLegend ul li{	padding:0 10px 0 0;}
+
+/****DetailView*******************/
+#RoomtypeDescription {padding:10px 0 0 0;}
+#roomTypeTitle, #rateTitle, #voucherTitle { 	clear:both; 	}
+#RoomTypeSelect h3 {margin:10px 0; }
+#roomFacilitiesIcons {text-align:left;}
+#roomFacilitiesIcons li img {max-height:128px; max-width:128px;}
+.showRatesResults8Txt { padding: 10px;}
+#roomFacilitiesIconsBox {margin:10px 0; text-align:center;}
+#roomFacilitiesIconsBox li img {max-height:32px; max-width:32px;}
+#addToBasketPanel {float:right; text-align:right;}
+#DetailViewContainer h4, #DetailViewHotelContainer h3, .AlternateDatesBox h3, #voucherBoxContent h4, .hotelFeatureGroupLi{border-bottom:@wbe-light-border-color 1px solid;}
+
+/**Article add to cart*****************/
+#articles {margin-top:20px;}
+.tableArticle, #BasketTable {margin:20px 0; width:100%;}
+.articlePrice, .articleFreq { clear:left; white-space:nowrap;}
+.articleFreq {color:@fontColor-black;}
+#articleToCart p{ margin:10px 0 0 0;}
+.articleCell1, .articleCell2 {margin-right:10px; display:inline; }
+.articleCell1, .articleCell2  {float:left;}
+.articleCell1 {width:25%;}
+.tableArticle .tableBox {border-spacing:0; left:0;}
+.articleCellBox.articleCell21 {vertical-align:bottom;}
+.articleCell21, .articleCell22, .articleCell23 {padding-right:10px;}
+.artAddedToCart {padding:10px; clear:left; .rounded-corners; background-color: @wbeArticleAddedToCart-background;  color:@wbeArticleAddedToCart-fontColor;}
+.articleCellBox .icon_generated {font-size: 1.5em; text-decoration: none;}
+
+/*Articles -by tabs - when this option is active*/
+	 #articlesTabWrapper {background: @wbe-artTabsArea-background; margin:2*@space_unit 0; }
+
+/***Basket***/
+#BasketTable { border:none; }
+#BasketTable td  { border-top:0px;border-left:0px;border-right:0px; padding-bottom:0; padding-top:0; } 
+#BasketTable th, .totalRow, .rowBoxResHead {
+	background-color: @wbeBasketTableTH-background!important;
+	margin:0;
+	border:0;
+	color: @wbeBasketTableTH-fontColor;
+	text-transform:uppercase;}
+.rowBoxResHead>div:first-child {text-align:center;}	
+#BasketTable td#totalRowLabel, #BasketTable td#totalRowPrice  {padding-top:10px; padding-bottom:10px;}
+.rowBoxResHead	 {text-align:left;}
+.tableBoxRes {margin-top:10px;}
+
+#BasketTable tr {background: @wbeBasketTable-background; color:@wbeBasketTable-fontColor;}
+#BasketTable tr:nth-of-type(2n+1) {background: @wbeBasketTable2n1-background;}
+
+#BasketTable tr:hover {background: @wbeBasketTableHover-background; color:@wbeBasketTableHover-fontColor;}
+.totalLabel {text-transform:uppercase;}
+#basketPanel { width:100%;}
+#BasketTable h5, #BasketTable h6, #BasketTable p {margin:0;} 
+/*Basket Plus-Minus btns*/
+.basketQtyMinus, .basketQtyPlus {text-decoration: none; cursor: pointer;
+		&.icon_generated:before {padding-right: @space_unit/2; padding-left: @space_unit/2;}
+	}
+
+
+
+/***PRe-checkout********************************/
+
+/***CheckOut**/
+#checkOutFormInfo, #checkOutVoucherFormInfo{ padding:@smallspace_unit; }
+#promoBarBox div {padding:4px 4px 2px 0;}
+#couponBarButton, #voucherBarButton {float:left; margin-top:2px;}
+#checkOutPersonalDiv1, #checkOutPersonalDiv2, #checkOutPersonalDiv3, #checkOutPersonalDiv12, #checkOutPersonalDiv22 {float:left; }
+#checkOutPersonalDiv1, #checkOutPersonalDiv12 { min-width:49%;}
+
+#divNoRoomAvailable {width:100%;overflow: hidden;}
+#tableCOPersonalData1,#tableCOPersonalData12, #tableCOPersonalData2,#tableCOPersonalData22, #tableCOPersonalData3, #tblVouchersData1, #tblVouchersData2{ margin:10px 0; width:100%;}
+#tblVouchersData3 td, #tableCOPersonalData1 td, #tableCOPersonalData12 td, #tableCOPersonalData2 td, #tableCOPersonalData22 td, #tableCOPersonalData3 td, #tblVouchersData1 td, #tblVouchersData2 td { padding: 4px 10px 4px 0; }
+.textareaTxt { margin: 20px 0 0 0; text-transform:uppercase;}
+#tableCOBookingData fieldset label, #checkOutPayment fieldset label { padding-right:10px; float:left; }
+
+.checkOutEntity {margin: 20px 0;}
+.checkOutEntityTitle {
+	padding:@space_unit 0 0 @smallspace_unit; 
+	text-align:left;
+	background-color: @wbeEntityHighlight-background;
+	text-transform:uppercase;
+	border-radius: 0 @radius @radius 0; 
+	color: @wbeEntityHighlight-fontColor;
+	}
+.checkOutEntityTitle a {color:@wbeEntityHighlight-fontColor;
+			&:hover {color:@fontColor;}
+			}
+.buttonPanel {width:100%; margin: 20px 0; overflow:hidden;}
+/*#MemberContent .buttonPanel {overflow:visible; margin: 0;}*/
+
+/**NoAvailability*****/
+.AlternateDatesBox {clear:left; }
+.AlternateDatesBox ul {margin-top:10px;}
+.AlternateDatesLi {margin:10px; display:inline-block;}
+.AlternateDatesLi:last-child{margin-right:0;}
+.AlternateDatesLi a {text-decoration:none;}
+.showResultsNTop,  .showResultsNBottom {}
+.showResultsNTop {padding:10px 20px 5px 20px;}
+.showResultsNBottom {
+	background-color:@wbeColored-background; 
+	padding:5px 20px 10px 20px;
+	border-top:2px solid @wbeWhite-border-color;
+	-webkit-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	-moz-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	-o-transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s;
+	transition: background cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s; }
+.showResultsNBottom:hover {border-top:2px solid @wbeColored-border-color;}
+
+/**HOME******************************/
+.startBox, #voucherImgBox {overflow:hidden; background:url("../wbe4img/icons/bg_noise-@{themeName}.png") repeat @wbePageColorElements-background;}
+.btnStartBoxHolder { margin:20px 0 0 0; text-align:right;}
+#reurningCustomerTxt {font-size: 0.542em; margin-left: 3.385em; color:@fontColor; }
+#reurningCustomerTxt h4 {margin-top:-1em;}
+#reurningCustomer.icon_generated {color:@wbeReturningUserIcon-Color; font-size: 1.8em; }
+
+/**Vouchers**************************/
+#voucherImgBox {padding:20px;}
+#voucherImgLogo {float:left; width:30%;}
+#voucherHotel{float:left; width:67% }
+#voucherImgLogo img {max-height:100px; max-width: 100px; width:100%; margin: 0 2% 0 0;}
+#voucherHotel h5, #voucherBoxContent h4 {margin:0 0 20px 0}
+
+/**THANK YOU PAGE**********************/
+#thankYouBox h6, #searchResultEmptyBox h2 {margin:20px 0 0 0;}
+
+/**Special Offer Box*******************/
+.SpecialOfferBoxBackground {
+	border:1px solid @wbeWhite-border-color;
+	background-color: @wbeLighterGrey-background; }
+#Special-Offer-Box h2, #Special-Offer-Box h5 {margin:0;}
+#specialOfferButton { text-align:right; margin:10px 0 0 0;}
+#specialOfferLk h2, #specialOfferLk h5 {color:@fontColor; }
+
+/**BUTTONS****************************/
+.wbeButton, .wbeButton_hover, .applyButton, .applyButton_hover, .bookButton, .bookButton_hover, .addToCartButton_disabled,  {
+	.rounded-corners;
+	box-shadow: rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color, @boxshadow_alfa) @unit_size @unit_size 2*@unit_size;		
+	display:inline-block;
+	margin:0;
+	padding:6px 40px;
+	font-size:1em;
+	text-align: center;
+	cursor: pointer;
+	border-style:none;
+	text-decoration:none;
+	line-height:1.4em;	}
+.bookButton, .bookButton_hover { font-weight:bold;}
+.wbeButton, .wbeButton_hover:visited, .wbeButton:visited {
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, @wbe-actionButton-startColor), color-stop(1, @wbe-actionButton-stopColor) );
+		background:-moz-linear-gradient( center top, @wbe-actionButton-startColor 5%, @wbe-actionButton-stopColor 100% );
+		background: -o-linear-gradient(top,  @wbe-actionButton-startColor 5%,@wbe-actionButton-stopColor 100%);
+		background: -ms-linear-gradient(top,  @wbe-actionButton-startColor 5%,@wbe-actionButton-stopColor 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-actionButton-startColor , endColorstr=@wbe-actionButton-stopColor, GradientType=0 ); /* IE6-9 */			
+		background-color:@wbe-actionButton-background;
+		color:@wbe-actionButton-fontColor;	}
+.wbeButton:hover, .wbeButton_hover, .wbeButton:active, .wbeButton_hover:hover {
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, @wbe-actionButtonHover-startColor), color-stop(1, @wbe-actionButtonHover-stopColor) );
+		background:-moz-linear-gradient( center top, @wbe-actionButtonHover-startColor 5%, @wbe-actionButtonHover-stopColor 100% );
+		background: -o-linear-gradient(top,  @wbe-actionButtonHover-startColor 5%,@wbe-actionButtonHover-stopColor 100%);
+		background: -ms-linear-gradient(top,  @wbe-actionButtonHover-startColor 5%,@wbe-actionButtonHover-stopColor 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-actionButtonHover-startColor, endColorstr=@wbe-actionButtonHover-stopColor, GradientType=0 ); /* IE6-9 */					
+		background-color:@wbe-actionButtonHover-background;
+		color:@wbe-actionButton-fontColorHover;	}
+.applyButton, .bookButton {
+		background: -moz-linear-gradient(top, @wbe-lightButton-startColor 0%, @wbe-lightButton-stopColor 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@wbe-lightButton-startColor), color-stop(100%,@wbe-lightButton-stopColor));
+		background: -webkit-linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		background: -o-linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		background: -ms-linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		background: linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-lightButton-startColor , endColorstr=@wbe-lightButton-stopColor, GradientType=0 ); /* IE6-9 */							
+		background-color:@wbe-lightButton-background;
+		color:@wbe-lightButton-fontColor; 
+		text-shadow:@wbe-lightButton-fontColorShadow @unit_size @unit_size 2*@unit_size;
+		white-space:normal;	}
+.applyButton_hover, .bookButton_hover, .applyButton:hover  {
+		background: @wbe-lightButtonHover-background;
+		background: -moz-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%, @wbe-lightButtonHover-stopColor 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@wbe-lightButtonHover-startColor), color-stop(100%,@wbe-lightButtonHover-stopColor));
+		background: -webkit-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		background: -o-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		background: -ms-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-lightButtonHover-startColor, endColorstr=@wbe-lightButtonHover-stopColor, GradientType=0 ); /* IE6-9 */									
+		background: linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		color:@wbe-lightButton-fontColorHover; 
+		text-shadow:@wbe-lightButton-fontColorHoverShadow @unit_size @unit_size 2*@unit_size;	}
+.addToCartButton_disabled, .addToCartButton_disabled:hover, .wbeButton:disabled { color:@colorDisabled; cursor: default;}
+
+
+
+/*Error*/
+.errorBox { margin:20px auto; background-color:@fontColor-white;  padding:20px;}
+.errorLBox, .errorRBox { float:left; }
+.errorLBox { width:90px; }
+.errorLBox  img {margin:0 20px 0 0;}
+.errorRBox H1, .errorRBox p {
+		line-height:1.2em; 	
+		font-family: Mako; }
+.errorRBox H1 {margin:0; font-size:2.8em; }
+.errorRBox p {margin:20px 0; font-size:1.3em; }
+ul#rateListItems {margin:20px;}
+ul#rateListItems li {line-height: 1.4em; list-style: square outside none; }
+
+/***GTC**********************/
+
+.k-window-titlebar.k-header {height: 2.5em; background: @wbeTOS-windowTitle-background;
+		& .k-window-title {
+			font-size: 1.3em;
+			padding: @space_unit 0;
+			color: @wbeTOS-windowTitle-fontColor;
+		 }
+	}
+
+#GTCWindowAccountBox, #GTCWindowCheckoutBox, #GTCWindowBox {background: @wbeTOS-window-background;  }
+
+
+
+
+/***PRINT*******************/
+#printMsg {display:none;}
+
+
+/***Not Used***************************/
+/*.hotelStarsS {background-position: 0 -1468px;}*/

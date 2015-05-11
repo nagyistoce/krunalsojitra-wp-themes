@@ -1,0 +1,111 @@
+﻿<div id="noAvailabilityForm" >
+	  <h2 data-localization="_lgNoRoomsMsg1">Sorry, there are no rooms available for your search</h2>
+      <p data-localization="_lgNoRoomsMsg2">Please feel in the form if you will like to be contacted by the hotel as soon as a room can be available</p>
+    
+
+    <div id="divNoRoomAvailable">
+
+        <div id="divNoAvailabilitiesCallBack" data-function="CallBackFormNotAvail">
+                <h4 data-localization="_myReservationCallBack">Request a Call Back</h4>
+                <p data-localization="_myReservationCallBackTxt1" class="txtB">No time to call us? We can call you back!</p>
+            <fieldset>
+                         <div  class="formLine clear">
+                                  <label for="callBack_Salutation" data-localization="_FormSalutation"><!-- Salutation --></label>
+                                  <input  id="callBack_Salutation"  name="callBack_Salutation" data-function="callbackSalutation" tabindex="1" /></div>
+                          <div  class="formLine clear">
+                                  <label for="callBack_Firstname" data-function="labelCallBack_Firstname" ><span data-localization="_FormFirstname" ><!-- First name --></span></label><span class="requiredSmb"></span>
+                                  <input id="callBack_Firstname"  type="text"   maxlength="50" name="callBack_Firstname_Input" required data-function="callbackFirstname" validationMessage="_firstnameRequired" tabindex="2" /></div>
+                          <div  class="formLine clear">
+                            <label for="callBack_Lastname"><span data-localization="_FormLastname"><!-- Last name --></span></label><span class="requiredSmb"></span>
+                            <input id="callBack_Lastname" type="text"  value=""  data-function="callbackLastname" required  maxlength="50" name="callBack_Lastname_Input" validationMessage="_lastnameRequired" tabindex="3" /></div>
+                          <div  class="formLine clear">
+                              <label for="callBack_countrySelect"><span data-localization="_FormCountry"><!-- Country --></span></label>
+                              <input id="callBack_countrySelect"  value=""  data-function="callbackCountry" name="callBack_countrySelect" tabindex="4" />
+                          </div>
+                          <div class="searchLine clear">
+                              <label for="callBack_Phone" data-localization="_FormPhone"><!-- Phone: --></label><span class="requiredSmb"></span>
+                              <input id="callBack_Phone"  type="text" data-function="phonenumber"  name=" callBack_Phone" required validationMessage="_phoneRequired" tabindex="5"  />
+                          </div>
+            </fieldset>                    
+                    <div class="buttonPanel"><div class="buttonPanelL"><input  class="wbeButton" onmouseover="this.className='wbeButton_hover';" data-function="callbackbutton" onmouseout="this.className='wbeButton';" value="Request Call Back" id="callBackBtn"  type="button" tabindex="4" data-localization="_callBackBtn" ></div></div>
+         </div>
+    
+        <div id="divNoAvailabilitiesWriteBack"  data-function="MailFormNotAvail">
+                   <h4 data-localization="_myReservationSendMsg">Send Message</h4>
+                   <p data-localization="_myReservationReqMsgTxt1" class="txtB">Please write down your questions</span></p>
+                    <fieldset>                
+                          <div  class="formLine">
+                                  <label for="mailback_Salutation" data-localization="_FormSalutation"><!-- Salutation --></label>
+                                  <input  id="mailback_Salutation" value="" name="mailback_Salutation" data-function="mailsalutation"  tabindex="11" /></div>
+                          <div class="clear">       </div>
+                          <div  class="formLine">
+                                  <label for="mailback_Firstname" data-function="labelmailback_Firstname" ><span data-localization="_FormFirstname" ><!-- First name --></span></label><span class="requiredSmb"></span>
+                                  <input id="mailback_Firstname"  type="text"   maxlength="50" name="mailback_Firstname_Input" required data-function="mailfirstname" validationMessage="_firstnameRequired"  tabindex="12" /></div>
+                          <div  class="formLine">
+                            <label for="mailback_Lastname"><span data-localization="_FormLastname"><!-- Last name --></span></label><span class="requiredSmb"></span>
+                            <input id="mailback_Lastname" type="text"  value="" data-function="maillastname" required maxlength="50" name="mailback_Lastname_Input" validationMessage="_lastnameRequired"  tabindex="13" /></div>
+                          <div class="clear">       </div>
+                          <div  class="formLine">
+                              <label for="mailback_countrySelect"><span data-localization="_FormCountry"><!-- Country --></span></label>
+                              <input id="mailback_countrySelect"  value="" name="mailback_countrySelect" data-function="mailcountry"  tabindex="14"/>
+                          </div>
+                          <div class="clear">       </div>
+                          <div class="formLine">
+                            <label for="mailback_Email" data-localization="_FormEmail"><!-- E-mail: --></label><span class="requiredSmb"></span>
+                            <input id="Email1"  type="email" name="sendMessage_Email" data-function="MailEmailSender" validationMessage="_emailRequired" required  tabindex="15" />
+                        </div>
+                          <div  class="formLine">
+                              <label for="mailback_telefon" data-function="mailback_phone"><span data-localization="_FormPhone"><!-- Phone --></span></label><span class="requiredSmb"></span>
+                                  <input id="mailback_telefon" type="text" value=""  data-function="mailphone"  maxlength="50" required name="mailback_telefon" validationMessage="_phoneRequired"  tabindex="16" />
+                          </div>
+                          <div class="clear">       </div>
+                          
+                        <div class="formLine">                    
+                            <label for="sendMsg_Comment" data-localization="_FormAddNote"><!-- Message: --></label><span class="requiredSmb"></span>
+                            <textarea  rows="5" id="Textarea2" name="sendMsg_Comment" validationMessage="_missingText" data-function="MailMessage" required  tabindex="17" ></textarea>
+                        </div>    
+                    </fieldset>
+                    <div class="buttonPanel"><div class="buttonPanelL"><input  data-function="SendMailButton" class="wbeButton" onmouseover="this.className='wbeButton_hover';"  onmouseout="this.className='wbeButton';"  value="Send Message" id="myReservationSendMsgBtn"  type="button" tabindex="7" data-localization="_myReservationSendMsgBtn" ></div></div>
+        </div>
+	</div>
+
+</div>
+<div class="clear"> </div>
+<div id="AlternateDatesContainer" class="AlternateDatesBox" data-hotelid="" >
+	<h3 data-localization="_lgAlternateArrival">Alternate Arrivale Dates</h3>
+
+ 	
+<ul data-function="alternateDates">
+</ul>   
+</div>
+
+
+<script language="javascript" type="text/javascript">
+    protelWBE.RegisterAlternateDatesContainer('AlternateDatesContainer');
+</script>
+ <script id="AlternateItemTemplate" type="text/x-kendo-template"> 
+
+
+ #if(data.length < 7){#
+ #length = data.length;}else{length=7;}#
+
+  # for(var i=0;i < data.length;i++){#
+  	
+  	<li class="AlternateDatesLi">
+		<div class="showResultsN">
+  		<a href="\\#" data-function="alternateLink" data-date="#=data[i].date#">
+			<div class="showResultsNTop">
+				<div class="displayBlock"><span data-localization="_ArriveOn">Arrive on</span></div>
+				<div class=" class="displayBlock"">#=data[i].date#</div>
+			</div>
+			<div class="showResultsNBottom">
+				<div class="displayBlock"><span >#=data[i].price.formatted + " "+data[i].price.currency#</span></div>
+				<div class="displayBlock">/<span data-localization="_noAvailNight">night</span></div>
+				<input type="radio" name="nextDateAvailable" value="day" />
+			</div>	
+		</div>
+		</a>
+	</li>
+  #}#
+
+ </script>

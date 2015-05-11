@@ -1,0 +1,37 @@
+#popup_container {
+	font-size: 1.2em;
+	width:auto;
+	border:1px solid @wbeAlerts-window-background;
+	box-shadow: rgba(0,0,0, 0.2) 2px 2px 4px;
+	border-radius: @radius;
+	padding:@space_unit; 
+	background-color: @wbeAlerts-window-background; 
+}
+
+
+#popup_title {
+	font-size: 1.2em;
+	text-align: center;
+	cursor: default;
+	padding: 1em 0 0 0;
+	margin: 0em;
+}
+
+#popup_content {
+	padding: 1em;
+	margin: 0em;
+	text-align: center;
+}
+
+#popup_panel {
+	margin: 1em 0 0 0;
+}
+
+#popup_prompt {
+	margin: .5em 0em;
+}
+
+#popup_container, #popup_title, #popup_content, #popup_content.alert, #popup_content.confirm, #popup_message, #popup_panel, #popup_prompt {
+	color: @wbeAlerts-window-fontColor;
+
+}

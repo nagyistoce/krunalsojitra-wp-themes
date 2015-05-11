@@ -1,0 +1,79 @@
+#popup_container {
+	font-family: Mako;
+	font-size: 1.3em;
+	min-width: 320px; /* Dialog will be no smaller than this */
+	max-width: 460px; /* Dialog will wrap after this width */
+	width:100%;
+	color: @wbeAlert-fontColor;
+	.rounded-corners;
+	border:1px solid @wbe-light-border-color;
+	-webkit-box-shadow: rgba(0,0,0, 0.2) 2px 2px 4px;
+	-moz-box-shadow: rgba(0,0,0, 0.2) 2px 2px 4px;
+	-o-box-shadow: rgba(0,0,0, 0.2) 2px 2px 4px;
+	box-shadow: rgba(0,0,0, 0.2) 2px 2px 4px;
+	background-color: @wbeAlert-background;
+}
+
+#popup_container input[type="button"] {
+	.rounded-corners;
+	box-shadow: rgba(@boxshadow_color,@boxshadow_color,@boxshadow_color, @boxshadow_alfa) @unit_size @unit_size 2*@unit_size;		
+	display:inline-block;
+	margin:0;
+	padding:4px 40px;
+	font-size:1em;
+	text-align: center;
+	cursor: pointer;
+	border-style:none;
+	text-decoration:none;
+	line-height:1.4em;
+		background: -moz-linear-gradient(top, @wbe-lightButton-startColor 0%, @wbe-lightButton-stopColor 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@wbe-lightButton-startColor), color-stop(100%,@wbe-lightButton-stopColor));
+		background: -webkit-linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		background: -o-linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		background: -ms-linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		background: linear-gradient(top,  @wbe-lightButton-startColor 0%,@wbe-lightButton-stopColor 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-lightButton-startColor , endColorstr=@wbe-lightButton-stopColor, GradientType=0 ); 
+		background-color:@wbe-lightButton-background;
+		color:@wbe-lightButton-fontColor; 
+		text-shadow:@fontColor-shadow @unit_size @unit_size 2*@unit_size;
+		white-space:normal;
+
+&:hover {
+		background: @wbe-lightButtonHover-background;
+		background: -moz-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%, @wbe-lightButtonHover-stopColor 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@wbe-lightButtonHover-startColor), color-stop(100%,@wbe-lightButtonHover-stopColor));
+		background: -webkit-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		background: -o-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		background: -ms-linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@wbe-lightButtonHover-startColor, endColorstr=@wbe-lightButtonHover-stopColor, GradientType=0 ); /* IE6-9 */									
+		background: linear-gradient(top,  @wbe-lightButtonHover-startColor 0%,@wbe-lightButtonHover-stopColor 100%);
+		color:@wbe-lightButton-fontColorHover; 
+		text-shadow:@fontColor-shadow @unit_size @unit_size 2*@unit_size;
+}
+}	
+
+
+#popup_title {
+	font-size: 1.2em;
+	text-align: center;
+	color: @wbeAlert-fontColor;
+	cursor: default;
+	padding: 1em 0 0 0;
+	margin: 0em;
+}
+
+#popup_content {
+	padding: 1em;
+	margin: 0em;
+	text-align: center;
+}
+
+#popup_panel {
+	margin: 1em 0 0 0;
+}
+
+#popup_prompt {
+	margin: .5em 0em;
+}
+
+#popup_container, #popup_title, #popup_content, #popup_content.alert, #popup_content.confirm, #popup_message, #popup_panel, #popup_prompt { line-height: @baselineheight; }

@@ -1,0 +1,59 @@
+﻿<div id="headerTop" class="contentOut" >
+      <!-- Header-Top-Content.html //-->
+      
+    <div id="headerTopLine" class="contentIn">	
+<div style="float: left;"><a href="http://www.imartinhal.com/"><img src="http://www.imartinhal.com/wp-content/uploads/2014/04/logo1.png" /></a></div>
+    	<div id="headerPersonal">
+            <div id="headerLine1">    
+                    <div id="hLanguageSelection" class="item"><a href="#" id="ResponsivelangSelectionBt" name="ResponsivelangSelectionBt"><span class="icon">⚑</span></a><span id="hLanguageSelectionTxt"><input id="languageselection" name="languageselection" /></span></div>
+					<div id="hPersonalBookPhone" class="item"><a data-function="hotlinemobileLink" href="tel:+49231915930"  ><span class="icon">a</span><span id="phoneBigNo" data-function="hotlinemobile" >+49.231.915.930</span></a></div>                    
+                    <div id="personaDiv"  class="item">
+                        <div id="HeaderMenuContainer">
+							<ul id="MyHeaderMenu" class="showInline"> 
+                            	<li id="myaccount"><span class="icon"><a href="#" id="LoginResponsive" name="LoginResponsive">u</a></span><p class="translate" data-localization="_MyAccount">My Account</p>
+                                	<ul ><div id="MemberContent" class="k-content" style="z-index:10000"></div></ul>    
+								</li>    
+                            </ul>
+                        </div>
+                   	</div> 
+	    	    	<div id="div_basket"  class="item"><a href="#"><span class="icon">c</span> <span href="#" id="ShowMyBasket"></span> </a></div>
+			</div> 
+    
+		</div>
+    </div>    
+    
+    <div class="clear"></div>
+
+    <div id="headerPower" class="contentOut" data-function="headerwithSearchbox">
+        <div id="headerSearch"  class="contentIn">
+           <a name="SearchbarContent" id="SearchbarContent"></a>
+            <div class="clear"></div>
+              <div id="Search-Box-Container">
+               <!-- Header-Left-Content-SearchBox.html //-->
+              </div>
+              <div  id="Special-Offer-Box" class="SpecialOfferBoxBackground">
+                 <!-- SpecialOfferBoxContent.html //-->
+              </div>
+        </div>      
+    </div>
+    <div data-function="VoucherHeader">
+<a href="#" class="morelk linkTxt" data-localization="_showOnlyVouchers">Gutscheine anzeigen</a>	
+	
+</div>
+</div>
+<script language="javascript" type="text/javascript">
+    protelWBE.RegisterShowBasketItemLink('ShowMyBasket');
+    protelWBE.RegisterLanguageSelection('languageselection');
+    protelWBE.RegisterMemberLoginContainer("MemberContent");
+    protelWBE.RegisterHeaderMenu('MyHeaderMenu');
+    protelWBE.RegisterSpecialOfferBox('Special-Offer-Box');
+    protelWBE.RegisterShowCancellationButton('hPersonalCancelReservationTxt');
+    protelWBE.RegisterShowCancellationResponsiveButton('CancelReservationResponsive');
+    protelWBE.RegisterResponsiveLoginButton('LoginResponsive');
+    protelWBE.RegisterResponsiveLanguageSelectionButton('ResponsivelangSelectionBt');
+</script>
+
+
+<script id="LanguageSelectionTemplate" type="text/x-kendo-template">
+<div><div style="float:left;padding-top:6px;"><img src="${ data.icon }" alt="${ data.name }" width="16px" height="11px" /></div><div style="float:left;padding-left:3px;">${ data.name }</div></div><div class="clear"></div>
+</script>
